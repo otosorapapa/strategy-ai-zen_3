@@ -1,0 +1,71 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" rx="36" fill="url(#paint0_radial)"/>
+  <rect x="40" y="40" width="880" height="460" rx="28" fill="#F8FBFF"/>
+  <rect x="84" y="118" width="792" height="284" rx="24" fill="url(#paint1_linear)"/>
+  <rect x="84" y="118" width="792" height="284" rx="24" stroke="#D8E4FF" stroke-width="2"/>
+  <g filter="url(#filter0_d)">
+    <rect x="132" y="168" width="216" height="200" rx="24" fill="white"/>
+  </g>
+  <g filter="url(#filter1_d)">
+    <rect x="372" y="150" width="216" height="236" rx="24" fill="white"/>
+  </g>
+  <g filter="url(#filter2_d)">
+    <rect x="612" y="168" width="216" height="200" rx="24" fill="white"/>
+  </g>
+  <path d="M348 268H372" stroke="#7BB6FF" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 12"/>
+  <path d="M588 268H612" stroke="#7BB6FF" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 12"/>
+  <circle cx="348" cy="268" r="12" fill="white" stroke="#7BB6FF" stroke-width="4"/>
+  <circle cx="612" cy="268" r="12" fill="white" stroke="#7BB6FF" stroke-width="4"/>
+  <path d="M348 268L360 258L360 278L348 268Z" fill="#1B4EDD"/>
+  <path d="M612 268L624 258L624 278L612 268Z" fill="#1B4EDD"/>
+  <g font-family="'Inter', 'Noto Sans JP', sans-serif" font-weight="600" fill="#1B2A4F">
+    <text font-size="14" letter-spacing="0.32em" x="132" y="148">BEFORE</text>
+    <text font-size="14" letter-spacing="0.32em" x="372" y="130">INTERVENTION</text>
+    <text font-size="14" letter-spacing="0.32em" x="612" y="148">AFTER</text>
+    <text font-size="28" x="152" y="212">断片化した判断軸</text>
+    <text font-size="28" x="392" y="194">AI×専門家の設計図</text>
+    <text font-size="28" x="632" y="212">統一された行動</text>
+  </g>
+  <g font-family="'Inter', 'Noto Sans JP', sans-serif" fill="#405380" font-size="16" font-weight="500">
+    <text x="152" y="244">・資料更新に追われ、未来視点が不足</text>
+    <text x="152" y="272">・部門ごとに優先度が異なる</text>
+    <text x="152" y="300">・銀行/取引先対応が後手</text>
+    <text x="392" y="226">・生成AIが財務・現場ログを統合</text>
+    <text x="392" y="254">・診断士が制約条件を言語化</text>
+    <text x="392" y="282">・シナリオ比較で優先施策を確定</text>
+    <text x="392" y="310">・48hで歪みの見取り図を提示</text>
+    <text x="632" y="244">・資金/案件/人材が同じタイムライン</text>
+    <text x="632" y="272">・合意形成が会議1回で完了</text>
+    <text x="632" y="300">・次の危機を待たずに先手を打てる</text>
+  </g>
+  <g font-family="'Inter', 'Noto Sans JP', sans-serif" fill="#1B4EDD" font-size="20" font-weight="700">
+    <text x="152" y="340">判断リードタイム 45%遅延</text>
+    <text x="392" y="340">リカバリープランを72時間で提示</text>
+    <text x="632" y="340">粗利+3.2pt / 交渉回答▲45%</text>
+  </g>
+  <defs>
+    <filter id="filter0_d" x="112" y="148" width="256" height="240" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur"/>
+    </filter>
+    <filter id="filter1_d" x="352" y="130" width="256" height="276" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur"/>
+    </filter>
+    <filter id="filter2_d" x="592" y="148" width="256" height="240" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur"/>
+    </filter>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(480 80) rotate(90) scale(520 520)">
+      <stop stop-color="#E0ECFF"/>
+      <stop offset="1" stop-color="#C3D9FF"/>
+    </radialGradient>
+    <linearGradient id="paint1_linear" x1="84" y1="118" x2="876" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9F3FF"/>
+      <stop offset="1" stop-color="#D2E4FF"/>
+    </linearGradient>
+  </defs>
+</svg>

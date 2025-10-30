@@ -5,7 +5,6 @@ import {
   CalendarClock,
   DollarSign,
   LineChart,
-  Network,
   ShieldCheck,
   TrendingUp,
   Users,
@@ -42,66 +41,66 @@ type ExecutiveSignal = {
 
 const pains: PainPoint[] = [
   {
-    title: "粗利とキャッシュのズレを説明できない",
-    quote: "利益は出ているのに資金残高が減る理由を会議で説明できず、AIの活用も構想止まりです。",
+    title: "数字と現場の時間軸が噛み合わない",
+    quote: "粗利とキャッシュの動きが説明できず、会議が確認と棚卸しだけで終わってしまいます。",
     reasons: [
-      "粗利・在庫・入出金が部署単位で分断され、更新タイミングが揃わない",
-      "資金繰り計画をExcelで手作業更新し、キャッシュ波形のシナリオ比較ができない",
-      "AIに学習させるデータ条件が決まらず、判断材料の自動生成が実現しない",
+      "粗利・在庫・入出金が部門ごとに更新タイミングもフォーマットもバラバラ",
+      "週次会議で使う資料が属人化し、意思決定までに複数版のエクセルが乱立",
+      "AIに学習させる条件が定まらず、差異要因やリスクの説明がその場しのぎになっている",
     ],
-    risk: "資金ショックを前倒しで検知できず、投資判断や金融機関との交渉が後手に回る",
-    focus: "粗利・在庫・キャッシュをAIで同時分析し、意思決定ボードに差異要因と打ち手を表示",
+    risk: "計画と実行のズレを検知できず、利益機会と資金余力が同時に失われる",
+    focus: "ZENが粗利・在庫・キャッシュの因果をAIで同時分析し、意思決定キャンバスで差異と打ち手を提示",
     icon: DollarSign,
     priority: 5,
   },
   {
-    title: "生成AIが現場に定着しない",
-    quote: "チャットツールで試しているが、判断に使える形でAIの提案が残らず運用が続きません。",
+    title: "生成AIの成果が経営に伝わらない",
+    quote: "チャットで試してはいるが、会議で使えるレベルに昇華できず活用が止まります。",
     reasons: [
-      "部署ごとにAIの使い方が違い、判断に必要なプロンプトやテンプレートが標準化されていない",
-      "AIが生成した施策の根拠が不明確で、会議で説明できるレベルまで磨き込めていない",
-      "教育コンテンツやガイドラインが不足し、リスク管理の観点で導入が止まっている",
+      "ユースケースごとにプロンプトと評価指標がバラバラで、成果の定義が曖昧",
+      "AIが提案した打ち手の根拠データが整理されず、意思決定ログに残らない",
+      "教育コンテンツや運用ガイドが不足し、リスク管理の観点で本格導入が進まない",
     ],
-    risk: "AIの活用が属人化し、投資対効果が見えず、現場のやり切り感と信頼が低下する",
-    focus: "専門家がユースケースと運用ルールを共創し、生成AIの提案を証跡付きで意思決定ログへ反映",
+    risk: "AI投資のROIが見えず、現場のやり切り感と経営陣の信頼が低下する",
+    focus: "専門家がユースケースと評価指標を共創し、AI提案を証跡付きで判断ログへ接続",
     icon: BrainCircuit,
     priority: 4,
   },
   {
-    title: "商談と在庫の意思決定が遅れる",
-    quote: "案件の勝ち筋が見えず値引きが常態化。欠品と過剰在庫が同時に発生し、会議が後追いになります。",
+    title: "キャッシュと投資の判断が後ろ倒し",
+    quote: "資金繰りの波形を揃えられず、投資計画と借入調達のタイミングが噛み合いません。",
     reasons: [
-      "商談・在庫・需要データが散在し、AIによる需要予測が学習できる状態ではない",
-      "勝ち筋プレイブックがなく、AIのスコアリング結果も定例会議で活用されない",
-      "在庫警戒ラインや補充ルールが暗黙知のままで、実績差異の検証に時間がかかる",
+      "資金計画がExcelで手作業更新、シナリオ比較に2〜3日かかる",
+      "取引条件や在庫の変化がキャッシュモデルに反映されるまでタイムラグが大きい",
+      "金融機関や投資家向けの説明資料が属人化し、交渉のたびにゼロベースで作り直している",
     ],
-    risk: "高粗利案件の取りこぼしと在庫滞留が同時発生し、キャッシュを圧迫する",
-    focus: "生成AIが需要シナリオと在庫アラートを提示し、会議で優先順位と責任者を即決",
+    risk: "資金ショックの前倒し検知ができず、投資判断・金融交渉の主導権を失う",
+    focus: "ZENがキャッシュ波形と投資シナリオをAIで更新し、意思決定ボードと金融資料を同時生成",
     icon: CalendarClock,
     priority: 4,
   },
   {
-    title: "人材育成と組織連携が追いつかない",
+    title: "人材・組織の連携が追いつかない",
     quote: "改善施策が属人化し、幹部が判断材料をまとめるだけで疲弊しています。",
     reasons: [
-      "スキルマップや評価指標が可視化されず、AIによる習熟診断ができない",
+      "スキルマップと評価指標が可視化されず、AIによる習熟診断ができない",
       "会議資料と現場タスクが連動せず、改善活動の再現性が上がらない",
-      "離職兆候やエンゲージメントのデータが点在し、改善策の効果検証が難しい",
+      "離職兆候やエンゲージメントデータが点在し、人材リスクの早期察知ができない",
     ],
     risk: "キーパーソンの離脱と施策停滞で、改善スピードと士気が低下する",
-    focus: "AIが個別最適化した教育プランとエンゲージメント指標を提示し、伴走で定着まで支援",
+    focus: "AIが個別最適化した教育プランと連携タスクを提示し、自走できるチーム体制を整える",
     icon: Users,
   },
   {
-    title: "金融機関・投資家との対話に時間がかかる",
+    title: "金融機関・投資家との対話が遅延",
     quote: "資料づくりに追われ、決算説明や条件交渉が後手に回ります。",
     reasons: [
-      "財務ストーリーと資金計画が部署ごとに散在し、最新データが共有できない",
-      "モニタリング項目の履歴が残らず、過去の合意事項を説明するのに時間がかかる",
+      "財務ストーリーと資金計画が部署ごとに散在し、最新データを共有できない",
+      "モニタリング項目の履歴が残らず、過去の合意事項の説明に時間がかかる",
       "面談ログと改善施策が連携せず、AIで交渉材料を抽出する仕組みがない",
     ],
     risk: "信用評価が下がり、追加融資や投資判断のタイミングを逃す",
-    focus: "生成AIが金融機関向け資料と交渉ログを標準化し、対話サイクルを高速化",
+    focus: "ZENが金融機関向け資料と交渉ログを標準化し、対話サイクルを高速化",
     icon: AlertTriangle,
   },
 ];
@@ -109,25 +108,25 @@ const pains: PainPoint[] = [
 const executiveSignals: ExecutiveSignal[] = [
   {
     label: "意思決定リードタイム",
-    metric: "+11日（例）",
-    note: "資料準備と確認に時間がかかり、判断が後ろ倒しになる",
+    metric: "+9日（例）",
+    note: "資料準備と確認が二重化し、判断が後ろ倒しになる",
     icon: CalendarClock,
   },
   {
     label: "粗利とキャッシュの乖離",
-    metric: "▲27%",
+    metric: "▲23%",
     note: "粗利は積み上がるのにキャッシュ残高が減少し、投資判断が止まる",
     icon: DollarSign,
   },
   {
-    label: "生成AIの活用度",
-    metric: "38%",
+    label: "AI提案の採択率",
+    metric: "38%→87%",
     note: "AIの成果指標が定義されず、試行止まりで現場に定着しない",
-    icon: Network,
+    icon: BrainCircuit,
   },
   {
     label: "金融機関との対話時間",
-    metric: "+4回/期",
+    metric: "▲40%",
     note: "面談準備が属人化し、説明資料の更新に追われる",
     icon: ShieldCheck,
   },
@@ -197,7 +196,7 @@ const PainAccordionItem = ({ pain, index }: { pain: PainPoint; index: number }) 
           </div>
         </div>
         <footer className="mt-6 flex flex-col gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>年商1億〜30億円規模の経営者ヒアリングから抽出</span>
+          <span>年商1〜50億円規模の経営者ヒアリングから抽出</span>
           <span>クリックで詳細を閉じる</span>
         </footer>
       </AccordionContent>
@@ -212,23 +211,23 @@ const storyFlow: StoryFlowItem[] = [
     headline: "判断材料が分断され迷いが生まれる",
     copy:
       "粗利とキャッシュの差異要因が整理できず、AI活用も試行止まり。会議は確認作業で終わり、判断が後ろ倒しになります。",
-    metrics: ["判断リードタイムの長期化", "現場の納得感の低下"],
+    metrics: ["意思決定リードタイム+9日（例）", "AI投資のROIが不透明"],
   },
   {
     stage: "変革",
     icon: BrainCircuit,
-    headline: "生成AIと専門家で意思決定を再設計",
+    headline: "ZENが経営シグナルを共創",
     copy:
-      "専門家が意思決定フレームを設計し、生成AIが粗利・在庫・キャッシュの因果を可視化。週次でシナリオと打ち手を提示します。",
-    metrics: ["粗利改善スピード2.4倍（例）", "キャッシュ創出28日前倒し（例）"],
+      "専門家が意思決定キャンバスを設計し、生成AIが粗利・在庫・キャッシュの因果を可視化。週次でシナリオと推奨アクションを提示します。",
+    metrics: ["改善サイクル3.1倍（例）", "キャッシュ余力+42日前倒し（例）"],
   },
   {
     stage: "成果",
     icon: TrendingUp,
-    headline: "同じ地図で動ける経営チームに",
+    headline: "同じタイムラインで動ける経営チームに",
     copy:
-      "週次の意思決定ボードと運用ルールが整い、会議準備が▲7時間（例）。金融機関や投資家への説明も一本化されます。",
-    metrics: ["意思決定リードタイム▲46%（例）", "金融機関面談準備▲60%"],
+      "週次のZENナビゲーションボードと運用ルールが整い、AI提案の採択率が向上。金融機関や投資家への説明も一本化されます。",
+    metrics: ["AI提案採択率87%（例）", "金融機関面談準備▲40%（例）"],
   },
 ];
 
@@ -239,13 +238,13 @@ const ProblemSection = () => {
         <div className="balanced-grid--reverse lg:items-start xl:items-center">
           <div className="space-y-8 lg:pr-16">
             <span className="inline-flex items-center rounded-full bg-highlight/20 px-5 py-2.5 text-sm font-bold uppercase tracking-[0.3em] text-highlight-foreground">
-              よくある課題
+              ZENが解きほぐす課題
             </span>
             <h2 className="text-balance text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl">
-              生成AI×専門家の活用で解決したい<br />5つの経営ボトルネック
+              生成AI×専門家×経営改善で乗り越える<br />5つの経営ボトルネック
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground md:text-lg lg:max-w-[62ch]">
-              データと現場の情報が分断されたままでは、生成AIも成果を出せません。Strategy AI ZENが支援してきた企業から共通して見えるボトルネックを整理しました。改善の順番を決めるヒントとしてご活用ください。
+              データと現場の情報が分断されたままでは、生成AIも成果を出せません。ZEN Strategic Navigatorが伴走してきた企業から共通して見えたボトルネックを整理しました。改善の順番を決めるヒントとしてご活用ください。
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               {executiveSignals.map((signal) => {
@@ -269,16 +268,16 @@ const ProblemSection = () => {
             </div>
             <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200/70 bg-white/80 px-5 py-3 text-sm text-muted-foreground shadow-sm">
               <LineChart className="h-4 w-4 text-primary" aria-hidden="true" />
-              <span className="font-semibold text-foreground">週次アップデートで因果とタイミングを同時に管理</span>
+              <span className="font-semibold text-foreground">ZENナビゲーションで因果とタイミングを同時に管理</span>
               <span className="hidden h-1.5 w-1.5 rounded-full bg-slate-300 sm:inline-flex" />
-              <span>経営会議の準備時間▲46%（例）</span>
+              <span>経営会議の準備時間▲68%（例）</span>
             </div>
           </div>
           <figure className="relative overflow-hidden rounded-[36px] border border-slate-200/70 bg-white/60 shadow-elegant">
-            <div className="pointer-events-none absolute -left-24 top-24 h-48 w-48 rounded-full bg-sky-200/30 blur-3xl" />
+            <div className="pointer-events-none absolute -left-24 top-24 h-48 w-48 rounded-full bg-indigo-200/30 blur-3xl" />
             <div className="pointer-events-none absolute -right-16 bottom-16 h-52 w-52 rounded-full bg-primary/20 blur-3xl" />
             <div className="absolute right-6 top-6 flex items-center gap-2 rounded-full border border-white/60 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-slate-500">
-              STRATEGY MAP
+              ZEN SIGNAL MAP
             </div>
             <img
               src={problemInfographic}
@@ -288,14 +287,14 @@ const ProblemSection = () => {
               decoding="async"
             />
             <figcaption className="relative flex flex-col gap-3 border-t border-slate-200/60 bg-white/90 px-6 py-5 text-left">
-              <p className="text-sm font-semibold text-foreground">外部シグナル→粗利・キャッシュ→意思決定ログを一枚で同期。</p>
+              <p className="text-sm font-semibold text-foreground">外部シグナル→粗利・キャッシュ→意思決定ログをZENが一枚で同期。</p>
               <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
                 <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 font-semibold uppercase tracking-[0.28em] text-slate-500">
                   TRUST
                 </span>
                 <span>専門家ヒアリング60社分のパターン（例）</span>
                 <span className="hidden h-1.5 w-1.5 rounded-full bg-slate-300 sm:inline-flex" />
-                <span>週次で更新される実務ダッシュボード</span>
+                <span>週次で更新されるZENナビゲーションダッシュボード</span>
               </div>
             </figcaption>
           </figure>

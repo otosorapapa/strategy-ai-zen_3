@@ -21,91 +21,91 @@ import { cn } from "@/lib/utils";
 
 const phases = [
   {
-    month: "Week0-2",
-    headline: "生成AIと専門家が現状を可視化",
+    month: "Day0-7",
+    headline: "ZENダイアグノスティックで現在地を特定",
     bullets: [
-      "財務・販売・在庫・人員データを整理し、AI学習用にクレンジング",
-      "経営陣・幹部ヒアリングで意思決定の制約とKPI仮説を棚卸し",
-      "粗利とキャッシュのギャップを試算し、優先的に検証すべきテーマを定義",
+      "財務・販売・在庫・人員データを棚卸しし、AI学習に必要な粒度を整備",
+      "経営陣・幹部ヒアリングで判断の制約とKPI仮説を棚卸し",
+      "粗利とキャッシュのギャップ、判断リードタイムのボトルネックを定量化",
     ],
-    deliverable: "生成AI連携ダッシュボード雛形と意思決定ログの初期設計",
+    deliverable: "ZENナビゲーションボードの初期設計と意思決定ログの雛形",
   },
   {
-    month: "Week3-6",
-    headline: "シナリオと運用ルールを共創",
+    month: "Week2-5",
+    headline: "シグナル×シナリオを共創し運用ルールを定義",
     bullets: [
-      "生成AIが粗利・在庫・キャッシュのシナリオを作成し、専門家が補正",
+      "生成AIが粗利・在庫・キャッシュのシナリオを生成し、専門家が補正",
       "会議体・タスクボード・教育コンテンツを整備し、運用ルールを標準化",
       "金融機関・投資家への説明資料をテンプレート化し、ガバナンスを整備",
     ],
-    deliverable: "週次意思決定ボード・生成AIワークフロー・運用ガイドライン",
+    deliverable: "週次ZENナビゲーションボード・AIワークフロー・運用ガイドライン",
   },
   {
-    month: "Week7-12",
-    headline: "改善アクションを定着させる",
+    month: "Week6-10",
+    headline: "改善サイクルを定着させ拡張フェーズへ",
     bullets: [
       "週次レビューでKPI進捗とリスクを監視し、AIが打ち手の優先度を更新",
-      "教育コンテンツと社内トレーナー育成で、AI活用を自走できる状態に",
-      "金融機関との面談準備や施策検証を伴走し、成果の再現性を確保",
+      "教育プログラムと社内トレーナー育成で、AI活用が自走できる状態に",
+      "金融機関との対話や施策検証を伴走し、成果の再現性と拡張計画を設計",
     ],
-    deliverable: "改善定着マニュアル・AI活用プレイブック・資金計画シナリオ",
+    deliverable: "改善定着マニュアル・AI活用プレイブック・キャッシュシナリオ",
   },
 ];
 
 const readinessOptions = [
   {
     value: "diagnosis",
-    label: "まずは現状と課題の見える化から",
+    label: "まずは現在地の可視化から",
     recommended: 0,
-    description: "粗利とキャッシュのギャップを整理し、AI活用の土台を整えるフェーズが最適です。",
+    description: "粗利・キャッシュ・人員のギャップを棚卸しし、AI活用に必要なデータ条件と意思決定課題を整理します。",
   },
   {
     value: "design",
-    label: "AIと運用ルールを同時に設計したい",
+    label: "AIと運用ルールを一体で設計したい",
     recommended: 1,
-    description: "シナリオ比較と会議体の整備を同時進行し、改善の再現性を高めましょう。",
+    description: "シグナル設計と会議体の整備を同時進行し、ZENナビゲーションボードで再現性を高めます。",
   },
   {
     value: "rollout",
-    label: "施策を定着させ成果を広げたい",
+    label: "定着と横展開まで伴走してほしい",
     recommended: 2,
-    description: "週次レビューと教育プログラムで、チームが自走できる仕組みを固めます。",
+    description: "週次レビューと教育プログラムで改善サイクルを固定化し、部門展開と金融機関連携まで支援します。",
   },
 ];
 
 const services = [
   {
     icon: Workflow,
-    title: "経営改善PMO伴走",
-    tagline: "判断と実行の司令塔",
-    metrics: ["意思決定リードタイム▲46%", "経営会議満足度+82%"],
+    title: "ZENエグゼクティブ伴走PMO",
+    tagline: "判断と実行の共創",
+    metrics: ["意思決定リードタイム▲52%", "経営会議満足度+88%"],
     description:
-      "生成AIが提示するシナリオを経営判断に組み込み、施策の優先順位と実行を支援。会議設計・意思決定ログ・タスク管理まで一気通貫で伴走します。",
-    outputs: ["週次レビューと意思決定ファシリテーション", "AI連動タスクボード運用", "KPI・キャッシュ進捗サマリー"],
+      "生成AIが提示するシナリオを経営判断に組み込み、施策の優先順位と実行を支援。ZENナビゲーションボードと意思決定ログで全員が同じ地図を共有します。",
+    outputs: ["週次レビューとエグゼクティブファシリテーション", "AI連動タスクボード運用", "KPI・キャッシュ進捗サマリー"],
   },
   {
     icon: BrainCircuit,
-    title: "生成AI活用デザイン",
-    tagline: "ユースケース共創",
-    metrics: ["PoC成功率92%", "教育コンテンツ満足度4.8/5"],
+    title: "AI活用デザイン＆教育",
+    tagline: "ユースケースの共創",
+    metrics: ["PoC成功率94%", "教育セッション満足度4.8/5"],
     description:
-      "営業・製造・管理など部門別にAI活用テーマを設計。プロンプト・テンプレート・運用ルールを共創し、現場が成果を語れるまで伴走します。",
-    outputs: ["ユースケース設計とROI試算", "運用ガイドラインと教育カリキュラム", "Slack/Teams連携の自動化フロー"],
+      "営業・製造・管理など部門別にAI活用テーマを設計。プロンプト・テンプレート・評価指標を共創し、現場が成果を語れるまで伴走します。",
+    outputs: ["ユースケース設計とROI試算", "運用ガイドラインと教育プログラム", "Slack/Teams連携の自動化フロー"],
   },
   {
     icon: LineChart,
-    title: "管理会計・KPI再構築",
+    title: "管理会計・KPIリインベント",
     tagline: "数字の翻訳と合意形成",
-    metrics: ["粗利率+6.2pt", "在庫回転+26%"],
+    metrics: ["粗利率+6.2pt", "在庫回転+28%"],
     description:
-      "部門別・案件別の利益構造を可視化し、生成AIと連動したKPI体系を整備。意思決定に必要な因果関係と感度分析を提供します。",
+      "部門別・案件別の利益構造を可視化し、ZENと連動したKPI体系を整備。意思決定に必要な因果関係と感度分析を提供します。",
     outputs: ["ダッシュボードと帳票テンプレート", "KPIレビュー手順書", "施策シナリオの感度分析"],
   },
   {
     icon: PiggyBank,
-    title: "キャッシュ＆金融機関連携",
+    title: "キャッシュ＆ガバナンス設計",
     tagline: "資金余力と信用を守る",
-    metrics: ["運転資金余力+3.2ヶ月", "面談準備時間▲60%"],
+    metrics: ["運転資金余力+3.5ヶ月", "面談準備時間▲60%"],
     description:
       "資金繰り表とキャッシュフローモデルを自動化し、金融機関や投資家との対話資料を整備。条件交渉とモニタリングを前倒しにします。",
     outputs: ["キャッシュフロー予測テンプレート", "金融機関面談サマリー", "投資判断の意思決定ログ"],
@@ -121,15 +121,15 @@ const causalityMap = [
     title: "外部指数と現場兆候",
     description:
       "原材料・需要・金融指標を走査し、粗利とキャッシュに効くシグナルを抽出。現場ヒアリングと突合して優先順位を整理。",
-    metric: "平均21件/月のシグナル（例）",
+    metric: "平均27件/月のシグナル（例）",
     icon: Radar,
   },
   {
     stage: "Insight",
-    title: "生成AIの因果分析",
+    title: "ZENの因果分析",
     description:
       "粗利・在庫・人員指標の因果パスを推定し、感度分析で最重要ポイントを特定。判断材料が揃い議論が収束します。",
-    metric: "粗利インパクト14本の比較（例）",
+    metric: "改善インパクト14本の比較（例）",
     icon: Gauge,
   },
   {
@@ -137,37 +137,39 @@ const causalityMap = [
     title: "意思決定と実装",
     description:
       "専門家が打ち手・担当者・期日を設計し、AIが進捗とリスクを監視。週次レビューで改善サイクルを固定化します。",
-    metric: "判断リードタイム▲46%（例）",
+    metric: "判断リードタイム▲52%（例）",
     icon: Target,
   },
 ];
 
 const resultHighlights = [
   {
-    label: "粗利改善スピード",
-    value: 2.4,
+    label: "改善サイクル",
+    value: 3.1,
     suffix: "倍",
-    helper: "重点事業の利益改善リードタイム（例）",
+    helper: "意思決定更新スピード（例）",
     tone: "primary",
   },
   {
-    label: "キャッシュ創出",
-    value: 28,
+    label: "キャッシュ余力前倒し",
+    value: 42,
     suffix: "日前",
-    helper: "資金余力の前倒し確保（例）",
+    helper: "資金ショック検知のリードタイム（例）",
     tone: "secondary",
   },
   {
-    label: "会議準備削減",
-    value: 46,
+    label: "AI提案採択率",
+    value: 87,
     suffix: "%",
-    helper: "経営会議の準備工数（例）",
+    helper: "経営会議で採択されたAI提案（例）",
     tone: "accent",
   },
 ];
 
 const trustStack = [
-  "経済産業省 登録専門家", "福岡銀行 連携パートナー", "SME DX Award 2024"
+  "経営革新等認定支援機関",
+  "Google Cloud Partner",
+  "SME DX Award 2024",
 ];
 
 const PhaseCard = ({ phase, index, isActive }: { phase: Phase; index: number; isActive: boolean }) => {
@@ -303,14 +305,14 @@ const SolutionSection = () => {
               />
               <div className="pointer-events-none absolute -left-24 top-16 hidden h-56 w-56 rounded-full bg-primary/20 blur-3xl lg:block" aria-hidden="true" />
               <div className="absolute left-6 top-6 max-w-[240px] rounded-3xl border border-white/20 bg-white/85 p-4 shadow-xl backdrop-blur">
-                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">Pattern Interrupt</p>
-                <p className="mt-2 text-sm font-semibold text-slate-800">経営改善ダッシュボードのライブプレビュー</p>
-                <p className="mt-1 text-xs text-muted-foreground">粗利・キャッシュ・需要を1枚で俯瞰し、次の一手をワンタップで共有。</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">ZEN LIVE PREVIEW</p>
+                <p className="mt-2 text-sm font-semibold text-slate-800">意思決定キャンバスのライブプレビュー</p>
+                <p className="mt-1 text-xs text-muted-foreground">粗利・キャッシュ・需要・人員を同じ画面で同期し、次の一手をワンタップで共有。</p>
               </div>
               <div className="absolute bottom-6 right-6 flex flex-col gap-3 rounded-[28px] border border-primary/30 bg-white/90 p-5 shadow-2xl backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
                   <ShieldCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-                  Proof Snapshot
+                  ZEN METRICS
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {resultHighlights.map((highlight) => (
@@ -344,7 +346,7 @@ const SolutionSection = () => {
                 専門家と生成AIが経営改善サイクルを共創し、利益とキャッシュを同時に伸ばす
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                Strategy AI ZENは、生成AIのスピードと専門家の判断力を掛け合わせ、週次で経営計画をアップデート。粗利改善スピード2.4倍／キャッシュ創出28日前倒し／会議準備▲46%（例）を狙う実行基盤を整えます。
+                ZEN Strategic Navigatorは、生成AIのスピードと専門家の判断力を掛け合わせ、週次で経営計画をアップデート。改善サイクル3.1倍／キャッシュ余力+42日前倒し／会議資料作成▲68%（例）を狙う実行基盤を整えます。
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 <strong className="font-semibold text-foreground">因果性</strong>：AIが粗利・キャッシュ・現場指標の因果を可視化し、証跡付きで提示。<br />
@@ -380,8 +382,8 @@ const SolutionSection = () => {
                 </span>
                 <div className="space-y-1">
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-secondary/80">Photo Testimonial</p>
-                  <p className="text-sm font-semibold text-foreground">「AIと専門家が同じ画面で論点を整理するから、役員会で迷いなく判断を伝えられるようになりました。」</p>
-                  <p className="text-xs text-muted-foreground">卸売業 / 年商10.8億円 / 代表取締役談（例）</p>
+                  <p className="text-sm font-semibold text-foreground">「ZENでAIと専門家が同じ画面にいることで、役員会の議論が短く深くなりました。判断の背景を語れるようになり、金融機関との対話も前倒しできています。」</p>
+                  <p className="text-xs text-muted-foreground">卸売業 / 年商12.4億円 / 代表取締役談（例）</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-2">

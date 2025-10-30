@@ -18,13 +18,36 @@ const supportItems = [
     icon: Lock,
     title: "データガバナンスと守秘体制",
     description:
-      "NDA締結・暗号化・アクセス権限管理を徹底。契約終了時は速やかにデータを削除し、監査対応ログも共有します。",
+      "暗号化クラウドとアクセス権限管理を徹底。NDA締結・監査ログ共有・契約終了時のデータ削除まで透明性を担保します。",
   },
   {
     icon: Award,
     title: "信頼を裏付ける認定と実績",
     description:
-      "経営革新等支援機関としての認定に加え、九州を中心に100社以上の再生プロジェクトを支援。金融機関との共同プロジェクトも経験豊富です。",
+      "経営革新等支援機関としての認定に加え、九州を中心に100社以上の再生プロジェクトを支援。金融機関との共同プロジェクトも豊富です。",
+  },
+];
+
+const processSteps = [
+  {
+    label: "STEP 1",
+    title: "初回相談（30分）",
+    detail: "経営課題と外部環境を棚卸し。AIで抽出した初期シグナルと優先論点をその場で共有します。",
+  },
+  {
+    label: "STEP 2",
+    title: "仮診断（2週間）",
+    detail: "データを預かり、生成AIが粗利・キャッシュの歪みをヒートマップ化。診断士が現場ヒアリングを実施。",
+  },
+  {
+    label: "STEP 3",
+    title: "再生設計ワークショップ",
+    detail: "複数シナリオを比較し、優先施策と数値目標を合意。金融機関へ伝えるストーリーも整理します。",
+  },
+  {
+    label: "STEP 4",
+    title: "実行伴走（3〜12ヶ月）",
+    detail: "週次レビューと月次ボードで進捗とリスクを確認。必要に応じて計画をリライトし続けます。",
   },
 ];
 
@@ -37,11 +60,24 @@ const SecurityPrivacySection = () => {
             Support System
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            再生の道のりを一緒に歩むための、信頼と守りの体制
+            再生の道のりを一緒に歩むための、導入ステップと伴走体制
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            机上の理論では終わらせません。判断の根拠、現場の納得、データの安心を揃えるための仕組みをセットで提供します。
+            机上の理論では終わらせません。判断の根拠、現場の納得、データの安心を揃えるための仕組みとプロセスをセットで提供します。
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-12 grid gap-4 rounded-[32px] border border-[#0b1f3f]/12 bg-white p-6 shadow-[0_25px_60px_rgba(6,21,48,0.12)] sm:grid-cols-4"
+        >
+          {processSteps.map((step) => (
+            <div key={step.label} className="space-y-3 rounded-2xl border border-[#0584c6]/20 bg-[#f4fbff] p-4 text-left">
+              <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]/80">{step.label}</span>
+              <h3 className="text-base font-semibold text-[#0b1f3f]">{step.title}</h3>
+              <p className="text-xs leading-relaxed text-[#1e3359]/75">{step.detail}</p>
+            </div>
+          ))}
         </ScrollReveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">

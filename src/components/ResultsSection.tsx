@@ -45,10 +45,10 @@ const ResultsSection = () => {
             Impact｜結果で語る
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            「再生の設計図」が描かれた瞬間、数字と行動が同じ未来を向き始める
+            「再生の設計図」が整うと、数字と行動が同じ未来を指すコンパスに変わる
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            仮説を示すだけでは再生は進みません。ZENは実行に耐えるプロセスを作り込み、粗利・資金・人材の波形を同時に整えることで、経営者が次のステップを迷いなく選べる状態を守り抜きます。
+            仮説を語るだけでは反転は起こりません。ZENは実行に耐えるプロセスを作り込み、粗利・資金・人材の波形を同時に整えることで、経営者が迷いなく次のステップを選べる状態を守り抜きます。
           </p>
         </ScrollReveal>
 

@@ -1,30 +1,98 @@
-import { AlertTriangle, BarChart3, CalendarClock, Users } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import {
+  AlertTriangle,
+  ArrowRight,
+  BarChart3,
+  CalendarClock,
+  Users,
+} from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import problemInfographic from "@/assets/problem-infographic.svg";
 
-const painPoints = [
+type PainPoint = {
+  badge: string;
+  description: string;
+  icon: LucideIcon;
+  insight: string;
+  signal: string;
+  title: string;
+};
+
+const painPoints: PainPoint[] = [
   {
+    badge: "症状 01",
     title: "数字と現場が別々に動く",
     description:
-      "粗利とキャッシュの動きが合わない。報告資料は何種類も存在し、意思決定の場に辿り着くまでに熱量が薄れてしまう。",
-    signal: "粗利率▲2.5pt／資金残高▲1.2ヶ月（例）",
+      "粗利とキャッシュの波形が噛み合わず、資料ごとに前提が異なる。経営会議に到達する頃には、判断の熱量が薄れてしまう。",
+    signal: "粗利率▲2.5pt｜運転資金カバー▲1.2ヶ月（例）",
+    insight: "報告経路が分断 → 合意形成まで平均7日遅延。現場は「どの数字を信じるか」で議論が止まる。",
+    icon: AlertTriangle,
   },
   {
+    badge: "症状 02",
     title: "生成AIが成果につながらない",
     description:
-      "チャットの実験は進むが、現場に渡るのは読み切れない長文。活用の評価指標が定まらず、採択された施策は断片的に終わる。",
-    signal: "AI提案の採択率38%→停滞",
+      "PoCは進んでも、現場に届くのは読み切れないテキスト。評価指標が曖昧で、採択された施策が断片的に終わる。",
+    signal: "AI提案の採択率38%｜ROI評価は未実装",
+    insight: "AI活用のKPIが欠如 → 投資判断が感覚的になり、改善の優先順位が定まらない。",
+    icon: AlertTriangle,
   },
   {
+    badge: "症状 03",
     title: "対外説明が後手に回る",
     description:
-      "金融機関・主要取引先との面談準備が属人化。資料更新に追われ、交渉と意思決定が常に“事後説明”になる。",
-    signal: "面談準備時間+40%／条件交渉の先延ばし",
+      "金融機関・主要取引先との面談準備が属人化し、更新資料の整合に追われる。説明は常に“事後報告”で、交渉が後ろ倒しに。",
+    signal: "面談準備時間+40%｜金融機関の追加質問が2倍",
+    insight: "事前シナリオが不足 → 交渉リードタイムが長期化し、資金繰りの選択肢が目減りする。",
+    icon: AlertTriangle,
+  },
+];
+
+const executiveSignals = [
+  {
+    label: "収益と資金の乖離",
+    value: "▲2.5pt × ▲1.2ヶ月",
+    note: "粗利率低下と運転資金減少が同時進行。",
+  },
+  {
+    label: "AI活用の定着度",
+    value: "採択率38%",
+    note: "PoC止まりで現場のKPIに接続できない。",
+  },
+  {
+    label: "対外説明のタイムラグ",
+    value: "+40%",
+    note: "資料更新が増え、交渉の主導権を失いがち。",
+  },
+];
+
+const narrativeFlow = [
+  {
+    stage: "Before",
+    title: "情報が散在し、意思決定が遅延",
+    metric: "資料更新 12本/月",
+    description:
+      "部門ごとに数字の定義が異なり、経営会議は“数字合わせ”で終わる。現場には優先順位が降りてこない。",
+  },
+  {
+    stage: "Intervention",
+    title: "生成AIと専門家で設計図化",
+    metric: "判断会議 週次化",
+    description:
+      "AIが財務と市場を横断解析し、診断士が現場ヒアリングで実行条件を整理。単一の意思決定ボードに情報を統合。",
+  },
+  {
+    stage: "After",
+    title: "判断軸が揃い、行動が先手に",
+    metric: "決裁リードタイム 1/3",
+    description:
+      "シナリオごとのアクションプランが共有され、部門横断で同じ未来像に沿って動ける。金融機関への説明も一貫。",
   },
 ];
 
 const ProblemSection = () => {
   return (
-    <section className="fade-in-section bg-[#04112a] py-20 text-white">
+    <section className="fade-in-section bg-[#04112a] py-24 text-white">
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
@@ -38,42 +106,166 @@ const ProblemSection = () => {
           </p>
         </ScrollReveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
+          <ScrollReveal
+            variant="fade-up"
+            className="flex h-full flex-col justify-between gap-6 rounded-[2rem] border border-white/12 bg-white/5 p-8 shadow-[0_35px_80px_rgba(5,20,45,0.55)]"
+          >
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
+                Executive Signal
+              </div>
+              <h3 className="text-left text-2xl font-semibold leading-snug text-white md:text-[1.75rem]">
+                数字・現場・資金のズレは、放置すると資金繰りの選択肢を確実に削ります。
+              </h3>
+              <p className="text-left text-sm leading-relaxed text-slate-200/90 md:text-[0.95rem]">
+                下記のシグナルが同時に表れている企業では、意思決定会議のリードタイムが平均で1.8倍に伸びています。早期に設計図を可視化し、判断の土台を揃えることが重要です。
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {executiveSignals.map((signal) => (
+                <div
+                  key={signal.label}
+                  className="flex flex-col rounded-2xl border border-cyan-300/20 bg-[#0a1f48]/60 p-4"
+                >
+                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
+                    {signal.label}
+                  </span>
+                  <span className="mt-3 text-xl font-semibold text-cyan-100">
+                    {signal.value}
+                  </span>
+                  <span className="mt-2 text-xs leading-relaxed text-slate-200/80">
+                    {signal.note}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal
+            as="figure"
+            variant="fade-up"
+            className="relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-[#0b264f] via-[#061632] to-[#010b1d] p-8 shadow-[0_35px_80px_rgba(1,11,29,0.55)]"
+          >
+            <div className="flex items-center justify-between gap-4 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
+              <span>Dual Coding</span>
+              <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.65rem] text-cyan-100">
+                課題マップ（要約）
+              </span>
+            </div>
+            <img
+              src={problemInfographic}
+              alt="収益低下・AI停滞・交渉遅延の関係性を示した課題マップ"
+              className="mt-6 w-full max-w-md self-center object-contain"
+              loading="lazy"
+            />
+            <figcaption className="mt-6 space-y-3 text-[0.9rem] leading-relaxed text-slate-200/85">
+              <p>
+                収益の漏れ・AI活用の停滞・対外説明の遅延は、同じ根にある「判断の設計図不在」が引き起こす連鎖です。視線誘導の矢印が示すとおり、数字と現場の分断が資金繰りの選択肢を削っています。
+              </p>
+              <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">
+                Proof Point｜再設計後は粗利+3.2pt／交渉回答スピード▲45%（例）
+              </p>
+            </figcaption>
+          </ScrollReveal>
+        </div>
+
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
           {painPoints.map((pain) => (
             <ScrollReveal
               key={pain.title}
               variant="fade-up"
-              className="flex h-full flex-col gap-4 rounded-3xl border border-white/12 bg-white/10 p-6 shadow-[0_25px_60px_rgba(2,8,20,0.45)]"
+              className="flex h-full flex-col gap-5 rounded-[1.8rem] border border-white/12 bg-white/5 p-6 shadow-[0_30px_70px_rgba(2,8,20,0.45)]"
             >
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/20 text-cyan-100">
-                <AlertTriangle className="h-6 w-6" aria-hidden="true" />
+              <div className="flex items-center justify-between gap-3">
+                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                  {pain.badge}
+                </span>
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
+                  <pain.icon className="h-5 w-5" aria-hidden="true" />
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-white">{pain.title}</h3>
-              <p className="text-sm leading-relaxed text-slate-200/90">{pain.description}</p>
-              <div className="mt-auto rounded-2xl border border-cyan-300/20 bg-[#0a1f48] p-4 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200/80">
-                {pain.signal}
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold text-white">{pain.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-200/90">{pain.description}</p>
+              </div>
+              <div className="rounded-2xl border border-cyan-300/20 bg-[#0a1f48]/70 p-4">
+                <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/70">
+                  経営指標シグナル
+                </span>
+                <p className="mt-2 text-sm font-semibold text-cyan-100">{pain.signal}</p>
+              </div>
+              <div className="mt-auto rounded-2xl border border-white/12 bg-white/[0.04] p-4">
+                <div className="flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+                  因果の洞察
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-slate-200/85">{pain.insight}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-16 rounded-[2rem] border border-cyan-300/20 bg-[#071a39]/80 p-8 shadow-[0_35px_80px_rgba(1,10,24,0.55)]"
+        >
+          <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
+            <div>
+              <span className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/85">
+                Narrative Visualization
+              </span>
+              <h3 className="mt-4 text-2xl font-semibold leading-snug text-white">
+                Before→介入→Afterを一枚で可視化し、全員が同じ未来を描ける状態へ。
+              </h3>
+            </div>
+            <p className="text-sm leading-relaxed text-slate-200/80 md:max-w-sm">
+              設計図の再構築は、課題の分解と優先順位付けを同時に行います。矢印の通り、ストーリーに沿って視線を誘導することで、役員会でも即座に理解が進みます。
+            </p>
+          </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {narrativeFlow.map((step, index) => (
+              <div
+                key={step.stage}
+                className="group relative flex h-full flex-col gap-4 rounded-2xl border border-white/12 bg-white/5 p-6"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
+                    {step.stage}
+                  </span>
+                  <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-100">
+                    {step.metric}
+                  </span>
+                </div>
+                <h4 className="text-lg font-semibold text-white">{step.title}</h4>
+                <p className="text-sm leading-relaxed text-slate-200/85">{step.description}</p>
+                {index < narrativeFlow.length - 1 && (
+                  <div className="mt-4 flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/70">
+                    Next
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
           <ScrollReveal
             variant="fade-up"
-            className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#093369] via-[#052147] to-[#031124] p-6 shadow-[0_30px_70px_rgba(5,20,45,0.55)]"
+            className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#093369] via-[#052147] to-[#031124] p-6 shadow-[0_35px_80px_rgba(5,20,45,0.55)]"
           >
             <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">
               <BarChart3 className="h-5 w-5" aria-hidden="true" />
               視点① データ
             </div>
             <p className="mt-4 text-sm leading-relaxed text-slate-200/90">
-              粗利率、在庫回転、顧客単価、離脱率。生成AIがこれらを横断的に解析し、どこで収益が漏れているかを特定します。
+              粗利率、在庫回転、顧客単価、離脱率。生成AIがこれらを横断解析し、どこで収益が漏れているかを特定します。
             </p>
           </ScrollReveal>
 
           <ScrollReveal
             variant="fade-up"
-            className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#093369] via-[#052147] to-[#031124] p-6 shadow-[0_30px_70px_rgba(5,20,45,0.55)]"
+            className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#093369] via-[#052147] to-[#031124] p-6 shadow-[0_35px_80px_rgba(5,20,45,0.55)]"
           >
             <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">
               <Users className="h-5 w-5" aria-hidden="true" />
@@ -86,7 +278,7 @@ const ProblemSection = () => {
 
           <ScrollReveal
             variant="fade-up"
-            className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#093369] via-[#052147] to-[#031124] p-6 shadow-[0_30px_70px_rgba(5,20,45,0.55)]"
+            className="rounded-3xl border border-white/15 bg-gradient-to-br from-[#093369] via-[#052147] to-[#031124] p-6 shadow-[0_35px_80px_rgba(5,20,45,0.55)]"
           >
             <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">
               <CalendarClock className="h-5 w-5" aria-hidden="true" />

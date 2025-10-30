@@ -42,13 +42,13 @@ const ResultsSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Impact
+            Impact｜結果で語る
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            「再生の設計図」が描かれたとき、数字と行動がつながり始める
+            「再生の設計図」が描かれた瞬間、数字と行動が同じ未来を向き始める
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            仮説を示すだけでは意味がありません。ZENは実行に耐える再生プロセスを作り込み、経営者が次のステップを選び取れる状態を守り抜きます。
+            仮説を示すだけでは再生は進みません。ZENは実行に耐えるプロセスを作り込み、粗利・資金・人材の波形を同時に整えることで、経営者が次のステップを迷いなく選べる状態を守り抜きます。
           </p>
         </ScrollReveal>
 

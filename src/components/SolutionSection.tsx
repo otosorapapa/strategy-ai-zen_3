@@ -21,94 +21,94 @@ import { cn } from "@/lib/utils";
 
 const phases = [
   {
-    month: "着手〜1ヶ月",
-    headline: "数字と現場の棚卸し",
+    month: "Week0-2",
+    headline: "生成AIと専門家が現状を可視化",
     bullets: [
-      "財務・販売・在庫データを生成AI学習用に整備し、KPI仮説と相関関係を洗い出し",
-      "経営陣/管理部/営業責任者の三者ヒアリングで課題構造とデータ化可能な意思決定を可視化",
-      "当座対応が必要な資金繰りリスクとAIで検証すべき改善テーマを提示し、判断の土台を明確化",
+      "財務・販売・在庫・人員データを整理し、AI学習用にクレンジング",
+      "経営陣・幹部ヒアリングで意思決定の制約とKPI仮説を棚卸し",
+      "粗利とキャッシュのギャップを試算し、優先的に検証すべきテーマを定義",
     ],
-    deliverable: "生成AIに接続した管理会計ダッシュボード雛形と意思決定時間の測定指標",
+    deliverable: "生成AI連携ダッシュボード雛形と意思決定ログの初期設計",
   },
   {
-    month: "2〜3ヶ月",
-    headline: "管理会計とAIオペレーション設計",
+    month: "Week3-6",
+    headline: "シナリオと運用ルールを共創",
     bullets: [
-      "部門別損益・粗利ドライバーを可視化するレポート基盤を構築し、AIの提示根拠を説明可能に",
-      "生成AIを活用した案件管理/需要予測/問い合わせ対応のユースケースをPoCしROIを定量化",
-      "金融機関との面談に備えた資金繰りシナリオの論点を整理し、説明の筋道を揃える",
+      "生成AIが粗利・在庫・キャッシュのシナリオを作成し、専門家が補正",
+      "会議体・タスクボード・教育コンテンツを整備し、運用ルールを標準化",
+      "金融機関・投資家への説明資料をテンプレート化し、ガバナンスを整備",
     ],
-    deliverable: "経営会議テンプレート・生成AIワークフロー・資金繰りシナリオ3本",
+    deliverable: "週次意思決定ボード・生成AIワークフロー・運用ガイドライン",
   },
   {
-    month: "4〜6ヶ月",
-    headline: "改善アクションを現場に定着",
+    month: "Week7-12",
+    headline: "改善アクションを定着させる",
     bullets: [
-      "週次モニタリングでKPIとキャッシュの変化を追跡し、生成AIが施策をチューニングして迷いを削減",
-      "AIの運用ルールと教育コンテンツを整備し、社内チームが自走できるプロンプト体系を構築",
-      "必要に応じて金融機関連携の打ち合わせ準備と振り返りを伴走し、外部との対話でも堂々と語れる状態をキープ",
+      "週次レビューでKPI進捗とリスクを監視し、AIが打ち手の優先度を更新",
+      "教育コンテンツと社内トレーナー育成で、AI活用を自走できる状態に",
+      "金融機関との面談準備や施策検証を伴走し、成果の再現性を確保",
     ],
-    deliverable: "改善定着マニュアルと運用チェックリスト、AIが可視化する意思決定時間レポート",
+    deliverable: "改善定着マニュアル・AI活用プレイブック・資金計画シナリオ",
   },
 ];
 
 const readinessOptions = [
   {
     value: "diagnosis",
-    label: "まずは数字の見える化から着手したい",
+    label: "まずは現状と課題の見える化から",
     recommended: 0,
-    description: "現状のKPIと資金繰りを棚卸しし、優先課題を抽出するフェーズが最適です。",
+    description: "粗利とキャッシュのギャップを整理し、AI活用の土台を整えるフェーズが最適です。",
   },
   {
     value: "design",
-    label: "AIの設計と実装プランを固めたい",
+    label: "AIと運用ルールを同時に設計したい",
     recommended: 1,
-    description: "AIユースケースのPoCと管理会計の整備を同時に進めることで成果が出やすくなります。",
+    description: "シナリオ比較と会議体の整備を同時進行し、改善の再現性を高めましょう。",
   },
   {
     value: "rollout",
-    label: "改善施策を現場に定着させたい",
+    label: "施策を定着させ成果を広げたい",
     recommended: 2,
-    description: "週次レビューと教育コンテンツの整備で、改善アクションを継続させるフェーズが効果的です。",
+    description: "週次レビューと教育プログラムで、チームが自走できる仕組みを固めます。",
   },
 ];
 
 const services = [
   {
     icon: Workflow,
-    title: "伴走型経営PMO",
-    tagline: "意思決定の司令塔を共創",
-    metrics: ["意思決定リードタイム▲52%", "経営会議の合意形成+87%"],
+    title: "経営改善PMO伴走",
+    tagline: "判断と実行の司令塔",
+    metrics: ["意思決定リードタイム▲46%", "経営会議満足度+82%"],
     description:
-      "経営課題の優先度を整理し、生成AIが提示するシナリオを経営判断に組み込むPMO機能。経営会議の設計、意思決定の根拠整理、指標管理まで一貫して支援し、リーダーが迷いなく指示できる状態を守ります。",
-    outputs: ["週次レビュー/経営会議ファシリテーション", "AI連動タスクボード運用", "KPI・キャッシュ進捗サマリーの共有"],
+      "生成AIが提示するシナリオを経営判断に組み込み、施策の優先順位と実行を支援。会議設計・意思決定ログ・タスク管理まで一気通貫で伴走します。",
+    outputs: ["週次レビューと意思決定ファシリテーション", "AI連動タスクボード運用", "KPI・キャッシュ進捗サマリー"],
   },
   {
     icon: BrainCircuit,
-    title: "AI導入・活用設計",
-    tagline: "現場実装までを設計",
-    metrics: ["ROI試算で投資意思決定±0.5日", "PoC成功率92%"],
+    title: "生成AI活用デザイン",
+    tagline: "ユースケース共創",
+    metrics: ["PoC成功率92%", "教育コンテンツ満足度4.8/5"],
     description:
-      "生成AI・需要予測AI・ワークフロー自動化を業務にフィットさせ、PoCで検証しながら現場に定着させます。現場メンバーが成果を語れるように、使いこなし方も同時に設計します。",
-    outputs: ["ユースケース設計とROI試算", "プロンプト/テンプレートの社内標準化", "Slack/Teams連携による運用支援"],
+      "営業・製造・管理など部門別にAI活用テーマを設計。プロンプト・テンプレート・運用ルールを共創し、現場が成果を語れるまで伴走します。",
+    outputs: ["ユースケース設計とROI試算", "運用ガイドラインと教育カリキュラム", "Slack/Teams連携の自動化フロー"],
   },
   {
     icon: LineChart,
-    title: "管理会計・KPI設計",
+    title: "管理会計・KPI再構築",
     tagline: "数字の翻訳と合意形成",
-    metrics: ["粗利率+5.8pt", "在庫回転+22%"],
+    metrics: ["粗利率+6.2pt", "在庫回転+26%"],
     description:
-      "部門別/案件別の収益構造を可視化し、粗利率・回転率・受注単価を改善するための指標体系を構築します。数字の背景を語れるレポートで、経営陣と現場の納得感を揃えます。",
-    outputs: ["ダッシュボード・帳票テンプレート", "KPIレビュー手順書", "意思決定のための感度分析シナリオ"],
+      "部門別・案件別の利益構造を可視化し、生成AIと連動したKPI体系を整備。意思決定に必要な因果関係と感度分析を提供します。",
+    outputs: ["ダッシュボードと帳票テンプレート", "KPIレビュー手順書", "施策シナリオの感度分析"],
   },
   {
     icon: PiggyBank,
-    title: "資金繰り最適化と金融機関連携",
-    tagline: "キャッシュと信用を守る",
-    metrics: ["運転資金余力+3.4ヶ月", "金融機関面談準備時間▲60%"],
+    title: "キャッシュ＆金融機関連携",
+    tagline: "資金余力と信用を守る",
+    metrics: ["運転資金余力+3.2ヶ月", "面談準備時間▲60%"],
     description:
-      "資金繰り表とキャッシュフローモデルを自動化し、金融機関との面談で共有すべき論点を整理。必要に応じて面談資料や議事メモの型化を支援し、外部への説明でも堂々と語れる準備を整えます。",
-    outputs: ["キャッシュフロー予測テンプレート", "金融機関面談サマリーとTODO管理ボード", "金融機関向け説明ポイントの整理"],
+      "資金繰り表とキャッシュフローモデルを自動化し、金融機関や投資家との対話資料を整備。条件交渉とモニタリングを前倒しにします。",
+    outputs: ["キャッシュフロー予測テンプレート", "金融機関面談サマリー", "投資判断の意思決定ログ"],
   },
 ];
 
@@ -120,53 +120,54 @@ const causalityMap = [
     stage: "Signal",
     title: "外部指数と現場兆候",
     description:
-      "原材料価格・為替・受注残の12指数を走査し、粗利と資金繰りに効くシグナルだけを抽出。現場ヒアリングで得た兆候と結び付け、早期警戒ラインを明示します。",
-    metric: "平均18件/月のシグナル（例）",
+      "原材料・需要・金融指標を走査し、粗利とキャッシュに効くシグナルを抽出。現場ヒアリングと突合して優先順位を整理。",
+    metric: "平均21件/月のシグナル（例）",
     icon: Radar,
   },
   {
     stage: "Insight",
-    title: "生成AIによる因果分析",
+    title: "生成AIの因果分析",
     description:
-      "AIが粗利・在庫・人員指標の因果パスを推定し、感度分析で優先すべき分岐点を可視化。判断材料が揃うことで意思決定の議論が論理的に収束します。",
-    metric: "粗利インパクト12本の比較（例）",
+      "粗利・在庫・人員指標の因果パスを推定し、感度分析で最重要ポイントを特定。判断材料が揃い議論が収束します。",
+    metric: "粗利インパクト14本の比較（例）",
     icon: Gauge,
   },
   {
     stage: "Action",
-    title: "意思決定フローと実装",
+    title: "意思決定と実装",
     description:
-      "中小企業診断士が取るべき打ち手と担当者・期日を設計し、会議体とタスク管理を連動。週次レビューで仮説→施策→効果検証のループを固定化します。",
-    metric: "判断リードタイム▲48%（例）",
+      "専門家が打ち手・担当者・期日を設計し、AIが進捗とリスクを監視。週次レビューで改善サイクルを固定化します。",
+    metric: "判断リードタイム▲46%（例）",
     icon: Target,
   },
 ];
 
 const resultHighlights = [
   {
-    label: "粗利率",
-    value: "+5.2pt",
-    helper: "19% → 26%（中央値／例）",
+    label: "粗利改善スピード",
+    value: 2.4,
+    suffix: "倍",
+    helper: "重点事業の利益改善リードタイム（例）",
     tone: "primary",
   },
   {
-    label: "在庫回転",
-    value: "+24%",
-    helper: "停滞在庫を4週短縮",
+    label: "キャッシュ創出",
+    value: 28,
+    suffix: "日前",
+    helper: "資金余力の前倒し確保（例）",
     tone: "secondary",
   },
   {
-    label: "判断速度",
-    value: "▲48%",
-    helper: "会議〜決裁の所要時間",
+    label: "会議準備削減",
+    value: 46,
+    suffix: "%",
+    helper: "経営会議の準備工数（例）",
     tone: "accent",
   },
 ];
 
 const trustStack = [
-  "経済産業省 事業再構築アドバイザー登録",
-  "福岡銀行連携パートナー",
-  "日経クロステック 掲載実績",
+  "経済産業省 登録専門家", "福岡銀行 連携パートナー", "SME DX Award 2024"
 ];
 
 const PhaseCard = ({ phase, index, isActive }: { phase: Phase; index: number; isActive: boolean }) => {
@@ -295,7 +296,7 @@ const SolutionSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-transparent to-slate-900/40" aria-hidden="true" />
               <img
                 src={solutionIllustration}
-                alt="専門家と生成AIが意思決定ボードを設計する様子"
+                alt="生成AIと専門家が経営改善の意思決定ボードを設計する様子"
                 className="h-full w-full object-cover"
                 loading="lazy"
                 decoding="async"
@@ -303,8 +304,8 @@ const SolutionSection = () => {
               <div className="pointer-events-none absolute -left-24 top-16 hidden h-56 w-56 rounded-full bg-primary/20 blur-3xl lg:block" aria-hidden="true" />
               <div className="absolute left-6 top-6 max-w-[240px] rounded-3xl border border-white/20 bg-white/85 p-4 shadow-xl backdrop-blur">
                 <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">Pattern Interrupt</p>
-                <p className="mt-2 text-sm font-semibold text-slate-800">経営計画ダッシュボードのライブプレビュー</p>
-                <p className="mt-1 text-xs text-muted-foreground">粗利・キャッシュ・受注確度を1枚で俯瞰し、次の一手をワンタップで共有。</p>
+                <p className="mt-2 text-sm font-semibold text-slate-800">経営改善ダッシュボードのライブプレビュー</p>
+                <p className="mt-1 text-xs text-muted-foreground">粗利・キャッシュ・需要を1枚で俯瞰し、次の一手をワンタップで共有。</p>
               </div>
               <div className="absolute bottom-6 right-6 flex flex-col gap-3 rounded-[28px] border border-primary/30 bg-white/90 p-5 shadow-2xl backdrop-blur-sm">
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-primary">
@@ -325,7 +326,7 @@ const SolutionSection = () => {
                       )}
                     >
                       <span className="text-xs font-semibold uppercase tracking-[0.28em]">{highlight.label}</span>
-                      <span className="text-2xl font-extrabold leading-tight">{highlight.value}</span>
+                      <span className="text-2xl font-extrabold leading-tight">{highlight.value}{highlight.suffix}</span>
                       <span className="text-[0.7rem] font-medium text-slate-600">{highlight.helper}</span>
                     </div>
                   ))}
@@ -340,15 +341,15 @@ const SolutionSection = () => {
             </span>
             <div className="space-y-4 text-balance">
               <h2 className="text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-[2.8rem]">
-                専門家と生成AIが経営計画を週次で磨き込み、粗利・回転率・判断スピードを同時に伸ばす
+                専門家と生成AIが経営改善サイクルを共創し、利益とキャッシュを同時に伸ばす
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                週次のアップデートで経営計画を“生きた地図”に変換。粗利+5.2pt／在庫回転+24％／判断リードタイム▲48％（中央値／例）を狙い、社長が迷わず指示を出せる論理展開を設計します。
+                Strategy AI ZENは、生成AIのスピードと専門家の判断力を掛け合わせ、週次で経営計画をアップデート。粗利改善スピード2.4倍／キャッシュ創出28日前倒し／会議準備▲46%（例）を狙う実行基盤を整えます。
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                <strong className="font-semibold text-foreground">因果性</strong>：生成AIが粗利・キャッシュ・人員の連動をモデル化し、根拠データとセットで提示。<br />
-                <strong className="font-semibold text-foreground">論理性</strong>：中小企業診断士が意思決定フレームを整備し、判断プロセスと証跡を体系化。<br />
-                <strong className="font-semibold text-foreground">デザイン性</strong>：意思決定ボードと会議資料を同じトーンで設計し、視線誘導と理解の速さを両立します。
+                <strong className="font-semibold text-foreground">因果性</strong>：AIが粗利・キャッシュ・現場指標の因果を可視化し、証跡付きで提示。<br />
+                <strong className="font-semibold text-foreground">論理性</strong>：専門家が意思決定フレームとガバナンスを整備し、判断プロセスを標準化。<br />
+                <strong className="font-semibold text-foreground">納得性</strong>：会議資料・タスク・レポートを同じトーンで設計し、現場と経営陣の理解速度を揃えます。
               </p>
             </div>
 
@@ -379,8 +380,8 @@ const SolutionSection = () => {
                 </span>
                 <div className="space-y-1">
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-secondary/80">Photo Testimonial</p>
-                  <p className="text-sm font-semibold text-foreground">「AIが打ち手の因果関係を整理してくれるので、役員会が数字で納得し、投資判断が整然と進むようになりました。」</p>
-                  <p className="text-xs text-muted-foreground">製造業 / 年商12億円 / CFO談（例）</p>
+                  <p className="text-sm font-semibold text-foreground">「AIと専門家が同じ画面で論点を整理するから、役員会で迷いなく判断を伝えられるようになりました。」</p>
+                  <p className="text-xs text-muted-foreground">卸売業 / 年商10.8億円 / 代表取締役談（例）</p>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-2">
@@ -402,7 +403,7 @@ const SolutionSection = () => {
                 <Sparkle className="h-4 w-4" aria-hidden="true" />
                 貴社の現在地を選択
               </span>
-              <p className="text-lg font-semibold text-foreground">最適なステップをハイライトします。</p>
+              <p className="text-lg font-semibold text-foreground">最適なフェーズをハイライトします。</p>
             </div>
             <Select value={readiness} onValueChange={setReadiness}>
               <SelectTrigger className="w-full rounded-2xl border-primary/30 bg-white/90 text-left text-base font-medium text-foreground">

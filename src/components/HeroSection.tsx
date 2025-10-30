@@ -1,4 +1,3 @@
-import heroImage from "@/assets/hero-consulting.jpg";
 import blueprintImage from "@/assets/dashboard-preview.jpg";
 import { Button, buttonVariants } from "@/components/ui/button";
 import AnimatedCounter from "@/components/AnimatedCounter";
@@ -194,12 +193,9 @@ const HeroSection = () => {
           <div className="space-y-6">
             <div className="relative overflow-hidden rounded-[40px] border border-white/15 bg-[#0b1f3f] shadow-[0_30px_80px_rgba(5,12,35,0.55)]">
               <div className="pointer-events-none absolute -left-24 top-16 h-48 w-48 rounded-full bg-cyan-500/20 blur-3xl" aria-hidden="true" />
-              <img
-                src={heroImage}
-                alt="生成AIダッシュボードを前に戦略を議論する専門家と経営者"
-                className="h-full max-h-[460px] w-full object-cover"
-                loading="eager"
-                fetchPriority="high"
+              <div
+                aria-hidden="true"
+                className="h-full min-h-[320px] max-h-[460px] w-full bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.22),_rgba(3,16,36,0.95))]"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#031024]/40 via-transparent to-[#0ef2ff]/10" aria-hidden="true" />
               <div className="absolute right-6 top-6 w-full max-w-[220px] rounded-3xl border border-cyan-200/30 bg-black/60 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.55)] backdrop-blur">

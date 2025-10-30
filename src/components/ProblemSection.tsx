@@ -2,12 +2,15 @@ import type { LucideIcon } from "lucide-react";
 import {
   AlertTriangle,
   ArrowRight,
+  ArrowUpRight,
   BarChart3,
   CalendarClock,
+  CheckCircle2,
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import problemInfographic from "@/assets/problem-infographic.svg";
+import strategyPlanning from "@/assets/strategy-planning.jpg";
 
 type PainPoint = {
   badge: string;
@@ -90,6 +93,12 @@ const narrativeFlow = [
   },
 ];
 
+const trustSignals = [
+  "中小企業庁 認定支援機関",
+  "再生・成長計画支援 42社",
+  "DX投資回収診断 共同監修",
+];
+
 const ProblemSection = () => {
   return (
     <section className="fade-in-section bg-[#04112a] py-24 text-white">
@@ -104,6 +113,54 @@ const ProblemSection = () => {
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
             勇気や根性だけでは再生は加速しません。市場の揺らぎ、資金の波形、現場の実感を同じキャンバスに載せ、「どこから、どんな順番で」動くのかを揃える仕組みが必要です。生成AIと専門家の視点を束ね、断片的な情報を“未来の設計図”として再構築します。
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-10 overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-[#0b2347] via-[#06152f] to-[#030b1d] p-8 shadow-[0_28px_70px_rgba(3,14,34,0.55)]"
+        >
+          <div className="grid items-center gap-6 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
+            <figure className="relative h-full w-full overflow-hidden rounded-[1.6rem] border border-white/10">
+              <img
+                src={strategyPlanning}
+                alt="経営会議で経営指標とアクションプランを共有しながら議論する様子"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/40 px-4 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-white/80 backdrop-blur">
+                Visual Anchor
+              </figcaption>
+            </figure>
+            <div className="space-y-5">
+              <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
+                Pattern Interrupt
+              </div>
+              <h3 className="text-2xl font-semibold leading-snug md:text-[1.75rem]">
+                「次の一手」がひと目で伝わるコンテキストを、会議冒頭で共有できていますか？
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-200/90 md:text-base">
+                読み切れないレポートではなく、<span className="text-cyan-200">状況・意図・判断</span>が同期した1枚を提示することで、経営陣と現場の思考速度を揃えます。図解とナラティブを並走させることで理解の負荷を下げ、議論は「どのように実行するか」へ早々に移行します。
+              </p>
+              <ul className="grid gap-3 text-sm text-slate-200/90 md:grid-cols-2">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
+                  <span>Dual Coding｜財務・現場・リスクの3層を一画面で可視化。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
+                  <span>Gaze Cueing｜視線誘導で議論の順序を固定し、迷いを減らす。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
+                  <span>Picture Superiority｜キーメッセージに象徴アイコンを添え記憶に残す。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
+                  <span>Isolation Effect｜重要指標を色面で分離し、判断基準を強調。</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </ScrollReveal>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
@@ -121,6 +178,20 @@ const ProblemSection = () => {
               <p className="text-left text-sm leading-relaxed text-slate-200/90 md:text-[0.95rem]">
                 下記のシグナルが同時に表れている企業では、意思決定会議のリードタイムが平均で1.8倍に伸びています。早期に設計図を可視化し、判断の土台を揃えることが重要です。
               </p>
+              <ul className="grid gap-3 text-sm text-slate-200/85 md:grid-cols-2">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
+                  <span>現場ヒアリングで抽出したリードタイムのボトルネックを即座に数値化。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
+                  <span>財務モデルと商談パイプラインを連携させ、意思決定の基準を統一。</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
+                  <span>資金調達シナリオと投資配分を併記し、納得度の高い判断を支援。</span>
+                </li>
+              </ul>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {executiveSignals.map((signal) => (
@@ -138,6 +209,17 @@ const ProblemSection = () => {
                     {signal.note}
                   </span>
                 </div>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
+              {trustSignals.map((signal) => (
+                <span
+                  key={signal}
+                  className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-cyan-100/90"
+                >
+                  <span className="inline-flex h-2 w-2 rounded-full bg-cyan-200" aria-hidden="true" />
+                  {signal}
+                </span>
               ))}
             </div>
           </ScrollReveal>
@@ -175,7 +257,7 @@ const ProblemSection = () => {
             <ScrollReveal
               key={pain.title}
               variant="fade-up"
-              className="flex h-full flex-col gap-5 rounded-[1.8rem] border border-white/12 bg-white/5 p-6 shadow-[0_30px_70px_rgba(2,8,20,0.45)]"
+              className="flex h-full flex-col gap-5 rounded-[1.8rem] border border-white/12 bg-gradient-to-br from-white/7 via-white/4 to-white/[0.02] p-6 shadow-[0_30px_70px_rgba(2,8,20,0.45)]"
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
@@ -195,11 +277,12 @@ const ProblemSection = () => {
                 </span>
                 <p className="mt-2 text-sm font-semibold text-cyan-100">{pain.signal}</p>
               </div>
-              <div className="mt-auto rounded-2xl border border-white/12 bg-white/[0.04] p-4">
-                <div className="flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+              <div className="mt-auto space-y-3 rounded-2xl border border-white/12 bg-gradient-to-br from-[#081c3b]/90 via-[#06162f]/90 to-[#030d1f]/90 p-4">
+                <div className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+                  <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                   因果の洞察
                 </div>
-                <p className="mt-2 text-sm leading-relaxed text-slate-200/85">{pain.insight}</p>
+                <p className="text-sm leading-relaxed text-slate-200/85">{pain.insight}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -226,12 +309,17 @@ const ProblemSection = () => {
             {narrativeFlow.map((step, index) => (
               <div
                 key={step.stage}
-                className="group relative flex h-full flex-col gap-4 rounded-2xl border border-white/12 bg-white/5 p-6"
+                className="group relative flex h-full flex-col gap-4 rounded-2xl border border-white/12 bg-gradient-to-br from-white/8 via-white/4 to-white/[0.02] p-6"
               >
                 <div className="flex items-center justify-between gap-3">
-                  <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
-                    {step.stage}
-                  </span>
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/30 bg-cyan-400/10 text-sm font-semibold text-cyan-100">
+                      0{index + 1}
+                    </span>
+                    <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
+                      {step.stage}
+                    </span>
+                  </div>
                   <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-100">
                     {step.metric}
                   </span>
@@ -244,8 +332,24 @@ const ProblemSection = () => {
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </div>
                 )}
+                {index < narrativeFlow.length - 1 && (
+                  <span
+                    className="pointer-events-none absolute right-[-3rem] top-1/2 hidden h-px w-12 translate-y-[-50%] bg-gradient-to-r from-cyan-300/40 via-cyan-200/20 to-transparent md:block"
+                    aria-hidden="true"
+                  />
+                )}
               </div>
             ))}
+          </div>
+          <div className="mt-8 rounded-2xl border border-cyan-300/20 bg-[#06142c]/80 p-6">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-2xl">
+                3ステップの設計図は、経営会議のアジェンダと連動したダッシュボードとして提供。部署別アクション、資金手当て、外部説明資料を同じ更新サイクルで管理するため、意思決定の“前後関係”が途切れません。
+              </p>
+              <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100">
+                Board Ready Package
+              </span>
+            </div>
           </div>
         </ScrollReveal>
 

@@ -10,17 +10,70 @@
   <body>
     <!-- NOTE: This static HTML mirrors the React版の構造。主要セクションとCTAのみ抜粋 -->
     <header class="hero">
-      <p class="badge">福岡・九州の中小企業特化</p>
-      <h1>AI×管理会計×資金繰りで、中小企業の“売上とキャッシュ”を同時に伸ばす。福岡発・伴走型の経営顧問。</h1>
-      <p class="hero-sub">3ヶ月で“見える化×打ち手”を定着、6ヶ月で粗利率・回転率を改善。初回相談は無料、オンライン可。</p>
-      <div class="cta-group">
-        <button class="btn-primary" data-cta="consult">無料で相談する</button>
-        <button class="btn-outline" data-cta="asset">3分で資料を見る</button>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="badge">福岡・九州の中小企業特化</p>
+          <h1>
+            専門家と生成AIが経営指標を週次で磨き込み、粗利・回転率・判断スピードを同時に伸ばす。
+          </h1>
+          <p class="hero-sub">
+            3ヶ月で“見える化×打ち手”を定着、6ヶ月で粗利率・回転率を改善。金融機関連携・補助金活用まで一気通貫で伴走します。
+          </p>
+          <div class="trust-badges">
+            <span>福岡商工会議所 提携</span>
+            <span>AI経営アドバイザー 認定</span>
+            <span>製造・物流・IT 180社支援</span>
+          </div>
+          <div class="cta-group">
+            <button class="btn-primary" data-cta="consult">無料で相談する</button>
+            <button class="btn-outline" data-cta="asset">3分で資料を見る</button>
+          </div>
+          <p class="microcopy">初回相談は無料｜所要30分｜オンライン可</p>
+          <div class="hero-metrics">
+            <div class="hero-metric-card">
+              <p class="metric-label">粗利率</p>
+              <p class="metric-value">+5.2pt</p>
+              <p class="metric-caption">AI×原価ドリルで利益構造を再設計</p>
+            </div>
+            <div class="hero-metric-card">
+              <p class="metric-label">回収日数</p>
+              <p class="metric-value">-12日</p>
+              <p class="metric-caption">営業CRMと請求フローを自動同期</p>
+            </div>
+            <div class="hero-metric-card">
+              <p class="metric-label">意思決定</p>
+              <p class="metric-value">1/2</p>
+              <p class="metric-caption">意思決定リードタイムを半減</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <figure class="dashboard-frame">
+            <img src="../../assets/dashboard-preview.jpg" alt="生成AIで可視化されたダッシュボードの画面" />
+            <figcaption>
+              3層ダッシュボードで「粗利」「キャッシュ」「現場実行」を連動可視化。
+            </figcaption>
+          </figure>
+        </div>
       </div>
-      <p class="microcopy">初回相談は無料｜所要30分｜オンライン可</p>
     </header>
 
     <main>
+      <section class="executive-summary visual-anchor">
+        <div class="summary-copy">
+          <h2>社長が意思決定に迷わない「3つの整流化」</h2>
+          <ol>
+            <li><strong>利益の因果構造を解体</strong> ── 部門別原価をAIで分解し、“儲からない理由”を可視化</li>
+            <li><strong>キャッシュフローを週次予測</strong> ── 資金繰り表と銀行折衝資料を自動更新</li>
+            <li><strong>現場PDCAを自動起動</strong> ── 営業・工場・ロジの行動KPIをSlackでアラート</li>
+          </ol>
+          <p class="summary-note">「数字→打ち手→現場実行」が1週間で回る統合フレームで、社長が戦略投資に集中できます。</p>
+        </div>
+        <div class="summary-visual">
+          <img src="../../assets/impact-flow.svg" alt="売上・利益・キャッシュの整流化を示すフロー図" />
+        </div>
+      </section>
+
       <section class="pain-section">
         <h2>社長・専務が抱える「あるある課題」</h2>
         <ul>
@@ -31,39 +84,78 @@
       </section>
 
       <section class="results">
-        <h2>成果指標とビフォー/アフター</h2>
-        <article>
-          <h3>K.M.社（建材卸）</h3>
-          <p>粗利率 19% → 26% / 重点商品単価 +14%</p>
-        </article>
-        <article>
-          <h3>T.F.社（食品製造）</h3>
-          <p>在庫回転率 1.1倍 → 2.1倍 / 廃棄コスト -55%</p>
-        </article>
-        <article>
-          <h3>S.K.社（建設業）</h3>
-          <p>原価乖離率 18% → 6% / 資料作成工数 -70%</p>
-        </article>
-        <article>
-          <h3>M.L.社（物流サービス）</h3>
-          <p>定時納品率 62% → 90% / 残業時間 -45%</p>
-        </article>
-        <article>
-          <h3>H.N.社（アパレルEC）</h3>
-          <p>広告ROI 1.4倍 → 2.6倍 / 在庫過多商品 -30%</p>
-        </article>
-        <article>
-          <h3>B.S.社（精密部品製造）</h3>
-          <p>在庫回転日数 78日 → 42日 / 緊急対応コスト -31%</p>
-        </article>
-        <article>
-          <h3>R.A.社（不動産管理）</h3>
-          <p>空室率 18% → 8% / 平均入居期間 +8ヶ月</p>
-        </article>
-        <article>
-          <h3>O.K.社（医療・ヘルスケア）</h3>
-          <p>フォロー完了率 52% → 88% / 解約率 -40%</p>
-        </article>
+        <div class="section-heading">
+          <h2>成果指標とビフォー/アフター</h2>
+          <p>効果の因果を「利益・資金・現場」の3レイヤーで可視化し、意思決定を数字で裏付けます。</p>
+        </div>
+        <div class="result-grid">
+          <article>
+            <h3>K.M.社（建材卸）</h3>
+            <p class="result-kpi">粗利率 19% → <strong>26%</strong></p>
+            <p>重点商品単価 +14% / AI需要予測で不良在庫を半減</p>
+          </article>
+          <article>
+            <h3>T.F.社（食品製造）</h3>
+            <p class="result-kpi">在庫回転率 1.1倍 → <strong>2.1倍</strong></p>
+            <p>廃棄コスト -55% / 原価シミュレーションで値付けを再設計</p>
+          </article>
+          <article>
+            <h3>S.K.社（建設業）</h3>
+            <p class="result-kpi">原価乖離率 18% → <strong>6%</strong></p>
+            <p>現場日報をAIで解析し、利益を食う工程を特定</p>
+          </article>
+          <article>
+            <h3>M.L.社（物流サービス）</h3>
+            <p class="result-kpi">定時納品率 62% → <strong>90%</strong></p>
+            <p>配車と倉庫をIoT連携し、残業時間 -45%</p>
+          </article>
+          <article>
+            <h3>H.N.社（アパレルEC）</h3>
+            <p class="result-kpi">広告ROI 1.4倍 → <strong>2.6倍</strong></p>
+            <p>チャネル別LTVを可視化し、投資配分を最適化</p>
+          </article>
+          <article>
+            <h3>B.S.社（精密部品製造）</h3>
+            <p class="result-kpi">在庫回転日数 78日 → <strong>42日</strong></p>
+            <p>受注確度スコアで緊急対応コスト -31%</p>
+          </article>
+          <article>
+            <h3>R.A.社（不動産管理）</h3>
+            <p class="result-kpi">空室率 18% → <strong>8%</strong></p>
+            <p>来店予約AIと内見導線を改善し、平均入居期間 +8ヶ月</p>
+          </article>
+          <article>
+            <h3>O.K.社（医療・ヘルスケア）</h3>
+            <p class="result-kpi">フォロー完了率 52% → <strong>88%</strong></p>
+            <p>リマインド動線を自動化し、解約率 -40%</p>
+          </article>
+        </div>
+        <aside class="result-aside">
+          <img src="../../assets/strategy-planning.jpg" alt="経営会議の様子" />
+          <p>毎月の経営会議でダッシュボード→打ち手→行動計画を45分で意思決定。意思決定の再現性を担保します。</p>
+        </aside>
+      </section>
+
+      <section class="methodology">
+        <div class="method-copy">
+          <h2>生成AI×専門家のハイブリッド伴走</h2>
+          <p>
+            データ整備・業務ヒアリング・AI活用の内製化までを、専任チームが四半期単位で伴走。AIの提案を鵜呑みにせず、財務と現場双方で検証するプロセスを内製化します。
+          </p>
+          <ul>
+            <li><span>Step 1</span> 財務・現場データ診断と課題仮説の設計</li>
+            <li><span>Step 2</span> AIダッシュボードと業務フローの現場実装</li>
+            <li><span>Step 3</span> 経営会議×日次アラートでKPI運用を定着</li>
+          </ul>
+          <div class="risk-reversal">
+            <span>初回無料診断</span>
+            <span>最短2週間トライアル</span>
+            <span>成果レビュー会を四半期開催</span>
+          </div>
+        </div>
+        <div class="method-visual">
+          <img src="../../assets/growth-chart.jpg" alt="成長チャートのイメージ" />
+        </div>
       </section>
 
       <section class="plans" id="plans">
@@ -85,6 +177,19 @@
             <li>AI需要予測と案件スコアリング</li>
             <li>金融機関面談の準備サポート（必要に応じて同席調整）</li>
           </ul>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="testimonial-media">
+          <img src="../../assets/representative.jpg" alt="クライアント企業の代表者" />
+        </div>
+        <div class="testimonial-copy">
+          <h2>「経営会議の90%が“未来の議論”に変わった」</h2>
+          <p class="quote">
+            「売上と粗利は追えていたものの、資金繰りと現場改善が噛み合わず、投資判断が常に後手でした。週次で数字と打ち手が揃う体制になり、<strong>粗利率+5.2pt / 回収日数-18日</strong>を実現。銀行からの追加融資もスムーズになりました。」
+          </p>
+          <p class="speaker">九州エンジニアリング株式会社 代表取締役社長</p>
         </div>
       </section>
 

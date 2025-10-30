@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="mb-4 text-2xl font-bold">株式会社創和経営コンサルティング</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              福岡発の伴走型経営顧問。AI×管理会計×資金繰りで、年商5000万円～10億円の中小企業の売上成長とキャッシュ最適化を同時に実現します。
+              福岡発の再生デザインスタジオ。生成AIと中小企業診断士の伴走で、年商5,000万円〜15億円規模の企業が粗利・キャッシュ・現場の動きを再構築できるよう支援します。
             </p>
             <div className="pt-3">
               <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2">
@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
             <div className="space-y-1 text-xs text-muted-foreground">
               <p>株式会社創和経営コンサルティング</p>
-              <p>代表取締役 中小企業診断士 古町 聖文</p>
+              <p>代表取締役 / 中小企業診断士 古町 聖文</p>
               <p>福岡県福岡市東区水谷3-14-17</p>
             </div>
           </div>
@@ -41,10 +41,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 flex-shrink-0 text-primary" />
-                <a
-                  href={PHONE_TEL_LINK}
-                  className="text-foreground transition-smooth hover:text-primary"
-                >
+                <a href={PHONE_TEL_LINK} className="text-foreground transition-smooth hover:text-primary">
                   092-231-2920
                 </a>
               </div>
@@ -59,7 +56,7 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Shield className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-                <p>中小企業診断士</p>
+                <p>中小企業診断士 / 事業再生コーディネーター</p>
               </div>
             </div>
           </div>
@@ -102,7 +99,7 @@ const Footer = () => {
 
           {/* Quick CTA */}
           <div className="space-y-4">
-            <h4 className="mb-4 text-lg font-semibold">すぐにアクション</h4>
+            <h4 className="mb-4 text-lg font-semibold">次のアクション</h4>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {PRIMARY_CTA.supportText.split("\n").map((line, index, array) => (
                 <span key={`${line}-${index}`}>
@@ -121,11 +118,9 @@ const Footer = () => {
                 >
                   {PRIMARY_CTA.label}
                 </a>{" "}
-                にお進みください。
+                をリクエストしてください。
               </p>
-              <p>
-                {SECONDARY_CTA.label} はフォームでリクエストいただくとメールで即時送付します。
-              </p>
+              <p>{SECONDARY_CTA.label} はフォーム送信後にメールで即日ご案内いたします。</p>
             </div>
             <div className="space-y-2 text-xs text-muted-foreground">
               <a href="/privacy-policy" className="flex items-center gap-2 hover:text-primary">
@@ -139,7 +134,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 border-t border-border pt-6 text-center text-sm text-muted-foreground">
-          <p>© 2024 株式会社創和経営コンサルティング All Rights Reserved. 最短当日中にご連絡します。</p>
+          <p>© 2024 株式会社創和経営コンサルティング All Rights Reserved. 最短で当日中にご連絡します。</p>
         </div>
       </div>
     </footer>

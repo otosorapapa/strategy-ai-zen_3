@@ -1,34 +1,45 @@
 import {
+  ArrowRight,
+  ArrowUpRight,
+  BarChart3,
   BrainCircuit,
   Building2,
   FileSpreadsheet,
   Gauge,
+  GanttChart,
+  Layers,
+  LineChart,
   Map,
   PanelRightDashed,
   ShieldCheck,
+  Sparkles,
+  Target,
+  TimerReset,
+  TrendingUp,
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import solutionIllustration from "@/assets/solution-illustration.jpg";
+import decisionOpsMock from "@/assets/dashboard-preview.jpg";
+import solutionIllustration from "@/assets/strategy-planning.jpg";
 
 const howPillars = [
   {
     icon: BrainCircuit,
     title: "生成AIが未来を読む",
     description:
-      "財務データ、販売ログ、業界トレンド、マクロ指標を横断分析。粗利とキャッシュの歪みを“何が・いつ・どこで”起きているかまで細分化します。",
+      "財務データ、販売ログ、業界トレンド、マクロ指標を横断分析。粗利とキャッシュの歪みを“何が・いつ・どこで”起きているかまで因果分解し、意思決定の根拠を秒で提示します。",
   },
   {
     icon: Users,
     title: "専門家が現場で翻訳",
     description:
-      "中小企業診断士が現場ヒアリングとワークショップを実施。人と組織のリアリティを加味し、実行可能な優先シナリオにまとめます。",
+      "中小企業診断士が現場ヒアリングとワークショップを実施。人と組織のリアリティを加味し、AIが示した打ち手を現実的な週次タスクまで翻訳します。",
   },
   {
     icon: Map,
     title: "再生ロードマップを設計",
     description:
-      "投資・撤退・強化すべき領域を週次で可視化。金融機関への説明ストーリーや現場タスクまで連動させ、実行力を底上げします。",
+      "投資・撤退・強化すべき領域を週次で可視化。金融機関への説明ストーリーや現場タスクまで連動させ、実行ステータスとキャッシュインパクトを同時に追跡します。",
   },
 ];
 
@@ -37,17 +48,56 @@ const impactHighlights = [
     label: "経営判断の短縮",
     value: "-38%",
     detail: "会議から意思決定までのリードタイム短縮（導入企業中央値）",
+    icon: TimerReset,
+    accent: "from-[#d7f4ff] to-[#f2fbff]",
   },
   {
     label: "粗利インパクト",
     value: "+3.4pt",
     detail: "重点施策の粗利率押し上げ効果（3カ月平均）",
+    icon: TrendingUp,
+    accent: "from-[#e8f3ff] to-[#f6f9ff]",
   },
   {
     label: "金融機関連携",
     value: "96%",
     detail: "レポート整備の満足度（金融機関ヒアリングによる）",
+    icon: ShieldCheck,
+    accent: "from-[#edf7ff] to-white",
   },
+];
+
+const logicSequence = [
+  {
+    title: "課題が見える化",
+    description:
+      "AIが粗利とキャッシュの歪みをスコアリングし、寄与要因をレイヤー構造で提示。どこを止血すべきかが瞬時に判明します。",
+    metricLabel: "寄与要因カバレッジ",
+    metricValue: "92%",
+    icon: Layers,
+  },
+  {
+    title: "打ち手を設計",
+    description:
+      "診断士がAIシミュレーションを検証し、優先度とリスクを意思決定キャンバスに整理。現場タスクとKPIがワンクリックで連動します。",
+    metricLabel: "実行準備まで",
+    metricValue: "48h",
+    icon: GanttChart,
+  },
+  {
+    title: "成果を定着",
+    description:
+      "週次の進捗と金融機関への説明資料が同じダッシュボードで更新。意思決定の納得感を可視化するレポートが自動生成されます。",
+    metricLabel: "金融先連携満足度",
+    metricValue: "96%",
+    icon: BarChart3,
+  },
+];
+
+const insightPills = [
+  "粗利・キャッシュ同時最適化",
+  "リードタイム短縮ロジック",
+  "金融機関が納得する証跡",
 ];
 
 const trustSignals = [
@@ -79,7 +129,7 @@ const SolutionSection = () => {
   return (
     <section className="fade-in-section bg-white py-24 text-[#0b1f3f]">
       <div className="container mx-auto max-w-6xl px-4">
-        <ScrollReveal variant="fade-up" className="space-y-5 text-center">
+        <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
             How｜再生の設計図を描く方法
           </span>
@@ -87,13 +137,53 @@ const SolutionSection = () => {
             生成AIと中小企業診断士が共創し、判断が止まらない「再生デザインスタジオ」を運用
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            最初の2週間でAIが財務指標・市場トレンド・競合動向を横断解析し、複数の回復シナリオを抽出。診断士が現場ヒアリングとプロセスマップを描き、実行条件を棚卸しします。両者が同じダッシュボードで議論することで、意思決定までのリードタイムを従来の3分の1に圧縮し、机上の空論ではない“再生の設計図”を共同で編み上げます。
+            最初の2週間でAIが財務指標・市場トレンド・競合動向を横断解析し、複数の回復シナリオを抽出。診断士が現場ヒアリングとプロセスマップを描き、実行条件を棚卸しします。意思決定プロセスのどこで時間が失われているか、キャッシュと粗利の因果を根拠付きで提示することで、判断の納得性とスピードを同時に高めます。
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {insightPills.map((pill) => (
+              <span
+                key={pill}
+                className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-[#0b1f3f]/70 shadow-[0_12px_30px_rgba(9,23,54,0.08)]"
+              >
+                <Sparkles className="h-3.5 w-3.5 text-[#0584c6]" aria-hidden="true" />
+                {pill}
+              </span>
+            ))}
+          </div>
         </ScrollReveal>
 
         <ScrollReveal
           variant="fade-up"
-          className="mx-auto mt-8 flex flex-col items-center justify-between gap-6 rounded-[32px] border border-[#0b1f3f]/10 bg-gradient-to-r from-[#f3f7ff] via-white to-[#ebf4ff] px-8 py-10 shadow-[0_30px_90px_rgba(8,27,59,0.12)] md:flex-row"
+          className="mx-auto mt-10 w-full max-w-5xl overflow-hidden rounded-[36px] border border-[#0b1f3f]/10 bg-gradient-to-br from-[#f1f7ff] via-white to-[#e8f3ff] shadow-[0_35px_100px_rgba(8,25,54,0.16)]"
+        >
+          <figure className="relative">
+            <img
+              src={decisionOpsMock}
+              alt="AIダッシュボードで意思決定の因果関係を俯瞰する様子"
+              className="w-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-x-6 bottom-6 flex flex-col gap-3 rounded-3xl bg-white/85 p-6 backdrop-blur">
+              <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/70">
+                <span className="inline-flex items-center gap-2">
+                  <Gauge className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />
+                  Impact Dashboard Snapshot
+                </span>
+                <span className="inline-flex items-center gap-2 text-[#0584c6]">
+                  <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  因果トレースが3層で可視化
+                </span>
+              </div>
+              <p className="text-sm font-semibold text-[#0b1f3f]">
+                直近4週の粗利ギャップとキャッシュ波形を同一画面で分解。右側のアクションボードと連動し、指示→現場実行→金融報告がひと続きで把握できます。
+              </p>
+            </div>
+          </figure>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mx-auto mt-10 flex flex-col items-center justify-between gap-6 rounded-[32px] border border-[#0b1f3f]/10 bg-gradient-to-r from-[#f3f7ff] via-white to-[#ebf4ff] px-8 py-10 shadow-[0_30px_90px_rgba(8,27,59,0.12)] md:flex-row"
         >
           <div className="max-w-xl space-y-4 text-left">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
@@ -117,12 +207,12 @@ const SolutionSection = () => {
           <figure className="relative w-full max-w-sm overflow-hidden rounded-[28px] border border-white/60 shadow-[0_25px_70px_rgba(5,24,55,0.14)]">
             <img
               src={solutionIllustration}
-              alt="生成AIダッシュボードと専門家が並んで意思決定を設計する様子"
+              alt="戦略プランニングのフレームで議論する専門家の様子"
               className="h-full w-full object-cover"
               loading="lazy"
             />
             <figcaption className="absolute bottom-3 left-3 rounded-full bg-[#0b1f3f]/80 px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.24em] text-white/90">
-              Dual Coding Insight
+              Proof of Execution
             </figcaption>
           </figure>
         </ScrollReveal>
@@ -131,15 +221,79 @@ const SolutionSection = () => {
           variant="fade-up"
           className="mt-10 grid gap-4 rounded-[28px] border border-[#0b1f3f]/10 bg-white/80 p-6 shadow-[0_30px_80px_rgba(6,21,48,0.08)] md:grid-cols-3"
         >
-          {impactHighlights.map((highlight) => (
-            <div key={highlight.label} className="flex flex-col gap-2 rounded-2xl bg-gradient-to-br from-[#f7fbff] via-white to-[#eef6ff] p-5">
-              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">
-                {highlight.label}
+          {impactHighlights.map((highlight) => {
+            const Icon = highlight.icon;
+            return (
+              <div
+                key={highlight.label}
+                className={`flex h-full flex-col gap-3 rounded-2xl bg-gradient-to-br ${highlight.accent} p-6 shadow-[0_18px_45px_rgba(9,29,62,0.12)]`}
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/80 text-[#0584c6] shadow-[0_10px_25px_rgba(9,38,70,0.12)]">
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">
+                    {highlight.label}
+                  </span>
+                  <div className="mt-2 flex items-baseline gap-2">
+                    <span className="text-3xl font-bold text-[#0584c6]">{highlight.value}</span>
+                    <ArrowRight className="h-4 w-4 text-[#0584c6]/70" aria-hidden="true" />
+                  </div>
+                </div>
+                <p className="text-sm leading-relaxed text-[#1e3359]/75">{highlight.detail}</p>
+              </div>
+            );
+          })}
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-12 space-y-8 rounded-[32px] border border-[#0b1f3f]/10 bg-gradient-to-br from-white via-[#f7faff] to-[#eef4ff] p-8 shadow-[0_32px_90px_rgba(7,22,48,0.1)]"
+        >
+          <div className="flex flex-col gap-5 text-center md:flex-row md:items-center md:justify-between md:text-left">
+            <div className="space-y-3">
+              <span className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+                ロジックドリブンな再生設計
               </span>
-              <span className="text-3xl font-bold text-[#0584c6]">{highlight.value}</span>
-              <p className="text-sm leading-relaxed text-[#1e3359]/75">{highlight.detail}</p>
+              <h3 className="text-2xl font-semibold text-[#0b1f3f]">
+                課題 → 介入 → 成果を3フェーズでトレースし、因果を可視化
+              </h3>
+              <p className="max-w-2xl text-sm leading-relaxed text-[#1e3359]/75">
+                データ統合で課題の発生源を炙り出し、優先施策の検証と現場浸透までを一気通貫に連結。各フェーズで生まれるKPIをトラストシグナルとして蓄積し、金融機関や株主への説明責任をスマートに果たせます。
+              </p>
             </div>
-          ))}
+            <div className="flex items-center gap-3 rounded-3xl border border-[#0584c6]/30 bg-white/70 px-5 py-4 text-left shadow-[0_20px_45px_rgba(5,120,180,0.12)]">
+              <LineChart className="h-10 w-10 text-[#0584c6]" aria-hidden="true" />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">視線誘導レポート</p>
+                <p className="text-sm font-semibold text-[#0b1f3f]">理事会資料にも転用できる証跡が自動生成</p>
+              </div>
+            </div>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {logicSequence.map((node, index) => {
+              const Icon = node.icon;
+              return (
+                <div key={node.title} className="relative h-full rounded-3xl border border-white/60 bg-white p-6 shadow-[0_22px_60px_rgba(8,25,54,0.12)]">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-[18px] bg-[#0584c6]/15 text-[#0584c6]">
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  </span>
+                  <h4 className="mt-4 text-lg font-semibold text-[#0b1f3f]">{node.title}</h4>
+                  <p className="mt-3 text-sm leading-relaxed text-[#1e3359]/75">{node.description}</p>
+                  <div className="mt-4 flex items-center justify-between rounded-2xl bg-[#f3f8ff] px-4 py-3">
+                    <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/60">{node.metricLabel}</span>
+                    <span className="text-lg font-bold text-[#0584c6]">{node.metricValue}</span>
+                  </div>
+                  {index < logicSequence.length - 1 && (
+                    <span
+                      className="absolute right-[-28px] top-1/2 hidden h-px w-12 -translate-y-1/2 bg-gradient-to-r from-[#0584c6]/60 to-transparent md:block"
+                      aria-hidden="true"
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </ScrollReveal>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -200,21 +354,22 @@ const SolutionSection = () => {
             <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/70">
               再生ロードマップの運用イメージ
             </div>
-            <ul className="relative space-y-5 text-sm leading-relaxed text-[#1e3359]/80">
-              <span
-                className="absolute left-4 top-4 h-[calc(100%-2rem)] w-px bg-gradient-to-b from-[#0584c6]/40 via-[#0584c6]/10 to-transparent"
-                aria-hidden="true"
-              />
-              {workflowSteps.map((step) => (
-                <li key={step.title} className="relative rounded-2xl border border-[#0584c6]/20 bg-[#f4fbff] p-5 shadow-sm">
-                  <span className="absolute -left-5 top-6 flex h-8 w-8 items-center justify-center rounded-full border border-white bg-[#0584c6] text-sm font-bold text-white shadow-[0_10px_25px_rgba(5,132,198,0.35)]">
-                    {step.title.split("｜")[0].replace("STEP", "S")}
-                  </span>
-                  <p className="font-semibold text-[#0b1f3f]">{step.title}</p>
+            <div className="grid gap-5 text-sm leading-relaxed text-[#1e3359]/80 md:grid-cols-3">
+              {workflowSteps.map((step, index) => (
+                <div key={step.title} className="relative h-full rounded-2xl border border-[#0584c6]/25 bg-[#f4fbff] p-5 shadow-[0_18px_45px_rgba(5,94,160,0.12)]">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/70 bg-[#0584c6] text-sm font-bold text-white shadow-[0_12px_28px_rgba(5,132,198,0.35)]">
+                      {step.title.split("｜")[0].replace("STEP", "S")}
+                    </span>
+                    {index < workflowSteps.length - 1 && (
+                      <ArrowRight className="hidden h-4 w-4 text-[#0584c6]/70 md:block" aria-hidden="true" />
+                    )}
+                  </div>
+                  <p className="mt-4 font-semibold text-[#0b1f3f]">{step.title}</p>
                   <p className="mt-2 text-xs leading-relaxed text-[#1e3359]/75">{step.detail}</p>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           </ScrollReveal>
         </div>
       </div>

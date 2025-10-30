@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780">
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6f9ff" />
+      <stop offset="100%" stop-color="#e8f1ff" />
+    </linearGradient>
+    <linearGradient id="centralGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3c8dff" />
+      <stop offset="100%" stop-color="#1b5fd6" />
+    </linearGradient>
+    <style>
+      .title { font: 700 40px 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif; fill: #0b2e5b; }
+      .label { font: 700 30px 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif; fill: #0b2e5b; }
+      .body { font: 400 24px 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif; fill: #1b1b1b; }
+      .note { font: 500 20px 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif; fill: #124e9c; }
+    </style>
+    <marker id="arrowhead" markerWidth="14" markerHeight="14" refX="8" refY="6" orient="auto">
+      <path d="M0,0 L0,12 L12,6 z" fill="#2f6bce" />
+    </marker>
+  </defs>
+  <rect width="1200" height="780" fill="url(#bgGradient)" rx="48" />
+
+  <text class="title" x="600" y="80" text-anchor="middle">非構造インパクトの理解を深める全体像</text>
+
+  <!-- Left column: 外部シグナル -->
+  <g transform="translate(90,160)">
+    <rect width="360" height="380" rx="28" fill="#ffffff" stroke="#94b9ff" stroke-width="2" />
+    <text class="label" x="180" y="60" text-anchor="middle">外部シグナル</text>
+    <text class="body" x="180" y="120" text-anchor="middle">現場アラート / SNS / 取引条件</text>
+    <text class="body" x="180" y="170" text-anchor="middle">営業日報・顧客の声・調査ログ</text>
+    <text class="body" x="180" y="220" text-anchor="middle">リスク検知スコア・異常検知</text>
+    <text class="body" x="180" y="270" text-anchor="middle">社外ニュース・行政通知</text>
+    <text class="note" x="180" y="340" text-anchor="middle">CAUSE：出来事の兆候を素早く集約</text>
+  </g>
+
+  <!-- Right column top: 意思決定 -->
+  <g transform="translate(770,160)">
+    <rect width="360" height="220" rx="28" fill="#ffffff" stroke="#94b9ff" stroke-width="2" />
+    <text class="label" x="180" y="60" text-anchor="middle">意思決定</text>
+    <text class="body" x="180" y="120" text-anchor="middle">指令・対策案の合意形成</text>
+    <text class="body" x="180" y="170" text-anchor="middle">シナリオ別ダッシュボードで確認</text>
+  </g>
+
+  <!-- Right column bottom: 連携部署ダッシュボード -->
+  <g transform="translate(770,420)">
+    <rect width="360" height="220" rx="28" fill="#ffffff" stroke="#94b9ff" stroke-width="2" />
+    <text class="label" x="180" y="60" text-anchor="middle">連携部署ダッシュボード</text>
+    <text class="body" x="180" y="120" text-anchor="middle">対応状況をリアルタイムで共有</text>
+    <text class="body" x="180" y="170" text-anchor="middle">現場・本部・外部パートナーと同期</text>
+  </g>
+
+  <!-- Central impact circle -->
+  <g transform="translate(400,280)">
+    <circle cx="200" cy="120" r="140" fill="url(#centralGradient)" />
+    <text class="label" x="200" y="80" text-anchor="middle" fill="#ffffff">非構造インパクト</text>
+    <text class="body" x="200" y="125" text-anchor="middle" fill="#ffffff">事象種別・影響推定・緊急度</text>
+    <text class="body" x="200" y="165" text-anchor="middle" fill="#ffffff">構造化スコアで定量評価</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <path d="M 450 340 C 520 340 520 300 560 300" fill="none" stroke="#2f6bce" stroke-width="6" marker-end="url(#arrowhead)" />
+  <path d="M 580 320 C 700 320 720 260 770 250" fill="none" stroke="#2f6bce" stroke-width="6" marker-end="url(#arrowhead)" />
+  <path d="M 580 420 C 700 440 720 520 770 540" fill="none" stroke="#2f6bce" stroke-width="6" marker-end="url(#arrowhead)" />
+  <path d="M 770 520 C 720 500 650 480 600 440" fill="none" stroke="#2f6bce" stroke-width="6" marker-end="url(#arrowhead)" />
+
+  <!-- Explanatory captions -->
+  <text class="note" x="345" y="600" text-anchor="middle">データ統合で非構造情報を整理し、影響度を数値化</text>
+  <text class="note" x="870" y="670" text-anchor="middle">IMPACT：意思決定と現場連携を同じ指標で評価</text>
+</svg>

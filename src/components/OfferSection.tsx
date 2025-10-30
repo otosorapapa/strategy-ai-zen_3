@@ -1,39 +1,35 @@
-import { ArrowRight, ClipboardList, FileText, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ClipboardList, FileText, Sparkles } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { PRIMARY_CTA, SECONDARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { cn } from "@/lib/utils";
-import AnimatedCounter from "@/components/AnimatedCounter";
-import offerBlueprint from "@/assets/financial-analysis.jpg";
 
-const offers = [
+const offerCards = [
   {
     id: "consult",
-    icon: Sparkles,
     label: "無料相談",
-    headline: "30分でZEN導入の適合度を棚卸し",
+    icon: Sparkles,
+    title: "30分で未来の設計図の輪郭を描き始める",
     description:
-      "経営者・後継者とオンラインで課題を整理し、粗利・資金・人員のボトルネックとAI活用余地を確認します。翌営業日にナビゲーションメモ（例）を送付し、チームに語るべき論点を言語化します。",
-    highlights: [
-      "粗利・資金・人員の3指標で因果を整理",
-      "経営会議で使える仮説メモを翌営業日に送付",
-      "投資判断までの不安・リスクを整理",
+      "経営者・キーパーソンとの対話で課題を棚卸し。生成AIが初期分析したシグナルと共に、優先仮説メモを24時間以内に共有します。",
+    bullets: [
+      "粗利・キャッシュ・人材データの整合性チェック",
+      "AI適用余地と優先課題を三層で整理",
+      "次回会議で伝えられる仮説メモを提供",
     ],
     button: PRIMARY_CTA,
-    ctaText: "30分で判断材料を整える",
-    targetId: "cta-section",
   },
   {
     id: "diagnosis",
-    icon: ClipboardList,
     label: "ZENスキャン",
-    headline: "72時間で18指標のシグナルレポート",
+    icon: ClipboardList,
+    title: "72時間で再生可能性を数値化するレポート",
     description:
-      "粗利率・在庫回転・資金余力・意思決定リードタイムなど18指標をAIが試算し、改善優先度を可視化します。（例）判断に必要な根拠を事前に揃え、会議での説明力を高めます。",
-    highlights: [
-      "18指標のスコアリングで優先順位を決定",
-      "AI導入時のデータ要件と実行ロードマップ",
-      "判断リードタイムを短縮するシミュレーション",
+      "粗利率・在庫回転・キャッシュ余力など14指標をAIがスコアリング。専門家のコメント付きで再生の到達イメージを提示します。",
+    bullets: [
+      "14指標のヒートマップとリスクスコア",
+      "シナリオ別の損益・資金シミュレーション",
+      "実行に必要なデータ・体制のチェックリスト",
     ],
     button: {
       id: SECONDARY_CTA.id,
@@ -42,170 +38,101 @@ const offers = [
       benefitCopyAlt: SECONDARY_CTA.benefitCopy,
       supportText: SECONDARY_CTA.description,
     },
-    targetId: "cta-section",
   },
   {
     id: "materials",
-    icon: FileText,
     label: "資料ダウンロード",
-    headline: "ZENの運用フローと数値例を確認",
+    icon: FileText,
+    title: "再生ロードマップの全体像を社内共有",
     description:
-      "サービス概要・ZENナビゲーションボードの画面・実行管理テンプレートをまとめたPDFを即時ダウンロードできます。",
-    highlights: [
-      "ZENナビゲーションボードの画面サンプル",
-      "ROI試算と導入チェックリスト",
-      "現場共有用の解説スライド",
+      "ZENの運用フロー、AIダッシュボード、会議テンプレートをまとめた資料。幹部会や金融機関との共有にも活用できます。",
+    bullets: [
+      "再生ロードマップのサンプル",
+      "AIダッシュボードの画面イメージ",
+      "週次レポートと会議運用の解説",
     ],
     button: {
       id: TERTIARY_CTA.id,
       label: TERTIARY_CTA.label,
-      benefitCopy: "PDFとダッシュボードのサンプル付き",
-      benefitCopyAlt: "PDFとダッシュボードのサンプル付き",
-      supportText: "",
+      benefitCopy: "PDFとデモ画面のセット",
+      benefitCopyAlt: "PDFとデモ画面のセット",
+      supportText: TERTIARY_CTA.description,
     },
-    ctaText: TERTIARY_CTA.label,
     href: TERTIARY_CTA.href,
   },
 ];
 
-const scrollTo = (id: string) => {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-};
-
-const offerMetrics = [
-  {
-    value: 30,
-    suffix: "分",
-    label: "初回棚卸",
-    description: "経営課題とAI適用余地を共同設計",
-  },
-  {
-    value: 72,
-    suffix: "時間",
-    label: "ZENスキャン",
-    description: "意思決定の前倒しを可視化",
-  },
-  {
-    value: 18,
-    suffix: "指標",
-    label: "シグナル",
-    description: "粗利・資金・需要のKPIを同期",
-  },
-];
-
 const OfferSection = () => {
+  const handleClick = (cardId: string, href?: string) => {
+    if (href) {
+      window.open(href, "_blank", "noreferrer noopener");
+      return;
+    }
+
+    if (cardId !== "materials") {
+      document.getElementById("cta-section")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="fade-in-section section-spacing bg-gradient-to-b from-white via-slate-50 to-slate-100" aria-labelledby="offer-heading">
-      <div className="layout-shell">
+    <section className="fade-in-section bg-white py-20" aria-labelledby="offer-heading">
+      <div className="container mx-auto max-w-6xl px-4">
         <div className="mx-auto max-w-3xl text-center space-y-4">
-          <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-primary">
-            OFFER
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#f2f7ff] px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
+            行動への3ステップ
           </span>
-          <h2 id="offer-heading" className="text-balance text-3xl font-bold text-foreground md:text-4xl">
-            意思決定の質・速さ・先見性を試せる3つの入り口
+          <h2 id="offer-heading" className="text-3xl font-bold leading-tight text-[#0b1f3f] md:text-4xl">
+            行動の重さに合わせた三つの入り口で、再生への一歩を後押しする
           </h2>
-          <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-            行動のハードルに応じた3つのオファーをご用意しました。経営者が自信を持って判断材料をそろえられる順番で並べています。
+          <p className="text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
+            無料相談で輪郭を描き、ZENスキャンで可能性を数値化し、資料で社内共有を進める。最初の一歩から実行までがひと続きになるように設計しています。
           </p>
         </div>
 
-        <div className="relative mx-auto mt-12 max-w-5xl overflow-hidden rounded-[32px] border border-primary/20 bg-gradient-to-br from-white via-primary/5 to-sky-50/60 p-8 shadow-card">
-          <div className="pointer-events-none absolute inset-0">
-            <img
-              src={offerBlueprint}
-              alt="AI経営ダッシュボードの意思決定イメージ"
-              className="h-full w-full object-cover opacity-35 mix-blend-multiply"
-              loading="lazy"
-              decoding="async"
-            />
-            <span className="absolute -right-16 top-1/2 h-56 w-56 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl" aria-hidden="true" />
-            <span className="absolute -left-20 bottom-0 h-48 w-48 rounded-full bg-secondary/20 blur-3xl" aria-hidden="true" />
-          </div>
-          <div className="relative z-10 space-y-6">
-            <div className="text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/90 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.32em] text-primary">
-                DECISION BLUEPRINT
-              </span>
-              <h3 className="mt-4 text-2xl font-bold text-foreground md:text-3xl">30分→72時間→18指標で一気に意思決定を前倒し</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
-                無料相談で課題を棚卸し、仮診断で優先順位を決定、資料ダウンロードで社内共有を加速する三段構えの導線です。
-              </p>
-            </div>
-            <div className="grid gap-4 md:grid-cols-3">
-              {offerMetrics.map((metric, index) => (
-                <div
-                  key={metric.label}
-                  className="group relative flex h-full flex-col gap-3 rounded-3xl border border-white/60 bg-white/90 p-5 shadow-inner backdrop-blur-sm"
-                  style={{ transitionDelay: `${index * 80}ms` }}
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary/70">{metric.label}</span>
-                  <AnimatedCounter
-                    value={metric.value}
-                    suffix={metric.suffix}
-                    duration={1000}
-                    className="text-3xl font-black text-primary"
-                  />
-                  <p className="text-sm leading-relaxed text-muted-foreground">{metric.description}</p>
-                  <div className="mt-auto h-1 rounded-full bg-gradient-to-r from-primary via-accent to-secondary" aria-hidden="true" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {offers.map((offer) => {
-            const Icon = offer.icon;
-            const handleClick = () => {
-              if (offer.href) {
-                if (typeof window !== "undefined") {
-                  window.open(offer.href, "_blank", "noreferrer noopener");
-                }
-              } else if (offer.targetId) {
-                scrollTo(offer.targetId);
-              }
-            };
-
+          {offerCards.map((card) => {
+            const Icon = card.icon;
             return (
               <article
-                key={offer.id}
-                className="group flex h-full flex-col justify-between gap-6 rounded-3xl border border-primary/15 bg-white/95 p-8 shadow-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-elegant"
+                key={card.id}
+                className="group flex h-full flex-col justify-between gap-6 rounded-[30px] border border-[#0b1f3f]/12 bg-[#f6f9ff] p-8 shadow-[0_25px_60px_rgba(6,21,48,0.12)]"
               >
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0584c6]/15 text-[#0584c6]">
                       <Icon className="h-6 w-6" aria-hidden="true" />
                     </span>
-                    <span className="text-xs font-semibold uppercase tracking-[0.3em] text-primary/70">{offer.label}</span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]/80">{card.label}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground md:text-2xl">{offer.headline}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground md:text-base">{offer.description}</p>
-                  {offer.highlights && (
-                    <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
-                      {offer.highlights.map((item) => (
-                        <li key={item} className="flex items-start gap-2">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-primary" aria-hidden="true" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <h3 className="text-xl font-semibold text-[#0b1f3f] md:text-2xl">{card.title}</h3>
+                  <p className="text-sm leading-relaxed text-[#1e3359]/75">{card.description}</p>
+                  <ul className="mt-4 space-y-2 text-sm leading-relaxed text-[#1e3359]/75">
+                    {card.bullets.map((bullet) => (
+                      <li key={bullet} className="flex items-start gap-2">
+                        <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <div className="space-y-3">
-                  <p className="text-sm font-semibold text-primary/80">{offer.button.benefitCopy || offer.button.benefitCopyAlt}</p>
+                  {card.button.supportText && (
+                    <p className="text-xs leading-relaxed text-[#1e3359]/70">{card.button.supportText}</p>
+                  )}
                   <Button
                     type="button"
                     variant="cta"
                     size="lg"
+                    data-cta-id={`${card.button.id}-offer`}
                     className={cn("w-full justify-center rounded-full text-sm font-bold", "interactive-cta")}
-                    onClick={handleClick}
-                    data-cta-id={`${offer.button.id}-offer`}
-                    data-cta-attention="offer"
-                    data-cta-attention-delay="640"
+                    onClick={() => handleClick(card.id, card.href)}
                   >
-                    {offer.ctaText || offer.button.label}
+                    {card.button.label}
                     <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Button>
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]/80">
+                    {card.button.benefitCopy || card.button.benefitCopyAlt}
+                  </p>
                 </div>
               </article>
             );

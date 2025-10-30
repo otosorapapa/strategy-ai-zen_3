@@ -1,174 +1,306 @@
-diff --git a/src/components/CTASection.tsx b/src/components/CTASection.tsx
-index 08cd13701c1b3d021d882e28c40a0d4733487ee7..6a7b711b49f3621ecd8766adcb1daea042ed8ca9 100644
---- a/src/components/CTASection.tsx
-+++ b/src/components/CTASection.tsx
-@@ -8,145 +8,145 @@ import { Textarea } from "@/components/ui/textarea";
- import { Checkbox } from "@/components/ui/checkbox";
- import { Progress } from "@/components/ui/progress";
- import { useToast } from "@/hooks/use-toast";
- import { PRIMARY_CTA, SECONDARY_CTA } from "@/lib/ctaVariants";
- import { cn } from "@/lib/utils";
- import { submitContactFormToWordPress } from "@/lib/wordpress";
- import {
-   AlertCircle,
-   ArrowRight,
-   Building2,
-   CalendarClock,
-   CheckCircle,
-   CheckCircle2,
-   JapaneseYen,
-   Loader2,
-   Lock,
-   Mail,
-   ShieldCheck,
-   Timer,
-   UserRound,
- } from "lucide-react";
- 
- const requestOptions = [
-   {
-     value: "consultation",
--    title: "30分相談で意思決定の詰まりを棚卸し",
-+    title: "30分相談でWhyを言語化",
-     description:
--      "代表・古町（中小企業診断士）が直接ヒアリングし、粗利・資金・需要のボトルネックとAI活用余地を整理。翌営業日に優先度と根拠をまとめた検証メモ（例）を共有します。",
-+      "代表・古町が直接ヒアリングし、再生の目的と制約を整理。翌営業日に“再生の設計図”ドラフト（例）と優先アクション候補を共有します。",
-     badge: "無料相談",
-   },
-   {
-     value: "diagnostic",
--    title: "14指標の仮診断で次の一手を決める",
-+    title: "AI診断でHowを描く",
-     description:
--      "粗利率・在庫回転・資金余力・意思決定リードタイムなど14指標をAIが試算。72時間以内に改善インパクト（例）と優先順位を添えて返信します。",
--    badge: "仮診断",
-+      "粗利・キャッシュ・人材の18指標をAIが分析し、専門家が行動順序とリスク注意点をコメント。72時間で実行の土台を把握できます。",
-+    badge: "AI診断",
-   },
-   {
-     value: "materials",
--    title: "要点資料を今すぐ確認する",
-+    title: "資料でWhatを共有",
-     description:
--      "サービス概要・導入ステップ・AIレポートと意思決定ボードのサンプルをまとめたPDFを即時ダウンロードできます。",
-+      "再生設計図の全体像、成果事例、金融機関連携のテンプレートをまとめたPDFを即時ダウンロード。社内外への共有にご活用ください。",
-     badge: "資料DL",
-   },
- ] as const;
- 
- type RequestType = (typeof requestOptions)[number]["value"];
- 
- const resolveRequestTypeLabel = (value: RequestType) => {
-   const option = requestOptions.find((entry) => entry.value === value);
-   return option?.title ?? "";
- };
- 
- const assuranceBadges = [
-   {
--    label: "中小企業診断士・登録専門家",
--    description: "代表 古町 聖文が直接伴走し、経営計画・資金調達・投資判断の打ち手まで責任を持って確認します。",
-+    label: "中小企業診断士が直接伴走",
-+    description: "株式会社創和経営コンサルティング（福岡）の専門チームが再生計画・金融交渉・実行支援を一貫サポートします。",
-   },
-   {
--    label: "ISMS/Pマーク取得ベンダーと連携",
--    description: "財務データは暗号化とアクセス制御で保管し、AI学習には匿名化した情報のみを利用。守秘義務契約も締結します。",
-+    label: "データと守秘の徹底",
-+    description: "財務・人材データは暗号化とアクセス制御で保管し、AI学習には匿名化した情報のみを使用。NDA締結も標準対応です。",
-   },
- ];
- 
- const confettiPieces = Array.from({ length: 12 }, (_, index) => {
-   const left = 6 + index * 7;
-   const delay = index * 55;
-   const direction = index % 2 === 0 ? -1 : 1;
-   const drift = direction * (18 + index * 3);
-   const rotation = direction * (10 + index * 2);
- 
-   return {
-     id: `confetti-piece-${index}`,
-     left,
-     delay,
-     drift,
-     rotation,
-     endRotation: rotation + direction * 42,
-     hue: 150 + index * 7,
-   };
- });
- 
- const bookingMetrics = [
-   {
-     icon: Timer,
-     value: "30分以内",
-     label: "最短返信",
--    helper: "社長・役員案件は優先回線で即時フォロー", 
-+    helper: "無料相談の希望日時を即日ご案内",
-   },
-   {
-     icon: ShieldCheck,
--    value: "14指標",
--    label: "経営スコア",
--    helper: "財務×現場データでボトルネックを可視化",
-+    value: "18指標",
-+    label: "AI診断",
-+    helper: "粗利・資金・人材の再生余地を一括可視化",
-   },
-   {
-     icon: Building2,
--    value: "累計210社",
--    label: "実行支援",
--    helper: "年商5,000万〜15億規模の改善プロジェクト",
-+    value: "100社超",
-+    label: "再生伴走",
-+    helper: "年商1〜50億規模の事業再生を支援",
-   },
- ];
- 
- const followUpSteps = [
-   {
-     icon: Mail,
--    title: "資料とヒアリングシートを即送付",
--    description: "送信直後に生成AIレポートのサンプルとヒアリングシート（Excel）を自動返信します。",
-+    title: "設計図サンプルとヒアリングシート送付",
-+    description: "送信直後に再生設計図のサンプルPDFと事前ヒアリングシート（Excel）を自動返信します。",
-     duration: "送信直後",
-   },
-   {
-     icon: CalendarClock,
--    title: "担当者が希望日時をすり合わせ",
--    description: "無料相談・仮診断をご希望の場合は当日～翌営業日に代表または担当者が候補日時をご案内します。",
-+    title: "代表が日程をご提案",
-+    description: "無料相談・AI診断をご希望の場合は当日〜翌営業日に代表または専門チームが候補日時をご連絡します。",
-     duration: "当日〜翌営業日",
-   },
-   {
-     icon: CheckCircle,
--    title: "初回30分で意思決定のボトルネック整理",
--    description: "粗利・資金の感度分析とAIが提案する施策案（例）を共有し、意思決定時間を週9時間創出するプランを提案します。迷いを削った状態でチームに方向性を伝えられるよう伴走します。",
-+    title: "初回30分でWhy/How/Whatを棚卸し",
-+    description: "粗利・資金・人材のギャップと優先施策を整理し、行動順序と金融機関への伝え方まで描いた“再生の設計図”を提示します。",
-     duration: "30分",
-   },
- ];
- 
- const formSteps = [
-   {
-     id: 1,
-     label: "メールアドレスと希望内容",
-     helper: "まずは診断結果の送付先を入力",
-     fields: ["email"] as const,
-   },
-   {
-     id: 2,
-     label: "会社情報と詳細",
-     helper: "会社名・お名前・任意の共有事項を入力",
-     fields: ["company", "name", "consent"] as const,
-   },
- ] as const;
- 
- const CTASection = () => {
-   const { toast } = useToast();
-   const formId = useId();
-   const requestLabelId = `${formId}-request-type`;
-   const helperIds = {
-     email: `${formId}-email-help`,
+import { useId, useState } from "react";
+import {
+  AlertCircle,
+  ArrowRight,
+  Building2,
+  CheckCircle2,
+  Loader2,
+  ShieldCheck,
+  Timer,
+} from "lucide-react";
+
+import ScrollReveal from "@/components/ScrollReveal";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { PRIMARY_CTA } from "@/lib/ctaVariants";
+import { submitContactFormToWordPress } from "@/lib/wordpress";
+import { cn } from "@/lib/utils";
+
+const requestOptions = [
+  {
+    value: "consultation",
+    title: "無料相談でWhyを言語化",
+    description:
+      "経営者とともに現状を棚卸しし、“再生の設計図”のドラフトと優先仮説メモを24時間以内にご共有します。",
+    badge: "無料相談",
+  },
+  {
+    value: "diagnostic",
+    title: "AI診断でHowを描く",
+    description:
+      "粗利・キャッシュ・人材の18指標をAIが分析し、専門家が行動順序とリスクをコメントしたレポートを72時間でお届けします。",
+    badge: "AI診断",
+  },
+  {
+    value: "materials",
+    title: "資料でWhatを共有",
+    description:
+      "再生設計図の全体像、成果事例、金融機関連携のテンプレートをまとめた資料を即時にダウンロードできます。",
+    badge: "資料DL",
+  },
+] as const;
+
+const bookingMetrics = [
+  {
+    icon: Timer,
+    value: "30分以内",
+    label: "最短返信",
+    helper: "無料相談の希望日時を即日ご案内",
+  },
+  {
+    icon: ShieldCheck,
+    value: "18指標",
+    label: "AI診断",
+    helper: "粗利・資金・人材の歪みを一括把握",
+  },
+  {
+    icon: Building2,
+    value: "100社超",
+    label: "再生伴走",
+    helper: "九州・西日本の再生案件を支援",
+  },
+];
+
+const CTASection = () => {
+  const { toast } = useToast();
+  const formId = useId();
+  const [requestType, setRequestType] = useState<(typeof requestOptions)[number]["value"]>("consultation");
+  const [company, setCompany] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const selectedRequest = requestOptions.find((option) => option.value === requestType) ?? requestOptions[0];
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (!consent) {
+      toast({
+        title: "利用規約への同意が必要です", 
+        description: "お問い合わせの前に同意にチェックを入れてください。",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const submissionResult = await submitContactFormToWordPress({
+        company,
+        name,
+        email,
+        requestType,
+        requestTypeLabel: selectedRequest.title,
+        message,
+        consent,
+      });
+
+      if (!submissionResult.success) {
+        throw new Error(submissionResult.message || "送信に失敗しました");
+      }
+
+      toast({
+        title: "送信が完了しました", 
+        description: "担当より24時間以内にご連絡いたします。",
+      });
+
+      setCompany("");
+      setName("");
+      setEmail("");
+      setMessage("");
+      setConsent(false);
+      setRequestType("consultation");
+    } catch (error) {
+      console.error("Failed to submit contact form", error);
+      toast({
+        title: "送信できませんでした",
+        description: error instanceof Error ? error.message : "時間をおいて再度お試しください。",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section
+      id="cta-section"
+      className="fade-in-section bg-gradient-to-b from-[#031024] via-[#071c3c] to-[#031024] py-20 text-white"
+      aria-labelledby="cta-heading"
+    >
+      <div className="container mx-auto max-w-6xl px-4">
+        <ScrollReveal variant="fade-up" className="space-y-6 text-center">
+          <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
+            行動に移す準備は整いましたか？
+          </span>
+          <h2 id="cta-heading" className="text-3xl font-bold leading-tight md:text-4xl">
+            今すぐ、未来の設計図を描き直す
+          </h2>
+          <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
+            生成AIと専門家の伴走で、再生の道筋をともに設計しましょう。無料相談では“Why”、AI診断で“How”、資料で“What”を揃え、経営者の判断を支援します。
+          </p>
+        </ScrollReveal>
+
+        <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+          <ScrollReveal
+            variant="fade-up"
+            className="space-y-6 rounded-[32px] border border-white/10 bg-white/5 p-8 shadow-[0_35px_90px_rgba(3,14,32,0.6)]"
+          >
+            <div className="grid gap-4 sm:grid-cols-3">
+              {bookingMetrics.map((metric) => {
+                const Icon = metric.icon;
+                return (
+                  <div key={metric.label} className="rounded-3xl border border-white/15 bg-white/10 p-5 text-center">
+                    <Icon className="mx-auto h-6 w-6 text-cyan-200" aria-hidden="true" />
+                    <p className="mt-3 text-2xl font-semibold text-white">{metric.value}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/80">{metric.label}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-slate-200/80">{metric.helper}</p>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="space-y-4 rounded-[28px] border border-white/10 bg-white/10 p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/80">選択中のメニュー</p>
+              <div className="rounded-2xl border border-white/15 bg-white/5 p-4">
+                <p className="text-sm font-semibold text-white">{selectedRequest.title}</p>
+                <p className="mt-2 text-xs leading-relaxed text-slate-200/80">{selectedRequest.description}</p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {requestOptions.map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    onClick={() => setRequestType(option.value)}
+                    className={cn(
+                      "rounded-2xl border px-4 py-3 text-left text-xs font-semibold transition",
+                      option.value === requestType
+                        ? "border-cyan-300/60 bg-cyan-500/15 text-white"
+                        : "border-white/15 bg-white/5 text-slate-200/80 hover:border-cyan-200/40 hover:text-white",
+                    )}
+                  >
+                    <span className="text-[0.65rem] uppercase tracking-[0.3em] text-cyan-200/80">{option.badge}</span>
+                    <span className="mt-1 block text-[0.95rem] leading-snug">{option.title}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 text-sm leading-relaxed text-slate-200/85">
+              <CheckCircle2 className="mb-3 h-5 w-5 text-cyan-200" aria-hidden="true" />
+              初回30分の無料相談では、粗利・キャッシュ・人材のギャップと優先施策を整理し、行動順序と金融機関への伝え方まで含めた“再生の設計図”をドラフトとしてお渡しします。
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal
+            variant="fade-up"
+            className="rounded-[32px] border border-white/10 bg-white p-8 text-[#0b1f3f] shadow-[0_30px_80px_rgba(5,20,45,0.25)]"
+          >
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="space-y-2">
+                <Label htmlFor={`${formId}-email`} className="text-sm font-semibold text-[#0b1f3f]">
+                  メールアドレス <span className="text-[#0584c6]">*</span>
+                </Label>
+                <Input
+                  id={`${formId}-email`}
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder="例）info@example.jp"
+                />
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor={`${formId}-company`} className="text-sm font-semibold text-[#0b1f3f]">
+                    会社名 <span className="text-[#0584c6]">*</span>
+                  </Label>
+                  <Input
+                    id={`${formId}-company`}
+                    required
+                    value={company}
+                    onChange={(event) => setCompany(event.target.value)}
+                    placeholder="例）株式会社〇〇"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor={`${formId}-name`} className="text-sm font-semibold text-[#0b1f3f]">
+                    お名前 <span className="text-[#0584c6]">*</span>
+                  </Label>
+                  <Input
+                    id={`${formId}-name`}
+                    required
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
+                    placeholder="例）山田 太郎"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor={`${formId}-message`} className="text-sm font-semibold text-[#0b1f3f]">
+                  共有したい課題・現状
+                </Label>
+                <Textarea
+                  id={`${formId}-message`}
+                  rows={4}
+                  value={message}
+                  onChange={(event) => setMessage(event.target.value)}
+                  placeholder="現状の課題やご相談内容をご自由にご記入ください"
+                />
+              </div>
+
+              <div className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f2f7ff] p-4 text-sm leading-relaxed text-[#1e3359]/80">
+                <Checkbox
+                  id={`${formId}-consent`}
+                  checked={consent}
+                  onCheckedChange={(checked) => setConsent(Boolean(checked))}
+                />
+                <Label htmlFor={`${formId}-consent`} className="cursor-pointer">
+                  お問い合わせ内容は利用規約およびプライバシーポリシーに基づき管理されます。内容に同意のうえ、送信してください。
+                </Label>
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full justify-center rounded-full bg-[#0584c6] py-4 text-base font-bold text-white shadow-[0_18px_40px_rgba(5,132,198,0.35)] transition hover:bg-[#0aa3e0]"
+                data-cta-id={`${PRIMARY_CTA.id}-form`}
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
+                    送信中...
+                  </span>
+                ) : (
+                  <span className="flex items-center justify-center gap-2">
+                    {PRIMARY_CTA.label}
+                    <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                )}
+              </Button>
+
+              <div className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f6f9ff] p-4 text-xs text-[#1e3359]/80">
+                <AlertCircle className="mt-0.5 h-4 w-4 text-[#0584c6]" aria-hidden="true" />
+                <p>
+                  送信後24時間以内に、代表または専門チームよりご連絡します。お急ぎの方はお電話（092-231-2920）でも承ります。
+                </p>
+              </div>
+            </form>
+          </ScrollReveal>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CTASection;

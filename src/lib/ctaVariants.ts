@@ -22,25 +22,25 @@ export type TertiaryCtaContent = {
 
 export const PRIMARY_CTA: PrimaryCtaContent = {
   id: "primary",
-  label: "30分相談で改善ロードマップを描く",
-  benefitCopy: "生成AIと専門家の伴走体制を確認",
-  benefitCopyAlt: "粗利・キャッシュ改善の優先順位を整理",
+  label: "AIと専門家が描く“再生の設計図”を無料で確認する",
+  benefitCopy: "48時間で再生シグナルのドラフトを提示",
+  benefitCopyAlt: "粗利・キャッシュ・人材の歪みを即可視化",
   supportText:
-    "・代表 古町（中小企業診断士）が直接ヒアリングし、AIに学習させる指標と改善テーマを48時間で棚卸しします。\n・翌営業日に意思決定ボードの雛形と優先施策（例）をご共有し、経営陣と共有できるストーリーを整えます。",
+    "代表・古町（中小企業診断士）が直接ヒアリングし、生成AIが抽出した歪みと優先仮説を24時間以内に共有します。次の会議で語れるストーリーと資料案をご用意します。",
 };
 
 export const SECONDARY_CTA: SecondaryCtaContent = {
   id: "secondary",
-  label: "72時間で生成AI経営診断を受け取る",
-  benefitCopy: "粗利・在庫・資金の14指標を先読み",
+  label: "72時間でAI診断レポートを受け取る",
+  benefitCopy: "粗利・資金・人材の18指標をスコアリング",
   description:
-    "ヒアリングシートに回答いただくと、生成AIが粗利率・在庫回転・資金余力・判断スピードの現状と改善幅（例）を算出し、専門家のコメントと共にお送りします。",
+    "AIが粗利率・キャッシュ余力・需要トレンドを分析し、専門家のコメント付きで改善シナリオを提示。リスク注意点と実行順序も明記します。",
 };
 
 export const TERTIARY_CTA: TertiaryCtaContent = {
   id: "tertiary",
-  label: "サービス概要資料をダウンロード",
+  label: "サービス資料で全体像を確認する",
   href: "https://furumachi-smec.lognowa.com/public/lp_2/assets/strategy-ai-brief.pdf",
   description:
-    "生成AI改善ワークフロー、週次レポート、意思決定ボードのサンプルをまとめたPDFを即時に取得できます。",
+    "再生ロードマップ、AIダッシュボード、金融機関連携テンプレートをまとめたPDFを即時に取得できます。",
 };

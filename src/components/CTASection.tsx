@@ -175,22 +175,38 @@ const CTASection = () => {
                 <p className="mt-2 text-xs leading-relaxed text-slate-200/80">{selectedRequest.description}</p>
               </div>
               <div className="grid gap-3 sm:grid-cols-3">
-                {requestOptions.map((option) => (
-                  <button
-                    key={option.value}
-                    type="button"
-                    onClick={() => setRequestType(option.value)}
-                    className={cn(
-                      "rounded-2xl border px-4 py-3 text-left text-xs font-semibold transition",
-                      option.value === requestType
-                        ? "border-cyan-300/60 bg-cyan-500/15 text-white"
-                        : "border-white/15 bg-white/5 text-slate-200/80 hover:border-cyan-200/40 hover:text-white",
-                    )}
-                  >
-                    <span className="text-[0.65rem] uppercase tracking-[0.3em] text-cyan-200/80">{option.badge}</span>
-                    <span className="mt-1 block text-[0.95rem] leading-snug">{option.title}</span>
-                  </button>
-                ))}
+                {requestOptions.map((option) => {
+                  const isSelected = option.value === requestType;
+
+                  return (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() => setRequestType(option.value)}
+                      aria-pressed={isSelected}
+                      className={cn(
+                        "group flex h-full flex-col justify-between rounded-2xl border px-4 py-3 text-left text-xs font-semibold transition",
+                        isSelected
+                          ? "border-cyan-300/60 bg-cyan-500/15 text-white"
+                          : "border-white/15 bg-white/5 text-slate-200/80 hover:border-cyan-200/40 hover:text-white",
+                      )}
+                    >
+                      <span className="text-[0.65rem] uppercase tracking-[0.3em] text-cyan-200/80">{option.badge}</span>
+                      <span className="mt-1 block text-[0.95rem] leading-snug">{option.title}</span>
+                      <span
+                        className={cn(
+                          "mt-3 inline-flex items-center gap-2 text-[0.7rem] font-semibold",
+                          isSelected
+                            ? "text-cyan-100"
+                            : "text-cyan-100/70 group-hover:text-cyan-50",
+                        )}
+                      >
+                        <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                        {isSelected ? "選択中" : "クリックして選択"}
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 

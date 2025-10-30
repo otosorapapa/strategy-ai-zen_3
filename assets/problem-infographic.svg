@@ -16,7 +16,7 @@
   <rect width="720" height="540" fill="#F8FAFC" />
   <rect x="72" y="48" width="576" height="444" rx="32" fill="url(#card)" stroke="#E2E8F0" stroke-width="2" />
   <text x="360" y="108" text-anchor="middle" fill="#0F172A" font-size="26" font-weight="700">課題マップ（要約）</text>
-  <text x="360" y="136" text-anchor="middle" fill="#475569" font-size="14">CAUSE → INSIGHT → ACTION の流れと検証ループを可視化</text>
+  <text x="360" y="136" text-anchor="middle" fill="#475569" font-size="14">原因をつかむ → 仮説をまとめる → 打ち手を決める</text>
 
   <g>
     <rect x="108" y="168" width="176" height="196" rx="24" fill="#E0F2FE" />
@@ -25,9 +25,9 @@
     <circle cx="140" cy="244" r="20" fill="#0EA5E9" opacity="0.9" />
     <text x="140" y="250" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">1</text>
     <text x="196" y="240" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">外部シグナル</text>
-    <text x="196" y="266" text-anchor="middle" fill="#1D4ED8" font-size="12" font-weight="600">需給・金利・競争条件</text>
-    <text x="196" y="292" text-anchor="middle" fill="#475569" font-size="12">週次サマリーで変化を把握</text>
-    <text x="196" y="318" text-anchor="middle" fill="#475569" font-size="12">リスク察知と優先課題候補を抽出</text>
+    <text x="196" y="266" text-anchor="middle" fill="#1D4ED8" font-size="13" font-weight="600">市場・顧客・リスク</text>
+    <text x="196" y="296" text-anchor="middle" fill="#475569" font-size="13">週次レポートで変化を把握</text>
+    <text x="196" y="326" text-anchor="middle" fill="#475569" font-size="13">次に考える課題の目星をつける</text>
   </g>
 
   <g>
@@ -36,11 +36,10 @@
     <text x="360" y="184" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">STEP 2｜INSIGHT</text>
     <circle cx="304" cy="232" r="20" fill="#3B82F6" opacity="0.95" />
     <text x="304" y="238" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">2</text>
-    <text x="360" y="228" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">優先仮説メモ</text>
-    <text x="360" y="256" text-anchor="middle" fill="#1D4ED8" font-size="12" font-weight="600">CAUSE と IMPACT を整理</text>
-    <text x="360" y="282" text-anchor="middle" fill="#475569" font-size="12">粗利・キャッシュ・在庫の関係性を可視化</text>
-    <text x="360" y="308" text-anchor="middle" fill="#475569" font-size="12">意思決定に必要な論点を一枚に集約</text>
-    <text x="360" y="334" text-anchor="middle" fill="#475569" font-size="12">想定シナリオごとのリスクと期待値を整理</text>
+    <text x="360" y="228" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">仮説メモ</text>
+    <text x="360" y="258" text-anchor="middle" fill="#1D4ED8" font-size="13" font-weight="600">要因と影響をつなぐ</text>
+    <text x="360" y="288" text-anchor="middle" fill="#475569" font-size="13">数字と現場の気づきを一枚に整理</text>
+    <text x="360" y="318" text-anchor="middle" fill="#475569" font-size="13">判断に使うポイントを明確化</text>
   </g>
 
   <g>
@@ -50,9 +49,9 @@
     <circle cx="468" cy="244" r="20" fill="#0F766E" opacity="0.9" />
     <text x="468" y="250" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">3</text>
     <text x="524" y="240" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">意思決定</text>
-    <text x="524" y="266" text-anchor="middle" fill="#0E7490" font-size="12" font-weight="600">投資・採用・価格のシナリオ設計</text>
-    <text x="524" y="292" text-anchor="middle" fill="#475569" font-size="12">優先度・リスク・必要リソースを即共有</text>
-    <text x="524" y="318" text-anchor="middle" fill="#475569" font-size="12">意思決定プロセスの透明性を確保</text>
+    <text x="524" y="266" text-anchor="middle" fill="#0E7490" font-size="13" font-weight="600">投資や施策を選ぶ</text>
+    <text x="524" y="296" text-anchor="middle" fill="#475569" font-size="13">優先度とリソースを共有</text>
+    <text x="524" y="326" text-anchor="middle" fill="#475569" font-size="13">進め方をすぐに揃える</text>
   </g>
 
   <path d="M284 268H324" stroke="#0EA5E9" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" />
@@ -60,9 +59,8 @@
 
   <g>
     <rect x="208" y="380" width="304" height="104" rx="24" fill="#0EA5E9" />
-    <text x="360" y="412" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="700">週次ダッシュボードで検証・更新</text>
-    <text x="360" y="438" text-anchor="middle" fill="#F8FAFC" font-size="12" font-weight="600">現場メモと指標を同期し、改善サイクルへ接続</text>
-    <text x="360" y="460" text-anchor="middle" fill="#E0F2FE" font-size="11">ズレを検出 → 仮説更新 → アクション修正</text>
+    <text x="360" y="412" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="700">週次ダッシュボードで確認</text>
+    <text x="360" y="440" text-anchor="middle" fill="#F8FAFC" font-size="13" font-weight="600">ズレを見つける → 仮説を更新 → アクション修正</text>
   </g>
 
   <path d="M360 348V372" stroke="#0EA5E9" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" />
@@ -70,6 +68,6 @@
 
   <g opacity="0.3">
     <path d="M126 352C126 322 152 300 182 300H538C568 300 594 322 594 352" stroke="url(#loop)" stroke-width="8" stroke-linecap="round" stroke-dasharray="12 18" />
-    <text x="360" y="354" text-anchor="middle" fill="#0284C7" font-size="11" font-weight="600">アクションで得た学びが次のシグナル評価に循環</text>
+    <text x="360" y="354" text-anchor="middle" fill="#0284C7" font-size="12" font-weight="600">行動の学びが次のシグナル確認へ戻る</text>
   </g>
 </svg>

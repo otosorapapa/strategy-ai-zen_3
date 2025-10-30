@@ -34,13 +34,13 @@ const AIWorkflowShowcase = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/15 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            提供価値
+            What｜提供する価値
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             AI × 専門家による経営再生支援で、再起のストーリーを一気通貫で描き直す
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            四つのモジュールが互いに連動し、数字・現場・金融機関との対話まで途切れない再生プロセスを構築します。全体像が見えるから、必要な一歩を迷わず踏み出せます。
+            四つのモジュールが互いに連動し、数字・現場・金融機関との対話まで途切れない再生プロセスを構築します。現状分析から金融交渉、経営者コーチングまで一気通貫で整うから、全体像が見えた状態で次の一歩を踏み出せます。
           </p>
         </ScrollReveal>
 

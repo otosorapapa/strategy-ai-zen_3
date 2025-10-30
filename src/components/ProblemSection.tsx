@@ -28,13 +28,13 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            現実の壁
+            Why 02｜現場で起きていること
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            「設計図」がなければ、努力は点在し続ける。だからこそ私たちはゴールをひとつに束ねます。
+            設計図がなければ、努力は点在し続ける。だからこそ、判断の軸をひとつに束ねる。
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            再生に必要なのは、勇気だけではありません。市場データと現場の声を同じキャンバスに置き、判断の軸を揃える仕組みです。私たちは生成AIと専門家の視点を束ね、経営に漂う断片を「未来の設計図」として再構築します。
+            勇気や根性だけでは再生は進みません。市場の揺らぎ、資金の目減り、現場の感覚を同じキャンバスに置き、何を優先すべきかを揃える仕組みが必要です。生成AIと専門家の視点を束ね、断片的な情報を“未来の設計図”として再構築します。
           </p>
         </ScrollReveal>
 

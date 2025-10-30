@@ -80,7 +80,7 @@ const HeroSection = () => {
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
                 使命｜判断力を取り戻す伴走
               </span>
-              <h1 className="text-balance text-3xl font-bold leading-tight md:text-4xl xl:text-[3.1rem]">
+              <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
                 資金が尽きる前に、未来を読み直す。<br className="hidden md:block" />「生成AI × 専門家」が描き切る再生の設計図
               </h1>
               <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">

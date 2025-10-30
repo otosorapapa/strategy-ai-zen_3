@@ -34,7 +34,7 @@ const AIWorkflowShowcase = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/15 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            What - 提供価値
+            提供価値
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             AI × 専門家による経営再生支援で、再起のストーリーを一気通貫で描き直す

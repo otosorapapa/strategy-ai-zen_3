@@ -1,7 +1,7 @@
 import { Lightbulb, Quote, Sparkles, TrendingUp } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const whyNarrative = [
+const rootCauseNarrative = [
   {
     title: "1. 変化の兆しを捉えきれない",
     description:
@@ -32,18 +32,18 @@ const InsightSpotlight = () => {
       <div className="container relative mx-auto max-w-5xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            Why
+            揺らぎの正体
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             経営の灯が揺らぐのは、努力不足ではなく「未来を読む設計図」が欠けているから
           </h2>
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            市場が揺れ、資金が逼迫し、現場の士気も落ちかけているとき。必要なのは“頑張れ”という精神論ではなく、未来の見取り図です。データと経験知を結びつける設計図がなければ、どれだけ情熱があっても経営は空回りします。だからこそ私たちは、経営者がもう一度舵を握れる環境を作るために伴走を続けています。
+            市場が揺れ、資金が逼迫し、現場の士気も落ちかけているとき。必要なのは“頑張れ”という精神論ではなく、未来の見取り図です。データと経験知を結びつける設計図がなければ、どれだけ情熱があっても経営は空回りします。だからこそ私たちは、経営者がもう一度舵を握り、胸を張って判断を伝えられる環境を作るために伴走を続けています。
           </p>
         </ScrollReveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {whyNarrative.map((item) => (
+          {rootCauseNarrative.map((item) => (
             <ScrollReveal
               key={item.title}
               variant="fade-up"
@@ -62,7 +62,7 @@ const InsightSpotlight = () => {
           <div className="flex flex-col gap-4 text-left md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
               <Quote className="h-5 w-5" aria-hidden="true" />
-              Story of Hope
+              共に描く希望
             </div>
             <p className="text-sm text-[#1e3359]/70">
               「再生の設計図」が整うと、判断の根拠と行動が一体化し、次の会議を待たずに動けるようになります。

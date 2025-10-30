@@ -23,23 +23,23 @@ import { cn } from "@/lib/utils";
 const requestOptions = [
   {
     value: "consultation",
-    title: "無料相談でWhyを言語化",
+    title: "無料相談で方向性を定義",
     description:
-      "経営者とともに現状を棚卸しし、“再生の設計図”のドラフトと優先仮説メモを24時間以内にご共有します。",
+      "経営者とともに現状を棚卸しし、“再生の設計図”のドラフトと優先仮説メモを24時間以内にご共有します。次の場で堂々と語れる要点を整理します。",
     badge: "無料相談",
   },
   {
     value: "diagnostic",
-    title: "AI診断でHowを描く",
+    title: "AI診断で歪みを可視化",
     description:
-      "粗利・キャッシュ・人材の18指標をAIが分析し、専門家が行動順序とリスクをコメントしたレポートを72時間でお届けします。",
+      "粗利・キャッシュ・人材の18指標をAIが分析し、専門家が行動順序とリスクをコメントしたレポートを72時間でお届けします。判断の軸が揺れないよう裏付けを整えます。",
     badge: "AI診断",
   },
   {
     value: "materials",
-    title: "資料でWhatを共有",
+    title: "資料で全体像を把握",
     description:
-      "再生設計図の全体像、成果事例、金融機関連携のテンプレートをまとめた資料を即時にダウンロードできます。",
+      "再生設計図の全体像、成果事例、金融機関連携のテンプレートをまとめた資料を即時にダウンロードできます。社内外に自信を持って示せる内容を厳選しました。",
     badge: "資料DL",
   },
 ] as const;
@@ -145,7 +145,7 @@ const CTASection = () => {
             今すぐ、未来の設計図を描き直す
           </h2>
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            生成AIと専門家の伴走で、再生の道筋をともに設計しましょう。無料相談では“Why”、AI診断で“How”、資料で“What”を揃え、経営者の判断を支援します。
+            生成AIと専門家の伴走で、再生の道筋をともに設計しましょう。数字とストーリーを揃え、どの会議でも堂々と語れる状態づくりを支援します。
           </p>
         </ScrollReveal>
 
@@ -196,7 +196,7 @@ const CTASection = () => {
 
             <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 text-sm leading-relaxed text-slate-200/85">
               <CheckCircle2 className="mb-3 h-5 w-5 text-cyan-200" aria-hidden="true" />
-              初回30分の無料相談では、粗利・キャッシュ・人材のギャップと優先施策を整理し、行動順序と金融機関への伝え方まで含めた“再生の設計図”をドラフトとしてお渡しします。
+              初回30分の無料相談では、粗利・キャッシュ・人材のギャップと優先施策を整理し、行動順序と金融機関への伝え方まで含めた“再生の設計図”をドラフトとしてお渡しします。次のステークホルダー面談で堂々と話せる根拠をご用意します。
             </div>
           </ScrollReveal>
 

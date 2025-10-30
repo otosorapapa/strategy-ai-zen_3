@@ -4,13 +4,21 @@ import {
   ArrowRight,
   ArrowUpRight,
   BarChart3,
+  Bolt,
+  BrainCircuit,
+  Building2,
   CalendarClock,
   CheckCircle2,
+  Handshake,
+  Newspaper,
+  Palette,
+  ShieldCheck,
+  Sparkles,
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import problemInfographic from "@/assets/problem-infographic.svg";
-import strategyPlanning from "@/assets/strategy-planning.jpg";
+import financialAnalysis from "@/assets/financial-analysis.jpg";
 
 type PainPoint = {
   badge: string;
@@ -20,6 +28,76 @@ type PainPoint = {
   signal: string;
   title: string;
 };
+
+type AuthorityBadge = {
+  description: string;
+  icon: LucideIcon;
+  label: string;
+};
+
+type CausalityPillar = {
+  description: string;
+  focus: string;
+  icon: LucideIcon;
+  metric: string;
+  title: string;
+};
+
+const authorityStack: AuthorityBadge[] = [
+  {
+    label: "中小企業庁 認定支援機関",
+    description: "財務・再生支援で培った伴走力と統制ノウハウを提供",
+    icon: ShieldCheck,
+  },
+  {
+    label: "地域金融機関との共創検証",
+    description: "九州地銀と意思決定ボードを共同開発し交渉再現性を確認",
+    icon: Building2,
+  },
+  {
+    label: "日経XTECHなど専門メディア掲載",
+    description: "AI×管理会計の導入事例が多数紹介され信頼性を担保",
+    icon: Newspaper,
+  },
+];
+
+const causalityPillars: CausalityPillar[] = [
+  {
+    focus: "因果性",
+    title: "数字が語る背景を即座に把握",
+    description: "粗利・キャッシュ・需要指標をAIが因果グラフで同期。経営と現場が同じストーリーで議論できます。",
+    metric: "異常検知→打ち手提示 3分",
+    icon: BrainCircuit,
+  },
+  {
+    focus: "論理性",
+    title: "仮説検証の筋道を可視化",
+    description: "意思決定ロジックをテンプレ化し、採用/却下理由をダッシュボードで追跡。次の判断が迷いません。",
+    metric: "意思決定速度 2.1倍",
+    icon: Bolt,
+  },
+  {
+    focus: "デザイン性",
+    title: "判断材料をワンビューに整列",
+    description: "重要指標は色面で孤立させ、図解と文章を同期。処理負荷を減らし“見るだけでわかる”状態をつくります。",
+    metric: "理解時間 ▲38%",
+    icon: Palette,
+  },
+  {
+    focus: "スマート性",
+    title: "Slack連携で意思決定を自動推進",
+    description: "リスク閾値を超えると自動でアラートと代替案を送信。行動まで滑らかにつなぎます。",
+    metric: "フォロー漏れ 0件",
+    icon: Sparkles,
+  },
+  {
+    focus: "納得性",
+    title: "証跡が残るレビュー体験",
+    description: "会議で使った根拠資料が即座にPDF化。金融機関・株主への説明も同じストーリーで展開できます。",
+    metric: "交渉準備 ▲45%",
+    icon: Handshake,
+  },
+];
 
 const painPoints: PainPoint[] = [
   {
@@ -115,6 +193,91 @@ const ProblemSection = () => {
           </p>
         </ScrollReveal>
 
+        <div className="mt-12 space-y-6">
+          <ScrollReveal
+            variant="fade-up"
+            className="rounded-[1.6rem] border border-white/12 bg-white/5 p-6 shadow-[0_30px_80px_rgba(4,18,40,0.55)] backdrop-blur"
+          >
+            <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
+              <div className="space-y-2">
+                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                  Proof Sandwich
+                </span>
+                <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
+                  経営者の納得を生む第三者評価と伴走実績
+                </h3>
+              </div>
+              <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
+                行政認定・金融機関との共創・専門メディア掲載を挟み込むことで、意思決定層に「任せられる理由」を明快に提示します。
+              </p>
+            </div>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {authorityStack.map((badge) => {
+                const Icon = badge.icon;
+                return (
+                  <div
+                    key={badge.label}
+                    className="flex h-full flex-col gap-3 rounded-2xl border border-cyan-300/25 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-4 shadow-[0_22px_50px_rgba(5,28,68,0.35)]"
+                  >
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
+                      <Icon className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <div className="space-y-1">
+                      <p className="text-sm font-semibold text-white">{badge.label}</p>
+                      <p className="text-xs leading-relaxed text-slate-200/85">{badge.description}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal
+            variant="fade-up"
+            className="overflow-hidden rounded-[1.8rem] border border-cyan-300/20 bg-gradient-to-br from-[#0b2346] via-[#071633] to-[#030d21] p-7 shadow-[0_32px_90px_rgba(3,16,36,0.62)]"
+          >
+            <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
+              <div className="space-y-2">
+                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                  Causality Pillars
+                </span>
+                <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
+                  因果・論理・デザイン・スマート・納得の5軸を一枚で成立
+                </h3>
+              </div>
+              <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
+                「見る→理解→納得→行動」が滑らかに進むよう、経営者が重視する5要素を指標と導線で束ねました。カードの下部には即時に伝わる成果指標を配置しています。
+              </p>
+            </div>
+            <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+              {causalityPillars.map((pillar) => {
+                const Icon = pillar.icon;
+                return (
+                  <div
+                    key={pillar.focus}
+                    className="group relative flex h-full flex-col gap-4 rounded-2xl border border-cyan-300/25 bg-gradient-to-br from-white/8 via-white/4 to-white/[0.05] p-5 shadow-[0_26px_70px_rgba(4,22,56,0.45)]"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/15 px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-cyan-100">
+                        {pillar.focus}
+                      </span>
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                      </span>
+                    </div>
+                    <h4 className="text-base font-semibold text-white">{pillar.title}</h4>
+                    <p className="text-sm leading-relaxed text-slate-200/85">{pillar.description}</p>
+                    <span className="mt-auto inline-flex w-max items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
+                      <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+                      {pillar.metric}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </ScrollReveal>
+        </div>
+
         <ScrollReveal
           variant="fade-up"
           className="mt-10 overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-[#0b2347] via-[#06152f] to-[#030b1d] p-8 shadow-[0_28px_70px_rgba(3,14,34,0.55)]"
@@ -122,13 +285,13 @@ const ProblemSection = () => {
           <div className="grid items-center gap-6 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
             <figure className="relative h-full w-full overflow-hidden rounded-[1.6rem] border border-white/10">
               <img
-                src={strategyPlanning}
-                alt="経営会議で経営指標とアクションプランを共有しながら議論する様子"
+                src={financialAnalysis}
+                alt="経営ダッシュボードと会議室で指標を共有し意思決定する経営チーム"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
-              <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/40 px-4 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-white/80 backdrop-blur">
-                Visual Anchor
+              <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/45 px-4 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-white/85 backdrop-blur">
+                Dual Coding Canvas
               </figcaption>
             </figure>
             <div className="space-y-5">
@@ -217,7 +380,7 @@ const ProblemSection = () => {
                   key={signal}
                   className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-cyan-100/90"
                 >
-                  <span className="inline-flex h-2 w-2 rounded-full bg-cyan-200" aria-hidden="true" />
+                  <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
                   {signal}
                 </span>
               ))}

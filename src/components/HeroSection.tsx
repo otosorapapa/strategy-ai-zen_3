@@ -1,5 +1,4 @@
 import { Button, buttonVariants } from "@/components/ui/button";
-import AnimatedCounter from "@/components/AnimatedCounter";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
 import { cn } from "@/lib/utils";
@@ -10,31 +9,8 @@ import {
   Landmark,
   LineChart,
   Sparkle,
-  Target,
   Timer,
-  Workflow,
 } from "lucide-react";
-
-const heroStats = [
-  {
-    label: "営業利益の反転", 
-    value: 12,
-    suffix: "%",
-    annotation: "再生設計図の実行後12ヶ月での平均改善幅（例）",
-  },
-  {
-    label: "債務超過の解消率",
-    value: 80,
-    suffix: "%",
-    annotation: "金融機関と再合意に至ったプロジェクト比率（例）",
-  },
-  {
-    label: "可視化までの時間",
-    value: 48,
-    suffix: "時間",
-    annotation: "再生の要点を共有する初期診断リードタイム",
-  },
-];
 
 const heroBullets = [
   "生成AIが粗利・資金・市場トレンドを重ね合わせ、再生余地を色分けして提示",
@@ -73,8 +49,7 @@ const HeroSection = () => {
     <section className="fade-in-section section-spacing relative overflow-hidden bg-gradient-to-b from-[#061530] via-[#0a1f48] to-[#031024] text-white">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.25),_transparent_65%)]" aria-hidden="true" />
       <div className="layout-shell relative z-10">
-        <div className="grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
-          <div className="space-y-10">
+        <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
                 使命｜判断力を取り戻す伴走
@@ -184,57 +159,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-
-          <div className="space-y-6">
-            <div className="relative overflow-hidden rounded-[40px] border border-white/15 bg-[#0b1f3f] shadow-[0_30px_80px_rgba(5,12,35,0.55)]">
-              <div className="pointer-events-none absolute -left-24 top-16 h-48 w-48 rounded-full bg-cyan-500/20 blur-3xl" aria-hidden="true" />
-              <div
-                aria-hidden="true"
-                className="h-full min-h-[320px] max-h-[460px] w-full bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.22),_rgba(3,16,36,0.95))]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#031024]/40 via-transparent to-[#0ef2ff]/10" aria-hidden="true" />
-              <div className="absolute right-6 top-6 w-full max-w-[220px] rounded-3xl border border-cyan-200/30 bg-black/60 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.55)] backdrop-blur">
-                <div className="flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
-                  <Workflow className="h-4 w-4" aria-hidden="true" />
-                  Before / After
-                </div>
-                <div className="mt-3 space-y-3 text-xs text-slate-100/90">
-                  <div className="flex items-center justify-between gap-2 rounded-2xl bg-white/10 px-3 py-2">
-                    <span className="font-semibold uppercase tracking-[0.2em] text-slate-200/80">Before</span>
-                    <span className="text-sm font-bold text-rose-200">キャッシュ残 2.5ヶ月</span>
-                  </div>
-                  <div className="flex items-center justify-between gap-2 rounded-2xl bg-cyan-500/10 px-3 py-2">
-                    <span className="font-semibold uppercase tracking-[0.2em] text-cyan-100/90">After</span>
-                    <span className="text-sm font-bold text-cyan-100">営業CF +12%</span>
-                  </div>
-                </div>
-              </div>
-              <div className="absolute inset-x-6 bottom-6 rounded-3xl bg-[#061530]/80 p-5 backdrop-blur">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-                  <Target className="h-4 w-4" aria-hidden="true" />
-                  再生の設計図｜KPIスナップショット
-                </div>
-                <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                  {heroStats.map((stat) => (
-                    <div key={stat.label} className="rounded-2xl border border-cyan-200/20 bg-white/10 p-4 text-center">
-                      <AnimatedCounter
-                        value={stat.value}
-                        suffix={stat.suffix}
-                        duration={1500}
-                        className="text-2xl font-black text-cyan-100"
-                      />
-                      <p className="mt-2 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
-                        {stat.label}
-                      </p>
-                      <p className="mt-1 text-[0.65rem] leading-relaxed text-slate-100/70">{stat.annotation}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
   );
 };

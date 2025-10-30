@@ -11,11 +11,11 @@ const offers = [
     id: "consult",
     icon: Sparkles,
     label: "無料相談",
-    headline: "30分で意思決定の詰まりを棚卸し",
+    headline: "30分でZEN導入の適合度を棚卸し",
     description:
-      "社長・後継者とオンラインで課題を整理し、粗利・資金・需要のボトルネックとAI活用余地を確認します。翌営業日に仮説メモ（例）を送付し、チームに語るべきポイントを言語化します。",
+      "経営者・後継者とオンラインで課題を整理し、粗利・資金・人員のボトルネックとAI活用余地を確認します。翌営業日にナビゲーションメモ（例）を送付し、チームに語るべき論点を言語化します。",
     highlights: [
-      "粗利・資金・需要の3指標で因果を整理",
+      "粗利・資金・人員の3指標で因果を整理",
       "経営会議で使える仮説メモを翌営業日に送付",
       "投資判断までの不安・リスクを整理",
     ],
@@ -26,12 +26,12 @@ const offers = [
   {
     id: "diagnosis",
     icon: ClipboardList,
-    label: "仮診断",
-    headline: "72時間で14指標の先読みレポート",
+    label: "ZENスキャン",
+    headline: "72時間で18指標のシグナルレポート",
     description:
-      "粗利率・在庫回転・資金残高・意思決定リードタイムなど14指標をAIが試算し、改善優先度を可視化します。（例）判断に必要な根拠を事前に揃え、会議での説明力を高めます。",
+      "粗利率・在庫回転・資金余力・意思決定リードタイムなど18指標をAIが試算し、改善優先度を可視化します。（例）判断に必要な根拠を事前に揃え、会議での説明力を高めます。",
     highlights: [
-      "14指標のスコアリングで優先順位を決定",
+      "18指標のスコアリングで優先順位を決定",
       "AI導入時のデータ要件と実行ロードマップ",
       "判断リードタイムを短縮するシミュレーション",
     ],
@@ -48,11 +48,11 @@ const offers = [
     id: "materials",
     icon: FileText,
     label: "資料ダウンロード",
-    headline: "即時に運用フローと数値例を確認",
+    headline: "ZENの運用フローと数値例を確認",
     description:
-      "サービス概要・生成AIダッシュボードの画面・実行管理テンプレートをまとめたPDFを即時ダウンロードできます。",
+      "サービス概要・ZENナビゲーションボードの画面・実行管理テンプレートをまとめたPDFを即時ダウンロードできます。",
     highlights: [
-      "生成AIダッシュボードの画面サンプル",
+      "ZENナビゲーションボードの画面サンプル",
       "ROI試算と導入チェックリスト",
       "現場共有用の解説スライド",
     ],
@@ -82,13 +82,13 @@ const offerMetrics = [
   {
     value: 72,
     suffix: "時間",
-    label: "仮診断",
+    label: "ZENスキャン",
     description: "意思決定の前倒しを可視化",
   },
   {
-    value: 14,
+    value: 18,
     suffix: "指標",
-    label: "レポート",
+    label: "シグナル",
     description: "粗利・資金・需要のKPIを同期",
   },
 ];
@@ -126,7 +126,7 @@ const OfferSection = () => {
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/90 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.32em] text-primary">
                 DECISION BLUEPRINT
               </span>
-              <h3 className="mt-4 text-2xl font-bold text-foreground md:text-3xl">30分→72時間→14指標で一気に意思決定を前倒し</h3>
+              <h3 className="mt-4 text-2xl font-bold text-foreground md:text-3xl">30分→72時間→18指標で一気に意思決定を前倒し</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
                 無料相談で課題を棚卸し、仮診断で優先順位を決定、資料ダウンロードで社内共有を加速する三段構えの導線です。
               </p>

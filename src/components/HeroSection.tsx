@@ -23,102 +23,102 @@ import {
 
 const heroStats = [
   {
-    label: "利益改善スピード",
-    value: 2.4,
+    label: "改善サイクルの短縮",
+    value: 3.1,
     suffix: "倍",
     decimals: 1,
     duration: 1400,
-    annotation: "重点事業の利益改善リードタイム（例）",
+    annotation: "利益計画のアップデート頻度（例）",
   },
   {
-    label: "キャッシュ創出前倒し",
-    value: 28,
+    label: "キャッシュ安心余力",
+    value: 42,
     suffix: "日前",
     duration: 1600,
-    annotation: "資金余力を確保できたタイミング（例）",
+    annotation: "資金ショック検知のリードタイム（例）",
   },
   {
-    label: "改善ロードマップ定着率",
-    value: 93,
+    label: "AI提案の採択率",
+    value: 87,
     suffix: "%",
     duration: 1800,
-    annotation: "経営陣アンケートでの定着実感（例）",
+    annotation: "経営会議で採用されたAI提案（例）",
   },
   {
-    label: "会議準備の削減",
-    value: 7,
-    suffix: "時間/週",
+    label: "会議資料作成時間",
+    value: 68,
+    suffix: "%削減",
     duration: 1900,
-    annotation: "役員クラスが創出した時間（例）",
+    annotation: "経営会議資料の作成工数（例）",
   },
 ];
 
 const heroChecklist = [
-  "粗利の伸び悩みとキャッシュ不足の原因が整理できず、会議が確認で終わる",
-  "生成AIを導入したいが、社内データ整備と運用ルールの設計が追いつかない",
-  "金融機関・幹部に説明する資料づくりに追われ、未来の打ち手が描けない",
+  "全社KPIが部門ごとにズレ、粗利・キャッシュ・人員のストーリーを語れない",
+  "生成AIのユースケースが点在し、現場の判断に使えるテンプレートが整わない",
+  "金融機関や主要取引先への説明資料が属人化し、交渉と意思決定が後手に回る",
 ];
 
 const heroSolutionHighlights = [
-  "診断士・会計士・データサイエンティストが48時間で現場ヒアリングとデータ棚卸しを実施。生成AIに学習させる指標と改善テーマを設計します",
-  "粗利・在庫・キャッシュのシナリオをAIが週次で自動生成し、専門家が優先度とリスクをコメント。意思決定ボードが“今すぐ着手すべき2つ”を提示します",
-  "改善の進捗・根拠データ・金融機関向け資料を自動更新。全員が同じ地図で動けるよう運用ルールと教育コンテンツまで伴走します",
+  "経営陣と専門家が『ZENナビゲーションボード』を共同設計。生成AIが粗利・キャッシュ・人員の因果を学習し、変化を即座に可視化します",
+  "週次のエグゼクティブスタンドアップでAIが施策シナリオとリスクを提示。専門家が優先順位と合意形成を支援し、そのまま現場に配信します",
+  "会議ログ・金融機関連携資料・教育コンテンツを自動生成。全員が同じ判断材料で動ける運用ルールまで伴走します",
 ];
 
 const servicePillars = [
   {
     icon: BrainCircuit,
-    title: "戦略×データ統合設計",
+    title: "意思決定キャンバス設計",
     description:
-      "経営課題とデータ構造を同時に棚卸し。粗利・キャッシュ・現場KPIの因果を定義し、生成AIが学習できる判断フレームを組み上げます。",
+      "経営課題・KPI・データ粒度を棚卸しし、生成AIが学習する判断フレームを構築。因果パスとリスク指標を1枚の図に整理します。",
   },
   {
     icon: BarChart3,
-    title: "生成AI改善スタジオ",
+    title: "シナリオ＆実行スタジオ",
     description:
-      "施策の根拠と数値シナリオをAIが生成し、専門家がチェック。週次レポートと意思決定ボードで、迷いのない指示を出すための材料を整えます。",
+      "粗利・キャッシュ・需要シナリオをAIが生成し、専門家が論理性を検証。週次レビューと実行ボードで迷いのない指示を出せます。",
   },
   {
     icon: PiggyBank,
-    title: "キャッシュ＆投資マネジメント",
+    title: "金融・組織ガバナンス",
     description:
-      "資金繰り・投資計画・金融機関資料をひとつのワークフローに。キャッシュ確保と攻めの投資判断を両立させる運用を標準化します。",
+      "資金繰り計画・金融機関資料・教育プログラムを標準化。投資判断と現場浸透を両立させる運用ルールを実装します。",
   },
 ];
 
 const proofPoints = [
   {
     icon: ShieldCheck,
-    title: "監査可能な意思決定ログ",
+    title: "監査対応の判断ログ",
     description:
-      "AIが提示した施策の根拠データと承認履歴を自動保存。経営会議や金融機関への説明にも流用できる透明性を備えています。",
+      "AIが提示した根拠データと承認履歴を自動保存。金融機関・取締役会・監査対応の説明にそのまま転用できます。",
   },
   {
     icon: BarChart3,
     title: "週次エグゼクティブレビュー",
     description:
-      "専門家が週次でレポートと意思決定ボードをレビュー。優先順位・リスク・アクションを整理し、経営陣の判断を前倒しにします。",
+      "専門家が週次でシナリオと実行状況をレビュー。判断遅延の兆候を先読みし、優先アクションを明確化します。",
   },
   {
     icon: BrainCircuit,
-    title: "現場定着プログラム",
+    title: "現場共創プログラム",
     description:
-      "会議体・教育コンテンツ・プロンプトを整備し、社内チームが自走できる状態まで伴走。生成AIの活用ルールも標準化します。",
+      "会議体・プロンプト・教育コンテンツを整備し、自走できる社内チームを育成。AI活用の統制と浸透を同時に実現します。",
   },
 ];
 
 const aiVisualHighlights = [
   {
     icon: LineChart,
-    title: "利益改善シナリオ",
+    title: "ZENシグナルマップ",
     description:
-      "価格改定・需要変動・原価を組み替えた3パターンを比較。粗利とキャッシュへの波及を同時に確認できます。",
+      "粗利・需要・在庫の揺らぎをヒートマップで表示。警戒ラインと期待インパクトを色面で把握できます。",
   },
   {
     icon: PieChart,
-    title: "キャッシュ確保レーダー",
+    title: "キャッシュバリアウォール",
     description:
-      "資金残高・借入余力・投資計画を重ね、危険ラインに触れる前に代替案を提示します。",
+      "資金残高・借入余力・投資枠を重ね、危険水域に触れる前に代替案と交渉ポイントを提示します。",
   },
 ];
 
@@ -145,17 +145,17 @@ const HeroSection = () => {
               <div className="space-y-6">
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="inline-flex items-center gap-2 rounded-full bg-highlight/15 px-5 py-2 text-[0.75rem] font-semibold uppercase tracking-[0.3em] text-highlight-foreground">
-                    年商1億〜30億円企業特化
+                    年商1〜50億円 成長フェーズ特化
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-4 py-2 text-[0.75rem] font-semibold uppercase tracking-[0.3em] text-accent">
-                    生成AI×専門家伴走
+                    生成AI×専門家×経営改善
                   </span>
                 </div>
                 <h1 className="text-balance text-3xl font-bold leading-[1.2] text-foreground md:text-4xl xl:text-[3.2rem] xl:leading-[1.15]">
-                  生成AIと専門家が同じチームで走る経営改善サービス「Strategy AI ZEN」
+                  生成AIと専門家が経営判断を共創する「ZEN Strategic Navigator」
                 </h1>
                 <p className="max-w-3xl text-[1.05rem] leading-relaxed text-muted-foreground md:text-lg">
-                  変動する市況、複雑化する商流、AI活用への期待。経営が迷う時間を減らし、利益とキャッシュを同時に積み上げるには、データと現場の知恵を一枚の地図にまとめる必要があります。Strategy AI ZENは、生成AIと経営改善の専門家が一体となって週次で計画を刷新。判断の根拠とタイミングを整え、経営陣が胸を張って次の一手を語れる状態をつくります。
+                  市況が揺れ、投資判断のスピードが問われる今。粗利・キャッシュ・現場の知恵を同じキャンバスに重ねなければ、AI活用も数字管理も成果につながりません。ZEN Strategic Navigatorは生成AIと専門家がひとつのチームとなり、週次で意思決定をアップデート。リーダーが「なぜ今動くのか」を語れる状態を継続的にデザインします。
                 </p>
               </div>
 
@@ -167,7 +167,7 @@ const HeroSection = () => {
                   <div className="space-y-2">
                     <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/80">エグゼクティブサマリー</p>
                     <p className="text-[1.05rem] leading-relaxed text-muted-foreground md:text-lg">
-                      背景：粗利とキャッシュのズレが経営判断を鈍らせ、AI活用も構想止まりになりがちです。約束する成果：生成AIと専門家が粗利+2.4倍の改善スピード／キャッシュ創出28日前倒し／会議準備▲7時間（例）を狙う改善基盤を構築します。進め方：48時間で現状棚卸し→週次でシナリオ提示→運用ルールまで伴走し、組織全体が同じ仮説で動ける状態を整えます。
+                      背景：市況変動と人材不足で判断が後ろ倒しになり、AI活用も実務に落ちないケースが急増。約束する成果：生成AIと専門家が改善サイクル3.1倍・キャッシュ余力+42日前倒し・会議資料作成▲68%（例）を狙う意思決定基盤を構築。進め方：48時間で現在地を棚卸し→週次でシナリオと実行を共創→金融機関・現場の合意形成まで伴走します。
                     </p>
                   </div>
                 </div>
@@ -175,7 +175,7 @@ const HeroSection = () => {
 
               <div className="grid gap-4 lg:grid-cols-2">
                 <div className="space-y-4 rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-card">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">整理したい経営課題</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">優先して整えたい論点</p>
                   <ul className="space-y-3">
                     {heroChecklist.map((item) => (
                       <li key={item} className="flex items-start gap-3 text-left text-[0.95rem] leading-relaxed text-muted-foreground">
@@ -187,11 +187,11 @@ const HeroSection = () => {
                     ))}
                   </ul>
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground/80">
-                    データ・現場・意思決定の断絶を10分で棚卸しし、AI活用に必要な要件を整理します。
+                    データ・現場・金融の断絶を10分で可視化し、AI活用と経営改善の必須要件を揃えます。
                   </p>
                 </div>
                 <div className="space-y-4 rounded-3xl border border-highlight/30 bg-gradient-to-br from-white via-highlight/5 to-highlight/15 p-6 shadow-card">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-highlight-foreground/80">AIが提示するシナリオ</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-highlight-foreground/80">AIが描く実行シナリオ</p>
                   <div className="space-y-3">
                     {heroSolutionHighlights.map((item) => (
                       <p key={item} className="flex items-start gap-3 rounded-2xl bg-white/80 p-3 text-[0.95rem] leading-relaxed text-foreground/90 shadow-sm">
@@ -203,7 +203,7 @@ const HeroSection = () => {
                     ))}
                   </div>
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-highlight-foreground/70">
-                    根拠・数字・アクションプランを1枚に集約し、判断のスピードと納得感を高めます。
+                    根拠・論点・実行を1枚に集約し、スピードと納得感を同時に引き上げます。
                   </p>
                 </div>
               </div>
@@ -275,7 +275,7 @@ const HeroSection = () => {
                   </span>
                   <span className="inline-flex items-center gap-1">
                     <JapaneseYen className="h-3.5 w-3.5" aria-hidden="true" />
-                    月額18万円〜
+                    月額20万円〜
                   </span>
                   <span className="inline-flex items-center gap-1">
                     <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
@@ -287,7 +287,7 @@ const HeroSection = () => {
                   </span>
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground/80">
-                  初回相談は無料｜オンライン・訪問どちらも対応｜所要30分
+                  初回相談は無料｜オンライン・訪問どちらも対応｜ZEN専門家が直接ヒアリング
                 </p>
               </div>
             </div>
@@ -352,7 +352,7 @@ const HeroSection = () => {
               </div>
 
               <div className="space-y-4 rounded-3xl border border-primary/15 bg-gradient-to-r from-white via-sky-50/90 to-sky-100/60 p-6 shadow-card">
-                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">信頼の構造</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">実現のための保証</p>
                 <div className="grid gap-4 sm:grid-cols-3">
                   {proofPoints.map((item) => {
                     const Icon = item.icon;
@@ -370,7 +370,7 @@ const HeroSection = () => {
               </div>
 
               <div className="space-y-4 rounded-3xl border border-slate-200/70 bg-slate-50/80 p-6 shadow-card">
-                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">ダッシュボードの一例</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-muted-foreground">ZENダッシュボードの一例</p>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {aiVisualHighlights.map((item) => {
                     const Icon = item.icon;

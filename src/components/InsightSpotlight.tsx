@@ -14,82 +14,82 @@ import representativePhoto from "@/assets/representative.jpg";
 
 const highlightStats = [
   {
-    label: "外部ショックの検知件数",
-    value: "+21件/月（例）",
-    detail: "主要取引先の条件変更や法規制の改定を即時アラート",
+    label: "経営アラートの捕捉",
+    value: "+27件/月（例）",
+    detail: "粗利・キャッシュ・需要の揺らぎを同時に通知",
     icon: LineChart,
   },
   {
-    label: "需要シフトの検出",
-    value: "+18%（例）",
-    detail: "生成AIが売上と検索動向を突合し、偏りを可視化",
-    icon: AlertTriangle,
+    label: "判断材料の更新速度",
+    value: "4.2倍（例）",
+    detail: "AIが意思決定ログと資料を自動リフレッシュ",
+    icon: TrendingUp,
   },
   {
-    label: "競合アクション",
-    value: "+12件/月（例）",
-    detail: "価格改定・販促強化の兆候をまとめて通知",
-    icon: ShieldCheck,
+    label: "リスクの事前察知",
+    value: "45日前（例）",
+    detail: "金融・取引条件の変更を先回りで検知",
+    icon: AlertTriangle,
   },
 ];
 
 const impactTimeline = [
   {
     label: "DAY 0",
-    headline: "外部環境を60分で棚卸し",
-    detail: "生成AIが業界指数・取引条件・競合行動を収集し、経営会議の論点を抽出",
+    headline: "外部・内部のシグナルを統合",
+    detail: "生成AIが業界指数・取引条件・現場ヒアリングを束ね、経営の“現在地”を描写",
   },
   {
-    label: "DAY 5",
-    headline: "粗利とキャッシュの揺れを可視化",
-    detail: "粗利率・在庫・資金を同じキャンバスでシミュレーションし、優先施策を設定",
+    label: "DAY 4",
+    headline: "ZENナビゲーションキャンバスを構築",
+    detail: "粗利・キャッシュ・人員の因果パスを可視化し、優先仮説を確定",
   },
   {
-    label: "DAY 14",
-    headline: "意思決定ログを自動更新",
-    detail: "採択した施策と証拠データを紐づけ、監査ログと共有資料を同時生成",
+    label: "DAY 12",
+    headline: "意思決定ログと資料を自動生成",
+    detail: "採択施策・証跡・金融機関向け要約を同時に更新し、共有をワンタップ化",
   },
 ];
 
 const assuranceBadges = [
-  "生成AI×経営改善スタジオ", "経済産業省 登録専門家", "Google Cloud Partner"
+  "生成AI×専門家×経営改善スタジオ", "経営革新等認定支援機関", "Google Cloud Partner"
 ];
 
 const narrativeFrames = [
   {
     stage: "課題",
-    kpi: "粗利率▲3.1pt",
-    description: "商流変化で粗利が圧迫。属人的な判断で資料作成に追われ、意思決定が遅延。",
+    kpi: "粗利率▲2.8pt",
+    description: "市況変化で粗利とキャッシュが乖離。報告資料づくりが目的化していた。",
   },
   {
     stage: "介入",
-    kpi: "判断時間▲46%",
-    description: "生成AIが粗利・在庫・資金の因果を可視化。専門家が優先施策と根拠を整理。",
+    kpi: "判断時間▲52%",
+    description: "生成AIが因果とシナリオを提示。専門家が論点・リスクを整理し、現場と即共有。",
   },
   {
     stage: "成果",
-    kpi: "投資余力+1.5億円",
-    description: "キャッシュショックを避けつつ成長投資に再配分。幹部との合意形成が加速。",
+    kpi: "投資余力+1.8億円",
+    description: "キャッシュ余力を確保しつつ成長投資へ再配分。幹部間の合意形成が高速化。",
   },
 ];
 
 const InsightSpotlight = () => {
   return (
-    <section className="fade-in-section relative overflow-hidden bg-slate-950 py-16 text-white md:py-20">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.14),_transparent_55%)]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-[-240px] h-[480px] bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.18),_transparent_60%)] blur-3xl" />
+    <section className="fade-in-section relative overflow-hidden bg-[#070b1d] py-16 text-white md:py-20">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(129,140,248,0.18),_transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-[-240px] h-[480px] bg-[radial-gradient(circle_at_center,_rgba(34,211,238,0.16),_transparent_58%)] blur-3xl" />
 
       <div className="container relative mx-auto px-3 sm:px-4">
         <ScrollReveal variant="fade-up" className="mx-auto max-w-4xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-sky-200">
-            URGENCY SIGNAL
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-indigo-200">
+            ZEN SIGNAL LAB
           </span>
           <h2 className="mt-6 text-balance text-3xl font-bold leading-tight text-white md:text-4xl">
-            変動が激しい時代こそ、生成AIと専門家の二重チェックで「いま動くべき理由」を先取りする。
+            市場・資金・現場の変化を同じタイミングで掴む。ZENが描く経営シグナル設計。
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-300 md:text-lg">
-            原材料価格、顧客ニーズ、金融機関からの期待値。ひとつでも読み違えれば、利益とキャッシュはすぐに揺らぎます。Strategy AI ZENは外部シグナルと社内データをリアルタイムで同期し、AIが示した仮説を専門家が補正。<br />
-            経営陣は週次で「リスク」「チャンス」「推奨アクション」を同じ画面で確認でき、判断のスピードと納得感を両立できます。
+            原材料、需要、金融機関からの期待値。どれかひとつでも読み違えれば、粗利とキャッシュはすぐに揺らぎます。ZEN Strategic Navigatorは外部シグナルと社内データをリアルタイムで束ね、AIが提示した仮説を専門家が補正。<br />
+            経営陣は週次で「リスク」「チャンス」「推奨アクション」を同じ画面で確認し、判断のスピードと納得感を両立できます。
           </p>
         </ScrollReveal>
 
@@ -103,33 +103,33 @@ const InsightSpotlight = () => {
             <div className="relative flex h-full flex-col justify-between gap-8">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-slate-900/50 px-4 py-2 text-left">
-                  <span className="text-[0.75rem] font-semibold tracking-[0.18em] text-sky-200">環境スナップショット</span>
-                  <span className="text-[0.75rem] text-slate-300">外部シグナルと社内データを同じ地図に配置</span>
+                  <span className="text-[0.75rem] font-semibold tracking-[0.18em] text-indigo-200">ZEN SIGNAL SNAPSHOT</span>
+                  <span className="text-[0.75rem] text-slate-300">外部シグナルと社内データをひとつのタイムラインに統合</span>
                 </div>
                 <h3 className="text-left text-2xl font-semibold leading-snug text-white md:text-[2rem]">
-                  変化を前倒しで掴んだ経営チームほど、粗利とキャッシュのギャップを閉じ、現場と投資家の信頼を同時に勝ち取っています。
+                  変化を前倒しで把握できる経営チームほど、粗利とキャッシュのギャップを閉じ、現場と投資家の信頼を同時に高めています。
                 </h3>
                 <ul className="grid gap-3 text-left text-sm leading-relaxed text-slate-300 md:text-base">
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 block h-1.5 w-1.5 rounded-full bg-sky-400" aria-hidden="true" />
-                    <span>調達：主要取引先の条件変更と為替を照合し、粗利への波及を即時試算（例）</span>
+                    <span className="mt-1 block h-1.5 w-1.5 rounded-full bg-indigo-300" aria-hidden="true" />
+                    <span>調達：主要仕入先の条件変更と為替をAIが照合し、粗利インパクトを即時試算（例）</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 block h-1.5 w-1.5 rounded-full bg-sky-400" aria-hidden="true" />
-                    <span>需要：オンライン・店舗・代理店の販売ログをAIが分析し、需要の偏りを可視化（例）</span>
+                    <span className="mt-1 block h-1.5 w-1.5 rounded-full bg-indigo-300" aria-hidden="true" />
+                    <span>需要：オンライン・店舗・代理店の販売ログを比較し、需要シフトと在庫偏りを浮き彫りに（例）</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="mt-1 block h-1.5 w-1.5 rounded-full bg-sky-400" aria-hidden="true" />
-                    <span>競争：競合の販促投資と価格変更を監視し、次に準備すべき差別化シナリオを提示（例）</span>
+                    <span className="mt-1 block h-1.5 w-1.5 rounded-full bg-indigo-300" aria-hidden="true" />
+                    <span>競争：競合の販促投資と価格変更を監視し、次に備える差別化シナリオと必要資源を提示（例）</span>
                   </li>
                 </ul>
 
                 <div className="rounded-[28px] border border-white/15 bg-slate-900/55 p-6 shadow-[0_22px_60px_rgba(15,23,42,0.45)]">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-xs font-semibold uppercase tracking-[0.26em] text-sky-200">EXECUTIVE PLAYBOOK</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.26em] text-indigo-200">ZEN PLAYBOOK</p>
                     <div className="flex items-center gap-2 text-xs text-slate-200/80">
-                      <TrendingUp className="h-4 w-4 text-sky-300" aria-hidden="true" />
-                      <span>14日で意思決定の地図を更新するステップ</span>
+                      <TrendingUp className="h-4 w-4 text-indigo-300" aria-hidden="true" />
+                      <span>12日で意思決定キャンバスを刷新するステップ</span>
                     </div>
                   </div>
                   <div className="mt-4 space-y-4">
@@ -139,7 +139,7 @@ const InsightSpotlight = () => {
                         className="relative grid gap-3 rounded-2xl border border-white/12 bg-white/[0.05] p-4 sm:grid-cols-[92px_1fr] sm:items-start"
                       >
                         <div className="flex flex-col gap-1">
-                          <span className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-sky-200">
+                          <span className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-indigo-200">
                             {milestone.label}
                           </span>
                         </div>
@@ -167,8 +167,8 @@ const InsightSpotlight = () => {
                       key={stat.label}
                       className="flex flex-col gap-2 rounded-2xl border border-white/15 bg-white/10 p-4 shadow-[0_18px_45px_rgba(15,23,42,0.25)]"
                     >
-                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-sky-200">
-                        <Icon className="h-3.5 w-3.5 text-sky-200" aria-hidden="true" />
+                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-200">
+                        <Icon className="h-3.5 w-3.5 text-indigo-200" aria-hidden="true" />
                         {stat.label}
                       </div>
                       <p className="text-2xl font-semibold text-white">{stat.value}</p>
@@ -179,14 +179,14 @@ const InsightSpotlight = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-3 rounded-[24px] border border-white/10 bg-white/[0.06] p-4 text-left">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-100">TRUST SIGNALS</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-100">ZEN ASSURANCE</p>
                 <div className="flex flex-wrap gap-2">
                   {assuranceBadges.map((badge) => (
                     <span
                       key={badge}
                       className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-slate-900/70 px-3 py-1 text-[0.7rem] text-slate-200"
                     >
-                      <span className="h-1.5 w-1.5 rounded-full bg-sky-300" aria-hidden="true" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-indigo-300" aria-hidden="true" />
                       {badge}
                     </span>
                   ))}
@@ -195,9 +195,9 @@ const InsightSpotlight = () => {
 
               <div className="flex flex-col gap-4 text-left md:flex-row md:items-center md:justify-between">
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200">IMPACT ON DECISIONS</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-200">IMPACT ON DECISIONS</p>
                   <p className="mt-1 text-sm text-slate-200">
-                    外部環境と内部データを同期することで、判断の根拠が揃い、経営陣は迷いなく指示を出せます。資金ショックの前倒し検知も同時に実現します。
+                    シグナル・シナリオ・実行計画を連動させることで、判断の根拠とタイミングが揃います。資金ショックの前倒し検知と現場の納得感を同時に実現します。
                   </p>
                 </div>
                 <Button
@@ -232,8 +232,8 @@ const InsightSpotlight = () => {
             <div className="absolute inset-0 rounded-[32px] bg-gradient-to-br from-slate-900/40 via-slate-900/10 to-slate-900/60" />
             <div className="relative flex flex-col gap-5">
               <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-slate-100">
-                <span>外部環境ダッシュボード</span>
-                <span className="text-sky-200">更新頻度：週次</span>
+                <span>ZEN SIGNAL DASHBOARD</span>
+                <span className="text-indigo-200">更新頻度：週次</span>
               </div>
               <img
                 src={dashboardPreview}
@@ -241,9 +241,9 @@ const InsightSpotlight = () => {
                 className="relative w-full rounded-[24px] border border-white/10 object-cover shadow-[0_20px_55px_rgba(15,23,42,0.45)]"
               />
               <div className="grid gap-3 rounded-[20px] border border-white/10 bg-white/[0.08] p-4 text-left">
-                <p className="text-xs font-semibold uppercase tracking-[0.26em] text-slate-100">DUAL CODING SUMMARY</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.26em] text-slate-100">ZEN DUAL SUMMARY</p>
                 <p className="text-sm text-slate-200">
-                  ダッシュボードは、粗利・キャッシュ・需要を同じ図で描画。数字とストーリーを並列で提示し、役員会での即時判断を後押しします。
+                  ダッシュボードは、粗利・キャッシュ・需要を同一キャンバスで描画。数字とストーリーを併置し、役員会での即時判断と共有を後押しします。
                 </p>
               </div>
             </div>
@@ -252,7 +252,7 @@ const InsightSpotlight = () => {
               <div className="rounded-2xl border border-white/10 bg-white/10 p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-100">CAUSE → EFFECT</p>
                 <p className="mt-2 text-sm text-slate-200">
-                  外部指数・販売・在庫から粗利とキャッシュの因果パスをAIが推定。施策の期待値が一目で把握できます。
+                  外部指数・販売・在庫から粗利とキャッシュの因果パスをAIが推定。施策の期待値とリスクが一目で把握できます。
                 </p>
               </div>
               <div className="rounded-2xl border border-white/10 bg-white/10 p-4">
@@ -272,12 +272,12 @@ const InsightSpotlight = () => {
                     className="relative flex flex-col gap-3 rounded-2xl border border-white/10 bg-slate-900/60 p-4 shadow-[0_16px_40px_rgba(15,23,42,0.35)]"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-sky-200">{frame.stage}</span>
+                      <span className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-indigo-200">{frame.stage}</span>
                       <span className="text-xs font-semibold text-slate-100">{frame.kpi}</span>
                     </div>
                     <p className="text-xs leading-relaxed text-slate-200 md:text-sm">{frame.description}</p>
                     {index < narrativeFrames.length - 1 && (
-                      <ArrowRight className="absolute -right-4 top-1/2 hidden h-4 w-4 -translate-y-1/2 text-sky-300/80 sm:block" aria-hidden="true" />
+                      <ArrowRight className="absolute -right-4 top-1/2 hidden h-4 w-4 -translate-y-1/2 text-indigo-300/80 sm:block" aria-hidden="true" />
                     )}
                   </div>
                 ))}
@@ -293,14 +293,14 @@ const InsightSpotlight = () => {
                 />
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.26em] text-slate-100">EXECUTIVE COMMENT</p>
-                  <p className="mt-1 text-xs text-slate-400">製造業 代表取締役（年商11億円・例）</p>
+                  <p className="mt-1 text-xs text-slate-400">製造業 代表取締役（年商12億円・例）</p>
                 </div>
               </div>
               <div className="flex-1 space-y-3">
                 <p className="text-sm leading-relaxed text-slate-200">
-                  「AIが示したシナリオを専門家が補足してくれるので、役員会の議論が一本化されました。判断の背景を語れるようになり、金融機関との面談も先回りできています。」
+                  「ZENはAIのスピードと専門家の視点が同居しているので、役員会の議論が一本化されました。判断の背景を言語化でき、金融機関との面談も先回りで準備できています。」
                 </p>
-                <div className="inline-flex items-center gap-2 rounded-full border border-sky-300/40 bg-sky-500/10 px-3 py-1 text-[0.7rem] font-semibold text-sky-100">
+                <div className="inline-flex items-center gap-2 rounded-full border border-indigo-300/40 bg-indigo-500/10 px-3 py-1 text-[0.7rem] font-semibold text-indigo-100">
                   <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
                   投資余力を確保しながら攻めの施策を継続
                 </div>

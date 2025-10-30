@@ -210,19 +210,6 @@ const InsightSpotlight = () => {
                   alt="再生シナリオの全体図を俯瞰するタイムラインインフォグラフィック"
                   className="h-full w-full object-cover"
                 />
-                <div className="pointer-events-none absolute inset-x-6 bottom-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/60 bg-white/80 px-5 py-3 text-sm font-semibold text-[#0584c6] shadow-[0_12px_32px_rgba(15,56,108,0.18)] backdrop-blur">
-                  <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
-                    Dual Coding Map
-                  </span>
-                  <span className="inline-flex items-center gap-2 text-xs text-[#0b1f3f]/70">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-[#0584c6]" aria-hidden="true" />
-                    因果連鎖とKPIを矢印で視覚化
-                  </span>
-                  <span className="inline-flex items-center gap-2 text-xs text-[#0b1f3f]/70">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-[#0b1f3f]" aria-hidden="true" />
-                    役員会議用の要約を即座に共有
-                  </span>
-                </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/70">

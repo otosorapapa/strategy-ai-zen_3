@@ -32,18 +32,18 @@ const rootCauseNarrative = [
 const blueprintSignals = [
   {
     label: "粗利改善シミュレーション",
-    value: "+3.8pt",
-    caption: "再投資余力を算出し、経営会議の討議時間を1/2に短縮",
+    value: "数％台の余地を即座に可視化",
+    caption: "再投資余力を算出し、経営会議の討議時間を圧縮",
   },
   {
     label: "資金繰り先読み",
-    value: "12週",
-    caption: "AIが需給差を週次で警告し、融資交渉の準備を事前化",
+    value: "先数カ月を俯瞰",
+    caption: "AIが需給差を週次で警告し、融資交渉の準備を前倒し",
   },
   {
     label: "変革推進チーム",
-    value: "6部署",
-    caption: "現場ヒアリングを通じた制約条件の棚卸しで意思決定を統一",
+    value: "部署横断で同期",
+    caption: "現場ヒアリングで制約条件を棚卸し、意思決定を統一",
   },
 ];
 
@@ -51,24 +51,24 @@ const hopeStatements = [
   {
     title: "Before",
     description: "月次報告が終わるころには次の危機が迫り、社員は疲弊したまま。",
-    metric: "会議の再設計前",
+    metric: "会議再設計前",
   },
   {
     title: "Intervention",
-    description: "生成AIと診断士がボトルネックを構造化し、優先仮説を3案に圧縮。",
-    metric: "48時間診断",
+    description: "生成AIと診断士がボトルネックを構造化し、優先仮説を厳選。",
+    metric: "短期集中診断",
   },
   {
     title: "After",
     description: "資金・人材・案件が一枚の設計図で同期し、次の一手が明文化。",
-    metric: "2週目から実装",
+    metric: "迅速な実装フェーズ",
   },
 ];
 
 const trustSignals = [
-  "経産省 認定支援機関",
-  "中小企業庁 事業再構築相談実績",
-  "主要3行 財務データ連携",
+  "福岡の主要金融機関とレビュー実績",
+  "再生案件に特化した経営会議ファシリテーション",
+  "製造・卸・サービス業の意思決定伴走実績",
 ];
 
 const InsightSpotlight = () => {
@@ -83,7 +83,7 @@ const InsightSpotlight = () => {
           <ScrollReveal variant="fade-up" className="space-y-8">
             <div className="space-y-4">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-                Why｜なぜ再生が止まるのか
+                意思決定が鈍る本質
               </span>
               <h2 className="text-3xl font-bold leading-tight md:text-4xl">
                 経営の灯が揺らぐ理由は、情熱ではなく「未来を指し示す設計図」の不在にある
@@ -93,7 +93,7 @@ const InsightSpotlight = () => {
                   再生案件で出会う経営者は、誰もが挑戦を続けています。それでも資金繰りが乱れ、人が疲弊していくのは、次の四半期を描く共通キャンバスが欠けているから。月次資料づくりに追われる間に、未来を読む時間が削られてしまうのです。
                 </p>
                 <p>
-                  私たちが存在する理由は、経営者がもう一度、自分の判断力と会社の可能性を信じられる環境を用意すること。生成AIが抽出する兆しと診断士が積み上げた経験知を重ね、再び前に進むためのストーリーと座標軸を描き出します。
+                  私たちが存在する理由は、経営者がもう一度、胸を張って自社の判断力と可能性を語れる環境を用意すること。生成AIが抽出する兆しと診断士が積み上げた経験知を重ね、再び前に進むためのストーリーと座標軸を描き出します。
                 </p>
               </div>
             </div>

@@ -27,8 +27,8 @@ const painPoints: PainPoint[] = [
     title: "数字と現場が別々に動く",
     description:
       "粗利とキャッシュの波形が噛み合わず、資料ごとに前提が異なる。経営会議に到達する頃には、判断の熱量が薄れてしまう。",
-    signal: "粗利率▲2.5pt｜運転資金カバー▲1.2ヶ月（例）",
-    insight: "報告経路が分断 → 合意形成まで平均7日遅延。現場は「どの数字を信じるか」で議論が止まる。",
+    signal: "粗利率が沈み、運転資金の余白が目減り（例）",
+    insight: "報告経路が分断 → 合意形成までのリードタイムが長期化。現場は「どの数字を信じるか」で議論が止まる。",
     icon: AlertTriangle,
   },
   {
@@ -36,7 +36,7 @@ const painPoints: PainPoint[] = [
     title: "生成AIが成果につながらない",
     description:
       "PoCは進んでも、現場に届くのは読み切れないテキスト。評価指標が曖昧で、採択された施策が断片的に終わる。",
-    signal: "AI提案の採択率38%｜ROI評価は未実装",
+    signal: "AI提案が選ばれず、ROIの検証も進まない",
     insight: "AI活用のKPIが欠如 → 投資判断が感覚的になり、改善の優先順位が定まらない。",
     icon: AlertTriangle,
   },
@@ -45,7 +45,7 @@ const painPoints: PainPoint[] = [
     title: "対外説明が後手に回る",
     description:
       "金融機関・主要取引先との面談準備が属人化し、更新資料の整合に追われる。説明は常に“事後報告”で、交渉が後ろ倒しに。",
-    signal: "面談準備時間+40%｜金融機関の追加質問が2倍",
+    signal: "準備工数が膨らみ、追加質問が絶えない",
     insight: "事前シナリオが不足 → 交渉リードタイムが長期化し、資金繰りの選択肢が目減りする。",
     icon: AlertTriangle,
   },
@@ -54,17 +54,17 @@ const painPoints: PainPoint[] = [
 const executiveSignals = [
   {
     label: "収益と資金の乖離",
-    value: "▲2.5pt × ▲1.2ヶ月",
+    value: "粗利率低下 × 運転資金の圧迫",
     note: "粗利率低下と運転資金減少が同時進行。",
   },
   {
     label: "AI活用の定着度",
-    value: "採択率38%",
+    value: "採択率が伸びない",
     note: "PoC止まりで現場のKPIに接続できない。",
   },
   {
     label: "対外説明のタイムラグ",
-    value: "+40%",
+    value: "準備時間が増え続ける",
     note: "資料更新が増え、交渉の主導権を失いがち。",
   },
 ];
@@ -73,30 +73,30 @@ const narrativeFlow = [
   {
     stage: "Before",
     title: "情報が散在し、意思決定が遅延",
-    metric: "資料更新 12本/月",
+    metric: "資料更新が雪だるま式に増加",
     description:
       "部門ごとに数字の定義が異なり、経営会議は“数字合わせ”で終わる。現場には優先順位が降りてこない。",
   },
   {
     stage: "Intervention",
     title: "生成AIと専門家で設計図化",
-    metric: "判断会議 週次化",
+    metric: "判断会議が定期運用へ",
     description:
       "AIが財務と市場を横断解析し、診断士が現場ヒアリングで実行条件を整理。単一の意思決定ボードに情報を統合。",
   },
   {
     stage: "After",
     title: "判断軸が揃い、行動が先手に",
-    metric: "決裁リードタイム 1/3",
+    metric: "決裁リードタイムが大幅短縮",
     description:
       "シナリオごとのアクションプランが共有され、部門横断で同じ未来像に沿って動ける。金融機関への説明も一貫。",
   },
 ];
 
 const trustSignals = [
-  "中小企業庁 認定支援機関",
-  "再生・成長計画支援 42社",
-  "DX投資回収診断 共同監修",
+  "地域金融機関と意思決定ボードを共同検証",
+  "経営会議での設計図レビューを継続支援",
+  "福岡発の再生支援案件を多数伴走",
 ];
 
 const ProblemSection = () => {
@@ -105,7 +105,7 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Why 02｜現場で起きていること
+            現場で起きていること
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             設計図が欠けたままでは、努力が点で終わる。判断の軸を一枚に集約し、未来を共有する。
@@ -176,7 +176,7 @@ const ProblemSection = () => {
                 数字・現場・資金のズレは、放置すると資金繰りの選択肢を確実に削ります。
               </h3>
               <p className="text-left text-sm leading-relaxed text-slate-200/90 md:text-[0.95rem]">
-                下記のシグナルが同時に表れている企業では、意思決定会議のリードタイムが平均で1.8倍に伸びています。早期に設計図を可視化し、判断の土台を揃えることが重要です。
+                下記のシグナルが同時に表れている企業では、意思決定会議のリードタイムが倍近くまで伸びがちです。早期に設計図を可視化し、判断の土台を揃えることが重要です。
               </p>
               <ul className="grid gap-3 text-sm text-slate-200/85 md:grid-cols-2">
                 <li className="flex items-start gap-2">

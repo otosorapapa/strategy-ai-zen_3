@@ -46,22 +46,22 @@ const howPillars = [
 const impactHighlights = [
   {
     label: "経営判断の短縮",
-    value: "-38%",
-    detail: "会議から意思決定までのリードタイム短縮（導入企業中央値）",
+    value: "会議から判断までが加速",
+    detail: "会議から意思決定までのリードタイム短縮を実現",
     icon: TimerReset,
     accent: "from-[#d7f4ff] to-[#f2fbff]",
   },
   {
     label: "粗利インパクト",
-    value: "+3.4pt",
-    detail: "重点施策の粗利率押し上げ効果（3カ月平均）",
+    value: "粗利改善の余地を見える化",
+    detail: "重点施策の粗利率押し上げ効果を裏付け",
     icon: TrendingUp,
     accent: "from-[#e8f3ff] to-[#f6f9ff]",
   },
   {
     label: "金融機関連携",
-    value: "96%",
-    detail: "レポート整備の満足度（金融機関ヒアリングによる）",
+    value: "資料整備が高評価",
+    detail: "レポート整備の満足度が高く評価されています",
     icon: ShieldCheck,
     accent: "from-[#edf7ff] to-white",
   },
@@ -73,7 +73,7 @@ const logicSequence = [
     description:
       "AIが粗利とキャッシュの歪みをスコアリングし、寄与要因をレイヤー構造で提示。どこを止血すべきかが瞬時に判明します。",
     metricLabel: "寄与要因カバレッジ",
-    metricValue: "92%",
+    metricValue: "高精度に把握",
     icon: Layers,
   },
   {
@@ -81,7 +81,7 @@ const logicSequence = [
     description:
       "診断士がAIシミュレーションを検証し、優先度とリスクを意思決定キャンバスに整理。現場タスクとKPIがワンクリックで連動します。",
     metricLabel: "実行準備まで",
-    metricValue: "48h",
+    metricValue: "短期間で整備",
     icon: GanttChart,
   },
   {
@@ -89,7 +89,7 @@ const logicSequence = [
     description:
       "週次の進捗と金融機関への説明資料が同じダッシュボードで更新。意思決定の納得感を可視化するレポートが自動生成されます。",
     metricLabel: "金融先連携満足度",
-    metricValue: "96%",
+    metricValue: "高水準を維持",
     icon: BarChart3,
   },
 ];
@@ -101,17 +101,17 @@ const insightPills = [
 ];
 
 const trustSignals = [
-  "福岡県認定支援機関",
-  "DX認定企業",
-  "地域金融機関連携",
-  "日経クロステック掲載",
+  "福岡の金融機関とデータ連携を実施",
+  "製造・サービス業の設計図づくりを伴走",
+  "経営会議での再生レビューを継続支援",
+  "メディア掲載・登壇多数",
 ];
 
 const workflowSteps = [
   {
     title: "STEP 0｜初期診断",
     detail:
-      "48時間で粗利・キャッシュ・人材のボトルネックを抽出し、生成AIが描いた歪みのヒートマップを提示します。",
+      "短期間で粗利・キャッシュ・人材のボトルネックを抽出し、生成AIが描いた歪みのヒートマップを提示します。",
   },
   {
     title: "STEP 1｜再生キャンバス設計",
@@ -131,13 +131,13 @@ const SolutionSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            How｜再生の設計図を描く方法
+            再生の設計図を描く進め方
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-[2.75rem] md:leading-[1.2]">
             生成AIと中小企業診断士が共創し、判断が止まらない「再生デザインスタジオ」を運用
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            最初の2週間でAIが財務指標・市場トレンド・競合動向を横断解析し、複数の回復シナリオを抽出。診断士が現場ヒアリングとプロセスマップを描き、実行条件を棚卸しします。意思決定プロセスのどこで時間が失われているか、キャッシュと粗利の因果を根拠付きで提示することで、判断の納得性とスピードを同時に高めます。
+            最初の数週間でAIが財務指標・市場トレンド・競合動向を横断解析し、複数の回復シナリオを抽出。診断士が現場ヒアリングとプロセスマップを描き、実行条件を棚卸しします。意思決定プロセスのどこで時間が失われているか、キャッシュと粗利の因果を根拠付きで提示することで、判断の納得性とスピードを同時に高めます。
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {insightPills.map((pill) => (

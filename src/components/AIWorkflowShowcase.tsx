@@ -46,27 +46,27 @@ const serviceItems = [
 
 const impactMetrics = [
   {
-    value: "粗利率 +3.2pt",
-    label: "平均改善幅",
-    detail: "製造・卸の再生案件18件の中央値（2022-2024年度実績）",
+    value: "議論が意思決定へ一直線",
+    label: "経営会議",
+    detail: "前提が揃ったキャンバスで討議が整理され、判断が速まります。",
   },
   {
-    value: "キャッシュ創出 +2.6ヶ月",
+    value: "キャッシュの見通しが澄む",
     label: "運転資金",
-    detail: "在庫・与信のテコ入れにより資金繰りの猶予を拡大",
+    detail: "資金の波形と行動計画が一体化し、安心して次の打ち手を選べます。",
   },
   {
-    value: "金融機関合意 94%",
-    label: "交渉成立率",
-    detail: "計画書の妥当性検証と対話資料の整備で再生計画を承認",
+    value: "交渉の土台が揺らがない",
+    label: "金融機関連携",
+    detail: "根拠が明確な資料で対話が進み、堂々と主導権を握れます。",
   },
 ];
 
 const trustSignals = [
-  "中小企業庁 認定支援機関",
-  "福岡県事業再生パートナー",
-  "金融ADR対応経験チーム",
-  "地域金融機関連携ネットワーク",
+  "福岡の金融機関と共同モニタリング実績",
+  "再生案件の意思決定ボードを専門家が伴走",
+  "金融交渉と現場実行を同時に支えるオペレーション",
+  "九州エリアの経営会議ファシリテーションを継続",
 ];
 
 const AIWorkflowShowcase = () => {
@@ -76,13 +76,13 @@ const AIWorkflowShowcase = () => {
       <div className="container relative mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-5 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#10294e]/10 bg-white/80 px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#10294e]/70 shadow-[0_10px_40px_rgba(16,41,78,0.08)]">
-            What｜提供価値の全体像
+            提供価値の全体像
           </span>
           <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem]">
             AI × 専門家による経営再生支援で、再起のストーリーを一気通貫で描き直す
           </h2>
           <p className="mx-auto max-w-4xl text-base leading-relaxed text-[#143057]/80 md:text-lg">
-            データ統合と専門家の判断力を一つのダッシュボードに束ね、計画立案から金融交渉、現場実行まで“同じ地図”で走り切れる状態をつくります。論点の抜け漏れを無くし、金融機関と従業員双方の納得感を高める再生プロセスです。
+            データ統合と専門家の判断力を一つのダッシュボードに束ね、計画立案から金融交渉、現場実行まで“同じ地図”で走り切れる状態をつくります。どの会議でも胸を張って次の一手を語れるよう、論点の抜け漏れを無くし、経営陣と現場の納得感を高める再生プロセスです。
           </p>
         </ScrollReveal>
 
@@ -128,9 +128,9 @@ const AIWorkflowShowcase = () => {
                           {index === 1 && (
                             <div className="grid gap-4 rounded-2xl border border-[#2b7df4]/10 bg-gradient-to-br from-[#f4f9ff] to-white p-4 sm:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
                               <div className="space-y-2">
-                                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2b7df4]">Dual Coding</p>
+                                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2b7df4]">デュアル・コーディング</p>
                                 <p className="text-sm leading-relaxed text-[#143057]/75">
-                                  KPIと意思決定の連動をフレーム図で共有。シナリオA/B/Cの粗利・キャッシュ・人員インパクトを一目で比較し、経営陣と現場の認識をそろえます。
+                                  KPIと意思決定の連動をフレーム図で共有。複数シナリオの粗利・キャッシュ・人員インパクトを一目で比較し、経営陣と現場の認識をそろえます。
                                 </p>
                               </div>
                               <div className="relative overflow-hidden rounded-xl">
@@ -168,7 +168,7 @@ const AIWorkflowShowcase = () => {
                               </li>
                               <li className="flex items-start gap-2">
                                 <ArrowUpRight className="mt-1 h-4 w-4 text-[#2b7df4]" aria-hidden="true" />
-                                After：AIがモンテカルロで収益変動を試算、専門家が交渉材料を整理し、説得力のあるロードマップに昇華
+                                After：AIが収益変動を多角的に試算し、専門家が交渉材料を整理。伝えたいメッセージが一本に収束する
                               </li>
                             </ul>
                           </div>
@@ -195,14 +195,14 @@ const AIWorkflowShowcase = () => {
               className="rounded-[32px] border border-[#0b1f3f]/8 bg-white/95 p-8 shadow-[0_35px_70px_rgba(7,23,48,0.16)] backdrop-blur"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#2b7df4]">成果と実行管理</p>
-              <h3 className="mt-3 text-2xl font-semibold text-[#0b1f3f]">72時間で「状況把握 → 戦略 → 交渉」の土台を整備</h3>
+              <h3 className="mt-3 text-2xl font-semibold text-[#0b1f3f]">短期間で「状況把握 → 戦略 → 交渉」の土台を整備</h3>
               <p className="mt-3 text-sm leading-relaxed text-[#143057]/80">
-                現場ヒアリングとデータ取り込みを同時進行させ、初回72時間で意思決定の材料を提示。1ヶ月以内に金融機関合意に向けた対話ストーリーを固め、以降は週次で実行度をレビューします。
+                現場ヒアリングとデータ取り込みを同時進行させ、初期フェーズで意思決定の材料を提示。早期に金融機関合意へ向けた対話ストーリーを固め、以降は週次で実行度をレビューします。
               </p>
               <div className="mt-6 grid gap-4 sm:grid-cols-3">
                 {impactMetrics.map((metric) => (
                   <div
-                    key={metric.value}
+                    key={metric.label}
                     className="rounded-2xl bg-gradient-to-br from-[#f5f9ff] to-white p-4 text-center shadow-[0_15px_40px_rgba(15,38,78,0.12)]"
                   >
                     <p className="text-lg font-semibold text-[#2b7df4]">{metric.value}</p>
@@ -221,13 +221,13 @@ const AIWorkflowShowcase = () => {
             >
               <div className="grid gap-0 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center">
                 <div className="space-y-4 px-8 py-8 lg:py-10">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#2b7df4]">Photo Testimonial</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#2b7df4]">フォト・テスティモニアル</p>
                   <blockquote className="text-base font-medium leading-relaxed text-[#0b1f3f]">
-                    「ヒアリングから72時間で粗利改善の仮説が共有され、銀行面談でも一枚のダッシュボードで説明できました。現場の動き方まで視覚化されるので、チーム全員が同じ方向を向けています。」
+                    「ヒアリングの直後には粗利改善の仮説が共有され、銀行面談でも一枚のダッシュボードで説明できました。現場の動き方まで視覚化されるので、チーム全員が同じ方向を向けています。」
                   </blockquote>
                   <div className="flex flex-col gap-1 text-sm text-[#143057]/75">
-                    <span className="font-semibold text-[#0b1f3f]">福岡県内 製造業 代表取締役（年商8.4億円）</span>
-                    <span>粗利率 +3.8pt / 銀行折衝リードタイム 50%短縮</span>
+                    <span className="font-semibold text-[#0b1f3f]">福岡県内 製造業 代表取締役（年商約10億円規模）</span>
+                    <span>交渉資料と現場タスクの整合性が保たれ、会議のたびに自信を持って共有できています。</span>
                   </div>
                 </div>
                 <div className="relative h-full overflow-hidden">
@@ -246,11 +246,11 @@ const AIWorkflowShowcase = () => {
               variant="fade-up"
               className="rounded-[28px] border border-dashed border-[#2b7df4]/30 bg-gradient-to-br from-[#f7fbff] to-white p-8 shadow-[0_24px_60px_rgba(14,35,73,0.12)]"
             >
-              <h4 className="text-lg font-semibold text-[#0b1f3f]">最初の無料セッションで確認する3つのポイント</h4>
+              <h4 className="text-lg font-semibold text-[#0b1f3f]">初回の無料セッションで確認する3つのポイント</h4>
               <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#143057]/80">
                 <li className="flex items-start gap-3">
                   <Sparkles className="mt-1 h-4 w-4 text-[#f97316]" aria-hidden="true" />
-                  <span>財務・商流データの取得状況とAI連携可否を診断し、初回72時間で可視化できる指標を特定</span>
+                  <span>財務・商流データの取得状況とAI連携可否を診断し、初期段階で可視化できる指標を特定</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Sparkles className="mt-1 h-4 w-4 text-[#f97316]" aria-hidden="true" />

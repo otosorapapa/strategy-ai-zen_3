@@ -17,9 +17,9 @@ const offerCards = [
     icon: Sparkles,
     image: consultWorkshop,
     imageAlt: "初回相談でのホワイトボードセッションを俯瞰したイメージ",
-    title: "30分で未来の設計図の輪郭を描き始める",
+    title: "短時間で未来の設計図の輪郭を描き始める",
     description:
-      "経営者・キーパーソンとの対話で課題を棚卸し。生成AIが初期分析したシグナルと共に、優先仮説メモを24時間以内に共有します。",
+      "経営者・キーパーソンとの対話で課題を棚卸し。生成AIが初期分析したシグナルと共に、優先仮説メモを即日共有します。",
     bullets: [
       "粗利・キャッシュ・人材データの整合性チェック",
       "AI適用余地と優先課題を三層で整理",
@@ -27,7 +27,7 @@ const offerCards = [
     ],
     stat: {
       label: "初回ドラフト提示",
-      value: "24h",
+      value: "即日",
       caption: "平均共有リードタイム（例）",
     },
     button: PRIMARY_CTA,
@@ -39,17 +39,17 @@ const offerCards = [
     icon: ClipboardList,
     image: diagnosisDashboard,
     imageAlt: "AIダッシュボードに可視化された再生シグナルのモックアップ",
-    title: "72時間で再生可能性を数値化するレポート",
+    title: "短期間で再生可能性を数値化するレポート",
     description:
-      "粗利率・在庫回転・キャッシュ余力など14指標をAIがスコアリング。専門家のコメント付きで再生の到達イメージを提示します。",
+      "粗利率・在庫回転・キャッシュ余力など主要指標をAIがスコアリング。専門家のコメント付きで再生の到達イメージを提示します。",
     bullets: [
-      "14指標のヒートマップとリスクスコア",
+      "主要指標のヒートマップとリスクスコア",
       "シナリオ別の損益・資金シミュレーション",
       "実行に必要なデータ・体制のチェックリスト",
     ],
     stat: {
       label: "定量化のスピード",
-      value: "72h",
+      value: "短期間",
       caption: "全指標スコアリング完了まで（例）",
     },
     button: {
@@ -77,8 +77,8 @@ const offerCards = [
     ],
     stat: {
       label: "社内共有キット",
-      value: "12点",
-      caption: "資料・テンプレートの同梱数（例）",
+      value: "豊富なセット",
+      caption: "資料・テンプレートの同梱内容（例）",
     },
     button: {
       id: TERTIARY_CTA.id,
@@ -119,11 +119,11 @@ const OfferSection = () => {
             行動の重さに合わせた三つの入り口で、再生への一歩を後押しする
           </h2>
           <p className="text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            無料相談で課題を棚卸し、ZENスキャンで再生余地を数値化し、資料で社内外の合意形成を進める。Whyで揺れた心をHow・Whatへとつなぐ導線を、三つの入り口で整えました。
+            無料相談で課題を棚卸し、ZENスキャンで再生余地を可視化し、資料で社内外の合意形成を進める。迷いを確信へ切り替える導線を、三つの入り口で整えました。
           </p>
           <div className="mx-auto flex flex-wrap items-center justify-center gap-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">
             <span className="inline-flex items-center gap-2">
-              <span className="h-1 w-8 rounded-full bg-[#0584c6]" aria-hidden="true" /> WhyからHowへ
+              <span className="h-1 w-8 rounded-full bg-[#0584c6]" aria-hidden="true" /> 共感から確信へ
             </span>
             <span className="inline-flex items-center gap-2">
               <span className="h-1 w-8 rounded-full bg-[#0b1f3f]/30" aria-hidden="true" /> 数字と現場を同期
@@ -222,7 +222,7 @@ const OfferSection = () => {
               顧客の声と再現性
             </p>
             <p className="text-[1.05rem] leading-relaxed text-[#0b1f3f]">
-              「初回相談で24時間以内に届いた“再生シグナル”のドラフトが、役員会での意思決定を加速させました。ZENの三つの入り口が、金融機関との交渉資料づくりと現場の動きを同時に進めるエンジンになりました。」
+              「初回相談で即座に届いた“再生シグナル”のドラフトが、役員会での意思決定を加速させました。ZENの三つの入り口が、金融機関との交渉資料づくりと現場の動きを同時に進めるエンジンになりました。」
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-[#1e3359]/70">
               <span className="font-semibold text-[#0b1f3f]">年商86億円 製造業C社（再生支援）</span>

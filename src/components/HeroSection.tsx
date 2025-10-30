@@ -1,10 +1,21 @@
-import heroImage from "@/assets/financial-analysis.jpg";
+import heroImage from "@/assets/hero-consulting.jpg";
+import blueprintImage from "@/assets/dashboard-preview.jpg";
 import { Button, buttonVariants } from "@/components/ui/button";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
 import { cn } from "@/lib/utils";
-import { ArrowRight, CheckCircle2, Sparkle, Target, Timer } from "lucide-react";
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  CheckCircle2,
+  Landmark,
+  LineChart,
+  Sparkle,
+  Target,
+  Timer,
+  Workflow,
+} from "lucide-react";
 
 const heroStats = [
   {
@@ -31,6 +42,27 @@ const heroBullets = [
   "生成AIが需要・資金・人材データを同時に解析し、再生余地をヒートマップで提示",
   "中小企業診断士が現場ヒアリングをもとに優先仮説とリスクを再設計",
   "週次レビューで交渉資料と現場アクションを更新し、再起の物語を共有",
+];
+
+const blueprintSteps = [
+  {
+    title: "課題の即時スキャン",
+    description: "主要3領域×45指標をAIでクロス解析し、優先度と緊急度を自動評価",
+  },
+  {
+    title: "反転シナリオの設計",
+    description: "診断士が現場の制約条件を織り込んだ再生ストーリーを共創",
+  },
+  {
+    title: "実行と交渉の伴走",
+    description: "金融機関・主要取引先向け資料と現場アクションを週次で更新",
+  },
+];
+
+const trustSignals = [
+  { icon: Landmark, label: "中小企業庁 登録診断士" },
+  { icon: BriefcaseBusiness, label: "再生案件 年間48件サポート" },
+  { icon: LineChart, label: "専門誌『TURNAROUND』掲載" },
 ];
 
 const HeroSection = () => {
@@ -71,6 +103,39 @@ const HeroSection = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="grid gap-6 rounded-[28px] border border-white/15 bg-white/5 p-6 shadow-[0_18px_55px_rgba(3,16,36,0.4)] backdrop-blur">
+              <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                <div className="space-y-4">
+                  <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200/90">
+                    再生ストーリーを3枚で把握
+                  </h2>
+                  <div className="grid gap-4 sm:grid-cols-3">
+                    {blueprintSteps.map((step) => (
+                      <div
+                        key={step.title}
+                        className="rounded-2xl border border-white/15 bg-[#0b1f3f]/60 p-4 shadow-[0_12px_30px_rgba(2,12,30,0.35)]"
+                      >
+                        <div className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+                          {step.title}
+                        </div>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-100/85">{step.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <figure className="group relative mx-auto w-full max-w-[280px] overflow-hidden rounded-[24px] border border-white/20 bg-[#031024]/80 shadow-[0_20px_45px_rgba(3,16,36,0.45)]">
+                  <img
+                    src={blueprintImage}
+                    alt="生成AIダッシュボードの要約カード"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+                  <figcaption className="absolute inset-x-4 bottom-4 rounded-2xl bg-black/60 px-4 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/90">
+                    KPIストーリーボード
+                  </figcaption>
+                </figure>
+              </div>
             </div>
 
             <div className="space-y-4">
@@ -115,11 +180,20 @@ const HeroSection = () => {
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-200/80">
                 代表・古町（中小企業診断士）が直接ヒアリング｜初回30分で論点を棚卸し、翌営業日に再生仮説と優先シナリオを提示
               </p>
+              <div className="flex flex-wrap items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-[0.75rem] uppercase tracking-[0.22em] text-cyan-100/80">
+                {trustSignals.map(({ icon: Icon, label }) => (
+                  <div key={label} className="flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2">
+                    <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                    <span className="font-semibold text-slate-100/80">{label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
           <div className="space-y-6">
             <div className="relative overflow-hidden rounded-[40px] border border-white/15 bg-[#0b1f3f] shadow-[0_30px_80px_rgba(5,12,35,0.55)]">
+              <div className="pointer-events-none absolute -left-24 top-16 h-48 w-48 rounded-full bg-cyan-500/20 blur-3xl" aria-hidden="true" />
               <img
                 src={heroImage}
                 alt="生成AIダッシュボードを前に戦略を議論する専門家と経営者"
@@ -128,6 +202,22 @@ const HeroSection = () => {
                 fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-[#031024]/40 via-transparent to-[#0ef2ff]/10" aria-hidden="true" />
+              <div className="absolute right-6 top-6 w-full max-w-[220px] rounded-3xl border border-cyan-200/30 bg-black/60 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.55)] backdrop-blur">
+                <div className="flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                  <Workflow className="h-4 w-4" aria-hidden="true" />
+                  Before / After
+                </div>
+                <div className="mt-3 space-y-3 text-xs text-slate-100/90">
+                  <div className="flex items-center justify-between gap-2 rounded-2xl bg-white/10 px-3 py-2">
+                    <span className="font-semibold uppercase tracking-[0.2em] text-slate-200/80">Before</span>
+                    <span className="text-sm font-bold text-rose-200">キャッシュ残 2.5ヶ月</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-2 rounded-2xl bg-cyan-500/10 px-3 py-2">
+                    <span className="font-semibold uppercase tracking-[0.2em] text-cyan-100/90">After</span>
+                    <span className="text-sm font-bold text-cyan-100">営業CF +12%</span>
+                  </div>
+                </div>
+              </div>
               <div className="absolute inset-x-6 bottom-6 rounded-3xl bg-[#061530]/80 p-5 backdrop-blur">
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
                   <Target className="h-4 w-4" aria-hidden="true" />

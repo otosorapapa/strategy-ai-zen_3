@@ -42,66 +42,66 @@ type ExecutiveSignal = {
 
 const pains: PainPoint[] = [
   {
-    title: "粗利は積み上がるのに資金が残らない",
-    quote: "会議のたびに資金繰りの読み替えを指示され、判断が常に後追いです。",
+    title: "粗利とキャッシュのズレを説明できない",
+    quote: "利益は出ているのに資金残高が減る理由を会議で説明できず、AIの活用も構想止まりです。",
     reasons: [
-      "粗利・在庫・入出金のデータが部門ごとに閉じ、更新タイミングも揃わない",
-      "資金繰りシミュレーションを手作業で回し、30日先の資金波形が共有されていない",
-      "価格シナリオを経験則で決めており、利益率と需要の弾力を同時に検証できない",
+      "粗利・在庫・入出金が部署単位で分断され、更新タイミングが揃わない",
+      "資金繰り計画をExcelで手作業更新し、キャッシュ波形のシナリオ比較ができない",
+      "AIに学習させるデータ条件が決まらず、判断材料の自動生成が実現しない",
     ],
-    risk: "短期資金ショックで投資判断が止まり、金融機関への説明責任も果たせない",
-    focus: "生成AIが粗利とキャッシュの差異要因を常時解析し、意思決定ボードへ即時反映",
+    risk: "資金ショックを前倒しで検知できず、投資判断や金融機関との交渉が後手に回る",
+    focus: "粗利・在庫・キャッシュをAIで同時分析し、意思決定ボードに差異要因と打ち手を表示",
     icon: DollarSign,
     priority: 5,
   },
   {
-    title: "営業判断が属人化し勝ち筋が読めない",
-    quote: "商談ヒアリングの要点が人ごとに違い、社長決裁まで時間がかかる。",
+    title: "生成AIが現場に定着しない",
+    quote: "チャットツールで試しているが、判断に使える形でAIの提案が残らず運用が続きません。",
     reasons: [
-      "顧客接点データがExcelとメールに散在し、AIで会話を横断分析できない",
-      "案件スコアリングの指標がなく、値引きや優先順位が担当者の経験に依存している",
-      "ナレッジ共有のワークフローが構築されず、生成AIの要約やFAQが活用されない",
+      "部署ごとにAIの使い方が違い、判断に必要なプロンプトやテンプレートが標準化されていない",
+      "AIが生成した施策の根拠が不明確で、会議で説明できるレベルまで磨き込めていない",
+      "教育コンテンツやガイドラインが不足し、リスク管理の観点で導入が止まっている",
     ],
-    risk: "高粗利案件の決裁が遅れ、営業人材の育成コストと離職率が同時に上がる",
-    focus: "商談ログをAIが構造化し、勝ち筋プレイブックと次アクションを自動提案",
-    icon: Network,
+    risk: "AIの活用が属人化し、投資対効果が見えず、現場のやり切り感と信頼が低下する",
+    focus: "専門家がユースケースと運用ルールを共創し、生成AIの提案を証跡付きで意思決定ログへ反映",
+    icon: BrainCircuit,
     priority: 4,
   },
   {
-    title: "回収と在庫が読めずキャッシュが滞留",
-    quote: "入金サイトが変わるたびに数値を集め直し、会議が確認だけで終わります。",
+    title: "商談と在庫の意思決定が遅れる",
+    quote: "案件の勝ち筋が見えず値引きが常態化。欠品と過剰在庫が同時に発生し、会議が後追いになります。",
     reasons: [
-      "販売・在庫・与信データが分断され、AI需要予測の学習サイクルが回っていない",
-      "調達・生産計画が慣習に頼り、在庫アラートや欠品シミュレーションが即時計算できない",
-      "請求と回収の情報更新が月次で止まり、資金波形のズレを即検知できない",
+      "商談・在庫・需要データが散在し、AIによる需要予測が学習できる状態ではない",
+      "勝ち筋プレイブックがなく、AIのスコアリング結果も定例会議で活用されない",
+      "在庫警戒ラインや補充ルールが暗黙知のままで、実績差異の検証に時間がかかる",
     ],
-    risk: "資金が棚卸資産に寝て新規投資が遅れ、サプライチェーンの信用も揺らぐ",
-    focus: "AI需要予測と調達ルールを連動させ、在庫・回収・資金繰りを一枚で管理",
+    risk: "高粗利案件の取りこぼしと在庫滞留が同時発生し、キャッシュを圧迫する",
+    focus: "生成AIが需要シナリオと在庫アラートを提示し、会議で優先順位と責任者を即決",
     icon: CalendarClock,
     priority: 4,
   },
   {
-    title: "人材が定着せず戦略が回らない",
-    quote: "育成指標が示せず、判断材料を準備するだけで管理職が疲弊しています。",
+    title: "人材育成と組織連携が追いつかない",
+    quote: "改善施策が属人化し、幹部が判断材料をまとめるだけで疲弊しています。",
     reasons: [
-      "スキルマップと評価指標が可視化されず、AIによる習熟度診断ができない",
-      "OJTコンテンツが属人化し、生成AIでのマイクロラーニング教材化が進まない",
-      "エンゲージメントや離職兆候のデータが点在し、予兆管理の会議が形骸化している",
+      "スキルマップや評価指標が可視化されず、AIによる習熟診断ができない",
+      "会議資料と現場タスクが連動せず、改善活動の再現性が上がらない",
+      "離職兆候やエンゲージメントのデータが点在し、改善策の効果検証が難しい",
     ],
-    risk: "キーパーソンの離脱でプロジェクトが停滞し、採用・教育コストが雪だるま式に増加",
-    focus: "AIパーソナライズ学習と組織診断ダッシュボードで、判断会議の再現性を高める",
+    risk: "キーパーソンの離脱と施策停滞で、改善スピードと士気が低下する",
+    focus: "AIが個別最適化した教育プランとエンゲージメント指標を提示し、伴走で定着まで支援",
     icon: Users,
   },
   {
-    title: "金融機関との対話が属人で途切れる",
-    quote: "面談準備に時間を取られ、本業の改善と意思決定が後回しになります。",
+    title: "金融機関・投資家との対話に時間がかかる",
+    quote: "資料づくりに追われ、決算説明や条件交渉が後手に回ります。",
     reasons: [
-      "財務ストーリーや資金繰り見通しが部署ごとに分散し、最新数値を一元管理できていない",
-      "借入条件やモニタリング論点の履歴が残らず、関係者間で期待値を共有できない",
-      "面談ログの要点が整理されず、AIで交渉材料を抽出する仕組みが用意されていない",
+      "財務ストーリーと資金計画が部署ごとに散在し、最新データが共有できない",
+      "モニタリング項目の履歴が残らず、過去の合意事項を説明するのに時間がかかる",
+      "面談ログと改善施策が連携せず、AIで交渉材料を抽出する仕組みがない",
     ],
-    risk: "信用評価が下がり、追加融資や条件交渉のタイミングを逃して資金計画が遅延",
-    focus: "生成AIで財務ストーリーと交渉履歴を標準化し、対話サイクルを高速化",
+    risk: "信用評価が下がり、追加融資や投資判断のタイミングを逃す",
+    focus: "生成AIが金融機関向け資料と交渉ログを標準化し、対話サイクルを高速化",
     icon: AlertTriangle,
   },
 ];
@@ -109,26 +109,26 @@ const pains: PainPoint[] = [
 const executiveSignals: ExecutiveSignal[] = [
   {
     label: "意思決定リードタイム",
-    metric: "+12日（例）",
-    note: "会議準備にかかるデータ収集時間が分散し、経営ボードの判断が後ろ倒し",
+    metric: "+11日（例）",
+    note: "資料準備と確認に時間がかかり、判断が後ろ倒しになる",
     icon: CalendarClock,
   },
   {
-    label: "粗利と資金の乖離",
-    metric: "▲24%",
-    note: "粗利が積み上がっても資金波形が遅行し、先行投資の意思決定が止まる",
+    label: "粗利とキャッシュの乖離",
+    metric: "▲27%",
+    note: "粗利は積み上がるのにキャッシュ残高が減少し、投資判断が止まる",
     icon: DollarSign,
   },
   {
-    label: "重要KPIの不一致",
-    metric: "68%",
-    note: "営業・財務・現場でモニタリング指標がバラバラになり、議論が噛み合わない",
+    label: "生成AIの活用度",
+    metric: "38%",
+    note: "AIの成果指標が定義されず、試行止まりで現場に定着しない",
     icon: Network,
   },
   {
-    label: "金融機関との停滞",
-    metric: "+3回/期",
-    note: "対話ログが属人化し、条件交渉とモニタリングのアップデートが遅延",
+    label: "金融機関との対話時間",
+    metric: "+4回/期",
+    note: "面談準備が属人化し、説明資料の更新に追われる",
     icon: ShieldCheck,
   },
 ];
@@ -197,7 +197,7 @@ const PainAccordionItem = ({ pain, index }: { pain: PainPoint; index: number }) 
           </div>
         </div>
         <footer className="mt-6 flex flex-col gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>年商5,000万円～15億円企業のヒアリングから抽出</span>
+          <span>年商1億〜30億円規模の経営者ヒアリングから抽出</span>
           <span>クリックで詳細を閉じる</span>
         </footer>
       </AccordionContent>
@@ -207,28 +207,28 @@ const PainAccordionItem = ({ pain, index }: { pain: PainPoint; index: number }) 
 
 const storyFlow: StoryFlowItem[] = [
   {
-    stage: "変化が迫る背景",
+    stage: "現状",
     icon: AlertTriangle,
-    headline: "判断が遅れるほど資金と信頼が目減り",
+    headline: "判断材料が分断され迷いが生まれる",
     copy:
-      "粗利の高い案件ほど判断材料が揃わず、会議資料は担当者の端末に点在。資金波形のズレを把握できず、社内外に示す方針がぶれ始めます。",
-    metrics: ["意思決定リードタイムの長期化", "現場の迷いと信用の低下"],
+      "粗利とキャッシュの差異要因が整理できず、AI活用も試行止まり。会議は確認作業で終わり、判断が後ろ倒しになります。",
+    metrics: ["判断リードタイムの長期化", "現場の納得感の低下"],
   },
   {
-    stage: "手に入る未来像",
+    stage: "変革",
     icon: BrainCircuit,
-    headline: "専門家×生成AIで判断を見える化",
+    headline: "生成AIと専門家で意思決定を再設計",
     copy:
-      "中小企業診断士が意思決定の論点を整理し、生成AIが販売・会計・資金データを一体化。週次で粗利・資金・需要の未来像を提示し、経営陣が迷いなく共有できる判断会議を設計します。",
-    metrics: ["粗利率+5.2pt（例）", "資金ショック30日前検知（例）"],
+      "専門家が意思決定フレームを設計し、生成AIが粗利・在庫・キャッシュの因果を可視化。週次でシナリオと打ち手を提示します。",
+    metrics: ["粗利改善スピード2.4倍（例）", "キャッシュ創出28日前倒し（例）"],
   },
   {
-    stage: "実行ステップ",
+    stage: "成果",
     icon: TrendingUp,
-    headline: "週次ボードで先読みと実行を両立",
+    headline: "同じ地図で動ける経営チームに",
     copy:
-      "AIが作成する議事録と意思決定ボードをもとに、重点テーマごとのKPIと打ち手を優先順位づけ。社長の判断時間を週8時間創出し、現場の勢いを保ったまま攻めの投資を前倒しできます。",
-    metrics: ["意思決定リードタイム▲48%（例）", "資金繰り更新時間-70%"],
+      "週次の意思決定ボードと運用ルールが整い、会議準備が▲7時間（例）。金融機関や投資家への説明も一本化されます。",
+    metrics: ["意思決定リードタイム▲46%（例）", "金融機関面談準備▲60%"],
   },
 ];
 
@@ -242,10 +242,10 @@ const ProblemSection = () => {
               よくある課題
             </span>
             <h2 className="text-balance text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl">
-              意思決定を止める<br />5つの警戒信号
+              生成AI×専門家の活用で解決したい<br />5つの経営ボトルネック
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground md:text-lg lg:max-w-[62ch]">
-              需給や取引条件が同時に変わるなかで判断が遅れれば、粗利と資金は即座に揺らぎます。経営者が迷いなく決断を示せるよう、現場ヒアリングと財務データから特に因果性の強いボトルネックを可視化しました。
+              データと現場の情報が分断されたままでは、生成AIも成果を出せません。Strategy AI ZENが支援してきた企業から共通して見えるボトルネックを整理しました。改善の順番を決めるヒントとしてご活用ください。
             </p>
             <div className="grid gap-4 sm:grid-cols-2">
               {executiveSignals.map((signal) => {
@@ -269,9 +269,9 @@ const ProblemSection = () => {
             </div>
             <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-slate-200/70 bg-white/80 px-5 py-3 text-sm text-muted-foreground shadow-sm">
               <LineChart className="h-4 w-4 text-primary" aria-hidden="true" />
-              <span className="font-semibold text-foreground">週次アップデートで因果とタイミングを両方管理</span>
+              <span className="font-semibold text-foreground">週次アップデートで因果とタイミングを同時に管理</span>
               <span className="hidden h-1.5 w-1.5 rounded-full bg-slate-300 sm:inline-flex" />
-              <span>経営会議の準備時間▲40%（例）</span>
+              <span>経営会議の準備時間▲46%（例）</span>
             </div>
           </div>
           <figure className="relative overflow-hidden rounded-[36px] border border-slate-200/70 bg-white/60 shadow-elegant">
@@ -282,18 +282,18 @@ const ProblemSection = () => {
             </div>
             <img
               src={problemInfographic}
-              alt="外部環境から意思決定までを結ぶ因果マップ"
+              alt="生成AIと専門家が経営判断までの因果を結ぶマップ"
               className="relative w-full object-cover"
               loading="lazy"
               decoding="async"
             />
             <figcaption className="relative flex flex-col gap-3 border-t border-slate-200/60 bg-white/90 px-6 py-5 text-left">
-              <p className="text-sm font-semibold text-foreground">外部シグナル→財務インパクト→意思決定の連鎖を一枚図で同期。</p>
+              <p className="text-sm font-semibold text-foreground">外部シグナル→粗利・キャッシュ→意思決定ログを一枚で同期。</p>
               <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
                 <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 font-semibold uppercase tracking-[0.28em] text-slate-500">
                   TRUST
                 </span>
-                <span>専門家ヒアリング48社分のパターン（例）</span>
+                <span>専門家ヒアリング60社分のパターン（例）</span>
                 <span className="hidden h-1.5 w-1.5 rounded-full bg-slate-300 sm:inline-flex" />
                 <span>週次で更新される実務ダッシュボード</span>
               </div>
@@ -309,7 +309,7 @@ const ProblemSection = () => {
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-primary/80">
                   NARRATIVE VISUALIZATION
                 </span>
-                <h3 className="mt-4 text-2xl font-bold text-foreground md:text-3xl">課題→介入→成果を3つのフレームで直感把握</h3>
+                <h3 className="mt-4 text-2xl font-bold text-foreground md:text-3xl">課題→変革→成果を3つのフレームで直感把握</h3>
               </div>
               <div className="flex items-center gap-3 rounded-2xl border border-primary/30 bg-primary/10 px-5 py-3 text-sm text-primary/80">
                 <LineChart className="h-4 w-4" aria-hidden="true" />
@@ -366,7 +366,7 @@ const ProblemSection = () => {
 
         <div className="rounded-[36px] border border-highlight/30 bg-gradient-to-r from-highlight/20 via-white to-accent/10 p-10 text-center shadow-card">
           <p className="text-xl font-semibold leading-relaxed text-foreground">
-            初回相談では判断が詰まるポイントを30分で診断し、専門家と生成AIが粗利・資金・需要を同じ地図で描くステップを共創します。視覚化された因果マップと週次ボードのサンプルも併せてご提示します。
+            初回相談では生成AIの活用余地とデータ整備状況を30分で診断し、専門家と共に粗利・キャッシュ・需要を同期するステップを描きます。因果マップと意思決定ボードのサンプルをもとに、貴社に適した改善ロードマップを提案します。
           </p>
         </div>
       </div>

@@ -46,7 +46,7 @@ const SolutionSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            How - 3倍速で再生戦略を描く理由
+            解決の仕組み
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             生成AIと中小企業診断士が共創し、再生戦略を高速でアップデートする運用スタジオ

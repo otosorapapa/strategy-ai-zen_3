@@ -78,7 +78,7 @@ export const serviceSchema = {
   serviceType: "事業再生・経営改善支援",
   url: "https://furumachi-smec.lognowa.com/public/lp_2",
   description:
-    "Why-How-Whatの設計思想に基づき、AI解析と専門家伴走で再生戦略を立案。粗利+12%・債務超過解消率80%（例）の実績を持つ再生支援サービスです。",
+    "AI解析と専門家伴走で未来の設計図を描き直し、粗利+12%・債務超過解消率80%（例）の実績を持つ再生支援サービスです。",
   provider: {
     "@type": "Organization",
     name: "株式会社創和経営コンサルティング",
@@ -207,7 +207,7 @@ export const webPageSchema = {
   name: "生成AI×専門家で描く再生の設計図",
   url: "https://furumachi-smec.lognowa.com/public/lp_2",
   description:
-    "生成AIと中小企業診断士が共創し、事業再生のWhy-How-Whatを設計する福岡発の伴走型サービス。粗利改善、債務超過解消、金融機関連携まで一貫支援します。",
+    "生成AIと中小企業診断士が共創し、未来の設計図を構築する福岡発の伴走型サービス。粗利改善、債務超過解消、金融機関連携まで一貫支援します。",
   inLanguage: "ja-JP",
   isPartOf: {
     "@type": "WebSite",

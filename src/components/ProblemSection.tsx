@@ -28,7 +28,7 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Why - 現状の壁
+            現実の壁
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             「設計図」がなければ、努力は点在し続ける。だからこそ私たちはゴールをひとつに束ねます。

@@ -39,6 +39,6 @@ export const SECONDARY_CTA: SecondaryCtaContent = {
 export const TERTIARY_CTA: TertiaryCtaContent = {
   id: "tertiary",
   label: "資料を今すぐ確認する",
-  href: "https://furumachi-smec.lognowa.com/public/lp/assets/strategy-ai-brief.pdf",
+  href: "https://furumachi-smec.lognowa.com/public/lp_2/assets/strategy-ai-brief.pdf",
   description: "サービス概要、AIダッシュボードの画面、週次レポートのサンプルをまとめたPDFを即時ダウンロードできます。",
 };

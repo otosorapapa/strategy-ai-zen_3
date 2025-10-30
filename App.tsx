@@ -20,8 +20,8 @@ const App = () => (
         <Routes>
           {/* /index.html 直打ち対策 */}
           <Route path="/index.html" element={<Navigate to="/" replace />} />
-          {/* /public/lp リダイレクト対策 */}
-          <Route path="/public/lp" element={<Navigate to="/" replace />} />
+          {/* /public/lp_2 リダイレクト対策 */}
+          <Route path="/public/lp_2" element={<Navigate to="/" replace />} />
 
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

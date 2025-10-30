@@ -1,46 +1,51 @@
 <svg width="720" height="540" viewBox="0 0 720 540" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="720" height="540" fill="#F8FAFC" />
   <rect x="72" y="48" width="576" height="444" rx="32" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
-  <text x="360" y="104" text-anchor="middle" fill="#0F172A" font-size="24" font-weight="700">課題マップ（要約）</text>
-  <line x1="210" y1="192" x2="510" y2="192" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" />
-  <line x1="210" y1="336" x2="510" y2="336" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" />
-  <path d="M360 192V312" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 14" />
+  <text x="360" y="108" text-anchor="middle" fill="#0F172A" font-size="24" font-weight="700">課題マップ（要約）</text>
+  <text x="360" y="136" text-anchor="middle" fill="#475569" font-size="14">CAUSE → IMPACT → ACTION の流れを一枚で共有</text>
+
   <g>
-    <rect x="156" y="160" width="180" height="72" rx="18" fill="#E0F2FE" />
-    <text x="246" y="188" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">外部シグナル</text>
-    <text x="246" y="210" text-anchor="middle" fill="#1D4ED8" font-size="13" font-weight="600">需給・金利・取引条件</text>
-    <text x="246" y="228" text-anchor="middle" fill="#475569" font-size="11">週次で自動収集し可視化</text>
+    <rect x="126" y="188" width="180" height="120" rx="20" fill="#E0F2FE" />
+    <circle cx="150" cy="212" r="18" fill="#0EA5E9" />
+    <text x="150" y="218" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">1</text>
+    <text x="216" y="220" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">外部シグナル</text>
+    <text x="216" y="246" text-anchor="middle" fill="#1D4ED8" font-size="13" font-weight="600">需給・金利・競争条件</text>
+    <text x="216" y="270" text-anchor="middle" fill="#475569" font-size="12">週次サマリーで変化を把握</text>
   </g>
+
   <g>
-    <rect x="384" y="160" width="180" height="72" rx="18" fill="#DBEAFE" />
-    <text x="474" y="188" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">意思決定</text>
-    <text x="474" y="210" text-anchor="middle" fill="#1D4ED8" font-size="13" font-weight="600">投資・採用・価格改定</text>
-    <text x="474" y="228" text-anchor="middle" fill="#475569" font-size="11">シナリオ比較で即時判断</text>
+    <rect x="270" y="180" width="180" height="136" rx="20" fill="#DBEAFE" />
+    <circle cx="294" cy="204" r="18" fill="#3B82F6" />
+    <text x="294" y="210" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">2</text>
+    <text x="360" y="216" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">優先仮説メモ</text>
+    <text x="360" y="240" text-anchor="middle" fill="#1D4ED8" font-size="13" font-weight="600">CAUSE と IMPACT を整理</text>
+    <text x="360" y="264" text-anchor="middle" fill="#475569" font-size="12">粗利・キャッシュ・在庫の関係性を可視化</text>
+    <text x="360" y="288" text-anchor="middle" fill="#475569" font-size="12">意思決定に必要な論点を一枚に集約</text>
   </g>
+
   <g>
-    <rect x="156" y="304" width="180" height="96" rx="18" fill="#CFFAFE" />
-    <text x="246" y="332" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">評価インパクト</text>
-    <text x="246" y="354" text-anchor="middle" fill="#0E7490" font-size="13" font-weight="600">粗利率・資金波形・在庫</text>
-    <text x="246" y="374" text-anchor="middle" fill="#0E7490" font-size="12" font-weight="600">意思決定リードタイム▲42%</text>
-    <text x="246" y="394" text-anchor="middle" fill="#475569" font-size="11">AIが関係性をスコア化</text>
+    <rect x="414" y="188" width="180" height="120" rx="20" fill="#CFFAFE" />
+    <circle cx="438" cy="212" r="18" fill="#0F766E" />
+    <text x="438" y="218" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">3</text>
+    <text x="504" y="220" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">意思決定</text>
+    <text x="504" y="246" text-anchor="middle" fill="#0E7490" font-size="13" font-weight="600">投資・採用・価格のシナリオ</text>
+    <text x="504" y="270" text-anchor="middle" fill="#475569" font-size="12">優先度とリスクを即共有</text>
   </g>
+
+  <path d="M306 248H330" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" />
+  <path d="M450 248H486" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" />
+
   <g>
-    <rect x="384" y="304" width="180" height="96" rx="18" fill="#E2E8F0" />
-    <text x="474" y="332" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">実務サイクル</text>
-    <text x="474" y="354" text-anchor="middle" fill="#0F172A" font-size="13" font-weight="600">週次ダッシュボード連携</text>
-    <text x="474" y="374" text-anchor="middle" fill="#475569" font-size="11">異常検知と現場メモを同期</text>
+    <rect x="216" y="360" width="288" height="96" rx="20" fill="#0EA5E9" />
+    <text x="360" y="392" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="700">週次ダッシュボードで検証</text>
+    <text x="360" y="418" text-anchor="middle" fill="#F8FAFC" font-size="13" font-weight="600">現場メモと指標を同期し、改善ループへ接続</text>
   </g>
-  <g>
-    <path d="M246 232C246 252 246 272 246 292" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" />
-    <path d="M474 232C474 252 474 272 474 292" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" />
-  </g>
-  <g>
-    <rect x="264" y="408" width="192" height="68" rx="16" fill="#0EA5E9" />
-    <text x="360" y="438" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="700">フィードバックで改善ループ</text>
-    <text x="360" y="456" text-anchor="middle" fill="#F8FAFC" font-size="12">CAUSE → IMPACT → ACTION</text>
-  </g>
+
+  <path d="M360 316V352" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" />
+  <path d="M360 456V324" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 12" marker-end="url(#arrow)" />
+
   <defs>
-    <marker id="arrow" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto">
       <path d="M2 2L10 6L2 10V2Z" fill="#38BDF8" />
     </marker>
   </defs>

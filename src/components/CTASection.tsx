@@ -25,14 +25,14 @@ const requestOptions = [
     value: "consultation",
     title: "無料相談で方向性を定義",
     description:
-      "経営者とともに現状を棚卸しし、“再生の設計図”のドラフトと優先仮説メモを24時間以内にご共有します。次の場で堂々と語れる要点を整理します。",
+      "経営者とともに現状を棚卸しし、“再生の設計図”のドラフトと優先仮説メモを即日でご共有します。次の場で堂々と語れる要点を整理します。",
     badge: "無料相談",
   },
   {
     value: "diagnostic",
     title: "AI診断で歪みを可視化",
     description:
-      "粗利・キャッシュ・人材の18指標をAIが分析し、専門家が行動順序とリスクをコメントしたレポートを72時間でお届けします。判断の軸が揺れないよう裏付けを整えます。",
+      "粗利・キャッシュ・人材の主要指標をAIが分析し、専門家が行動順序とリスクをコメントしたレポートを短期間でお届けします。判断の軸が揺れないよう裏付けを整えます。",
     badge: "AI診断",
   },
   {
@@ -47,19 +47,19 @@ const requestOptions = [
 const bookingMetrics = [
   {
     icon: Timer,
-    value: "30分以内",
+    value: "即日対応",
     label: "最短返信",
-    helper: "無料相談の希望日時を即日ご案内",
+    helper: "無料相談の希望日時をスピーディーにご案内",
   },
   {
     icon: ShieldCheck,
-    value: "18指標",
+    value: "主要指標",
     label: "AI診断",
     helper: "粗利・資金・人材の歪みを一括把握",
   },
   {
     icon: Building2,
-    value: "100社超",
+    value: "多数の案件",
     label: "再生伴走",
     helper: "九州・西日本の再生案件を支援",
   },
@@ -108,8 +108,8 @@ const CTASection = () => {
       }
 
       toast({
-        title: "送信が完了しました", 
-        description: "担当より24時間以内にご連絡いたします。",
+        title: "送信が完了しました",
+        description: "担当より速やかにご連絡いたします。",
       });
 
       setCompany("");
@@ -196,7 +196,7 @@ const CTASection = () => {
 
             <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 text-sm leading-relaxed text-slate-200/85">
               <CheckCircle2 className="mb-3 h-5 w-5 text-cyan-200" aria-hidden="true" />
-              初回30分の無料相談では、粗利・キャッシュ・人材のギャップと優先施策を整理し、行動順序と金融機関への伝え方まで含めた“再生の設計図”をドラフトとしてお渡しします。次のステークホルダー面談で堂々と話せる根拠をご用意します。
+              初回相談では、粗利・キャッシュ・人材のギャップと優先施策を整理し、行動順序と金融機関への伝え方まで含めた“再生の設計図”をドラフトとしてお渡しします。次のステークホルダー面談で堂々と話せる根拠をご用意します。
             </div>
           </ScrollReveal>
 
@@ -292,7 +292,7 @@ const CTASection = () => {
               <div className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f6f9ff] p-4 text-xs text-[#1e3359]/80">
                 <AlertCircle className="mt-0.5 h-4 w-4 text-[#0584c6]" aria-hidden="true" />
                 <p>
-                  送信後24時間以内に、代表または専門チームよりご連絡します。お急ぎの方はお電話（092-231-2920）でも承ります。
+                  送信後は代表または専門チームより迅速にご連絡します。お急ぎの方はお電話（092-231-2920）でも承ります。
                 </p>
               </div>
             </form>

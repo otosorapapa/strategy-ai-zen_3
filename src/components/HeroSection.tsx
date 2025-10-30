@@ -1,4 +1,3 @@
-import blueprintImage from "@/assets/dashboard-preview.jpg";
 import { Button, buttonVariants } from "@/components/ui/button";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
@@ -124,16 +123,12 @@ const HeroSection = () => {
                     ))}
                   </div>
                 </div>
-                <figure className="group relative mx-auto w-full max-w-[280px] overflow-hidden rounded-[24px] border border-white/20 bg-[#031024]/80 shadow-[0_20px_45px_rgba(3,16,36,0.45)]">
-                  <img
-                    src={blueprintImage}
-                    alt="生成AIダッシュボードの要約カード"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                  <figcaption className="absolute inset-x-4 bottom-4 rounded-2xl bg-black/60 px-4 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/90">
-                    KPIストーリーボード
-                  </figcaption>
-                </figure>
+                <div className="relative mx-auto w-full max-w-[280px] rounded-[24px] border border-white/20 bg-[#031024]/80 p-6 text-center shadow-[0_20px_45px_rgba(3,16,36,0.45)]">
+                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">KPIストーリー</div>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-100/80">
+                    生成AIが示す優先指標と改善幅を、診断士が意思決定に使えるストーリーへと翻訳。数値の裏側にある行動と交渉のポイントを一枚で共有します。
+                  </p>
+                </div>
               </div>
             </div>
 

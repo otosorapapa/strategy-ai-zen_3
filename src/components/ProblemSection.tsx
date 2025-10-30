@@ -6,19 +6,19 @@ const painPoints = [
     title: "数字と現場が別々に動く",
     description:
       "粗利とキャッシュの動きが合わない。報告資料は何種類も存在し、意思決定の場に辿り着くまでに熱量が薄れてしまう。",
-    signal: "粗利率▲2.5pt／資金残高▲1.2ヶ月（例）",
+    signal: "指標のズレが会議を迷わせる兆し",
   },
   {
     title: "生成AIが成果につながらない",
     description:
       "チャットの実験は進むが、現場に渡るのは読み切れない長文。活用の評価指標が定まらず、採択された施策は断片的に終わる。",
-    signal: "AI提案の採択率38%→停滞",
+    signal: "AIの提案が合意形成につながらない停滞",
   },
   {
     title: "対外説明が後手に回る",
     description:
       "金融機関・主要取引先との面談準備が属人化。資料更新に追われ、交渉と意思決定が常に“事後説明”になる。",
-    signal: "面談準備時間+40%／条件交渉の先延ばし",
+    signal: "交渉準備が追いつかず説明が後手に回る",
   },
 ];
 
@@ -28,7 +28,7 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Why 02｜現場で起きていること
+            兆候｜現場で起きていること
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             設計図がなければ、努力は点在し続ける。だからこそ、判断の軸をひとつに束ねる。

@@ -46,13 +46,16 @@ const SolutionSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            How｜再生の設計図を描く方法
+            共創モデル｜再生の描き方
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             生成AIと中小企業診断士が共創し、判断が止まらない「再生デザインスタジオ」を運用
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            最初の2週間でAIが財務指標・市場トレンド・競合動向を横断解析し、複数の回復シナリオを抽出。診断士が現場ヒアリングとプロセスマップを描き、実行条件を棚卸しします。両者が同じダッシュボードで議論することで、意思決定までのリードタイムを従来の3分の1に圧縮し、机上の空論ではない“再生の設計図”を共同で編み上げます。
+            最初の2週間でAIが財務指標・市場トレンド・競合動向を横断解析し、複数の回復シナリオを抽出。診断士が現場ヒアリングとプロセスマップを描き、実行条件を棚卸しします。両者が同じダッシュボードで議論することで、迷いを削ぎ落とした判断プロセスが立ち上がり、机上の空論ではない“再生の設計図”を共同で編み上げます。
+          </p>
+          <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
+            数字で裏付けられた選択肢を手にしたとき、経営者は自らの言葉で未来を語れるようになります。矜持を守りながら、スピードと先見性を備えた意思決定へ踏み出せるようデザインされています。
           </p>
         </ScrollReveal>
 

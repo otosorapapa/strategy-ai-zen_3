@@ -32,7 +32,7 @@ const InsightSpotlight = () => {
       <div className="container relative mx-auto max-w-5xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            Why｜なぜ再生が止まるのか
+            志｜再起を阻む真因
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
             経営の灯が揺らぐのは、情熱が足りないからではなく「未来を読む設計図」が欠けているから
@@ -43,6 +43,9 @@ const InsightSpotlight = () => {
             </p>
             <p>
               創和が存在する理由は、経営者がもう一度自分の判断を信じられる環境を整えること。データの正確さと現場の会話を往復させ、どこから着手すれば事業が息を吹き返すのかを明確にする。そのために、生成AIの洞察と診断士の経験知を重ね合わせます。
+            </p>
+            <p>
+              数字の根拠と現場の納得感が揃った瞬間、経営者としての矜持は自然と立ち上がります。先を読む視座を取り戻し、語る言葉に重みを宿す──それが私たちの使命です。
             </p>
           </div>
         </ScrollReveal>

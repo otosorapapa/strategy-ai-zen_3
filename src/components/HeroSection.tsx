@@ -8,29 +8,29 @@ import { ArrowRight, CheckCircle2, Sparkle, Target, Timer } from "lucide-react";
 
 const heroStats = [
   {
-    label: "営業利益の反転", 
-    value: 12,
-    suffix: "%",
-    annotation: "再生計画実行後1年の営業利益改善（例）",
-  },
-  {
-    label: "債務超過の解消率",
-    value: 80,
-    suffix: "%",
-    annotation: "銀行合意形成まで到達した割合（例）",
-  },
-  {
-    label: "可視化までの時間",
+    label: "初期診断までのスピード",
     value: 48,
-    suffix: "時間",
-    annotation: "再生シグナルの初期設計に要する目安",
+    suffix: "時間以内",
+    annotation: "生成AIと専門家が歪みの見取り図を提示",
+  },
+  {
+    label: "会議アップデートの頻度",
+    value: 1,
+    suffix: "週間ごと",
+    annotation: "判断の根拠と行動計画を同期",
+  },
+  {
+    label: "伴走する専門領域",
+    value: 3,
+    suffix: "領域連携",
+    annotation: "財務・販売・人材の視点を束ねる",
   },
 ];
 
 const heroBullets = [
-  "生成AIが需要・資金・人材データを同時に解析し、再生余地をヒートマップで提示",
-  "中小企業診断士が現場ヒアリングをもとに優先仮説とリスクを再設計",
-  "週次レビューで交渉資料と現場アクションを更新し、再起の物語を共有",
+  "生成AIが市場・資金・人材データを同時解析し、歪みと余白を一枚のヒートマップに集約",
+  "診断士が現場ヒアリングで制約条件を棚卸し、合意形成に耐える優先シナリオを構築",
+  "週次レビューで交渉資料と現場アクションを同期し、語れる物語として意思決定を磨く",
 ];
 
 const HeroSection = () => {
@@ -47,14 +47,14 @@ const HeroSection = () => {
           <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-                使命｜判断力を取り戻す伴走
+                信念｜判断力を研ぎ澄ます伴走
               </span>
               <h1 className="text-balance text-3xl font-bold leading-tight md:text-4xl xl:text-[3.1rem]">
                 資金が尽きる前に、未来を読み直す。<br className="hidden md:block" />「生成AI × 専門家」が描く再生の設計図
               </h1>
               <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">
                 資金が目減りし、主力メンバーが疲弊し、次の一手が見えない──停滞は努力不足ではなく、未来を読む設計図が卓上にないことが原因です。<br className="hidden md:block" />
-                創和経営コンサルティングは、生成AIが読み解く外部データと診断士が現場で積み上げてきた判断軸を束ね、貴社の“再生の設計図”をゼロから描き直します。数値が示す兆しと専門家の洞察を一枚のボードに統合し、次の一年を反転させる最初の決断を共に導きます。
+                創和経営コンサルティングは、生成AIが読み解く外部データと診断士が現場で積み上げてきた判断軸を束ね、貴社の“再生の設計図”をゼロから描き直します。数字とストーリーを一枚のボードに統合し、経営者が胸を張って判断を語れる舞台を整えます。
               </p>
             </div>
 

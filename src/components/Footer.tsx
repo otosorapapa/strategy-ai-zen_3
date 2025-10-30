@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="mb-4 text-2xl font-bold">株式会社創和経営コンサルティング</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              福岡発の伴走型経営顧問。AI×管理会計×資金繰りで、年商5000万円～10億円の中小企業の売上成長とキャッシュ最適化を同時に実現します。
+              福岡発の伴走型経営顧問。AI×管理会計×資金繰りで、年商数千万円規模から十億円規模の中小企業の売上成長とキャッシュ最適化を同時に実現します。
             </p>
             <div className="pt-3">
               <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2">

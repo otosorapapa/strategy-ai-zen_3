@@ -78,7 +78,7 @@ const InsightSpotlight = () => {
           </ul>
           <div className="rounded-3xl border border-[#0584c6]/30 bg-[#0584c6]/10 p-6 text-center text-sm font-semibold text-[#0b1f3f]">
             <TrendingUp className="mx-auto mb-3 h-5 w-5 text-[#0584c6]" aria-hidden="true" />
-            48時間の初期診断で「歪みの見取り図」を提示し、2週目から再生シナリオと優先施策の比較検証を開始します。
+            短期集中の初期診断で「歪みの見取り図」を提示し、続けて再生シナリオと優先施策の比較検証を開始します。
           </div>
         </div>
       </div>

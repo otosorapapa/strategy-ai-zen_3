@@ -9,9 +9,9 @@ const offerCards = [
     id: "consult",
     label: "無料相談",
     icon: Sparkles,
-    title: "30分で未来の設計図の輪郭を描き始める",
+    title: "短時間で未来の設計図の輪郭を描き始める",
     description:
-      "経営者・キーパーソンとの対話で課題を棚卸し。生成AIが初期分析したシグナルと共に、優先仮説メモを24時間以内に共有します。",
+      "経営者・キーパーソンとの対話で課題を棚卸し。生成AIが初期分析したシグナルと共に、優先仮説メモを速やかに共有します。",
     bullets: [
       "粗利・キャッシュ・人材データの整合性チェック",
       "AI適用余地と優先課題を三層で整理",
@@ -23,11 +23,11 @@ const offerCards = [
     id: "diagnosis",
     label: "ZENスキャン",
     icon: ClipboardList,
-    title: "72時間で再生可能性を数値化するレポート",
+    title: "短期間で再生可能性を数値化するレポート",
     description:
-      "粗利率・在庫回転・キャッシュ余力など14指標をAIがスコアリング。専門家のコメント付きで再生の到達イメージを提示します。",
+      "粗利率・在庫回転・キャッシュ余力など多層の指標をAIがスコアリング。専門家のコメント付きで再生の到達イメージを提示します。",
     bullets: [
-      "14指標のヒートマップとリスクスコア",
+      "重要指標のヒートマップとリスクスコア",
       "シナリオ別の損益・資金シミュレーション",
       "実行に必要なデータ・体制のチェックリスト",
     ],
@@ -79,7 +79,7 @@ const OfferSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <div className="mx-auto max-w-3xl text-center space-y-4">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#f2f7ff] px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            行動への3ステップ
+            行動へのステップ
           </span>
           <h2 id="offer-heading" className="text-3xl font-bold leading-tight text-[#0b1f3f] md:text-4xl">
             行動の重さに合わせた三つの入り口で、再生への一歩を後押しする

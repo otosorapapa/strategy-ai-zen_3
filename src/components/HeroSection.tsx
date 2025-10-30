@@ -1,6 +1,5 @@
 import heroImage from "@/assets/financial-analysis.jpg";
 import { Button, buttonVariants } from "@/components/ui/button";
-import AnimatedCounter from "@/components/AnimatedCounter";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
 import { cn } from "@/lib/utils";
@@ -8,29 +7,26 @@ import { ArrowRight, CheckCircle2, Sparkle, Target, Timer } from "lucide-react";
 
 const heroStats = [
   {
-    label: "営業利益の反転", 
-    value: 12,
-    suffix: "%",
-    annotation: "再生計画実行後1年の営業利益改善（例）",
+    label: "経営の立て直しを支える視座",
+    value: "複数業種の再建知を集約",
+    annotation: "製造・卸・サービスで磨いた判断モデル",
   },
   {
-    label: "債務超過の解消率",
-    value: 80,
-    suffix: "%",
-    annotation: "銀行合意形成まで到達した割合（例）",
+    label: "判断の根拠をそろえる体制",
+    value: "AI分析と専門家の統合レビュー",
+    annotation: "数字と現場の声を同時に扱う伴走",
   },
   {
-    label: "可視化までの時間",
-    value: 48,
-    suffix: "時間",
-    annotation: "再生シグナルの初期設計に要する目安",
+    label: "意思決定までの流れ",
+    value: "短期集中で見取り図を構築",
+    annotation: "初回対話からロードマップを共創",
   },
 ];
 
 const heroBullets = [
-  "資金・需要・人材の歪みを一枚の“再生の設計図”に集約し、判断に筋を通す",
-  "生成AIが業界トレンドと自社データを解析。専門家（中小企業診断士）が現場のリアリティを織り込む",
-  "金融機関・幹部・現場へ伝える資料まで連動し、胸を張って語れる再起のストーリーを形にする",
+  "資金・需要・人材の歪みを一枚の“再生の設計図”に集約し、判断の筋道を揃える",
+  "生成AIが業界トレンドと自社データを解析。専門家（中小企業診断士）が現場の温度感を織り込む",
+  "金融機関・幹部・現場へ伝える資料まで連動し、迷いなく語れる再起のストーリーを形にする",
 ];
 
 const HeroSection = () => {
@@ -54,7 +50,7 @@ const HeroSection = () => {
               </h1>
               <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">
                 経営が行き詰まるのは、情熱が足りないからではありません。<br className="hidden md:block" />
-                変化の速さに合わせて更新されるべき“未来の設計図”が欠けているからです。私たちは生成AIの解析力と中小企業診断士の経験知を重ね、粗利・キャッシュ・現場の気配を同じ時間軸に整列させます。経営者が再び判断に確信を持ち、胸を張って未来を語れる状態をともに築きます。
+                変化の速さに合わせて更新されるべき“未来の設計図”が欠けているからです。私たちは生成AIの解析力と中小企業診断士の経験知を重ね、粗利・キャッシュ・現場の気配を同じ時間軸に整列させます。経営者が再び判断に確信を持ち、堂々と未来を語れる状態をともに築きます。
               </p>
             </div>
 
@@ -100,7 +96,7 @@ const HeroSection = () => {
                   aria-label="電話で相談する"
                 >
                   <Timer className="mr-2 h-5 w-5" aria-hidden="true" />
-                  まずは48時間の初期診断から
+                  まずは短期集中の初期診断から
                 </a>
                 <a
                   href={TERTIARY_CTA.href}
@@ -113,7 +109,7 @@ const HeroSection = () => {
                 </a>
               </div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-200/80">
-                代表・古町（中小企業診断士）が直接ヒアリング｜初回ヒアリング後24時間以内に再生仮説と優先シナリオを共有
+                代表・古町（中小企業診断士）が直接ヒアリング｜初回ヒアリング後すぐに再生仮説と優先シナリオを共有
               </p>
             </div>
           </div>
@@ -136,12 +132,7 @@ const HeroSection = () => {
                 <div className="mt-4 grid gap-4 sm:grid-cols-3">
                   {heroStats.map((stat) => (
                     <div key={stat.label} className="rounded-2xl border border-cyan-200/20 bg-white/10 p-4 text-center">
-                      <AnimatedCounter
-                        value={stat.value}
-                        suffix={stat.suffix}
-                        duration={1500}
-                        className="text-2xl font-black text-cyan-100"
-                      />
+                      <p className="text-[1.1rem] font-bold text-cyan-100">{stat.value}</p>
                       <p className="mt-2 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
                         {stat.label}
                       </p>

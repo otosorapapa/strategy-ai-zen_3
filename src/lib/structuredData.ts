@@ -5,7 +5,7 @@ export const organizationSchema = {
   url: "https://furumachi-smec.lognowa.com/public/lp_2",
   logo: "https://furumachi-smec.lognowa.com/public/lp_2/assets/logo.png",
   description:
-    "福岡・九州の年商5000万円～15億円企業に向けた、専門家×生成AIで意思決定の質・速さ・先見性を高める伴走型経営支援",
+    "福岡・九州を中心に、生成AIと中小企業診断士の専門知を組み合わせて事業再生と経営改善を支援する伴走型コンサルティング",
   founder: "古町 聖文",
   foundingDate: "2018-04-01",
   email: "10vance.re.silie.nce@gmail.com",
@@ -50,8 +50,9 @@ export const localBusinessSchema = {
 export const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "伴走型AI経営顧問サービス",
-  description: "専門家が設計した意思決定フレームに生成AIを掛け合わせ、粗利・資金・意思決定リードタイムを同時に改善する伴走型プラン",
+  name: "生成AI×専門家による事業再生プログラム",
+  description:
+    "生成AIが数値と市場データを解析し、中小企業診断士が再生ロードマップを構築する伴走型サービス。粗利・キャッシュ・人材を同時に再設計します。",
   brand: { "@type": "Brand", name: "株式会社創和経営コンサルティング" },
   offers: {
     "@type": "Offer",
@@ -73,11 +74,11 @@ export const productSchema = {
 export const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "伴走型AI経営顧問",
-  serviceType: "AI経営支援",
+  name: "生成AI×専門家による経営再生支援",
+  serviceType: "事業再生・経営改善支援",
   url: "https://furumachi-smec.lognowa.com/public/lp_2",
   description:
-    "週1回のAIレポートと管理会計・資金繰り支援で、粗利+5.8pt／在庫回転+22%／意思決定リードタイム▲52%（例）を実現する伴走型サービス",
+    "Why-How-Whatの設計思想に基づき、AI解析と専門家伴走で再生戦略を立案。粗利+12%・債務超過解消率80%（例）の実績を持つ再生支援サービスです。",
   provider: {
     "@type": "Organization",
     name: "株式会社創和経営コンサルティング",
@@ -95,26 +96,42 @@ export const serviceSchema = {
   ],
   audience: {
     "@type": "Audience",
-    audienceType: "年商5,000万円～10億円の中小企業経営者",
+    audienceType: "年商1億〜50億円の中小企業経営者",
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "AI経営顧問プログラム",
+    name: "経営再生サポートメニュー",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "AIレポーティング・ダッシュボード",
-          description: "AIが粗利とキャッシュの変動要因を可視化し、週次で意思決定資料を生成",
+          name: "現状分析とシミュレーション",
+          description: "AIが粗利・キャッシュ・人材データを解析し、改善余地とリスクを可視化します。",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "管理会計・資金繰り伴走",
-          description: "管理会計指標とキャッシュフロー計画を整備し、投資判断を支援",
+          name: "再生シナリオ策定",
+          description: "専門家が実行可能性を検証し、再生ロードマップを構築します。",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "金融機関交渉・モニタリング",
+          description: "金融機関との対話資料とモニタリング体制を構築し、交渉を伴走します。",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "経営者コーチング",
+          description: "週次対話と教育プログラムで意思決定の質とスピードを高めます。",
         },
       },
     ],
@@ -134,50 +151,42 @@ export const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "費用とトライアルの仕組みは？",
+      name: "無料相談では何が得られますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "月額18万円〜（税別）。初月は1ヶ月トライアルとして粗利率・在庫回転・意思決定リードタイムなど事前に合意した指標を週次でレビューし、改善が見られなければ追加費用なしで改善案を再設計します。",
+        text: "生成AIが抽出した粗利・キャッシュ・人材のシグナルを共有し、再生の設計図ドラフトと優先施策メモを24時間以内に提示します。",
       },
     },
     {
       "@type": "Question",
-      name: "導入期間とスケジュールは？",
+      name: "AI診断はどのように進みますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Week0-2で現状診断とデータ整備、Week3-6でAIレポートと意思決定ボードを運用開始、Week7-12で施策実行と検証を回します。以降は四半期ごとに戦略レビューを実施します。",
+        text: "72時間以内に18指標のスコアリングと再生シナリオの比較レポートを作成し、専門家のコメント付きでお届けします。",
       },
     },
     {
       "@type": "Question",
-      name: "必要な社内体制は？",
+      name: "金融機関への説明は支援してもらえますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "社長と管理部・営業責任者を中心とした3〜5名体制を推奨。週次レポートとタスクボードは当社が整備するため、専任DX人材がいなくても運用できます。",
+        text: "交渉資料の作成、面談同席、モニタリング報告の整備まで伴走します。",
       },
     },
     {
       "@type": "Question",
-      name: "データと守秘義務の取り扱いは？",
+      name: "データ管理は安全ですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "NDAを締結し、財務・人事・顧客データは暗号化されたクラウドで保管。アクセス権限は役割ベースで管理し、契約終了時は速やかにデータを削除します。",
+        text: "NDA締結、暗号化、アクセス権限管理を徹底し、契約終了時には速やかにデータを削除します。",
       },
     },
     {
       "@type": "Question",
-      name: "生成AIの精度と監査体制は？",
+      name: "費用の目安は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "AIが生成するシナリオには因果グラフと根拠データを添付し、中小企業診断士がダブルチェック。異常値は自動アラートで検知し、監査ログに保存します。",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "社内で成果を共有する仕組みは？",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "週次レポートと意思決定ボードにコメント機能を設け、経営陣と現場が同じ画面で根拠と判断を確認。導入初月は会議ファシリテーションも伴走し、方針を自信を持って伝えられる資料を整えます。",
+        text: "月額18万円〜（税別）。初月はトライアルとして、合意した指標の改善を検証します。",
       },
     },
   ],
@@ -188,17 +197,17 @@ export const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "ホーム", item: "https://furumachi-smec.lognowa.com/" },
-    { "@type": "ListItem", position: 2, name: "AI経営顧問", item: "https://furumachi-smec.lognowa.com/public/lp_2" },
+    { "@type": "ListItem", position: 2, name: "生成AI×専門家 経営再生支援", item: "https://furumachi-smec.lognowa.com/public/lp_2" },
   ],
 };
 
 export const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "迷いない意思決定へ導くAI経営伴走",
+  name: "生成AI×専門家で描く再生の設計図",
   url: "https://furumachi-smec.lognowa.com/public/lp_2",
   description:
-    "専門家×生成AIで意思決定の質・速さ・先見性を高め、粗利とキャッシュの先読みを週次で更新する福岡発の伴走型経営支援",
+    "生成AIと中小企業診断士が共創し、事業再生のWhy-How-Whatを設計する福岡発の伴走型サービス。粗利改善、債務超過解消、金融機関連携まで一貫支援します。",
   inLanguage: "ja-JP",
   isPartOf: {
     "@type": "WebSite",

@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   ArrowUpRight,
   BadgeCheck,
   BarChart3,
@@ -9,23 +10,23 @@ import {
   TrendingUp,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import strategyPlanningVisual from "@/assets/problem-infographic.svg";
+import blueprintFlowVisual from "@/assets/insight-blueprint-flow.svg";
 
-const rootCauseNarrative = [
+const insightHighlights = [
   {
-    title: "兆しは見えても座標軸が共有されない",
-    description:
-      "原価や人件費の波がダッシュボードで可視化されず、部門ごとの判断軸がバラバラなまま。決裁までの遅延が資金の歪みを拡大させます。",
+    label: "因果の見取り図",
+    value: "48時間で提示",
+    caption: "資金・現場・市場の歪みを一本化し、判断の論点を同期",
   },
   {
-    title: "説明資料づくりにエネルギーを奪われる",
-    description:
-      "現場確認→資料作成→再説明がループし、未来の仮説づくりに十分な時間が残らない。銀行対応が優先され、攻めの議論が途切れます。",
+    label: "設計図化プロセス",
+    value: "AI × 診断士",
+    caption: "定量と定性を統合し、合意形成の摩擦を削減",
   },
   {
-    title: "納得感のある未来像が描けない",
-    description:
-      "改善策は点で存在しても、人・数字・現場が同じ未来を語れない。設計図の欠如が、変革の初速と組織の納得度を下げてしまいます。",
+    label: "合意形成スピード",
+    value: "会議1回で決定",
+    caption: "前提共有をテンプレート化し、論点議論に即移行",
   },
 ];
 
@@ -47,21 +48,69 @@ const blueprintSignals = [
   },
 ];
 
+const rootCauseNarrative = [
+  {
+    badge: "Pattern 01",
+    title: "兆しは見えても座標軸が共有されない",
+    description:
+      "原価や人件費の波がダッシュボードで可視化されず、部門ごとの判断軸がバラバラなまま。決裁までの遅延が資金の歪みを拡大させます。",
+    metric: "判断リードタイム +2週間",
+    signal: "月次会議が“数字合わせ”で終わり、次の一手が宙に浮く",
+  },
+  {
+    badge: "Pattern 02",
+    title: "説明資料づくりにエネルギーを奪われる",
+    description:
+      "現場確認→資料作成→再説明がループし、未来の仮説づくりに十分な時間が残らない。銀行対応が優先され、攻めの議論が途切れます。",
+    metric: "再説明工数 1.7倍",
+    signal: "説明資料の更新が週次化し、現場の改善議論が後回しに",
+  },
+  {
+    badge: "Pattern 03",
+    title: "納得感のある未来像が描けない",
+    description:
+      "改善策は点で存在しても、人・数字・現場が同じ未来を語れない。設計図の欠如が、変革の初速と組織の納得度を下げてしまいます。",
+    metric: "再投資判断が停滞 3カ月",
+    signal: "未来シナリオの定義が曖昧で、合意形成に追加会議が必要",
+  },
+];
+
 const hopeStatements = [
   {
     title: "Before",
     description: "月次報告が終わるころには次の危機が迫り、社員は疲弊したまま。",
     metric: "会議再設計前",
+    kpi: "会議準備 38h/週",
   },
   {
     title: "Intervention",
     description: "生成AIと診断士がボトルネックを構造化し、優先仮説を厳選。",
     metric: "短期集中診断",
+    kpi: "48hで歪みの見取り図",
   },
   {
     title: "After",
     description: "資金・人材・案件が一枚の設計図で同期し、次の一手が明文化。",
     metric: "迅速な実装フェーズ",
+    kpi: "決裁リードタイム ▲45%",
+  },
+];
+
+const proofMetrics = [
+  {
+    label: "粗利率",
+    value: "+3.2pt",
+    caption: "設計図再構築後6カ月平均（例）",
+  },
+  {
+    label: "交渉リードタイム",
+    value: "▲45%",
+    caption: "主要金融機関との折衝スピード",
+  },
+  {
+    label: "再投資余力",
+    value: "+1.8億円",
+    caption: "キャッシュ創出原資を可視化",
   },
 ];
 
@@ -80,8 +129,8 @@ const InsightSpotlight = () => {
       />
       <div className="container relative mx-auto max-w-6xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <ScrollReveal variant="fade-up" className="space-y-8">
-            <div className="space-y-4">
+          <div className="space-y-10">
+            <ScrollReveal variant="fade-up" className="space-y-4">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
                 意思決定が鈍る本質
               </span>
@@ -96,51 +145,84 @@ const InsightSpotlight = () => {
                   私たちが存在する理由は、経営者がもう一度、胸を張って自社の判断力と可能性を語れる環境を用意すること。生成AIが抽出する兆しと診断士が積み上げた経験知を重ね、再び前に進むためのストーリーと座標軸を描き出します。
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
 
-            <div className="grid gap-4 sm:grid-cols-3">
-              {blueprintSignals.map((signal) => (
+            <ScrollReveal variant="fade-up" className="grid gap-4 sm:grid-cols-3">
+              {insightHighlights.map((item) => (
                 <div
-                  key={signal.label}
-                  className="group relative overflow-hidden rounded-2xl border border-[#0b1f3f]/10 bg-white/80 p-5 shadow-[0_15px_45px_rgba(11,31,63,0.08)] transition-transform duration-300 hover:-translate-y-1"
+                  key={item.label}
+                  className="group relative overflow-hidden rounded-2xl border border-[#0b1f3f]/12 bg-white/95 p-5 shadow-[0_18px_45px_rgba(11,31,63,0.12)] transition-transform duration-300 hover:-translate-y-1"
                 >
-                  <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">
-                    {signal.label}
-                    <ArrowUpRight className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />
+                  <div className="text-[0.6rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">
+                    {item.label}
                   </div>
-                  <p className="mt-3 text-3xl font-bold text-[#0584c6]">{signal.value}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-[#1e3359]/75">{signal.caption}</p>
+                  <p className="mt-3 text-2xl font-bold text-[#0584c6]">{item.value}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-[#1e3359]/75">{item.caption}</p>
+                  <span className="pointer-events-none absolute right-4 top-4 rounded-full border border-[#0584c6]/30 bg-[#0584c6]/10 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]/90">
+                    Logic Map
+                  </span>
                 </div>
               ))}
-            </div>
+            </ScrollReveal>
 
-            <div className="flex flex-wrap items-center gap-3 text-xs font-semibold text-[#1e3359]/60">
-              {trustSignals.map((signal) => (
-                <span
-                  key={signal}
-                  className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white/70 px-4 py-2 shadow-sm"
-                >
-                  <BadgeCheck className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />
-                  {signal}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
+            <ScrollReveal variant="fade-up" className="space-y-6">
+              <div className="grid gap-4 sm:grid-cols-3">
+                {blueprintSignals.map((signal) => (
+                  <div
+                    key={signal.label}
+                    className="group relative overflow-hidden rounded-2xl border border-[#0b1f3f]/10 bg-white/80 p-5 shadow-[0_15px_45px_rgba(11,31,63,0.08)] transition-transform duration-300 hover:-translate-y-1"
+                  >
+                    <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">
+                      {signal.label}
+                      <ArrowUpRight className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />
+                    </div>
+                    <p className="mt-3 text-3xl font-bold text-[#0584c6]">{signal.value}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#1e3359]/75">{signal.caption}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 text-xs font-semibold text-[#1e3359]/60">
+                {trustSignals.map((signal) => (
+                  <span
+                    key={signal}
+                    className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-2 shadow-sm"
+                  >
+                    <BadgeCheck className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />
+                    {signal}
+                  </span>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
 
           <ScrollReveal
             variant="fade-up"
-            className="relative rounded-[32px] border border-[#0b1f3f]/12 bg-white/90 p-8 shadow-[0_25px_65px_rgba(5,25,58,0.12)]"
+            className="relative rounded-[32px] border border-[#0b1f3f]/12 bg-white/95 p-8 shadow-[0_25px_65px_rgba(5,25,58,0.16)]"
           >
             <div className="absolute -top-10 right-8 hidden rounded-2xl bg-[#0584c6] px-4 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-white shadow-lg lg:flex">
               Blueprint Insight
             </div>
             <figure className="space-y-6">
-              <div className="overflow-hidden rounded-3xl border border-[#0b1f3f]/10 bg-[#f5f9ff]">
+              <div className="relative overflow-hidden rounded-3xl border border-[#0b1f3f]/10 bg-[#f5f9ff]">
                 <img
-                  src={strategyPlanningVisual}
-                  alt="再生シナリオの全体図を俯瞰するインフォグラフィック"
+                  src={blueprintFlowVisual}
+                  alt="再生シナリオの全体図を俯瞰するタイムラインインフォグラフィック"
                   className="h-full w-full object-cover"
                 />
+                <div className="pointer-events-none absolute inset-x-6 bottom-6 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-white/60 bg-white/80 px-5 py-3 text-sm font-semibold text-[#0584c6] shadow-[0_12px_32px_rgba(15,56,108,0.18)] backdrop-blur">
+                  <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
+                    Dual Coding Map
+                  </span>
+                  <span className="inline-flex items-center gap-2 text-xs text-[#0b1f3f]/70">
+                    <span className="inline-flex h-2 w-2 rounded-full bg-[#0584c6]" aria-hidden="true" />
+                    因果連鎖とKPIを矢印で視覚化
+                  </span>
+                  <span className="inline-flex items-center gap-2 text-xs text-[#0b1f3f]/70">
+                    <span className="inline-flex h-2 w-2 rounded-full bg-[#0b1f3f]" aria-hidden="true" />
+                    役員会議用の要約を即座に共有
+                  </span>
+                </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/70">
@@ -178,17 +260,40 @@ const InsightSpotlight = () => {
               </p>
             </ScrollReveal>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
-              {rootCauseNarrative.map((item) => (
+              {rootCauseNarrative.map((item, index) => (
                 <ScrollReveal
                   key={item.title}
                   variant="fade-up"
-                  className="flex h-full flex-col gap-4 rounded-3xl border border-[#0b1f3f]/12 bg-white/90 p-6 shadow-[0_20px_50px_rgba(11,31,63,0.08)]"
+                  className="relative flex h-full flex-col gap-4 rounded-3xl border border-[#0b1f3f]/12 bg-white/95 p-6 shadow-[0_24px_60px_rgba(11,31,63,0.12)]"
                 >
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0b1f3f]/8 text-[#0b1f3f]">
-                    <Lightbulb className="h-5 w-5" aria-hidden="true" />
+                  {index < rootCauseNarrative.length - 1 && (
+                    <span
+                      className="pointer-events-none absolute left-[24px] top-[88px] hidden h-[calc(100%-96px)] w-px bg-gradient-to-b from-[#0584c6]/50 to-transparent sm:block"
+                      aria-hidden="true"
+                    />
+                  )}
+                  <div className="flex items-center gap-4">
+                    <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0584c6]/12 text-sm font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
+                      {item.badge.split(" ")[1]}
+                      <span
+                        className="absolute -left-[18px] top-1/2 hidden h-px w-6 -translate-y-1/2 bg-gradient-to-r from-transparent via-[#0584c6]/40 to-[#0584c6]/80 sm:block"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <div>
+                      <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">{item.badge}</span>
+                      <h3 className="mt-1 text-lg font-semibold text-[#0b1f3f]">{item.title}</h3>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-[#0b1f3f]">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-[#1e3359]/75">{item.description}</p>
+                  <div className="grid gap-3 rounded-2xl border border-[#0584c6]/20 bg-[#f0f6ff] p-4 text-sm text-[#0b1f3f]">
+                    <div className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
+                      <TrendingUp className="h-4 w-4" aria-hidden="true" />
+                      Leading Signal
+                    </div>
+                    <p className="font-semibold text-[#0584c6]">{item.metric}</p>
+                    <p className="text-[#1e3359]/75">{item.signal}</p>
+                  </div>
                 </ScrollReveal>
               ))}
             </div>
@@ -205,27 +310,57 @@ const InsightSpotlight = () => {
                   「再生の設計図」が整うと、判断の根拠と行動が一体化し、次の会議を待たずに動けるようになります。
                 </p>
               </div>
-              <ul className="grid gap-4 md:grid-cols-3">
-                {hopeStatements.map((statement) => (
+              <ol className="relative grid gap-5">
+                {hopeStatements.map((statement, index) => (
                   <li
                     key={statement.title}
-                    className="flex h-full flex-col gap-3 rounded-3xl border border-[#0b1f3f]/10 bg-white/70 p-5 text-sm leading-relaxed text-[#1e3359]/80"
+                    className="relative flex flex-col gap-4 rounded-3xl border border-[#0b1f3f]/12 bg-white/85 p-5 text-sm leading-relaxed text-[#1e3359]/80 shadow-[0_20px_55px_rgba(11,31,63,0.12)]"
                   >
-                    <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">
-                      {statement.title}
-                      <TrendingUp className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />
+                    {index < hopeStatements.length - 1 && (
+                      <span
+                        className="pointer-events-none absolute left-[28px] top-[92px] hidden h-[calc(100%-104px)] w-px bg-gradient-to-b from-[#0584c6]/40 to-transparent md:block"
+                        aria-hidden="true"
+                      />
+                    )}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#0584c6]/30 bg-[#0584c6]/10 text-sm font-semibold text-[#0584c6]">
+                          0{index + 1}
+                        </span>
+                        <div>
+                          <span className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{statement.title}</span>
+                          <p className="text-base font-semibold text-[#0b1f3f]">{statement.metric}</p>
+                        </div>
+                      </div>
+                      {index < hopeStatements.length - 1 && (
+                        <ArrowRight className="hidden h-5 w-5 text-[#0584c6] md:block" aria-hidden="true" />
+                      )}
                     </div>
-                    <p className="text-base font-semibold text-[#0b1f3f]">{statement.metric}</p>
                     <p>{statement.description}</p>
+                    <div className="inline-flex items-center gap-2 rounded-full border border-[#0584c6]/20 bg-[#f0f6ff] px-3 py-1 text-xs font-semibold text-[#0584c6]">
+                      KPI Anchor｜{statement.kpi}
+                    </div>
                   </li>
                 ))}
-              </ul>
-              <div className="rounded-3xl border border-[#0584c6]/30 bg-[#0584c6]/10 p-6 text-sm font-semibold text-[#0b1f3f]">
-                <div className="flex items-start gap-3">
-                  <TrendingUp className="mt-1 h-5 w-5 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+              </ol>
+              <div className="grid gap-4 rounded-3xl border border-[#0584c6]/25 bg-[#0584c6]/10 p-6 text-[#0b1f3f]">
+                <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
+                  <TrendingUp className="h-5 w-5 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
                   <span>
                     48時間の初期診断で「歪みの見取り図」を提示し、2週目から再生シナリオと優先施策の比較検証を開始します。資金調達・人材再配置・販管費最適化を一つのタイムラインにまとめ、意思決定を加速させます。
                   </span>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {proofMetrics.map((metric) => (
+                    <div
+                      key={metric.label}
+                      className="rounded-2xl border border-white/60 bg-white/85 p-4 text-center shadow-[0_15px_35px_rgba(5,40,85,0.1)]"
+                    >
+                      <div className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{metric.label}</div>
+                      <div className="mt-2 text-2xl font-bold text-[#0584c6]">{metric.value}</div>
+                      <div className="mt-1 text-xs text-[#1e3359]/70">{metric.caption}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </ScrollReveal>

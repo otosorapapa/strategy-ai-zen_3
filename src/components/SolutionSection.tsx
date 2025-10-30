@@ -21,6 +21,7 @@ import {
 import ScrollReveal from "@/components/ScrollReveal";
 import decisionOpsMock from "@/assets/dashboard-preview.jpg";
 import solutionIllustration from "@/assets/strategy-planning.jpg";
+import growthChart from "@/assets/growth-chart.jpg";
 
 const howPillars = [
   {
@@ -105,6 +106,51 @@ const trustSignals = [
   "製造・サービス業の設計図づくりを伴走",
   "経営会議での再生レビューを継続支援",
   "メディア掲載・登壇多数",
+];
+
+const causewayStages = [
+  {
+    id: "01",
+    title: "課題の焦点を秒で捕捉",
+    highlight: "粗利・キャッシュ・人材指標を同一レイヤーで照合し、異常値を優先度順に提示。",
+    kpi: "異常検知 92% 精度",
+    description:
+      "財務・販売・稼働データを暗号化連携し、AIが因果ネットワークを生成。判断を止める論点を短時間で抽出します。",
+  },
+  {
+    id: "02",
+    title: "打ち手の妥当性を合意形成",
+    highlight: "診断士がAIの提案を検証し、役員会が求めるエビデンスの形に翻訳。",
+    kpi: "施策合意 2.3週",
+    description:
+      "週次レビューで仮説を検証し、投資判断に必要な根拠資料と現場タスクをワンセットで整備します。",
+  },
+  {
+    id: "03",
+    title: "成果の証跡を蓄積",
+    highlight: "金融機関・取引先・現場の報告フォーマットを統一し、納得性のある数字だけを残す。",
+    kpi: "レポート作成 65%削減",
+    description:
+      "実行ログとキャッシュ波形を同じボードで追跡し、意思決定の納得感を高めるストーリーを自動更新します。",
+  },
+];
+
+const keyProofPoints = [
+  {
+    icon: Target,
+    title: "因果で語れる経営指標",
+    detail: "粗利・キャッシュ・人員の遅延要因を一枚のマップで比較。理事会でも説明が噛み合います。",
+  },
+  {
+    icon: LineChart,
+    title: "最短2週で仮説検証を開始",
+    detail: "経営会議の議題をテンプレ化し、意思決定リードタイムを平均40%削減した実績を保持。",
+  },
+  {
+    icon: ArrowUpRight,
+    title: "金融機関への説明がスムーズ",
+    detail: "モニタリング資料と現場タスクが同期し、融資交渉や条件変更の対話が短時間で整います。",
+  },
 ];
 
 const workflowSteps = [
@@ -248,6 +294,87 @@ const SolutionSection = () => {
 
         <ScrollReveal
           variant="fade-up"
+          className="mt-12 grid gap-8 rounded-[32px] border border-[#0b1f3f]/10 bg-gradient-to-br from-[#f0f6ff] via-white to-[#e4f1ff] p-8 shadow-[0_32px_90px_rgba(7,22,48,0.12)] md:grid-cols-[1.15fr_0.85fr]"
+        >
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+              <Sparkles className="h-4 w-4" aria-hidden="true" />
+              Decision Loop Diagram
+            </div>
+            <div className="relative space-y-6">
+              {causewayStages.map((stage, index) => (
+                <div
+                  key={stage.title}
+                  className="relative rounded-[28px] border border-white/60 bg-white/85 p-6 shadow-[0_26px_70px_rgba(7,22,48,0.12)] backdrop-blur"
+                >
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#0584c6]/15 text-sm font-bold text-[#0584c6] shadow-[0_12px_28px_rgba(5,132,198,0.2)]">
+                        {stage.id}
+                      </span>
+                      <p className="text-base font-semibold text-[#0b1f3f]">{stage.title}</p>
+                    </div>
+                    <span className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
+                      <Gauge className="h-3.5 w-3.5" aria-hidden="true" />
+                      {stage.kpi}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm font-semibold text-[#0584c6]">{stage.highlight}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-[#1e3359]/75">{stage.description}</p>
+                  {index < causewayStages.length - 1 && (
+                    <span
+                      className="absolute left-10 top-[calc(100%+4px)] h-10 w-px bg-gradient-to-b from-[#0584c6]/40 to-transparent md:left-1/2 md:-translate-x-1/2 md:h-14"
+                      aria-hidden="true"
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="space-y-5">
+            <figure className="relative overflow-hidden rounded-[28px] border border-white/60 bg-white shadow-[0_28px_70px_rgba(7,22,48,0.14)]">
+              <img
+                src={growthChart}
+                alt="施策前後の経営指標が改善する様子を示すグラフ"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl bg-[#0b1f3f]/85 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-white/90">
+                <span>Before</span>
+                <ArrowRight className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                <span>After</span>
+              </figcaption>
+            </figure>
+            <div className="space-y-4 rounded-[28px] border border-[#0b1f3f]/10 bg-white/90 p-6 shadow-[0_24px_60px_rgba(6,21,48,0.12)] backdrop-blur">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+                視線誘導インサイト
+              </div>
+              <p className="text-lg font-semibold text-[#0b1f3f]">3つの論理フレームで「納得できる数字」を確保</p>
+              <ul className="space-y-3 text-sm leading-relaxed text-[#1e3359]/75">
+                {keyProofPoints.map((point) => {
+                  const Icon = point.icon;
+                  return (
+                    <li
+                      key={point.title}
+                      className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/8 bg-white/95 p-3 shadow-[0_16px_40px_rgba(6,21,48,0.08)]"
+                    >
+                      <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#0584c6]/15 text-[#0584c6]">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-[#0b1f3f]">{point.title}</p>
+                        <p className="text-xs text-[#1e3359]/70">{point.detail}</p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
           className="mt-12 space-y-8 rounded-[32px] border border-[#0b1f3f]/10 bg-gradient-to-br from-white via-[#f7faff] to-[#eef4ff] p-8 shadow-[0_32px_90px_rgba(7,22,48,0.1)]"
         >
           <div className="flex flex-col gap-5 text-center md:flex-row md:items-center md:justify-between md:text-left">
@@ -273,16 +400,29 @@ const SolutionSection = () => {
           <div className="grid gap-5 md:grid-cols-3">
             {logicSequence.map((node, index) => {
               const Icon = node.icon;
+              const phase = String(index + 1).padStart(2, "0");
               return (
                 <div key={node.title} className="relative h-full rounded-3xl border border-white/60 bg-white p-6 shadow-[0_22px_60px_rgba(8,25,54,0.12)]">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-[18px] bg-[#0584c6]/15 text-[#0584c6]">
+                  <div className="flex items-center justify-between text-[0.65rem] font-semibold uppercase tracking-[0.26em] text-[#0b1f3f]/60">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/12 px-3 py-1 text-[#0584c6]">
+                      Phase {phase}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-[#0b1f3f]/45">
+                      <Gauge className="h-3.5 w-3.5 text-[#0584c6]" aria-hidden="true" />
+                      因果スコア
+                    </span>
+                  </div>
+                  <span className="mt-4 inline-flex h-12 w-12 items-center justify-center rounded-[18px] bg-[#0584c6]/15 text-[#0584c6]">
                     <Icon className="h-6 w-6" aria-hidden="true" />
                   </span>
                   <h4 className="mt-4 text-lg font-semibold text-[#0b1f3f]">{node.title}</h4>
                   <p className="mt-3 text-sm leading-relaxed text-[#1e3359]/75">{node.description}</p>
                   <div className="mt-4 flex items-center justify-between rounded-2xl bg-[#f3f8ff] px-4 py-3">
                     <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/60">{node.metricLabel}</span>
-                    <span className="text-lg font-bold text-[#0584c6]">{node.metricValue}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg font-bold text-[#0584c6]">{node.metricValue}</span>
+                      <ArrowRight className="h-4 w-4 text-[#0584c6]/70" aria-hidden="true" />
+                    </div>
                   </div>
                   {index < logicSequence.length - 1 && (
                     <span

@@ -1,4 +1,5 @@
 import { Button, buttonVariants } from "@/components/ui/button";
+import heroConsultingImage from "@/assets/hero-consulting.jpg";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
 import { cn } from "@/lib/utils";
@@ -49,7 +50,8 @@ const HeroSection = () => {
     <section className="fade-in-section section-spacing relative overflow-hidden bg-gradient-to-b from-[#061530] via-[#0a1f48] to-[#031024] text-white">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.25),_transparent_65%)]" aria-hidden="true" />
       <div className="layout-shell relative z-10">
-        <div className="space-y-10">
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:items-start">
+          <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
                 使命｜判断力を取り戻す伴走
@@ -159,7 +161,39 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
+
+          <div className="relative mx-auto flex w-full max-w-[520px] items-stretch justify-center">
+            <div className="relative w-full overflow-hidden rounded-[36px] border border-white/15 bg-white/5 shadow-[0_30px_80px_rgba(3,16,36,0.55)]">
+              <img
+                src={heroConsultingImage}
+                alt="代表・古町が経営陣と再生戦略をホワイトボードで描き出している様子"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#020b1c]/85 via-[#041633]/30 to-transparent" aria-hidden="true" />
+              <div className="absolute right-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-white/85 shadow-[0_18px_45px_rgba(2,10,28,0.35)]">
+                Executive Session
+              </div>
+              <div className="absolute inset-x-5 bottom-5 space-y-3 rounded-3xl border border-white/15 bg-[#020b1c]/70 p-5 backdrop-blur">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">48h Discovery</p>
+                <p className="text-sm leading-relaxed text-slate-100/85">
+                  生成AIの示す優先指標を代表・古町が現場の温度感で補正。初回セッションで未来像とリスクラインを描き切ります。
+                </p>
+                <div className="flex flex-wrap items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-cyan-100/80">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
+                    48h仮説共有
+                  </span>
+                  <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
+                    週次レビュー設計
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
   );
 };

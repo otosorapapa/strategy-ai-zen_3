@@ -8,7 +8,7 @@ import {
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import supportVisual from "@/assets/strategy-planning.jpg";
+import supportVisual from "@/assets/strategic-meeting.jpg";
 
 const kpiSnapshots = [
   {
@@ -144,7 +144,7 @@ const SecurityPrivacySection = () => {
               </div>
               <img
                 src={supportVisual}
-                alt="伴走プログラムのフレームワーク図。課題→分析→合意→伴走までの流れを視覚化"
+                alt="戦略ミーティングでAIダッシュボードを共有しながら伴走体制の流れを確認する様子"
                 className="h-56 w-full rounded-[28px] object-cover"
                 loading="lazy"
               />

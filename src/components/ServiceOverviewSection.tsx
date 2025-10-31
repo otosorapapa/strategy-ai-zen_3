@@ -11,7 +11,7 @@ import {
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import serviceFlowIllustration from "@/assets/strategy-planning.jpg";
+import serviceFlowIllustration from "@/assets/dashboard-preview.jpg";
 
 const executiveAssurance = [
   {

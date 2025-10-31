@@ -19,8 +19,8 @@ import {
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import decisionOpsMock from "@/assets/dashboard-preview.jpg";
-import solutionIllustration from "@/assets/strategy-planning.jpg";
+import decisionOpsMock from "@/assets/roi-chart.jpg";
+import solutionIllustration from "@/assets/ai-analysis (1).jpg";
 import growthChart from "@/assets/growth-chart.jpg";
 
 const howPillars = [
@@ -205,7 +205,7 @@ const SolutionSection = () => {
           <figure className="relative">
             <img
               src={decisionOpsMock}
-              alt="AIダッシュボードで意思決定の因果関係を俯瞰する様子"
+              alt="粗利改善とキャッシュROIの相関チャートを多層でレビューしている経営会議のビジュアル"
               className="w-full object-cover"
               loading="lazy"
             />
@@ -253,7 +253,7 @@ const SolutionSection = () => {
           <figure className="relative w-full max-w-sm overflow-hidden rounded-[28px] border border-white/60 shadow-[0_25px_70px_rgba(5,24,55,0.14)]">
             <img
               src={solutionIllustration}
-              alt="戦略プランニングのフレームで議論する専門家の様子"
+              alt="AI分析レポートをホワイトボードで検討しながら再生シナリオを組み立てる専門家チームの様子"
               className="h-full w-full object-cover"
               loading="lazy"
             />

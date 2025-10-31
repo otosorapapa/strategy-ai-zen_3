@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 import methodologyDiagram from "@/assets/problem-infographic.svg";
-import representativeImage from "@/assets/representative.jpg";
+import representativeImage from "@/assets/representative_.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -239,7 +239,7 @@ const FAQSection = () => {
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <img
                   src={representativeImage}
-                  alt="代表コンサルタントの写真"
+                  alt="代表・古町が顧客に寄り添ってヒアリングするシーン"
                   className="h-20 w-20 rounded-full object-cover shadow-md"
                   loading="lazy"
                 />

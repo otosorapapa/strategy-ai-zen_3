@@ -11,7 +11,7 @@ import {
 import AnimatedCounter from "@/components/AnimatedCounter";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
-import executiveSuite from "@/assets/dashboard-preview.jpg";
+import aiCommandCenter from "@/assets/ai-technology.jpg";
 
 const features = [
   {
@@ -323,8 +323,8 @@ const AIBenefitsSection = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-secondary/15 via-transparent to-primary/15" aria-hidden="true" />
             <img
-              src={executiveSuite}
-              alt="経営ダッシュボードで粗利とキャッシュを統合分析するハイエンドなビジュアル"
+              src={aiCommandCenter}
+              alt="AI指揮センターで粗利とキャッシュ指標を俯瞰しながら経営会議を行う様子"
               className="h-full w-full object-cover object-center"
               loading="lazy"
             />

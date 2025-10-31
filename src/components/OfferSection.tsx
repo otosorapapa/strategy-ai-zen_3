@@ -1,9 +1,9 @@
 import { ArrowRight, CheckCircle2, ClipboardList, FileText, Sparkles } from "lucide-react";
 
-import consultWorkshop from "@/assets/solution-illustration.jpg";
-import diagnosisDashboard from "@/assets/dashboard-preview.jpg";
-import materialsPreview from "@/assets/strategy-planning.jpg";
-import representativePortrait from "@/assets/representative.jpg";
+import consultWorkshop from "@/assets/strategic-meeting.jpg";
+import diagnosisDashboard from "@/assets/financial-analysis.jpg";
+import materialsPreview from "@/assets/ai-illustration.jpg";
+import representativePortrait from "@/assets/representative_.jpg";
 
 import { Button } from "@/components/ui/button";
 import { PRIMARY_CTA, SECONDARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
@@ -38,7 +38,7 @@ const offerCards = [
     step: "STEP 02",
     icon: ClipboardList,
     image: diagnosisDashboard,
-    imageAlt: "AIダッシュボードに可視化された再生シグナルのモックアップ",
+    imageAlt: "粗利とキャッシュの推移を分析する財務チャートとレポートのビジュアル",
     title: "短期間で再生可能性を数値化するレポート",
     description:
       "粗利率・在庫回転・キャッシュ余力など主要指標をAIがスコアリング。専門家のコメント付きで再生の到達イメージを提示します。",
@@ -66,7 +66,7 @@ const offerCards = [
     step: "STEP 03",
     icon: FileText,
     image: materialsPreview,
-    imageAlt: "再生ロードマップ資料のプレビューと会議用スライド",
+    imageAlt: "生成AIがまとめた再生ロードマップ資料セットと共有スライドのイメージ",
     title: "再生ロードマップの全体像を社内共有",
     description:
       "ZENの運用フロー、AIダッシュボード、会議テンプレートをまとめた資料。幹部会や金融機関との共有にも活用できます。",
@@ -209,7 +209,7 @@ const OfferSection = () => {
           <div className="relative mx-auto h-24 w-24 overflow-hidden rounded-full border-4 border-white shadow-lg shadow-[#0b1f3f]/15 md:mx-0">
             <img
               src={representativePortrait}
-              alt="代表・古町のポートレート写真"
+              alt="代表・古町が穏やかな表情で相談者に向き合うポートレート"
               className="h-full w-full object-cover"
               loading="lazy"
             />

@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="mb-4 text-2xl font-bold">株式会社創和経営コンサルティング</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              福岡発の再生デザインスタジオ。生成AIと中小企業診断士の伴走で、年商5,000万円〜15億円規模の企業が粗利・キャッシュ・現場の動きを再構築できるよう支援します。
+              福岡発の再生デザインスタジオ。生成AIと中小企業診断士の伴走で、年商5,000万円〜15億円規模の企業が粗利・キャッシュ・現場の動きを再構築できるよう支援します。経営改善計画策定支援補助金を活用した計画策定・申請まで一気通貫でサポートします。
             </p>
             <div className="pt-3">
               <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2">
@@ -22,6 +22,7 @@ const Footer = () => {
               <p>株式会社創和経営コンサルティング</p>
               <p>代表取締役 / 中小企業診断士 古町 聖文</p>
               <p>福岡県福岡市東区水谷3-14-17</p>
+              <p>経営改善計画策定支援補助金 申請支援実績多数</p>
             </div>
           </div>
 
@@ -108,6 +109,7 @@ const Footer = () => {
                 </span>
               ))}
               ご状況に合わせて、{SECONDARY_CTA.description}
+              補助金を活用したい場合はフォーム内で「補助金」を選択いただくと、要件整理と書類準備の流れをご案内します。
             </p>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground">
               <p>
@@ -128,6 +130,14 @@ const Footer = () => {
               </a>
               <a href="/legal" className="flex items-center gap-2 hover:text-primary">
                 <FileText className="h-4 w-4" /> 特定商取引法に基づく表記
+              </a>
+              <a
+                href="https://www.chusho.meti.go.jp/keiei/saisei/05.html"
+                className="flex items-center gap-2 hover:text-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FileText className="h-4 w-4" /> 経営改善計画策定支援事業（公式）
               </a>
             </div>
           </div>

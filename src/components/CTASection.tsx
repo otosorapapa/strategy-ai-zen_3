@@ -45,6 +45,13 @@ const requestOptions = [
     badge: "AI診断",
   },
   {
+    value: "subsidy",
+    title: "補助金活用の可否を確認",
+    description:
+      "経営改善計画策定支援補助金の要件整理、スケジュール設計、申請書ドラフトの段取りまでまとめてご案内します。金融機関との連携実績を基に準備物もお伝えします。",
+    badge: "補助金",
+  },
+  {
     value: "materials",
     title: "資料で全体像を把握",
     description:
@@ -68,9 +75,9 @@ const bookingMetrics = [
   },
   {
     icon: Building2,
-    value: "多数の案件",
-    label: "再生伴走",
-    helper: "九州・西日本の再生案件を支援",
+    value: "補助金対応",
+    label: "計画策定",
+    helper: "経営改善計画策定支援補助金の計画書作成を支援",
   },
 ];
 
@@ -117,18 +124,24 @@ const faqShortcuts = [
     label: "データ準備の不安",
     description: "紙・Excelでも開始できる理由",
   },
+  {
+    href: "#faq-section",
+    label: "補助金申請の進め方",
+    description: "要件整理と書類準備の流れ",
+  },
 ];
 
 const contactValuePoints = [
   "翌営業日に“再生仮説メモ”と優先アクション案をメールで共有",
   "銀行説明用の論点シートと交渉Q&Aテンプレを提供",
+  "補助金活用の意向を伺い、必要書類リストとスケジュールを併せて提示",
   "週次レビューの進め方サンプルと必要データ一覧を事前送付",
 ];
 
 const trustReassurances = [
   "福岡銀行・北九州銀行など主要行との協働実績",
   "再生案件の平均CV回復率 180%（過去3年）",
-  "中小企業庁登録診断士チームが直接対応",
+  "中小企業庁登録診断士チームが直接対応し補助金申請も伴走",
 ];
 
 const testimonialVideo = {
@@ -186,7 +199,7 @@ const CTASection = () => {
       setCurrentStep(2);
       toast({
         title: "あと少しで送信できます",
-        description: "具体的な課題やご希望を共有いただくと、より精緻な提案が可能です。",
+        description: "具体的な課題や補助金活用のご希望を共有いただくと、より精緻な提案が可能です。",
       });
       return;
     }
@@ -258,7 +271,7 @@ const CTASection = () => {
             今すぐ、未来の設計図を描き直す
           </h2>
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            生成AIと専門家の伴走で、再生の道筋をともに設計しましょう。数字とストーリーを揃え、どの会議でも堂々と語れる状態づくりを支援します。
+            生成AIと専門家の伴走で、再生の道筋をともに設計しましょう。数字とストーリーに加え、経営改善計画策定支援補助金の活用シミュレーションまで揃え、どの会議でも堂々と語れる状態づくりを支援します。
           </p>
         </ScrollReveal>
 
@@ -480,8 +493,8 @@ const CTASection = () => {
                   </p>
                   <p className="text-xs leading-relaxed">
                     {isStepTwo
-                      ? "頂いた情報を基に、仮説メモと優先アクション案を準備してご連絡します。"
-                      : "まずはメールアドレスと会社規模をお知らせください。次のステップで詳細を伺います。"}
+                      ? "頂いた情報を基に、仮説メモと優先アクション案、補助金活用時の準備物リストを整えてご連絡します。"
+                      : "まずはメールアドレスと会社規模をお知らせください。補助金の活用希望も次のステップで伺います。"}
                   </p>
                 </div>
 
@@ -597,8 +610,11 @@ const CTASection = () => {
                         rows={4}
                         value={message}
                         onChange={(event) => setMessage(event.target.value)}
-                        placeholder="直近の課題や実現したい姿、関係者の状況などをご記入ください"
+                        placeholder="直近の課題や実現したい姿、関係者の状況、補助金活用の有無などをご記入ください"
                       />
+                      <p className="text-xs text-[#1e3359]/70">
+                        補助金を利用予定の場合は希望時期や金融機関との進捗もお知らせください。要件に沿った計画書ドラフトをご用意します。
+                      </p>
                     </div>
 
                     <div className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f2f7ff] p-4 text-sm leading-relaxed text-[#1e3359]/80">

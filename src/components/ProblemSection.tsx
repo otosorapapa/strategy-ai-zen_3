@@ -191,7 +191,7 @@ const problemNextActions = [
 
 const ProblemSection = () => {
   return (
-    <section className="fade-in-section bg-[#04112a] py-24 text-white">
+    <section id="why-section" className="fade-in-section bg-[#04112a] py-24 text-white">
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">

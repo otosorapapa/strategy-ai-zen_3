@@ -8,7 +8,9 @@ import {
   ArrowRight,
   BriefcaseBusiness,
   CheckCircle2,
+  Compass,
   Landmark,
+  LayoutDashboard,
   LineChart,
   Sparkle,
   Target,
@@ -63,6 +65,28 @@ const heroImpactStats = [
   },
 ];
 
+const heroSummaryHighlights = [
+  {
+    icon: Compass,
+    eyebrow: "48H診断",
+    title: "48時間で方向性を確定",
+    description:
+      "初回セッションで優先仮説と次の一手を整理し、迷いを断ち切る指標セットを共有",
+  },
+  {
+    icon: LayoutDashboard,
+    eyebrow: "可視化",
+    title: "粗利・資金・人材を一枚化",
+    description: "AIが主要指標を重ね合わせ、現場でも語れるダッシュボードを生成",
+  },
+  {
+    icon: BriefcaseBusiness,
+    eyebrow: "伴走",
+    title: "診断士が実行伴走",
+    description: "金融機関との交渉シナリオと現場アクションを週次でレビュー",
+  },
+];
+
 const HeroSection = () => {
   const scrollToContact = () => {
     const target = document.getElementById("cta-section");
@@ -82,6 +106,21 @@ const HeroSection = () => {
               <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
                 資金が尽きる前に、未来を読み直す。<br className="hidden md:block" />「生成AI × 専門家」が描き切る再生の設計図
               </h1>
+              <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 sm:grid-cols-3">
+                {heroSummaryHighlights.map(({ icon: Icon, title, description, eyebrow }) => (
+                  <div
+                    key={title}
+                    className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4 shadow-[0_18px_45px_rgba(3,16,36,0.4)]"
+                  >
+                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                      <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                      {eyebrow}
+                    </div>
+                    <p className="text-sm font-semibold text-white/90">{title}</p>
+                    <p className="text-xs leading-relaxed text-slate-100/75">{description}</p>
+                  </div>
+                ))}
+              </div>
               <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">
                 手元資金が減り、要となる人材が疲弊し、次の一手が霧の中に消えていく──その停滞は情熱不足ではなく「未来を読むための設計図」が卓上に存在しないからこそ起こります。<br className="hidden md:block" />
                 創和経営コンサルティングは、生成AIが読み解く外部データと診断士が現場で磨いてきた判断軸を束ね、貴社専用の“再生の設計図”をゼロから描き直します。数値が示す兆しと専門家の洞察を一枚のボードに統合し、これからの一年を反転させるための最初の決断を共に導きます。

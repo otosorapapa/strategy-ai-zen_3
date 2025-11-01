@@ -186,7 +186,7 @@ const workflowSteps = [
 
 const SolutionSection = () => {
   return (
-    <section className="fade-in-section bg-white py-24 text-[#0b1f3f]">
+    <section id="what-section" className="fade-in-section bg-white py-24 text-[#0b1f3f]">
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">

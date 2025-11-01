@@ -15,6 +15,7 @@ import StructuredData from "@/components/StructuredData";
 import StickyCtaBar from "@/components/StickyCtaBar";
 import useInteractiveCtaFeedback from "@/hooks/useInteractiveCtaFeedback";
 import useFadeInSections from "@/hooks/useFadeInSections";
+import SectionNavigationMap from "@/components/SectionNavigationMap";
 
 const Index = () => {
   useInteractiveCtaFeedback();
@@ -25,6 +26,7 @@ const Index = () => {
       <StructuredData />
       <StickyCtaBar />
       <HeroSection />
+      <SectionNavigationMap />
       <InsightSpotlight />
       <ProblemSection />
       <SolutionSection />

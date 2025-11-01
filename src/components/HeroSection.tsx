@@ -14,6 +14,7 @@ import {
   Landmark,
   LayoutDashboard,
   LineChart,
+  PlayCircle,
   Sparkle,
   Target,
   Timer,
@@ -68,34 +69,41 @@ const heroImpactStats = [
   },
 ];
 
-const heroSummaryHighlights = [
+const heroReasonHighlights = [
   {
     icon: Compass,
-    eyebrow: "48H診断",
-    title: "48時間で方向性を確定",
+    eyebrow: "Reason 01",
+    title: "48H診断で再生の羅針盤を提示",
     description:
-      "初回セッションで優先仮説と次の一手を整理し、迷いを断ち切る指標セットを共有",
+      "AIが粗利・資金・人材の歪みを色分けし、診断士が48時間以内に優先仮説とリスクラインを整理",
   },
   {
     icon: LayoutDashboard,
-    eyebrow: "可視化",
-    title: "粗利・資金・人材を一枚化",
-    description: "AIが主要指標を重ね合わせ、現場でも語れるダッシュボードを生成",
+    eyebrow: "Reason 02",
+    title: "同じ画面で意思決定を統一",
+    description:
+      "銀行・役員・現場が共有できるダッシュボードと会議アジェンダをセットで提供し、迷いを排除",
   },
   {
     icon: Landmark,
-    eyebrow: "補助金",
-    title: "計画策定と申請を伴走",
+    eyebrow: "Reason 03",
+    title: "補助金・交渉までワンストップ伴走",
     description:
-      "経営改善計画策定支援補助金の要件整理から計画書ドラフトまで同時に支援",
-  },
-  {
-    icon: BriefcaseBusiness,
-    eyebrow: "伴走",
-    title: "診断士が実行伴走",
-    description: "金融機関との交渉シナリオと現場アクションを週次でレビュー",
+      "経営改善計画策定支援補助金の要件整理と資料作成、金融機関交渉の同席支援まで一気通貫",
   },
 ];
+
+const heroVideoSummary = {
+  url: "https://www.youtube.com/embed/2Xc9gXyf2G4?rel=0&autoplay=0&mute=1",
+  title: "90秒でわかる再生設計図の全体像",
+  description:
+    "粗利・資金・人材の指標がどのように一枚の設計図に統合されるのか、AI解析と診断士伴走の役割分担を短時間で確認できます。",
+  highlights: [
+    "48時間以内に届く成果物の中身と合意形成までのタイムライン",
+    "銀行・現場との共有シーンで使われるダッシュボードの使い方",
+    "補助金活用時の準備物とスケジュールの流れ",
+  ],
+};
 
 const heroProcessSteps = [
   {
@@ -117,9 +125,9 @@ const heroProcessSteps = [
 
 const heroIntroCopy = {
   short:
-    "財務の減速や現場の疲弊が進む前に、再生に必要な指標・シナリオ・交渉材料を一枚に束ねます。経営改善計画策定支援補助金の活用を想定したスケジュールと書類準備まで見据え、主要指標の優先順位と即応アクションを48時間で揃えます。",
+    "粗利・資金・人材のズレをAIが即スキャンし、診断士が実行条件と交渉材料まで翻訳。財務が減速する前に、再生の羅針盤・優先アクション・金融機関への提示資料を48時間で揃えます。",
   extended:
-    "生成AIが粗利・資金・人材の歪みを色分けし、診断士が現場ヒアリングで実行条件を翻訳。補助金要件に合わせた改善シナリオと金融機関連携の手順を同梱し、銀行説明・現場アクション・経営会議のストーリーを一本化して意思決定リードタイムを平均1/3に短縮します。",
+    "生成AIが抽出した歪みを色分けし、現場ヒアリングで得た制約条件を診断士が整合。経営改善計画策定支援補助金のスケジュールと要件を踏まえた再生シナリオを構築し、銀行説明・現場アクション・経営会議のストーリーを一本化して意思決定リードタイムを平均1/3に短縮します。",
 };
 
 const HeroSection = () => {
@@ -141,7 +149,7 @@ const HeroSection = () => {
                 使命｜判断力を取り戻す伴走
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
-                48時間で未来の打ち手が揃う。AIが導き、診断士が実装まで描き切る“再生設計図”
+                48時間で再生の羅針盤を手に。AI診断と診断士伴走で「次の一手」を同じ画面に。
               </h1>
               <div className="grid gap-3 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
                 {heroProcessSteps.map(({ icon: Icon, title, description }) => (
@@ -193,20 +201,57 @@ const HeroSection = () => {
                   </span>
                 </Button>
               </div>
-              <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 sm:grid-cols-3">
-                {heroSummaryHighlights.map(({ icon: Icon, title, description, eyebrow }) => (
-                  <div
-                    key={title}
-                    className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4 shadow-[0_18px_45px_rgba(3,16,36,0.4)]"
-                  >
-                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
-                      <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
-                      {eyebrow}
+              <div className="space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">
+                  3つの選ばれる理由
+                </p>
+                <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 sm:grid-cols-3">
+                  {heroReasonHighlights.map(({ icon: Icon, title, description, eyebrow }) => (
+                    <div
+                      key={title}
+                      className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4 shadow-[0_18px_45px_rgba(3,16,36,0.4)]"
+                    >
+                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                        <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                        {eyebrow}
+                      </div>
+                      <p className="text-sm font-semibold text-white/90">{title}</p>
+                      <p className="text-xs leading-relaxed text-slate-100/75">{description}</p>
                     </div>
-                    <p className="text-sm font-semibold text-white/90">{title}</p>
-                    <p className="text-xs leading-relaxed text-slate-100/75">{description}</p>
+                  ))}
+                </div>
+              </div>
+              <div className="grid gap-6 rounded-3xl border border-white/15 bg-white/5 p-5 shadow-[0_22px_55px_rgba(3,16,36,0.45)]">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/85">
+                  <PlayCircle className="h-4 w-4" aria-hidden="true" />
+                  {heroVideoSummary.title}
+                </div>
+                <div className="grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center">
+                  <div className="aspect-video w-full overflow-hidden rounded-[20px] border border-white/15 bg-black/60 shadow-lg">
+                    <iframe
+                      src={heroVideoSummary.url}
+                      title={heroVideoSummary.title}
+                      className="h-full w-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                    />
                   </div>
-                ))}
+                  <div className="space-y-3 text-left text-sm leading-relaxed text-slate-100/85">
+                    <p>{heroVideoSummary.description}</p>
+                    <ul className="space-y-2 text-xs text-slate-100/75">
+                      {heroVideoSummary.highlights.map((highlight) => (
+                        <li key={highlight} className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/80">
+                      まずは動画で全体像を掴んでからフォームへ
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 

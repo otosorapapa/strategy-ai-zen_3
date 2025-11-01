@@ -62,6 +62,24 @@ const requestOptions = [
   },
 ] as const;
 
+const responseSpeedOptions = [
+  {
+    value: "immediate",
+    label: "至急｜48H以内に返答が欲しい",
+    description: "決裁や金融機関対応が迫っているので、最短で仮説メモを受け取りたい",
+  },
+  {
+    value: "this-month",
+    label: "今月中に方向性を確定したい",
+    description: "次の経営会議までに再生シナリオと補助金の可否を整理したい",
+  },
+  {
+    value: "research",
+    label: "情報収集中・資料で検討したい",
+    description: "社内での検討材料として資料や成功事例を優先的に確認したい",
+  },
+] as const;
+
 const bookingMetrics = [
   {
     icon: Timer,
@@ -188,6 +206,9 @@ const CTASection = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [responseSpeed, setResponseSpeed] = useState<(typeof responseSpeedOptions)[number]["value"]>(
+    responseSpeedOptions[0].value,
+  );
   const [consent, setConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [currentStep, setCurrentStep] = useState<1 | 2>(1);
@@ -196,6 +217,8 @@ const CTASection = () => {
   const remainingTimeLabel = currentStep === 1 ? "残り約40秒" : "残り約20秒";
 
   const selectedRequest = requestOptions.find((option) => option.value === requestType) ?? requestOptions[0];
+  const selectedResponseSpeed =
+    responseSpeedOptions.find((option) => option.value === responseSpeed) ?? responseSpeedOptions[0];
   const isStepTwo = currentStep === 2;
 
   useEffect(() => {
@@ -210,19 +233,10 @@ const CTASection = () => {
     event.preventDefault();
 
     if (currentStep === 1) {
-      if (!email || !companySize) {
-        toast({
-          title: "必須項目を入力してください",
-          description: "メールアドレスと会社規模を入力すると詳細ステップに進めます。",
-          variant: "destructive",
-        });
-        return;
-      }
-
       setCurrentStep(2);
       toast({
         title: "あと少しで送信できます",
-        description: "具体的な課題や補助金活用のご希望を共有いただくと、より精緻な提案が可能です。",
+        description: "メールアドレスなど必要最低限の情報をご入力いただくと、仮説メモの準備が完了します。",
       });
       return;
     }
@@ -246,7 +260,7 @@ const CTASection = () => {
         companySize,
         requestType,
         requestTypeLabel: selectedRequest.title,
-        message,
+        message: `【希望フォロー速度】${selectedResponseSpeed.label}${message ? `\n${message}` : ""}`,
         consent,
       });
 
@@ -264,6 +278,7 @@ const CTASection = () => {
       setEmail("");
       setCompanySize(undefined);
       setMessage("");
+      setResponseSpeed(responseSpeedOptions[0].value);
       setConsent(false);
       setRequestType("consultation");
       setCurrentStep(1);
@@ -518,7 +533,7 @@ const CTASection = () => {
                       STEP {currentStep} / {totalSteps}
                     </span>
                     <span className="font-semibold text-[#0b1f3f]">
-                      {isStepTwo ? "詳細ヒアリング" : "連絡先の入力"}
+                      {isStepTwo ? "詳細ヒアリング" : "目的と緊急度の選択"}
                     </span>
                   </div>
                   <div
@@ -535,47 +550,80 @@ const CTASection = () => {
                     />
                   </div>
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/60">
-                    所要時間 約60秒｜必須入力2項目のみでスタート（{remainingTimeLabel}）
+                    所要時間 約60秒｜STEP1はタップのみ、STEP2で必要情報入力（{remainingTimeLabel}）
                   </p>
                   <p className="text-xs leading-relaxed">
                     {isStepTwo
                       ? "頂いた情報を基に、仮説メモと優先アクション案、補助金活用時の準備物リストを整えてご連絡します。"
-                      : "まずはメールアドレスと会社規模をお知らせください。補助金の活用希望も次のステップで伺います。"}
+                      : "メニューとフォロー速度をタップすると、次のステップでメールアドレス等の入力に進みます。"}
                   </p>
                 </div>
 
                 {!isStepTwo ? (
                   <>
-                    <div className="space-y-2">
-                      <Label htmlFor={`${formId}-email`} className="text-sm font-semibold text-[#0b1f3f]">
-                        メールアドレス <span className="text-[#0584c6]">*</span>
-                      </Label>
-                      <Input
-                        id={`${formId}-email`}
-                        type="email"
-                        required
-                        value={email}
-                        onChange={(event) => setEmail(event.target.value)}
-                        placeholder="例）info@example.jp"
-                      />
+                    <div className="rounded-2xl border border-[#0b1f3f]/10 bg-white p-4 text-sm text-[#1e3359]/85 shadow-sm">
+                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
+                        まずはクリックで目的と緊急度を共有
+                      </p>
+                      <p className="mt-2 text-sm">
+                        2つの質問にタップで回答すると、必要な資料と仮説メモの準備が始まります。まだ検討段階でもお気軽にお選びください。
+                      </p>
                     </div>
 
-                    <div className="space-y-2">
-                      <Label className="text-sm font-semibold text-[#0b1f3f]">
-                        会社規模 <span className="text-[#0584c6]">*</span>
-                      </Label>
-                      <Select value={companySize} onValueChange={(value) => setCompanySize(value)}>
-                        <SelectTrigger className="h-11 rounded-xl border-[#d1dcf5] bg-white text-left text-sm text-[#0b1f3f]">
-                          <SelectValue placeholder="年商規模を選択" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {companySizeOptions.map((option) => (
-                            <SelectItem key={option.value} value={option.value}>
-                              {option.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
+                    <div className="space-y-3">
+                      <Label className="text-sm font-semibold text-[#0b1f3f]">関心のあるメニュー</Label>
+                      <div className="grid gap-3 sm:grid-cols-2">
+                        {requestOptions.map((option) => {
+                          const isSelected = option.value === requestType;
+
+                          return (
+                            <button
+                              key={option.value}
+                              type="button"
+                              onClick={() => setRequestType(option.value)}
+                              aria-pressed={isSelected}
+                              className={cn(
+                                "flex h-full flex-col gap-2 rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition",
+                                isSelected
+                                  ? "border-[#0584c6] bg-[#eef6ff] text-[#0b1f3f] shadow-sm"
+                                  : "border-[#d1dcf5] bg-white text-[#1e3359]/80 hover:border-[#0584c6]/60 hover:text-[#0b1f3f]",
+                              )}
+                            >
+                              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
+                                {option.badge}
+                              </span>
+                              <span>{option.title}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label className="text-sm font-semibold text-[#0b1f3f]">希望するフォロー速度</Label>
+                      <div className="grid gap-3 sm:grid-cols-3">
+                        {responseSpeedOptions.map((option) => {
+                          const isSelected = option.value === responseSpeed;
+
+                          return (
+                            <button
+                              key={option.value}
+                              type="button"
+                              onClick={() => setResponseSpeed(option.value)}
+                              aria-pressed={isSelected}
+                              className={cn(
+                                "flex h-full flex-col gap-1 rounded-2xl border px-4 py-3 text-left text-xs transition",
+                                isSelected
+                                  ? "border-[#0584c6] bg-[#e6f6ff] text-[#0b1f3f] shadow-sm"
+                                  : "border-[#d1dcf5] bg-white text-[#1e3359]/80 hover:border-[#0584c6]/60 hover:text-[#0b1f3f]",
+                              )}
+                            >
+                              <span className="text-[0.75rem] font-semibold">{option.label}</span>
+                              <span className="text-[0.7rem] text-[#1e3359]/70">{option.description}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
 
                     <Button
@@ -618,7 +666,43 @@ const CTASection = () => {
                           <dt className="text-xs text-[#0b1f3f]/60">選択メニュー</dt>
                           <dd className="text-sm font-semibold text-[#0b1f3f]">{selectedRequest.title}</dd>
                         </div>
+                        <div>
+                          <dt className="text-xs text-[#0b1f3f]/60">希望フォロー速度</dt>
+                          <dd className="text-sm font-semibold text-[#0b1f3f]">{selectedResponseSpeed.label}</dd>
+                        </div>
                       </dl>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor={`${formId}-email`} className="text-sm font-semibold text-[#0b1f3f]">
+                        メールアドレス <span className="text-[#0584c6]">*</span>
+                      </Label>
+                      <Input
+                        id={`${formId}-email`}
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        placeholder="例）info@example.jp"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label className="text-sm font-semibold text-[#0b1f3f]">
+                        会社規模 <span className="text-[#0584c6]">*</span>
+                      </Label>
+                      <Select value={companySize} onValueChange={(value) => setCompanySize(value)}>
+                        <SelectTrigger className="h-11 rounded-xl border-[#d1dcf5] bg-white text-left text-sm text-[#0b1f3f]">
+                          <SelectValue placeholder="年商規模を選択" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {companySizeOptions.map((option) => (
+                            <SelectItem key={option.value} value={option.value}>
+                              {option.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <div className="space-y-2">

@@ -26,6 +26,33 @@ const resultsQuickSummary = [
   "銀行・現場・役員会が同じダッシュボードを共有し、判断と行動のズレを解消",
 ];
 
+const adoptionSnapshotMetrics = [
+  {
+    label: "導入社数",
+    value: "108社",
+    helper: "九州・西日本の伴走企業（過去3年累計）",
+  },
+  {
+    label: "平均CV回復率",
+    value: "180%",
+    helper: "再生後6ヶ月の粗利・キャッシュ改善スコア（中央値）",
+  },
+  {
+    label: "金融機関同席率",
+    value: "92%",
+    helper: "主要行・信金との週次レビュー同席割合",
+  },
+];
+
+const adoptionClientLogos = [
+  "福岡機械工業会",
+  "九州ロジスティクス連合",
+  "福岡観光イノベーション協議会",
+  "北九州スタートアップパートナーズ",
+  "九州DX推進ネットワーク",
+  "福岡地域金融連携PF",
+];
+
 const resultsMomentumLevers = [
   "金融機関とのエビデンス共有で条件交渉を先手に進める",
   "AIと診断士が週次で改善仮説を検証し、粗利とキャッシュの波形を同期",
@@ -173,6 +200,67 @@ const ResultsSection = () => {
                 ))}
               </ul>
             </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-10 grid gap-6 rounded-[32px] border border-white/12 bg-white/5 p-6 text-left shadow-[0_28px_70px_rgba(2,12,32,0.5)] backdrop-blur md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]"
+        >
+          <div className="space-y-4">
+            <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+              導入社数×成果スナップショット
+            </p>
+            <div className="overflow-hidden rounded-3xl border border-white/15 bg-[#041536]/60 shadow-[0_18px_50px_rgba(2,12,32,0.45)]">
+              <table className="w-full text-left text-sm text-slate-200/85">
+                <thead className="bg-white/5 text-xs uppercase tracking-[0.28em] text-cyan-100/80">
+                  <tr>
+                    <th scope="col" className="px-5 py-3 font-semibold">
+                      指標
+                    </th>
+                    <th scope="col" className="px-5 py-3 font-semibold text-right">
+                      実績値
+                    </th>
+                    <th scope="col" className="px-5 py-3 font-semibold">
+                      補足
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {adoptionSnapshotMetrics.map((metric) => (
+                    <tr key={metric.label} className="border-t border-white/10">
+                      <th
+                        scope="row"
+                        className="px-5 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-cyan-100/85"
+                      >
+                        {metric.label}
+                      </th>
+                      <td className="px-5 py-4 text-right text-xl font-bold text-white">{metric.value}</td>
+                      <td className="px-5 py-4 text-xs leading-relaxed text-slate-200/75">{metric.helper}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">
+              ※数値は直近3年間の平均実績。詳細は無料相談時に個別開示します。
+            </p>
+          </div>
+          <div className="space-y-4 rounded-[28px] border border-white/12 bg-white/5 p-6 text-center text-slate-200/85">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">共創パートナー</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {adoptionClientLogos.map((logo) => (
+                <span
+                  key={logo}
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-[#041536]/60 px-4 py-3 text-sm font-semibold tracking-[0.18em] text-cyan-100/85"
+                >
+                  {logo}
+                </span>
+              ))}
+            </div>
+            <p className="text-xs leading-relaxed text-slate-200/75">
+              地域金融機関・業界団体との共創で蓄積した再生ナレッジを活用し、業界特有の課題にも即応します。
+            </p>
           </div>
         </ScrollReveal>
 

@@ -93,6 +93,39 @@ const faqs: FAQ[] = [
     ),
   },
   {
+    question: "福岡エリアで補助金を活用した再生事例はありますか？",
+    lead: "福岡市・北九州市の中小企業で『福岡 中小企業再生 補助金』検索ニーズに対応した実績があります。",
+    metric: "福岡",
+    metricLabel: "地域実績",
+    answer: (
+      <div className="space-y-4 text-base text-[#1e3359]/85">
+        <p>
+          製造・卸売・サービスの各業種で、経営改善計画策定支援補助金を活用した再生事例があります。福岡県内の主要金融機関と連携し、補助金採択後もキャッシュフロー監視と週次レビューを継続することで、再生計画の実効性を高めています。
+        </p>
+        <div className="grid gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-white/85 p-4 text-sm text-[#1e3359]/80">
+          <div className="font-semibold text-[#0b1f3f]">代表的な成果指標</div>
+          <ul className="space-y-2">
+            <li className="flex items-start gap-2">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
+              <span>福岡市内製造業：補助金採択後6ヶ月で営業利益+9%、資金繰り耐性+30日を達成。</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
+              <span>北九州市の卸売業：追加融資と補助金を併用し、債務超過を8ヶ月で解消。</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
+              <span>サービス業：福岡観光需要に合わせたDX投資を補助金で支援し、平均客単価+15%を実現。</span>
+            </li>
+          </ul>
+        </div>
+        <p className="text-sm">
+          福岡エリア特有の金融慣行や商習慣を踏まえ、補助金の採択後も「福岡 中小企業再生 補助金」で検索される論点（資金繰り表の更新、モニタリング資料、銀行との協議記録）をテンプレート化しています。無料相談では、エリア別の参考シナリオを具体的にお見せします。
+        </p>
+      </div>
+    ),
+  },
+  {
     question: "フォーム入力はどれくらい時間がかかりますか？",
     lead: "所要時間は約60秒。必須項目はメールアドレスと会社規模だけです。",
     metric: "60sec",

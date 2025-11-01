@@ -4,7 +4,9 @@ import {
   ArrowLeft,
   ArrowRight,
   Building2,
+  CalendarClock,
   CheckCircle2,
+  FileCheck2,
   Loader2,
   MessageCircleQuestion,
   ShieldCheck,
@@ -78,6 +80,27 @@ const bookingMetrics = [
     value: "補助金対応",
     label: "計画策定",
     helper: "経営改善計画策定支援補助金の計画書作成を支援",
+  },
+];
+
+const engagementTimeline = [
+  {
+    icon: CalendarClock,
+    phase: "Day 0",
+    title: "45分の初回相談で課題とゴールを棚卸し",
+    deliverable: "再生仮説メモ・資金繰り耐性チェックリストを当日共有",
+  },
+  {
+    icon: Timer,
+    phase: "48H以内",
+    title: "AI診断で粗利・資金・人材の歪みを色分け",
+    deliverable: "優先アクション案とリスクラインをまとめたヒートマップレポート",
+  },
+  {
+    icon: FileCheck2,
+    phase: "Week 2",
+    title: "金融機関・社内へ共有し実行ロードマップを確定",
+    deliverable: "銀行説明シナリオと週次レビューの進め方テンプレートを提供",
   },
 ];
 
@@ -265,13 +288,13 @@ const CTASection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            行動に移す準備は整いましたか？
+            Action｜45分で再生シナリオを受け取る
           </span>
           <h2 id="cta-heading" className="text-3xl font-bold leading-tight md:text-4xl">
-            今すぐ、未来の設計図を描き直す
+            粗利・資金・人材の打ち手を45分で整理し、2週間で実行フェーズへ
           </h2>
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            生成AIと専門家の伴走で、再生の道筋をともに設計しましょう。数字とストーリーに加え、経営改善計画策定支援補助金の活用シミュレーションまで揃え、どの会議でも堂々と語れる状態づくりを支援します。
+            PASフレームで痛点を深掘りしたうえで、AI診断と専門家の伴走によりSolutionへ橋渡し。補助金活用シミュレーションや金融機関との合意形成資料まで揃え、どの会議でも迷わず意思決定できる状態を設計します。
           </p>
         </ScrollReveal>
 
@@ -366,6 +389,29 @@ const CTASection = () => {
                   </div>
                 );
               })}
+            </div>
+
+            <div className="space-y-4 rounded-[28px] border border-white/10 bg-white/5 p-6 text-left text-slate-200/85">
+              <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/80">
+                <CalendarClock className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                導入タイムライン（平均所要 2週間）
+              </p>
+              <div className="grid gap-4 md:grid-cols-3">
+                {engagementTimeline.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <div key={item.phase} className="flex h-full flex-col gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
+                      <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/75">
+                        <span>{item.phase}</span>
+                        <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                      </div>
+                      <p className="text-sm font-semibold text-white">{item.title}</p>
+                      <p className="text-xs leading-relaxed text-slate-200/75">{item.deliverable}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="space-y-4 rounded-[28px] border border-white/10 bg-white/10 p-6">

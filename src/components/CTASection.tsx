@@ -16,6 +16,13 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
@@ -67,6 +74,14 @@ const bookingMetrics = [
   },
 ];
 
+const companySizeOptions = [
+  { value: "~1億円", label: "年商 1億円未満" },
+  { value: "1-5億円", label: "年商 1〜5億円" },
+  { value: "5-10億円", label: "年商 5〜10億円" },
+  { value: "10-30億円", label: "年商 10〜30億円" },
+  { value: "30億円以上", label: "年商 30億円以上" },
+];
+
 const sampleSummary = [
   "再生設計図ドラフトのサンプル3枚と、銀行共有用テンプレート付き",
   "粗利・キャッシュ・人材の改善ストーリーを色分けしたダッシュボード例",
@@ -104,10 +119,23 @@ const faqShortcuts = [
   },
 ];
 
+const contactValuePoints = [
+  "翌営業日に“再生仮説メモ”と優先アクション案をメールで共有",
+  "銀行説明用の論点シートと交渉Q&Aテンプレを提供",
+  "週次レビューの進め方サンプルと必要データ一覧を事前送付",
+];
+
+const trustReassurances = [
+  "福岡銀行・北九州銀行など主要行との協働実績", 
+  "再生案件の平均CV回復率 180%（過去3年）",
+  "中小企業庁登録診断士チームが直接対応",
+];
+
 const CTASection = () => {
   const { toast } = useToast();
   const formId = useId();
   const [requestType, setRequestType] = useState<(typeof requestOptions)[number]["value"]>("consultation");
+  const [companySize, setCompanySize] = useState<string | undefined>();
   const [company, setCompany] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -123,10 +151,10 @@ const CTASection = () => {
     event.preventDefault();
 
     if (currentStep === 1) {
-      if (!email || !company || !name) {
+      if (!email || !companySize) {
         toast({
           title: "必須項目を入力してください",
-          description: "メールアドレス・会社名・お名前を入力すると詳細ステップに進めます。",
+          description: "メールアドレスと会社規模を入力すると詳細ステップに進めます。",
           variant: "destructive",
         });
         return;
@@ -156,6 +184,7 @@ const CTASection = () => {
         company,
         name,
         email,
+        companySize,
         requestType,
         requestTypeLabel: selectedRequest.title,
         message,
@@ -174,6 +203,7 @@ const CTASection = () => {
       setCompany("");
       setName("");
       setEmail("");
+      setCompanySize(undefined);
       setMessage("");
       setConsent(false);
       setRequestType("consultation");
@@ -316,6 +346,18 @@ const CTASection = () => {
               <CheckCircle2 className="mb-3 h-5 w-5 text-cyan-200" aria-hidden="true" />
               初回相談では、粗利・キャッシュ・人材のギャップと優先施策を整理し、行動順序と金融機関への伝え方まで含めた“再生の設計図”をドラフトとしてお渡しします。次のステークホルダー面談で堂々と話せる根拠をご用意します。
             </div>
+
+            <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 text-sm leading-relaxed text-slate-200/85">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">送信前にご確認ください</p>
+              <ul className="mt-3 space-y-2">
+                {contactValuePoints.map((point) => (
+                  <li key={point} className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </ScrollReveal>
 
           <ScrollReveal
@@ -368,7 +410,7 @@ const CTASection = () => {
                   <p className="text-xs leading-relaxed">
                     {isStepTwo
                       ? "頂いた情報を基に、仮説メモと優先アクション案を準備してご連絡します。"
-                      : "まずは連絡先のみ。次のステップで課題やご希望を伺います。"}
+                      : "まずはメールと規模感のみ。次のステップで詳細を伺います。"}
                   </p>
                 </div>
 
@@ -388,31 +430,22 @@ const CTASection = () => {
                       />
                     </div>
 
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div className="space-y-2">
-                        <Label htmlFor={`${formId}-company`} className="text-sm font-semibold text-[#0b1f3f]">
-                          会社名 <span className="text-[#0584c6]">*</span>
-                        </Label>
-                        <Input
-                          id={`${formId}-company`}
-                          required
-                          value={company}
-                          onChange={(event) => setCompany(event.target.value)}
-                          placeholder="例）株式会社〇〇"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor={`${formId}-name`} className="text-sm font-semibold text-[#0b1f3f]">
-                          お名前 <span className="text-[#0584c6]">*</span>
-                        </Label>
-                        <Input
-                          id={`${formId}-name`}
-                          required
-                          value={name}
-                          onChange={(event) => setName(event.target.value)}
-                          placeholder="例）山田 太郎"
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <Label className="text-sm font-semibold text-[#0b1f3f]">
+                        会社規模 <span className="text-[#0584c6]">*</span>
+                      </Label>
+                      <Select value={companySize} onValueChange={(value) => setCompanySize(value)}>
+                        <SelectTrigger className="h-11 rounded-xl border-[#d1dcf5] bg-white text-left text-sm text-[#0b1f3f]">
+                          <SelectValue placeholder="年商規模を選択" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {companySizeOptions.map((option) => (
+                            <SelectItem key={option.value} value={option.value}>
+                              {option.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
                     </div>
 
                     <Button
@@ -436,6 +469,14 @@ const CTASection = () => {
                           <dd className="text-sm font-semibold text-[#0b1f3f]">{email}</dd>
                         </div>
                         <div>
+                          <dt className="text-xs text-[#0b1f3f]/60">会社規模</dt>
+                          <dd className="text-sm font-semibold text-[#0b1f3f]">
+                            {companySize
+                              ? companySizeOptions.find((option) => option.value === companySize)?.label ?? companySize
+                              : "未選択"}
+                          </dd>
+                        </div>
+                        <div>
                           <dt className="text-xs text-[#0b1f3f]/60">会社名</dt>
                           <dd className="text-sm font-semibold text-[#0b1f3f]">{company}</dd>
                         </div>
@@ -448,6 +489,32 @@ const CTASection = () => {
                           <dd className="text-sm font-semibold text-[#0b1f3f]">{selectedRequest.title}</dd>
                         </div>
                       </dl>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor={`${formId}-company`} className="text-sm font-semibold text-[#0b1f3f]">
+                        会社名 <span className="text-[#0584c6]">*</span>
+                      </Label>
+                      <Input
+                        id={`${formId}-company`}
+                        required
+                        value={company}
+                        onChange={(event) => setCompany(event.target.value)}
+                        placeholder="例）株式会社〇〇"
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor={`${formId}-name`} className="text-sm font-semibold text-[#0b1f3f]">
+                        ご担当者名 <span className="text-[#0584c6]">*</span>
+                      </Label>
+                      <Input
+                        id={`${formId}-name`}
+                        required
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
+                        placeholder="例）山田 太郎"
+                      />
                     </div>
 
                     <div className="space-y-2">
@@ -515,6 +582,17 @@ const CTASection = () => {
                   </>
                 )}
               </form>
+
+              <div className="rounded-[28px] border border-[#0b1f3f]/10 bg-[#f6f9ff] p-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">
+                <div className="flex flex-col gap-3 text-left normal-case tracking-normal text-[#1e3359]/80">
+                  {trustReassurances.map((item) => (
+                    <div key={item} className="flex items-start gap-2 text-sm text-[#1e3359]">
+                      <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>

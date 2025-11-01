@@ -51,6 +51,7 @@ type ContactPayload = {
   company: string;
   name: string;
   email: string;
+  companySize?: string;
   requestType: string;
   requestTypeLabel?: string;
   message: string;
@@ -105,6 +106,12 @@ const buildWordPressPayload = (payload: ContactPayload): FormData => {
   if (payload.requestTypeLabel) {
     entries["request-type-label"] = payload.requestTypeLabel;
     entries["request-type-slug"] = payload.requestType;
+  }
+
+  if (payload.companySize) {
+    entries["company-size"] = payload.companySize;
+    entries["annual-revenue"] = payload.companySize;
+    entries["company_size"] = payload.companySize;
   }
 
   Object.entries(entries).forEach(([key, value]) => {
@@ -254,7 +261,7 @@ const buildAutoReplyContent = (payload: ContactPayload) => {
     (payload.requestType === "consultation" ? "無料経営診断" : "チェックリスト資料");
 
   const textContent = `\
-${recipientName} 様\n\nこの度はStrategy AIへ${requestLabel}のご依頼をいただき、誠にありがとうございます。\n\n以下の内容でお問い合わせを承りました。\n\n------------------------------\n会社名: ${payload.company || "未入力"}\nお名前: ${payload.name || "未入力"}\nメールアドレス: ${payload.email}\n希望内容: ${requestLabel}\nメッセージ:\n${payload.message || "(メッセージはありません)"}\n------------------------------\n\n担当者より、1営業日以内に改めてご連絡させていただきます。\n\n何かご不明点がございましたら、本メールにご返信ください。\n\nStrategy AI サポートチーム`;
+${recipientName} 様\n\nこの度はStrategy AIへ${requestLabel}のご依頼をいただき、誠にありがとうございます。\n\n以下の内容でお問い合わせを承りました。\n\n------------------------------\n会社名: ${payload.company || "未入力"}\n会社規模: ${payload.companySize || "未入力"}\nお名前: ${payload.name || "未入力"}\nメールアドレス: ${payload.email}\n希望内容: ${requestLabel}\nメッセージ:\n${payload.message || "(メッセージはありません)"}\n------------------------------\n\n担当者より、1営業日以内に改めてご連絡させていただきます。\n\n何かご不明点がございましたら、本メールにご返信ください。\n\nStrategy AI サポートチーム`;
 
   const htmlContent = `
   <p>${recipientName} 様</p>
@@ -269,6 +276,10 @@ ${recipientName} 様\n\nこの度はStrategy AIへ${requestLabel}のご依頼を
       <tr>
         <th align="left" style="padding:8px 12px;color:#334155;background:#e2e8f0;">お名前</th>
         <td style="padding:8px 12px;background:#fff;">${payload.name || "未入力"}</td>
+      </tr>
+      <tr>
+        <th align="left" style="padding:8px 12px;color:#334155;background:#e2e8f0;">会社規模</th>
+        <td style="padding:8px 12px;background:#fff;">${payload.companySize || "未入力"}</td>
       </tr>
       <tr>
         <th align="left" style="padding:8px 12px;color:#334155;background:#e2e8f0;">メールアドレス</th>
@@ -433,6 +444,7 @@ export default async function handler(req: ContactRequest, res: ContactResponse)
     company: sanitizeString(body.company),
     name: sanitizeString(body.name),
     email: sanitizeString(body.email),
+    companySize: sanitizeString(body.companySize),
     requestType: sanitizeString(body.requestType) || "consultation",
     requestTypeLabel: sanitizeString(body.requestTypeLabel),
     message: sanitizeString(body.message),

@@ -16,6 +16,7 @@ import StickyCtaBar from "@/components/StickyCtaBar";
 import useInteractiveCtaFeedback from "@/hooks/useInteractiveCtaFeedback";
 import useFadeInSections from "@/hooks/useFadeInSections";
 import SectionNavigationMap from "@/components/SectionNavigationMap";
+import ComparisonSection from "@/components/ComparisonSection";
 
 const Index = () => {
   useInteractiveCtaFeedback();
@@ -30,6 +31,7 @@ const Index = () => {
       <InsightSpotlight />
       <ProblemSection />
       <SolutionSection />
+      <ComparisonSection />
       <AIWorkflowShowcase />
       <ResultsSection />
       <DashboardShowcase />

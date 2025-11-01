@@ -198,7 +198,7 @@ const ProblemSection = () => {
             現場で起きていること
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            設計図が欠けたままでは、努力が点で終わる。判断の軸を一枚に集約し、未来を共有する。
+            福岡・九州の中小企業再生で頻発する課題｜判断の軸を一枚に集約し、未来を共有する
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
             勇気や根性だけでは再生は加速しません。市場の揺らぎ、資金の波形、現場の実感を同じキャンバスに載せ、「どこから、どんな順番で」動くのかを揃える仕組みが必要です。生成AIと専門家の視点を束ね、断片的な情報を“未来の設計図”として再構築します。

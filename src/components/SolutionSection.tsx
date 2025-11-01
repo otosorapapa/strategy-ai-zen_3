@@ -193,7 +193,7 @@ const SolutionSection = () => {
             再生の設計図を描く進め方
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-[2.75rem] md:leading-[1.2]">
-            生成AIと中小企業診断士が共創し、判断が止まらない「再生デザインスタジオ」を運用
+            福岡発・九州エリアの中小企業再生支援｜生成AIと診断士が共創する「再生デザインスタジオ」
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
             最初の数週間でAIが財務指標・市場トレンド・競合動向を横断解析し、複数の回復シナリオを抽出。診断士が現場ヒアリングとプロセスマップを描き、実行条件を棚卸しします。意思決定プロセスのどこで時間が失われているか、キャッシュと粗利の因果を根拠付きで提示することで、判断の納得性とスピードを同時に高めます。

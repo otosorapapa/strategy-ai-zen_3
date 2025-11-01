@@ -4,6 +4,7 @@ import {
   BarChart3,
   BrainCircuit,
   Building2,
+  CheckCircle2,
   FileSpreadsheet,
   Gauge,
   GanttChart,
@@ -108,6 +109,18 @@ const trustSignals = [
   "メディア掲載・登壇多数",
 ];
 
+const solutionQuickSummary = [
+  "AIが粗利・キャッシュ・需要データを重ね合わせ、判断を止める論点を即時に抽出",
+  "診断士が現場ヒアリングで実行条件を翻訳し、週次運用の筋道を描く",
+  "金融機関向け資料と現場タスクを同期させ、戦略と行動のズレを解消",
+];
+
+const solutionNextActions = [
+  "初回相談でAI初期スコアと現場課題を棚卸し、優先仮説メモを即日共有",
+  "ZENスキャンで粗利・キャッシュの改善幅とリスクを定量化し、役員会の議題へ接続",
+  "週次レビューで交渉資料と実行タスクを同時更新し、判断リードタイムを1/3に短縮",
+];
+
 const causewayStages = [
   {
     id: "01",
@@ -195,6 +208,40 @@ const SolutionSection = () => {
                 {pill}
               </span>
             ))}
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-12 rounded-[32px] border border-[#0b1f3f]/10 bg-[#f4f8ff] p-7 shadow-[0_30px_80px_rgba(9,27,60,0.18)]"
+        >
+          <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-start">
+            <div className="space-y-3">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+                30秒サマリー
+              </p>
+              <ul className="space-y-2 text-sm leading-relaxed text-[#1a335c]/85">
+                {solutionQuickSummary.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-3 rounded-[24px] border border-[#0584c6]/25 bg-white p-5">
+              <p className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+                次のアクション
+              </p>
+              <ul className="space-y-2 text-sm leading-relaxed text-[#1a335c]/85">
+                {solutionNextActions.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <ArrowRight className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </ScrollReveal>
 

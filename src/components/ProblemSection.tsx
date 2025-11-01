@@ -177,6 +177,18 @@ const trustSignals = [
   "福岡発の再生支援案件を多数伴走",
 ];
 
+const problemQuickSummary = [
+  "粗利・キャッシュ・現場の情報が分断され、意思決定の場までに熱量が失われている",
+  "生成AIの提案が実装フェーズに届かず、投資判断が属人的な感覚に依存している",
+  "金融機関や取引先への説明が後手になり、資金繰りと信頼が同時に削られている",
+];
+
+const problemNextActions = [
+  "48時間で粗利・資金・人材の歪みをヒートマップ化し、議論のスタート地点を揃える",
+  "AIスコアと現場ヒアリングを結ぶ意思決定ログを整え、合意までのリードタイムを短縮",
+  "金融機関向けストーリーと現場タスクを同期させ、外部説明の先手を取る",
+];
+
 const ProblemSection = () => {
   return (
     <section className="fade-in-section bg-[#04112a] py-24 text-white">
@@ -191,6 +203,40 @@ const ProblemSection = () => {
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
             勇気や根性だけでは再生は加速しません。市場の揺らぎ、資金の波形、現場の実感を同じキャンバスに載せ、「どこから、どんな順番で」動くのかを揃える仕組みが必要です。生成AIと専門家の視点を束ね、断片的な情報を“未来の設計図”として再構築します。
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-10 grid gap-6 rounded-[28px] border border-white/12 bg-white/5 p-6 text-left shadow-[0_28px_75px_rgba(4,18,40,0.45)] backdrop-blur"
+        >
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="space-y-3">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+                30秒サマリー
+              </p>
+              <ul className="space-y-2 text-sm leading-relaxed text-slate-200/85">
+                {problemQuickSummary.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-3 rounded-[24px] border border-cyan-300/30 bg-cyan-500/10 p-5">
+              <p className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                次のアクション
+              </p>
+              <ul className="space-y-2 text-sm leading-relaxed text-slate-100/85">
+                {problemNextActions.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <ArrowRight className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </ScrollReveal>
 
         <div className="mt-12 space-y-6">

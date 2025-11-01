@@ -8,6 +8,7 @@ import {
   Gauge,
   Landmark,
   LineChart,
+  Quote,
   ShieldCheck,
   Users,
 } from "lucide-react";
@@ -88,6 +89,17 @@ const proofStories = [
     kpi: ["平均客単価+18%", "離職率▲35%"],
     image: serviceLeader,
   },
+];
+
+const financialPartnerQuote = {
+  quote:
+    "経営陣と金融機関が同じ指標で議論できる資料設計により、条件変更の協議が驚くほど滑らかになりました。ストーリーと数字の一体感が、社内稟議を後押ししています。",
+  author: "西日本シティ銀行 企業再生部 部長",
+  name: "田島 直樹 氏",
+};
+
+const partnerLogos = [
+  "西日本シティ銀行", "福岡信用金庫", "九州DXパートナー協議会"
 ];
 
 const ResultsSection = () => {
@@ -224,6 +236,41 @@ const ResultsSection = () => {
             );
           })}
         </div>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-14 grid gap-6 rounded-[32px] border border-white/12 bg-white/5 p-8 text-left shadow-[0_30px_80px_rgba(2,12,32,0.55)] backdrop-blur md:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]"
+        >
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+              金融機関からの声
+            </div>
+            <p className="text-lg font-semibold leading-relaxed text-white md:text-xl">
+              {financialPartnerQuote.quote}
+            </p>
+            <div className="flex items-center gap-3 text-sm font-semibold text-cyan-100/85">
+              <Quote className="h-5 w-5" aria-hidden="true" />
+              <span>{financialPartnerQuote.name}</span>
+              <span className="text-slate-200/70">{financialPartnerQuote.author}</span>
+            </div>
+          </div>
+          <div className="grid gap-3 rounded-[24px] border border-white/15 bg-white/10 p-6 text-center">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">第三者証明</p>
+            <div className="grid gap-3">
+              {partnerLogos.map((logo) => (
+                <span
+                  key={logo}
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-[#041536]/60 px-4 py-3 text-sm font-semibold tracking-[0.18em] text-cyan-100/85"
+                >
+                  {logo}
+                </span>
+              ))}
+            </div>
+            <p className="text-xs leading-relaxed text-slate-200/80">
+              共同検証・共創プロジェクトで蓄積したノウハウをもとに、金融庁ガイドライン準拠のレポート形式で提供しています。
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {proofStories.map((story) => (

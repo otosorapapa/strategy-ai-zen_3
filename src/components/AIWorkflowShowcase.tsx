@@ -1,7 +1,9 @@
 import { Fragment } from "react";
 import {
+  ArrowRight,
   ArrowUpRight,
   BarChart3,
+  CheckCircle2,
   FileText,
   HandshakeIcon,
   MessageSquare,
@@ -69,6 +71,18 @@ const trustSignals = [
   "九州エリアの経営会議ファシリテーションを継続",
 ];
 
+const workflowQuickSummary = [
+  "AIが財務・商流・人材データを統合し、再起に必要な論点を網羅",
+  "専門家がシナリオ設計と交渉準備を伴走し、合意形成の再現性を担保",
+  "週次レビューとダッシュボードで実行ログと資金見通しを同時管理",
+];
+
+const workflowNextActions = [
+  "現状データと課題メモを共有し、48時間でリスクヒートマップを受け取る",
+  "2週間のZENスキャンで投資/撤退シナリオと金融交渉資料を同時準備",
+  "週次伴走でKPIダッシュボードとレポートを更新し、交渉の先手を取る",
+];
+
 const AIWorkflowShowcase = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#ecf3ff] via-[#f4f8ff] to-white py-24 text-[#081a33]">
@@ -84,6 +98,40 @@ const AIWorkflowShowcase = () => {
           <p className="mx-auto max-w-4xl text-base leading-relaxed text-[#143057]/80 md:text-lg">
             データ統合と専門家の判断力を一つのダッシュボードに束ね、計画立案から金融交渉、現場実行まで“同じ地図”で走り切れる状態をつくります。どの会議でも胸を張って次の一手を語れるよう、論点の抜け漏れを無くし、経営陣と現場の納得感を高める再生プロセスです。
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-10 rounded-[32px] border border-[#0f2647]/10 bg-white/85 p-6 shadow-[0_30px_70px_rgba(8,26,51,0.14)] backdrop-blur"
+        >
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="space-y-3">
+              <p className="inline-flex items-center gap-2 rounded-full bg-[#eff5ff] px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0f2647]">
+                30秒サマリー
+              </p>
+              <ul className="space-y-2 text-sm leading-relaxed text-[#143057]/80">
+                {workflowQuickSummary.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-[#2b7df4]" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-3 rounded-[24px] border border-[#2b7df4]/25 bg-[#f3f8ff] p-5">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#2b7df4]">
+                次のアクション
+              </p>
+              <ul className="space-y-2 text-sm leading-relaxed text-[#143057]/80">
+                {workflowNextActions.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <ArrowRight className="mt-1 h-4 w-4 flex-shrink-0 text-[#2b7df4]" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </ScrollReveal>
 
         <ScrollReveal variant="fade-up" className="mt-8 flex flex-wrap items-center justify-center gap-3">

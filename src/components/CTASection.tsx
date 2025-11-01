@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { PRIMARY_CTA } from "@/lib/ctaVariants";
+import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { submitContactFormToWordPress } from "@/lib/wordpress";
 import { cn } from "@/lib/utils";
 
@@ -63,6 +63,12 @@ const bookingMetrics = [
     label: "再生伴走",
     helper: "九州・西日本の再生案件を支援",
   },
+];
+
+const sampleSummary = [
+  "再生設計図ドラフトのサンプル3枚と、銀行共有用テンプレート付き",
+  "粗利・キャッシュ・人材の改善ストーリーを色分けしたダッシュボード例",
+  "意思決定ログと週次レビューのチェックリストを同梱",
 ];
 
 const CTASection = () => {
@@ -147,6 +153,48 @@ const CTASection = () => {
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
             生成AIと専門家の伴走で、再生の道筋をともに設計しましょう。数字とストーリーを揃え、どの会議でも堂々と語れる状態づくりを支援します。
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-10 grid gap-6 rounded-[28px] border border-white/12 bg-white/10 p-6 text-left shadow-[0_30px_80px_rgba(3,14,32,0.55)] backdrop-blur lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]"
+        >
+          <div className="space-y-4">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+              診断レポート サンプルで確認
+            </p>
+            <h3 className="text-xl font-semibold leading-relaxed text-white md:text-2xl">
+              3分で「どんな成果物が届くか」を確認できる資料セットを即ダウンロード
+            </h3>
+            <ul className="space-y-2 text-sm leading-relaxed text-slate-200/85">
+              {sampleSummary.map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex flex-col justify-between gap-4 rounded-[24px] border border-cyan-300/30 bg-cyan-500/10 p-6 text-white">
+            <div className="space-y-2 text-sm leading-relaxed text-slate-100/90">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/90">ダウンロード特典</p>
+              <p>
+                銀行説明用スライド、週次レビュー議事録テンプレ、KPIダッシュボードのハイライトをまとめています。社内展開や決裁準備にそのまま活用いただけます。
+              </p>
+            </div>
+            <Button
+              type="button"
+              variant="cta"
+              size="lg"
+              className="w-full justify-center rounded-full text-sm font-bold interactive-cta"
+              data-cta-id={`${TERTIARY_CTA.id}-cta-highlight`}
+              onClick={() => window.open(TERTIARY_CTA.href, "_blank", "noreferrer")}
+            >
+              {TERTIARY_CTA.label}
+              <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+            </Button>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/85">PDF &amp; デモ画面セット</p>
+          </div>
         </ScrollReveal>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">

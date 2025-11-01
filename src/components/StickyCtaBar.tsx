@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 const StickyCtaBar = () => {
   const [isCompact, setIsCompact] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [formStep, setFormStep] = useState<1 | 2>(1);
 
   useEffect(() => {
     let rafId = 0;
@@ -43,6 +44,23 @@ const StickyCtaBar = () => {
         window.cancelAnimationFrame(rafId);
       }
       ticking = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleProgressChange = (event: Event) => {
+      const customEvent = event as CustomEvent<{ step?: number }>;
+      const nextStep = customEvent.detail?.step;
+
+      if (nextStep === 1 || nextStep === 2) {
+        setFormStep(nextStep);
+      }
+    };
+
+    window.addEventListener("cta-progress-change", handleProgressChange as EventListener);
+
+    return () => {
+      window.removeEventListener("cta-progress-change", handleProgressChange as EventListener);
     };
   }, []);
 
@@ -90,6 +108,20 @@ const StickyCtaBar = () => {
           </div>
 
           <div className="flex items-center justify-center gap-2 md:justify-end">
+            <div className="hidden flex-col gap-2 text-left md:flex md:w-56">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-highlight">
+                所要時間 約60秒｜必須入力2項目から
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="relative h-2 flex-1 overflow-hidden rounded-full bg-highlight/10" aria-hidden="true">
+                  <div
+                    className="h-full rounded-full bg-highlight transition-all duration-500"
+                    style={{ width: `${(formStep / 2) * 100}%` }}
+                  />
+                </div>
+                <span className="text-xs font-semibold text-muted-foreground">STEP {formStep}/2</span>
+              </div>
+            </div>
             <Button
               type="button"
               variant="cta"

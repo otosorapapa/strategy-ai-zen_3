@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Button, buttonVariants } from "@/components/ui/button";
 import heroConsultingImage from "@/assets/hero-consulting.jpg";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
@@ -87,7 +89,34 @@ const heroSummaryHighlights = [
   },
 ];
 
+const heroProcessSteps = [
+  {
+    icon: Compass,
+    title: "48H診断",
+    description: "AIが粗利・資金・人材の歪みを即スキャンし、意思決定の焦点を提示",
+  },
+  {
+    icon: Sparkle,
+    title: "再生設計",
+    description: "診断士が現場の制約と金融機関の視点を織り込み、実行シナリオを共創",
+  },
+  {
+    icon: Landmark,
+    title: "伴走・交渉",
+    description: "銀行・現場の合意形成に必要な資料と行動を週次で更新し、納得度を維持",
+  },
+];
+
+const heroIntroCopy = {
+  short:
+    "財務の減速や現場の疲弊が進む前に、再生に必要な指標・シナリオ・交渉材料を一枚に束ねます。主要指標の優先順位と即応アクションを48時間で揃え、迷いを断ち切る判断軸を提示します。",
+  extended:
+    "生成AIが粗利・資金・人材の歪みを色分けし、診断士が現場ヒアリングで実行条件を翻訳。銀行説明・現場アクション・経営会議のストーリーを一本化し、意思決定リードタイムを平均1/3に短縮します。",
+};
+
 const HeroSection = () => {
+  const [isDetailOpen, setIsDetailOpen] = useState(false);
+
   const scrollToContact = () => {
     const target = document.getElementById("cta-section");
     target?.scrollIntoView({ behavior: "smooth" });
@@ -106,9 +135,56 @@ const HeroSection = () => {
               <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
                 48時間で未来の打ち手が揃う。AIが導き、診断士が実装まで描き切る“再生設計図”
               </h1>
+              <div className="grid gap-3 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
+                {heroProcessSteps.map(({ icon: Icon, title, description }) => (
+                  <div key={title} className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4">
+                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                      <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                      {title}
+                    </div>
+                    <p className="text-xs leading-relaxed text-slate-100/80">{description}</p>
+                  </div>
+                ))}
+              </div>
               <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">
-                財務の減速や現場の疲弊が進む前に、再生に必要な指標・シナリオ・交渉材料を一枚に束ねます。初回セッションで優先仮説と次の一手を提示し、意思決定を止めないための合意形成プロセスを整備します。
+                {heroIntroCopy.short}
               </p>
+              <div className="max-w-3xl space-y-3">
+                <div
+                  className={cn(
+                    "grid overflow-hidden transition-all duration-500",
+                    isDetailOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                  )}
+                  aria-hidden={!isDetailOpen}
+                >
+                  <div
+                    id="hero-detail-copy"
+                    className="min-h-0 text-[1.05rem] leading-relaxed text-slate-100/80 md:text-lg"
+                  >
+                    {heroIntroCopy.extended}
+                  </div>
+                </div>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  className="group h-auto w-fit rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90"
+                  onClick={() => setIsDetailOpen((prev) => !prev)}
+                  aria-expanded={isDetailOpen}
+                  aria-controls="hero-detail-copy"
+                >
+                  <span className="flex items-center gap-2 text-[0.7rem] normal-case tracking-[0.08em] text-white/80 group-hover:text-white">
+                    {isDetailOpen ? "詳細を閉じる" : "詳細を開いて効果シナリオを見る"}
+                    <ArrowRight
+                      className={cn(
+                        "h-4 w-4 transition-transform",
+                        isDetailOpen ? "rotate-90" : "translate-x-0",
+                      )}
+                      aria-hidden="true"
+                    />
+                  </span>
+                </Button>
+              </div>
               <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 sm:grid-cols-3">
                 {heroSummaryHighlights.map(({ icon: Icon, title, description, eyebrow }) => (
                   <div

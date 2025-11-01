@@ -5,6 +5,7 @@ import wholesaleLeader from "@/assets/financial-analysis.jpg";
 import serviceLeader from "@/assets/ai-illustration.jpg";
 import {
   ArrowRight,
+  CheckCircle2,
   Gauge,
   Landmark,
   LineChart,
@@ -17,6 +18,18 @@ const trustBadges = [
   "中小企業診断士チーム常駐",
   "金融機関連携テンプレ完備",
   "福岡・九州100社超の伴走",
+];
+
+const resultsQuickSummary = [
+  "営業利益+12%、債務超過解消率80%（例）など九州エリアで蓄積した成果指標",
+  "48時間診断→再生設計→金融交渉の3ステップで意思決定リードタイムを1/3に短縮",
+  "銀行・現場・役員会が同じダッシュボードを共有し、判断と行動のズレを解消",
+];
+
+const resultsMomentumLevers = [
+  "金融機関とのエビデンス共有で条件交渉を先手に進める",
+  "AIと診断士が週次で改善仮説を検証し、粗利とキャッシュの波形を同期",
+  "現場タスクとKPIを結ぶ設計図で、会議後すぐに行動へ移せる状態を維持",
 ];
 
 const resultMetrics = [
@@ -111,7 +124,7 @@ const ResultsSection = () => {
             Impact｜結果で語る
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            「再生の設計図」が整うと、数字と行動が同じ未来を指すコンパスに変わる
+            福岡・九州の中小企業再生実績｜「再生の設計図」が整うと数字と行動が同じ未来を指す
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
             仮説を語るだけでは反転は起こりません。ZENは実行に耐えるプロセスを作り込み、粗利・資金・人材の波形を同時に整えることで、経営者が迷いなく次のステップを選べる状態を守り抜きます。
@@ -126,6 +139,40 @@ const ResultsSection = () => {
                 {badge}
               </span>
             ))}
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-10 grid gap-6 rounded-[32px] border border-white/12 bg-white/10 p-6 text-left shadow-[0_28px_70px_rgba(2,12,32,0.5)] backdrop-blur"
+        >
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="space-y-3">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+                30秒サマリー
+              </p>
+              <ul className="space-y-2 text-sm leading-relaxed text-slate-200/85">
+                {resultsQuickSummary.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="space-y-3 rounded-[24px] border border-cyan-300/30 bg-cyan-500/10 p-5">
+              <p className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                成果を引き上げるレバー
+              </p>
+              <ul className="space-y-2 text-sm leading-relaxed text-slate-100/85">
+                {resultsMomentumLevers.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <ArrowRight className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </ScrollReveal>
 

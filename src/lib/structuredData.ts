@@ -159,6 +159,14 @@ export const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "フォーム入力はどれくらい時間がかかりますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "所要時間は約60秒で、必須項目はメールアドレスと会社規模のみ。続くステップで会社名や課題を共有いただくと、翌営業日に優先アクション案をお届けします。",
+      },
+    },
+    {
+      "@type": "Question",
       name: "AI診断はどのように進みますか？",
       acceptedAnswer: {
         "@type": "Answer",

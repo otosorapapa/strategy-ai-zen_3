@@ -5,6 +5,7 @@ import representativeImage from "@/assets/representative_.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
+import { CheckCircle2 } from "lucide-react";
 
 type FAQ = {
   question: string;
@@ -43,6 +44,35 @@ const faqs: FAQ[] = [
                 <span>改善のROIが高い仮説に対し、ToDoと担当配置の初期案をセットで共有。</span>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    question: "フォーム入力はどれくらい時間がかかりますか？",
+    lead: "所要時間は約60秒。必須項目はメールアドレスと会社規模だけです。",
+    metric: "60sec",
+    metricLabel: "入力時間",
+    answer: (
+      <div className="space-y-4 text-base text-[#1e3359]/85">
+        <p>
+          STEP1ではメールアドレスと会社規模を入力し、仮説メモをお送りする準備を整えます。STEP2で会社名・担当者名・任意の課題を共有いただくと、翌営業日までに再生仮説メモと優先アクション案をお届けします。
+        </p>
+        <div className="grid gap-3 rounded-2xl border border-dashed border-[#0b1f3f]/15 bg-white/80 p-4 shadow-sm">
+          <div className="flex items-start gap-3">
+            <CheckCircle2 className="mt-1 h-5 w-5 text-[#0b5cff]" aria-hidden="true" />
+            <div>
+              <p className="text-sm font-semibold text-[#0b1f3f]">STEP1（約30秒）</p>
+              <p className="text-sm text-[#1e3359]/75">メール・会社規模のみ入力で次に進め、優先仮説メモの準備が開始されます。</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <CheckCircle2 className="mt-1 h-5 w-5 text-[#0b5cff]" aria-hidden="true" />
+            <div>
+              <p className="text-sm font-semibold text-[#0b1f3f]">STEP2（約30秒）</p>
+              <p className="text-sm text-[#1e3359]/75">会社名・ご担当者名・任意の課題を共有いただくと、翌営業日に優先アクション案をお送りします。</p>
+            </div>
           </div>
         </div>
       </div>

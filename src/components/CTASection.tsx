@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import {
   AlertCircle,
   ArrowLeft,
@@ -126,10 +126,22 @@ const contactValuePoints = [
 ];
 
 const trustReassurances = [
-  "福岡銀行・北九州銀行など主要行との協働実績", 
+  "福岡銀行・北九州銀行など主要行との協働実績",
   "再生案件の平均CV回復率 180%（過去3年）",
   "中小企業庁登録診断士チームが直接対応",
 ];
+
+const testimonialVideo = {
+  url: "https://www.youtube.com/embed/2Xc9gXyf2G4?rel=0",
+  title: "地域金融機関との共創インタビュー",
+  description:
+    "福岡の地方銀行・企業再生部門とのディスカッションを収録。合意形成を加速させる資料構成と、AIを交えた意思決定プロセスの実際を語っています。",
+  highlights: [
+    "銀行稟議で評価された“因果が見える”レポート構成",
+    "週次レビューで交渉準備が1/2になった実例",
+    "データ共有の安全性とステークホルダー連携の進め方",
+  ],
+};
 
 const CTASection = () => {
   const { toast } = useToast();
@@ -143,9 +155,20 @@ const CTASection = () => {
   const [consent, setConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [currentStep, setCurrentStep] = useState<1 | 2>(1);
+  const totalSteps = 2;
+  const stepProgress = Math.round((currentStep / totalSteps) * 100);
+  const remainingTimeLabel = currentStep === 1 ? "残り約40秒" : "残り約20秒";
 
   const selectedRequest = requestOptions.find((option) => option.value === requestType) ?? requestOptions[0];
   const isStepTwo = currentStep === 2;
+
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent("cta-progress-change", {
+        detail: { step: currentStep },
+      }),
+    );
+  }, [currentStep]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -281,6 +304,38 @@ const CTASection = () => {
           </div>
         </ScrollReveal>
 
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-8 grid gap-6 rounded-[28px] border border-white/12 bg-white/5 p-6 shadow-[0_25px_70px_rgba(3,14,32,0.5)] backdrop-blur lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]"
+        >
+          <div className="aspect-video w-full overflow-hidden rounded-[20px] border border-white/15 bg-black/70 shadow-lg">
+            <iframe
+              src={testimonialVideo.url}
+              title={testimonialVideo.title}
+              className="h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+          <div className="flex flex-col justify-between gap-4 text-sm leading-relaxed text-slate-200/85">
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/85">金融機関の声</p>
+              <h3 className="text-xl font-semibold text-white md:text-2xl">{testimonialVideo.title}</h3>
+              <p>{testimonialVideo.description}</p>
+            </div>
+            <ul className="space-y-2">
+              {testimonialVideo.highlights.map((point) => (
+                <li key={point} className="flex items-start gap-2 text-sm">
+                  <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">3分で合意形成の裏側を確認</p>
+          </div>
+        </ScrollReveal>
+
         <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
           <ScrollReveal
             variant="fade-up"
@@ -398,19 +453,35 @@ const CTASection = () => {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="flex flex-col gap-2 rounded-2xl border border-[#0b1f3f]/10 bg-[#f3f7ff] p-4 text-sm text-[#1e3359]/80">
+                <div className="flex flex-col gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#eef4ff] p-4 text-sm text-[#1e3359]/80">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-                      STEP {currentStep} / 2
+                      STEP {currentStep} / {totalSteps}
                     </span>
                     <span className="font-semibold text-[#0b1f3f]">
-                      {isStepTwo ? "詳細ヒアリング" : "連絡先"}
+                      {isStepTwo ? "詳細ヒアリング" : "連絡先の入力"}
                     </span>
                   </div>
+                  <div
+                    className="h-2 w-full overflow-hidden rounded-full bg-[#d1dcf5]"
+                    role="progressbar"
+                    aria-label="フォーム入力の進捗"
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={stepProgress}
+                  >
+                    <div
+                      className="h-full rounded-full bg-[#0584c6] transition-all duration-500"
+                      style={{ width: `${stepProgress}%` }}
+                    />
+                  </div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/60">
+                    所要時間 約60秒｜必須入力2項目のみでスタート（{remainingTimeLabel}）
+                  </p>
                   <p className="text-xs leading-relaxed">
                     {isStepTwo
                       ? "頂いた情報を基に、仮説メモと優先アクション案を準備してご連絡します。"
-                      : "まずはメールと規模感のみ。次のステップで詳細を伺います。"}
+                      : "まずはメールアドレスと会社規模をお知らせください。次のステップで詳細を伺います。"}
                   </p>
                 </div>
 
@@ -454,7 +525,7 @@ const CTASection = () => {
                       data-cta-id={`${PRIMARY_CTA.id}-form-step1`}
                     >
                       <span className="flex items-center justify-center gap-2">
-                        次へ（優先課題を共有）
+                        次へ（{remainingTimeLabel}）
                         <ArrowRight className="h-5 w-5" aria-hidden="true" />
                       </span>
                     </Button>

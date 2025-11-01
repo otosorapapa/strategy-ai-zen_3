@@ -22,11 +22,11 @@ export type TertiaryCtaContent = {
 
 export const PRIMARY_CTA: PrimaryCtaContent = {
   id: "primary",
-  label: "AIと専門家が描く“再生の設計図”を無料で確認する",
-  benefitCopy: "短時間で再生シグナルのドラフトを提示",
+  label: "45分で自社の改善シナリオを受け取る（無料）",
+  benefitCopy: "再生仮説メモと優先アクション案を当日共有",
   benefitCopyAlt: "粗利・キャッシュ・人材の歪みを即可視化",
   supportText:
-    "代表・古町（中小企業診断士）が直接ヒアリングし、生成AIが抽出した歪みと優先仮説を即日共有します。次の会議で語れるストーリーと資料案をご用意します。",
+    "代表・古町（中小企業診断士）が直接ヒアリングし、生成AIが抽出した歪みと優先仮説を即日共有。銀行説明や社内会議でそのまま使えるシナリオと資料の骨子をお渡しします。",
 };
 
 export const SECONDARY_CTA: SecondaryCtaContent = {

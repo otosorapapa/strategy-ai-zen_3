@@ -17,6 +17,8 @@ import useInteractiveCtaFeedback from "@/hooks/useInteractiveCtaFeedback";
 import useFadeInSections from "@/hooks/useFadeInSections";
 import SectionNavigationMap from "@/components/SectionNavigationMap";
 import ComparisonSection from "@/components/ComparisonSection";
+import PainChecklistSection from "@/components/PainChecklistSection";
+import MidPageCtaSection from "@/components/MidPageCtaSection";
 
 const Index = () => {
   useInteractiveCtaFeedback();
@@ -28,6 +30,7 @@ const Index = () => {
       <StickyCtaBar />
       <HeroSection />
       <SectionNavigationMap />
+      <PainChecklistSection />
       <InsightSpotlight />
       <ProblemSection />
       <SolutionSection />
@@ -36,6 +39,7 @@ const Index = () => {
       <ResultsSection />
       <DashboardShowcase />
       <OfferSection />
+      <MidPageCtaSection />
       <SecurityPrivacySection />
       <FAQSection />
       <CTASection />

@@ -85,7 +85,10 @@ const workflowNextActions = [
 
 const AIWorkflowShowcase = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#ecf3ff] via-[#f4f8ff] to-white py-24 text-[#081a33]">
+    <section
+      id="how-section"
+      className="relative overflow-hidden bg-gradient-to-b from-[#ecf3ff] via-[#f4f8ff] to-white py-24 text-[#081a33]"
+    >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top,_rgba(44,123,255,0.18),_transparent_60%)]" />
       <div className="container relative mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-5 text-center">

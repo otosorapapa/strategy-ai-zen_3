@@ -161,6 +161,7 @@ const faqs: FAQ[] = [
 const FAQSection = () => {
   return (
     <section
+      id="faq-section"
       className="relative overflow-hidden bg-gradient-to-b from-[#edf3ff] via-white to-[#f3f6ff] py-24"
       aria-labelledby="faq-heading"
     >

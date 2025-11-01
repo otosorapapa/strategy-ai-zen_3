@@ -1,10 +1,12 @@
 import { useId, useState } from "react";
 import {
   AlertCircle,
+  ArrowLeft,
   ArrowRight,
   Building2,
   CheckCircle2,
   Loader2,
+  MessageCircleQuestion,
   ShieldCheck,
   Timer,
 } from "lucide-react";
@@ -71,6 +73,37 @@ const sampleSummary = [
   "意思決定ログと週次レビューのチェックリストを同梱",
 ];
 
+const caseStudyHighlights = [
+  {
+    stat: "+12%",
+    label: "粗利改善",
+    description: "6ヶ月で主要製品ラインの粗利率が12%向上し、固定費を賄える水準に回復",
+  },
+  {
+    stat: "45日",
+    label: "資金繰り安定",
+    description: "銀行交渉を3回実施し、運転資金枠を45日延長。仕入れの停止リスクを解消",
+  },
+  {
+    stat: "1.8x",
+    label: "会議生産性",
+    description: "週次会議の意思決定速度が1.8倍に。現場との共有資料数を半減",
+  },
+];
+
+const faqShortcuts = [
+  {
+    href: "#faq-section",
+    label: "無料相談で得られるもの",
+    description: "48時間診断の流れを確認",
+  },
+  {
+    href: "#faq-section",
+    label: "データ準備の不安",
+    description: "紙・Excelでも開始できる理由",
+  },
+];
+
 const CTASection = () => {
   const { toast } = useToast();
   const formId = useId();
@@ -81,15 +114,35 @@ const CTASection = () => {
   const [message, setMessage] = useState("");
   const [consent, setConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [currentStep, setCurrentStep] = useState<1 | 2>(1);
 
   const selectedRequest = requestOptions.find((option) => option.value === requestType) ?? requestOptions[0];
+  const isStepTwo = currentStep === 2;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    if (currentStep === 1) {
+      if (!email || !company || !name) {
+        toast({
+          title: "必須項目を入力してください",
+          description: "メールアドレス・会社名・お名前を入力すると詳細ステップに進めます。",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      setCurrentStep(2);
+      toast({
+        title: "あと少しで送信できます",
+        description: "具体的な課題やご希望を共有いただくと、より精緻な提案が可能です。",
+      });
+      return;
+    }
+
     if (!consent) {
       toast({
-        title: "利用規約への同意が必要です", 
+        title: "利用規約への同意が必要です",
         description: "お問い合わせの前に同意にチェックを入れてください。",
         variant: "destructive",
       });
@@ -124,6 +177,7 @@ const CTASection = () => {
       setMessage("");
       setConsent(false);
       setRequestType("consultation");
+      setCurrentStep(1);
     } catch (error) {
       console.error("Failed to submit contact form", error);
       toast({
@@ -268,98 +322,200 @@ const CTASection = () => {
             variant="fade-up"
             className="rounded-[32px] border border-white/10 bg-white p-8 text-[#0b1f3f] shadow-[0_30px_80px_rgba(5,20,45,0.25)]"
           >
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="space-y-2">
-                <Label htmlFor={`${formId}-email`} className="text-sm font-semibold text-[#0b1f3f]">
-                  メールアドレス <span className="text-[#0584c6]">*</span>
-                </Label>
-                <Input
-                  id={`${formId}-email`}
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                  placeholder="例）info@example.jp"
-                />
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="space-y-2">
-                  <Label htmlFor={`${formId}-company`} className="text-sm font-semibold text-[#0b1f3f]">
-                    会社名 <span className="text-[#0584c6]">*</span>
-                  </Label>
-                  <Input
-                    id={`${formId}-company`}
-                    required
-                    value={company}
-                    onChange={(event) => setCompany(event.target.value)}
-                    placeholder="例）株式会社〇〇"
-                  />
+            <div className="space-y-6">
+              <div className="space-y-4 rounded-[28px] border border-[#0b1f3f]/10 bg-[#f4f8ff] p-6 text-[#1e3359]/85">
+                <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/70">
+                  <CheckCircle2 className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />
+                  Case Study Digest
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor={`${formId}-name`} className="text-sm font-semibold text-[#0b1f3f]">
-                    お名前 <span className="text-[#0584c6]">*</span>
-                  </Label>
-                  <Input
-                    id={`${formId}-name`}
-                    required
-                    value={name}
-                    onChange={(event) => setName(event.target.value)}
-                    placeholder="例）山田 太郎"
-                  />
+                <h3 className="text-xl font-semibold text-[#0b1f3f]">直近12ヶ月の再生成功パターン</h3>
+                <ul className="grid gap-3 sm:grid-cols-3">
+                  {caseStudyHighlights.map((item) => (
+                    <li key={item.label} className="rounded-2xl border border-[#0b1f3f]/10 bg-white/70 p-4 shadow-sm">
+                      <p className="text-2xl font-bold text-[#0b1f3f]">{item.stat}</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{item.label}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-[#1e3359]/80">{item.description}</p>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-3">
+                  {faqShortcuts.map((shortcut) => (
+                    <a
+                      key={shortcut.label}
+                      href={shortcut.href}
+                      className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/15 bg-white px-4 py-2 text-xs font-semibold text-[#0b1f3f] transition hover:border-[#0584c6]/60 hover:text-[#0584c6]"
+                    >
+                      <MessageCircleQuestion className="h-4 w-4" aria-hidden="true" />
+                      <span className="text-left">
+                        {shortcut.label}
+                        <span className="block text-[0.7rem] font-normal text-[#1e3359]/70">{shortcut.description}</span>
+                      </span>
+                    </a>
+                  ))}
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor={`${formId}-message`} className="text-sm font-semibold text-[#0b1f3f]">
-                  共有したい課題・現状
-                </Label>
-                <Textarea
-                  id={`${formId}-message`}
-                  rows={4}
-                  value={message}
-                  onChange={(event) => setMessage(event.target.value)}
-                  placeholder="現状の課題やご相談内容をご自由にご記入ください"
-                />
-              </div>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="flex flex-col gap-2 rounded-2xl border border-[#0b1f3f]/10 bg-[#f3f7ff] p-4 text-sm text-[#1e3359]/80">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
+                      STEP {currentStep} / 2
+                    </span>
+                    <span className="font-semibold text-[#0b1f3f]">
+                      {isStepTwo ? "詳細ヒアリング" : "連絡先"}
+                    </span>
+                  </div>
+                  <p className="text-xs leading-relaxed">
+                    {isStepTwo
+                      ? "頂いた情報を基に、仮説メモと優先アクション案を準備してご連絡します。"
+                      : "まずは連絡先のみ。次のステップで課題やご希望を伺います。"}
+                  </p>
+                </div>
 
-              <div className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f2f7ff] p-4 text-sm leading-relaxed text-[#1e3359]/80">
-                <Checkbox
-                  id={`${formId}-consent`}
-                  checked={consent}
-                  onCheckedChange={(checked) => setConsent(Boolean(checked))}
-                />
-                <Label htmlFor={`${formId}-consent`} className="cursor-pointer">
-                  お問い合わせ内容は利用規約およびプライバシーポリシーに基づき管理されます。内容に同意のうえ、送信してください。
-                </Label>
-              </div>
+                {!isStepTwo ? (
+                  <>
+                    <div className="space-y-2">
+                      <Label htmlFor={`${formId}-email`} className="text-sm font-semibold text-[#0b1f3f]">
+                        メールアドレス <span className="text-[#0584c6]">*</span>
+                      </Label>
+                      <Input
+                        id={`${formId}-email`}
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                        placeholder="例）info@example.jp"
+                      />
+                    </div>
 
-              <Button
-                type="submit"
-                className="w-full justify-center rounded-full bg-[#0584c6] py-4 text-base font-bold text-white shadow-[0_18px_40px_rgba(5,132,198,0.35)] transition hover:bg-[#0aa3e0]"
-                data-cta-id={`${PRIMARY_CTA.id}-form`}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
-                    送信中...
-                  </span>
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <div className="space-y-2">
+                        <Label htmlFor={`${formId}-company`} className="text-sm font-semibold text-[#0b1f3f]">
+                          会社名 <span className="text-[#0584c6]">*</span>
+                        </Label>
+                        <Input
+                          id={`${formId}-company`}
+                          required
+                          value={company}
+                          onChange={(event) => setCompany(event.target.value)}
+                          placeholder="例）株式会社〇〇"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor={`${formId}-name`} className="text-sm font-semibold text-[#0b1f3f]">
+                          お名前 <span className="text-[#0584c6]">*</span>
+                        </Label>
+                        <Input
+                          id={`${formId}-name`}
+                          required
+                          value={name}
+                          onChange={(event) => setName(event.target.value)}
+                          placeholder="例）山田 太郎"
+                        />
+                      </div>
+                    </div>
+
+                    <Button
+                      type="submit"
+                      className="w-full justify-center rounded-full bg-[#0584c6] py-4 text-base font-bold text-white shadow-[0_18px_40px_rgba(5,132,198,0.35)] transition hover:bg-[#0aa3e0]"
+                      data-cta-id={`${PRIMARY_CTA.id}-form-step1`}
+                    >
+                      <span className="flex items-center justify-center gap-2">
+                        次へ（優先課題を共有）
+                        <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                      </span>
+                    </Button>
+                  </>
                 ) : (
-                  <span className="flex items-center justify-center gap-2">
-                    {PRIMARY_CTA.label}
-                    <ArrowRight className="h-5 w-5" aria-hidden="true" />
-                  </span>
-                )}
-              </Button>
+                  <>
+                    <div className="rounded-2xl border border-[#0b1f3f]/10 bg-[#f6f9ff] p-4 text-sm text-[#1e3359]/80">
+                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">確認済みの情報</p>
+                      <dl className="mt-2 grid gap-2 md:grid-cols-2">
+                        <div>
+                          <dt className="text-xs text-[#0b1f3f]/60">メール</dt>
+                          <dd className="text-sm font-semibold text-[#0b1f3f]">{email}</dd>
+                        </div>
+                        <div>
+                          <dt className="text-xs text-[#0b1f3f]/60">会社名</dt>
+                          <dd className="text-sm font-semibold text-[#0b1f3f]">{company}</dd>
+                        </div>
+                        <div>
+                          <dt className="text-xs text-[#0b1f3f]/60">お名前</dt>
+                          <dd className="text-sm font-semibold text-[#0b1f3f]">{name}</dd>
+                        </div>
+                        <div>
+                          <dt className="text-xs text-[#0b1f3f]/60">選択メニュー</dt>
+                          <dd className="text-sm font-semibold text-[#0b1f3f]">{selectedRequest.title}</dd>
+                        </div>
+                      </dl>
+                    </div>
 
-              <div className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f6f9ff] p-4 text-xs text-[#1e3359]/80">
-                <AlertCircle className="mt-0.5 h-4 w-4 text-[#0584c6]" aria-hidden="true" />
-                <p>
-                  送信後は代表または専門チームより迅速にご連絡します。お急ぎの方はお電話（092-231-2920）でも承ります。
-                </p>
-              </div>
-            </form>
+                    <div className="space-y-2">
+                      <Label htmlFor={`${formId}-message`} className="text-sm font-semibold text-[#0b1f3f]">
+                        共有したい課題・現状
+                      </Label>
+                      <Textarea
+                        id={`${formId}-message`}
+                        rows={4}
+                        value={message}
+                        onChange={(event) => setMessage(event.target.value)}
+                        placeholder="直近の課題や実現したい姿、関係者の状況などをご記入ください"
+                      />
+                    </div>
+
+                    <div className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f2f7ff] p-4 text-sm leading-relaxed text-[#1e3359]/80">
+                      <Checkbox
+                        id={`${formId}-consent`}
+                        checked={consent}
+                        onCheckedChange={(checked) => setConsent(Boolean(checked))}
+                      />
+                      <Label htmlFor={`${formId}-consent`} className="cursor-pointer">
+                        お問い合わせ内容は利用規約およびプライバシーポリシーに基づき管理されます。内容に同意のうえ、送信してください。
+                      </Label>
+                    </div>
+
+                    <div className="flex flex-col gap-3 sm:flex-row">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        className="flex-1 justify-center rounded-full border border-[#0b1f3f]/20 bg-white py-4 text-sm font-semibold text-[#0b1f3f] hover:border-[#0584c6] hover:text-[#0584c6]"
+                        onClick={() => setCurrentStep(1)}
+                      >
+                        <span className="flex items-center justify-center gap-2">
+                          <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                          戻って修正する
+                        </span>
+                      </Button>
+                      <Button
+                        type="submit"
+                        className="flex-1 justify-center rounded-full bg-[#0584c6] py-4 text-base font-bold text-white shadow-[0_18px_40px_rgba(5,132,198,0.35)] transition hover:bg-[#0aa3e0]"
+                        data-cta-id={`${PRIMARY_CTA.id}-form`}
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? (
+                          <span className="flex items-center justify-center gap-2">
+                            <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
+                            送信中...
+                          </span>
+                        ) : (
+                          <span className="flex items-center justify-center gap-2">
+                            {PRIMARY_CTA.label}
+                            <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                          </span>
+                        )}
+                      </Button>
+                    </div>
+
+                    <div className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f6f9ff] p-4 text-xs text-[#1e3359]/80">
+                      <AlertCircle className="mt-0.5 h-4 w-4 text-[#0584c6]" aria-hidden="true" />
+                      <p>
+                        送信後は代表または専門チームより迅速にご連絡します。お急ぎの方はお電話（092-231-2920）でも承ります。
+                      </p>
+                    </div>
+                  </>
+                )}
+              </form>
+            </div>
           </ScrollReveal>
         </div>
       </div>

@@ -50,6 +50,49 @@ const faqs: FAQ[] = [
     ),
   },
   {
+    question: "補助金の申請支援は可能ですか？",
+    lead: "経営改善計画策定支援補助金の申請要件から書類作成まで伴走します。",
+    metric: "Full",
+    metricLabel: "補助金対応",
+    answer: (
+      <div className="space-y-4 text-base text-[#1e3359]/85">
+        <p>
+          初回相談時に補助金活用の意向とスケジュールを確認し、必要な財務指標や実行体制をヒアリングします。48時間で申請可否の見立てと不足情報を棚卸しし、経営改善計画のドラフトアウトラインを共有します。
+        </p>
+        <div className="grid gap-4 rounded-2xl border border-[#0b1f3f]/10 bg-white/85 p-4 md:grid-cols-2">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">提供するサポート</p>
+            <ul className="mt-1 space-y-1.5 text-sm">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
+                <span>金融機関ヒアリング用の論点メモと申請スケジュールの設計</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
+                <span>経営改善計画書（様式5号）ドラフトの作成と差分レビュー</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">参考リソース</p>
+            <p className="mt-1 text-sm text-[#1e3359]/80">
+              制度の詳細は中小企業庁の案内ページをご確認いただけます。
+              <br />
+              <a
+                href="https://www.chusho.meti.go.jp/keiei/saisei/05.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[#0b5cff] underline decoration-dotted underline-offset-4"
+              >
+                経営改善計画策定支援事業（公式サイト）
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
     question: "フォーム入力はどれくらい時間がかかりますか？",
     lead: "所要時間は約60秒。必須項目はメールアドレスと会社規模だけです。",
     metric: "60sec",

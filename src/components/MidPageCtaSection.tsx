@@ -27,12 +27,12 @@ const ctaCards: MidPageCta[] = [
   {
     id: "diagnostic",
     eyebrow: "15 MINUTE CHECK",
-    title: "資金繰りの詰まりを15分で可視化し、今週の打ち手を即断",
+    title: "15分ヒアリングで『資金繰り耐性スコア』をその場で受診",
     description:
       "AIDMAの『Desire→Memory』を切り替える短時間セッション。AIが直近12週間のキャッシュ波形を整理し、支払いインパクトの高い論点を色分けします。",
-    bullet: "銀行同席時に使えるキャッシュ耐性スナップショットを当日共有",
+    bullet: "銀行同席時に使えるキャッシュ耐性スナップショットと優先アクションを当日共有",
     action: {
-      label: "15分で受診する無料資金繰りチェック",
+      label: "15分ヒアリングを予約して耐性スコアを確認",
       type: "scroll",
       targetId: "cta-section",
       ctaId: "mid-cta-diagnostic",

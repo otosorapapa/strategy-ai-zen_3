@@ -5,6 +5,7 @@ import SolutionSection from "@/components/SolutionSection";
 import AIWorkflowShowcase from "@/components/AIWorkflowShowcase";
 import ResultsSection from "@/components/ResultsSection";
 import OfferSection from "@/components/OfferSection";
+import ComparisonSection from "@/components/ComparisonSection";
 import SecurityPrivacySection from "@/components/SecurityPrivacySection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
@@ -30,6 +31,7 @@ const Index = () => {
       <AIWorkflowShowcase />
       <ResultsSection />
       <OfferSection />
+      <ComparisonSection />
       <SecurityPrivacySection />
       <FAQSection />
       <CTASection />

@@ -4,12 +4,14 @@ import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
 import { cn } from "@/lib/utils";
 import {
+  Activity,
   ArrowRight,
   BriefcaseBusiness,
   CheckCircle2,
   Landmark,
   LineChart,
   Sparkle,
+  Target,
   Timer,
 } from "lucide-react";
 
@@ -38,6 +40,27 @@ const trustSignals = [
   { icon: Landmark, label: "中小企業庁 登録診断士" },
   { icon: BriefcaseBusiness, label: "再生案件 年間48件サポート" },
   { icon: LineChart, label: "専門誌『TURNAROUND』掲載" },
+];
+
+const heroImpactStats = [
+  {
+    icon: LineChart,
+    value: "+12%",
+    label: "営業利益改善幅",
+    helper: "再生後12ヶ月の平均伸長（例）",
+  },
+  {
+    icon: Activity,
+    value: "80%",
+    label: "債務超過解消率",
+    helper: "主要金融機関との再交渉成功割合（例）",
+  },
+  {
+    icon: Target,
+    value: "92%",
+    label: "合意形成継続率",
+    helper: "銀行同席レビューの継続率（例）",
+  },
 ];
 
 const HeroSection = () => {
@@ -78,6 +101,30 @@ const HeroSection = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-3">
+              {heroImpactStats.map((metric) => {
+                const Icon = metric.icon;
+
+                return (
+                  <div
+                    key={metric.label}
+                    className="rounded-3xl border border-white/15 bg-[#0b1f3f]/60 p-5 shadow-[0_20px_45px_rgba(2,12,30,0.4)] backdrop-blur"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-cyan-500/20 text-cyan-100">
+                        <Icon className="h-5 w-5" aria-hidden="true" />
+                      </span>
+                      <p className="text-2xl font-bold text-white">{metric.value}</p>
+                    </div>
+                    <p className="mt-2 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
+                      {metric.label}
+                    </p>
+                    <p className="mt-2 text-xs leading-relaxed text-slate-100/75">{metric.helper}</p>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="grid gap-6 rounded-[28px] border border-white/15 bg-white/5 p-6 shadow-[0_18px_55px_rgba(3,16,36,0.4)] backdrop-blur">

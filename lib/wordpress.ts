@@ -157,6 +157,7 @@ export type WordPressContactSubmission = {
   company: string;
   name: string;
   email: string;
+  companySize?: string;
   requestType: string;
   requestTypeLabel?: string;
   message: string;
@@ -433,6 +434,12 @@ const buildFormDataPayload = (
     "acceptance-privacy": consentValue,
     "accept-privacy": consentValue,
   };
+
+  if (payload.companySize) {
+    entries["company-size"] = payload.companySize;
+    entries["annual-revenue"] = payload.companySize;
+    entries["company_size"] = payload.companySize;
+  }
 
   if (payload.requestTypeLabel) {
     entries["request-type-label"] = payload.requestTypeLabel;

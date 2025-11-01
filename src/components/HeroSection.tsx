@@ -18,9 +18,9 @@ import {
 } from "lucide-react";
 
 const heroBullets = [
-  "生成AIが粗利・資金・市場トレンドを重ね合わせ、再生余地を色分けして提示",
-  "中小企業診断士が現場ヒアリングで制約条件を棚卸し、優先仮説とリスクを言語化",
-  "週次レビューで交渉資料と現場アクションを同期し、全員が共有できる未来像を整備",
+  "粗利・資金・人材をAIが同時解析し、優先順位を色分け",
+  "診断士が48時間で“次の一手”とリスクラインを文書化",
+  "銀行・現場が共有できる指標ボードと実行チェックリストを整備",
 ];
 
 const blueprintSteps = [
@@ -104,8 +104,11 @@ const HeroSection = () => {
                 使命｜判断力を取り戻す伴走
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
-                資金が尽きる前に、未来を読み直す。<br className="hidden md:block" />「生成AI × 専門家」が描き切る再生の設計図
+                48時間で未来の打ち手が揃う。AIが導き、診断士が実装まで描き切る“再生設計図”
               </h1>
+              <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">
+                財務の減速や現場の疲弊が進む前に、再生に必要な指標・シナリオ・交渉材料を一枚に束ねます。初回セッションで優先仮説と次の一手を提示し、意思決定を止めないための合意形成プロセスを整備します。
+              </p>
               <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 sm:grid-cols-3">
                 {heroSummaryHighlights.map(({ icon: Icon, title, description, eyebrow }) => (
                   <div
@@ -121,21 +124,17 @@ const HeroSection = () => {
                   </div>
                 ))}
               </div>
-              <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">
-                手元資金が減り、要となる人材が疲弊し、次の一手が霧の中に消えていく──その停滞は情熱不足ではなく「未来を読むための設計図」が卓上に存在しないからこそ起こります。<br className="hidden md:block" />
-                創和経営コンサルティングは、生成AIが読み解く外部データと診断士が現場で磨いてきた判断軸を束ね、貴社専用の“再生の設計図”をゼロから描き直します。数値が示す兆しと専門家の洞察を一枚のボードに統合し、これからの一年を反転させるための最初の決断を共に導きます。
-              </p>
             </div>
 
             <div className="space-y-4 rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
               <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200">
                 <Sparkle className="h-4 w-4" aria-hidden="true" />
-                ZEN Re-Design Blueprint
+                48H Blueprint Preview
               </div>
               <ul className="space-y-3 text-left text-sm leading-relaxed text-slate-100/85 md:text-base">
                 {heroBullets.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-cyan-400/20 text-xs font-bold text-cyan-100">●</span>
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-200" aria-hidden="true" />
                     <span>{item}</span>
                   </li>
                 ))}

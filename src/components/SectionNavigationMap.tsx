@@ -1,39 +1,25 @@
-import { ArrowRight, CircleDashed, Compass, Heart, Sparkles, Workflow } from "lucide-react";
+import { ArrowRight, CircleDashed, Compass, Layers, Workflow } from "lucide-react";
 
 const navigationItems = [
   {
-    id: "morse-copy-section",
-    label: "Flow Map",
-    title: "4段階コピーの全体像",
-    description: "「わかる→感じる→動きたくなる→実行できる」の俯瞰図を確認",
-    icon: Sparkles,
-  },
-  {
     id: "why-section",
-    label: "Stage 01",
-    title: "わかっていること",
-    description: "粗利・資金・人材が分断される真因と失速パターンを把握",
+    label: "Why",
+    title: "なぜ停滞するのか",
+    description: "資金・粗利・現場の分断要因と失速パターンを3分で把握",
     icon: Compass,
   },
   {
-    id: "before-after-section",
-    label: "Stage 02",
-    title: "感じていること",
-    description: "経営者の感情ジャーニーと共感のポイントを確認",
-    icon: Heart,
-  },
-  {
-    id: "segment-benefits-section",
-    label: "Stage 03",
-    title: "やりたいこと",
-    description: "業態別に次の一手とCTAを設計したカードを見る",
-    icon: ArrowRight,
+    id: "what-section",
+    label: "What",
+    title: "何を提供するのか",
+    description: "AI×診断士が描く“再生の設計図”と価値を確認",
+    icon: Layers,
   },
   {
     id: "how-section",
-    label: "Stage 04",
-    title: "どうしたらよいか",
-    description: "AI診断×診断士伴走の具体的な進め方と成果を確認",
+    label: "How",
+    title: "どう進めるのか",
+    description: "週次ワークフローと実行伴走の具体的な進め方を確認",
     icon: Workflow,
   },
 ];
@@ -49,7 +35,7 @@ const SectionNavigationMap = () => {
               Navigation Map
             </div>
             <p className="max-w-3xl text-[0.95rem] leading-relaxed">
-              モールスコピーで整理した「わかる→感じる→動きたくなる→実行できる」の流れを、スクロールに合わせてたどれるよう並べ替えました。気になるフェーズから即アクセスし、最適なCTAを選択してください。
+              「Why→What→How」の順に読み進めることで、再生の全体像と次のアクションを迷わず把握できます。気になるセクションから即座にアクセスしてください。
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">

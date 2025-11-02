@@ -195,13 +195,13 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Stage 01｜わかっていること
+            現場で起きていること
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            福岡・九州の再生案件で共通する「判断が遅れる」真因を言語化し、全員で共有する土台をつくる
+            福岡・九州の中小企業再生で頻発する課題｜判断の軸を一枚に集約し、未来を共有する
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            画像で整理したモールスコピーの第一段階に合わせ、現状の事実と構造を徹底的に描写します。粗利・資金・人材が別々に走っている現実、会議までに熱量が失われる構造をストーリー化し、「まずはここから整えるべきだ」と読者が腹落ちするよう再構成しました。
+            勇気や根性だけでは再生は加速しません。市場の揺らぎ、資金の波形、現場の実感を同じキャンバスに載せ、「どこから、どんな順番で」動くのかを揃える仕組みが必要です。生成AIと専門家の視点を束ね、断片的な情報を“未来の設計図”として再構築します。
           </p>
         </ScrollReveal>
 

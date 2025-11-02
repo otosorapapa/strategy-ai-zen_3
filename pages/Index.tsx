@@ -21,6 +21,7 @@ import PainChecklistSection from "@/components/PainChecklistSection";
 import MidPageCtaSection from "@/components/MidPageCtaSection";
 import StorySeriesSection from "@/components/StorySeriesSection";
 import PlansSection from "@/components/PlansSection";
+import ConsultantProfileSection from "@/components/ConsultantProfileSection";
 
 const Index = () => {
   useInteractiveCtaFeedback();
@@ -44,6 +45,7 @@ const Index = () => {
       <OfferSection />
       <MidPageCtaSection />
       <PlansSection />
+      <ConsultantProfileSection />
       <SecurityPrivacySection />
       <FAQSection />
       <CTASection />

@@ -68,17 +68,20 @@ const SegmentBenefitsSection = () => {
   };
 
   return (
-    <section className="fade-in-section bg-[#f6f9ff] py-24 text-[#0b1f3f]">
+    <section
+      id="segment-benefits-section"
+      className="fade-in-section bg-[#f6f9ff] py-24 text-[#0b1f3f]"
+    >
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            Segment Benefits
+            Stage 03｜やりたいこと
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            ターゲット別のベネフィットを明確化し、「自分ごと化」を後押し
+            業態別に「次の一手」を具体化し、行動したくなる理由と成果物を明確に提示
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/85 md:text-lg">
-            年商5,000万〜15億円の経営者でも、業態によって優先課題は異なります。ZENはAI診断と診断士の伴走を組み合わせ、業種ごとに刺さる成果物とKPIをカスタマイズします。
+            モールスコピー第三段階では、「やりたい」と思ってもらう条件を細かく提示します。年商5,000万〜15億円の経営者でも業態ごとに欲しいアウトプットが違うため、ZENはAI診断と診断士伴走を組み合わせた成果物・KPI・CTAをセグメント別に設計しました。
           </p>
         </ScrollReveal>
 

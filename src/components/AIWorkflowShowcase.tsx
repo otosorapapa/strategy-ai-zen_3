@@ -93,13 +93,13 @@ const AIWorkflowShowcase = () => {
       <div className="container relative mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-5 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#10294e]/10 bg-white/80 px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#10294e]/70 shadow-[0_10px_40px_rgba(16,41,78,0.08)]">
-            提供価値の全体像
+            Stage 04｜どうしたらよいか
           </span>
           <h2 className="text-3xl font-semibold leading-tight md:text-[2.5rem]">
-            AI × 専門家による経営再生支援で、再起のストーリーを一気通貫で描き直す
+            AI × 専門家伴走で「再生の設計図」を実装する4ステップと、得られる成果を具体的に提示
           </h2>
           <p className="mx-auto max-w-4xl text-base leading-relaxed text-[#143057]/80 md:text-lg">
-            データ統合と専門家の判断力を一つのダッシュボードに束ね、計画立案から金融交渉、現場実行まで“同じ地図”で走り切れる状態をつくります。どの会議でも胸を張って次の一手を語れるよう、論点の抜け漏れを無くし、経営陣と現場の納得感を高める再生プロセスです。
+            モールスコピー第四段階では、実際の進め方と提供価値を明示します。データ統合と診断士の判断力を一つのダッシュボードに束ね、計画立案から金融交渉、現場実行まで同じ地図で走り切るプロセスを視覚化しました。
           </p>
         </ScrollReveal>
 

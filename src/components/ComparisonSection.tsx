@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 
 const comparisonRows = [
   {
@@ -110,6 +111,13 @@ const ComparisonSection = () => {
             </div>
           ))}
         </ScrollReveal>
+
+        <SectionMicroCta
+          eyebrow="Micro CTA"
+          title="現在の顧問体制との違いを、個別比較レポートでご案内"
+          description="契約状況や月額費用を伺い、切替時のスケジュール・コスト・リスクをシートにまとめてお渡しします。迷っているポイントを事前にクリアにしましょう。"
+          ctaId="comparison-support"
+        />
       </div>
     </section>
   );

@@ -17,6 +17,7 @@ import {
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import problemInfographic from "@/assets/problem-infographic.svg";
 import financialAnalysis from "@/assets/financial-analysis.jpg";
 
@@ -603,6 +604,14 @@ const ProblemSection = () => {
           </ScrollReveal>
         </div>
       </div>
+
+      <SectionMicroCta
+        variant="dark"
+        eyebrow="Micro CTA"
+        title="課題が刺さったら、48時間診断で現状と優先度を確認"
+        description="無料相談で粗利・資金・現場の歪みをヒートマップ化し、どこから着手すべきかを専門家がコメントします。次の経営会議で使える要約メモをセットでお渡しします。"
+        ctaId="problem-insights"
+      />
     </section>
   );
 };

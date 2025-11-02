@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import resultBlueprint from "@/assets/dashboard-preview.jpg";
 import manufacturingLeader from "@/assets/growth-chart.jpg";
 import wholesaleLeader from "@/assets/financial-analysis.jpg";
@@ -446,6 +447,13 @@ const ResultsSection = () => {
           ))}
         </div>
       </div>
+      <SectionMicroCta
+        variant="dark"
+        eyebrow="Micro CTA"
+        title="成果指標の再現性を、貴社のKPIに当てはめてシミュレーション"
+        description="過去事例のROIデータとダッシュボードサンプルを共有し、粗利・キャッシュ・人材指標がどこまで動くかを無料診断で試算します。"
+        ctaId="results-proof"
+      />
     </section>
   );
 };

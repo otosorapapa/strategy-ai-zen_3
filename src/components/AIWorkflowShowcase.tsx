@@ -14,6 +14,7 @@ import dashboardPreview from "@/assets/dashboard-preview.jpg";
 import problemInfographic from "@/assets/problem-infographic.svg";
 import representativeImage from "@/assets/representative.jpg";
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 
 const serviceItems = [
   {
@@ -315,6 +316,14 @@ const AIWorkflowShowcase = () => {
             </ScrollReveal>
           </div>
         </div>
+
+        <SectionMicroCta
+          eyebrow="Micro CTA"
+          title="ワークフローの全体像を、45分の無料相談で自社仕様に描き換え"
+          description="AIが生成する資料サンプルや金融機関との対話テンプレートをお見せしながら、貴社のKPIと現状データに合わせた導入シナリオをご提案します。"
+          ctaId="workflow-overview"
+          variant="subtle"
+        />
       </div>
     </section>
   );

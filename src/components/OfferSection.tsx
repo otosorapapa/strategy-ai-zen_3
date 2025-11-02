@@ -6,6 +6,7 @@ import materialsPreview from "@/assets/ai-illustration.jpg";
 import representativePortrait from "@/assets/representative_.jpg";
 
 import { Button } from "@/components/ui/button";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import { PRIMARY_CTA, SECONDARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { cn } from "@/lib/utils";
 
@@ -238,6 +239,13 @@ const OfferSection = () => {
           </div>
         </aside>
       </div>
+
+      <SectionMicroCta
+        eyebrow="Micro CTA"
+        title="三つの入り口のうち、いま最適な一歩を無料で設計"
+        description="無料相談・ZENスキャン・資料DLのどれを優先するか、現在の社内状況と意思決定スケジュールを伺いながら一緒に決めましょう。"
+        ctaId="offer-steps"
+      />
     </section>
   );
 };

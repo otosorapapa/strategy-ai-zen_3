@@ -151,10 +151,10 @@ const ResultsSection = () => {
             Impact｜結果で語る
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            福岡・九州の中小企業再生実績｜「再生の設計図」が整うと数字と行動が同じ未来を指す
+            年商5,000万円〜15億円の経営改善で積み上げた“再成長ストーリー”と定量成果
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            仮説を語るだけでは反転は起こりません。ZENは実行に耐えるプロセスを作り込み、粗利・資金・人材の波形を同時に整えることで、経営者が迷いなく次のステップを選べる状態を守り抜きます。
+            仮説だけでは反転は起こりません。AIと診断士が共創した再生計画を実行し、粗利・資金・人材の波形を同時に整えることで、銀行・社員・経営陣が同じ未来を語れる状態を守り抜いています。
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {trustBadges.map((badge) => (

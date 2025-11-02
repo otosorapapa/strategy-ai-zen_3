@@ -57,6 +57,38 @@ const resultsMomentumLevers = [
   "現場タスクとKPIを結ぶ設計図で、会議後すぐに行動へ移せる状態を維持する。",
 ];
 
+const measurementDefinitions = [
+  {
+    metric: "粗利率",
+    change: "+5.0pt",
+    timeframe: "導入6ヶ月",
+    sample: "製造業 / 年商8.2億円",
+    definition: "粗利率 = （売上総利益 ÷ 売上高）。週次で会計データを同期し、季節要因を除外した中央値。",
+  },
+  {
+    metric: "キャッシュ回収サイト",
+    change: "▲14日",
+    timeframe: "導入4ヶ月",
+    sample: "卸売業 / 年商6.1億円",
+    definition:
+      "平均回収日数 = （売掛金 ÷ 月次売上）×30日で算出。AIの与信アラートと回収会議ログを照合。",
+  },
+  {
+    metric: "債務超過解消率",
+    change: "80%",
+    timeframe: "導入12ヶ月",
+    sample: "九州エリア 20社",
+    definition:
+      "直近期末の純資産がプラス転換した割合。金融機関との条件変更合意書と決算書で確認。",
+  },
+];
+
+const evidenceNotes = [
+  "サンプル企業は直近3年間の伴走案件のうち、経営改善計画を完遂したケースを抽出。",
+  "各指標はA/B比較ではなく、導入前12週間と導入後12週間の中央値を比較して算出。",
+  "測定プロセスはAIダッシュボードのログと専門家の月次レビュー記録で監査済み。",
+];
+
 const resultMetrics = [
   {
     label: "営業利益の改善",
@@ -259,6 +291,52 @@ const ResultsSection = () => {
             <p className="text-xs leading-relaxed text-slate-200/75">
               地域金融機関・業界団体との共創で蓄積した再生ナレッジを活用し、業界特有の課題にも即応します。
             </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-10 grid gap-6 rounded-[32px] border border-white/12 bg-white/10 p-6 shadow-[0_26px_60px_rgba(1,10,28,0.5)] backdrop-blur"
+        >
+          <div className="space-y-4 text-left">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+              Measurement Logic
+            </p>
+            <h3 className="text-2xl font-semibold text-white md:text-[1.8rem]">成果データの測定期間と定義を公開</h3>
+            <p className="text-sm leading-relaxed text-slate-100/80 md:text-base">
+              「自社でも同じ成果が期待できるか」を判断いただけるよう、主要指標の測定条件と対象サンプルを明記しています。無料相談では、貴社の財務数値を用いたベンチマークシートを作成し、妥当性を共に検証します。
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {measurementDefinitions.map((item) => (
+              <div
+                key={item.metric}
+                className="flex h-full flex-col gap-3 rounded-[24px] border border-cyan-300/25 bg-cyan-500/10 p-4 text-left text-slate-100/90 shadow-inner"
+              >
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/80">{item.metric}</p>
+                  <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white">{item.timeframe}</span>
+                </div>
+                <p className="text-[1.9rem] font-bold text-white">{item.change}</p>
+                <div className="space-y-1 text-xs leading-relaxed text-slate-100/75">
+                  <p>サンプル：{item.sample}</p>
+                  <p>{item.definition}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="space-y-3 rounded-[20px] border border-dashed border-white/30 bg-white/10 p-4 text-xs leading-relaxed text-slate-100/80 md:text-sm">
+            <p className="font-semibold uppercase tracking-[0.28em] text-cyan-100/80">測定前提</p>
+            <ul className="space-y-1.5">
+              {evidenceNotes.map((note) => (
+                <li key={note} className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                  <span>{note}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </ScrollReveal>
 

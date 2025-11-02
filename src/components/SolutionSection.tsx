@@ -186,18 +186,18 @@ const workflowSteps = [
 
 const SolutionSection = () => {
   return (
-    <section id="what-section" className="fade-in-section bg-white py-24 text-[#0b1f3f]">
-      <div className="container mx-auto max-w-6xl px-4">
-        <ScrollReveal variant="fade-up" className="space-y-6 text-center">
-          <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            再生の設計図を描く進め方
-          </span>
-          <h2 className="text-3xl font-bold leading-tight md:text-[2.75rem] md:leading-[1.2]">
-            福岡発・九州エリアの中小企業再生支援｜生成AIと診断士が共創する「再生デザインスタジオ」
-          </h2>
-          <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            最初の数週間でAIが財務指標・市場トレンド・競合動向を横断解析し、複数の回復シナリオを抽出。診断士が現場ヒアリングとプロセスマップを描き、実行条件を棚卸しします。意思決定プロセスのどこで時間が失われているか、キャッシュと粗利の因果を根拠付きで提示することで、判断の納得性とスピードを同時に高めます。
-          </p>
+      <section id="what-section" className="fade-in-section bg-white py-24 text-[#0b1f3f]">
+        <div className="container mx-auto max-w-6xl px-4">
+          <ScrollReveal variant="fade-up" className="space-y-6 text-center">
+            <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
+              48H診断から180日伴走までの道筋
+            </span>
+            <h2 className="text-3xl font-bold leading-tight md:text-[2.75rem] md:leading-[1.2]">
+              AI×中小企業診断士が描く「再成長の設計図」──3フェーズで意思決定と実行を同期
+            </h2>
+            <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
+              Day0-7でAIが粗利・資金・人材の歪みを抽出し、Day7-30で診断士が改善計画を共創、Day30-180で実行と金融機関交渉を伴走します。判断のストーリーと数字が同じ画面に揃うことで、年商5,000万円〜15億円規模の企業でも迷わず前進できる体制を整えます。
+            </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {insightPills.map((pill) => (
               <span

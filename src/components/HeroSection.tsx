@@ -21,51 +21,51 @@ import {
 } from "lucide-react";
 
 const heroBullets = [
-  "粗利・資金・人材をAIが同時解析し、優先順位を色分け",
-  "診断士が48時間で“次の一手”とリスクラインを文書化",
-  "銀行・現場が共有できる指標ボードと実行チェックリストを整備",
+  "粗利・資金・人材の歪みをAIが色分けし、優先度と緊急度を示したヒートマップを48時間で共有",
+  "診断士が再生シナリオを文章と図解で翻訳。銀行・現場・役員会でそのまま使える改善計画ドラフトを整備",
+  "週次レビューでダッシュボードと行動チェックリストを更新し、金融機関向け説明資料まで一気通貫で提供",
 ];
 
 const blueprintSteps = [
   {
-    title: "課題の即時スキャン",
-    description: "主要3領域×45指標をAIでクロス解析し、優先度と緊急度を自動評価",
+    title: "Day0-7｜課題スキャン",
+    description: "粗利率・資金繰り・人材稼働を45指標で照合。危険ラインと改善余地を可視化",
   },
   {
-    title: "反転シナリオの設計",
-    description: "診断士が現場の制約条件を織り込んだ再生ストーリーを共創",
+    title: "Day7-30｜再生設計",
+    description: "現場ヒアリングで実行条件を整理し、AIシミュレーションを踏まえた改善ロードマップを策定",
   },
   {
-    title: "実行と交渉の伴走",
-    description: "金融機関・主要取引先向け資料と現場アクションを週次で更新",
+    title: "Day30-180｜実行伴走",
+    description: "金融機関向け資料と現場タスクを週次でアップデート。交渉と実行のズレを解消",
   },
 ];
 
 const trustSignals = [
-  { icon: Landmark, label: "中小企業庁 登録診断士" },
-  { icon: BriefcaseBusiness, label: "再生案件 年間48件サポート" },
-  { icon: LineChart, label: "専門誌『TURNAROUND』掲載" },
-  { icon: Timer, label: "経営改善計画策定支援補助金の活用サポート" },
+  { icon: Landmark, label: "中小企業庁 登録支援機関" },
+  { icon: BriefcaseBusiness, label: "再生・改善案件 180社超を伴走" },
+  { icon: LineChart, label: "経営改善計画策定支援補助金の活用支援" },
+  { icon: Timer, label: "48時間以内の初回レポート共有" },
 ];
 
 const heroImpactStats = [
   {
     icon: LineChart,
     value: "+12%",
-    label: "営業利益改善幅",
-    helper: "再生後12ヶ月の平均伸長（例）",
+    label: "営業利益改善幅（中央値）",
+    helper: "改善計画実行6〜12ヶ月後の例",
   },
   {
     icon: Activity,
     value: "80%",
     label: "債務超過解消率",
-    helper: "主要金融機関との再交渉成功割合（例）",
+    helper: "金融機関との再交渉が合意に至った割合（例）",
   },
   {
     icon: Target,
-    value: "92%",
-    label: "合意形成継続率",
-    helper: "銀行同席レビューの継続率（例）",
+    value: "3.1ヶ月",
+    label: "意思決定リードタイム",
+    helper: "平均で1/3に短縮された再生案件の実績値",
   },
 ];
 
@@ -73,61 +73,67 @@ const heroReasonHighlights = [
   {
     icon: Compass,
     eyebrow: "Reason 01",
-    title: "48H診断で再生の羅針盤を提示",
+    title: "年商5,000万〜15億円の課題に特化",
     description:
-      "AIが粗利・資金・人材の歪みを色分けし、診断士が48時間以内に優先仮説とリスクラインを整理",
+      "財務と現場データの粒度を理解した診断士が、規模にフィットする改善ロードマップを48時間で提示",
   },
   {
     icon: LayoutDashboard,
     eyebrow: "Reason 02",
-    title: "同じ画面で意思決定を統一",
+    title: "AIと診断士が一枚の設計図に統合",
     description:
-      "銀行・役員・現場が共有できるダッシュボードと会議アジェンダをセットで提供し、迷いを排除",
+      "AIの提案を経験知で補正し、銀行・役員・現場で共有できるダッシュボードと会議テンプレを整備",
   },
   {
     icon: Landmark,
     eyebrow: "Reason 03",
-    title: "補助金・交渉までワンストップ伴走",
+    title: "交渉と補助金申請まで伴走",
     description:
-      "経営改善計画策定支援補助金の要件整理と資料作成、金融機関交渉の同席支援まで一気通貫",
+      "経営改善計画策定支援補助金や条件変更交渉に必要な資料づくりまでワンストップで支援",
   },
 ];
 
 const heroVideoSummary = {
   url: "https://www.youtube.com/embed/2Xc9gXyf2G4?rel=0&autoplay=0&mute=1",
-  title: "90秒でわかる再生設計図の全体像",
+  title: "90秒でわかるAI×診断士の再生ロードマップ",
   description:
-    "粗利・資金・人材の指標がどのように一枚の設計図に統合されるのか、AI解析と診断士伴走の役割分担を短時間で確認できます。",
+    "無料相談から6ヶ月の伴走までの流れをストーリー形式で紹介。どのタイミングでAIと専門家が関わるかを把握できます。",
   highlights: [
-    "48時間以内に届く成果物の中身と合意形成までのタイムライン",
-    "銀行・現場との共有シーンで使われるダッシュボードの使い方",
-    "補助金活用時の準備物とスケジュールの流れ",
+    "初回30分ヒアリングで棚卸しする論点と必要データ",
+    "AIヒートマップと改善計画ドラフトのサンプル",
+    "金融機関面談・補助金申請までのマイルストーン",
   ],
 };
 
 const heroProcessSteps = [
   {
     icon: Compass,
-    title: "48H診断",
-    description: "AIが粗利・資金・人材の歪みを即スキャンし、意思決定の焦点を提示",
+    title: "無料相談 30分",
+    description: "経営者の悩みを棚卸しし、AI初期診断に必要なデータと進め方を整理",
   },
   {
     icon: Sparkle,
-    title: "再生設計",
-    description: "診断士が現場の制約と金融機関の視点を織り込み、実行シナリオを共創",
+    title: "48H AI診断",
+    description: "粗利・資金・人材のリスクと伸び代を可視化し、優先順位付きの改善仮説を提示",
   },
   {
     icon: Landmark,
-    title: "伴走・交渉",
-    description: "銀行・現場の合意形成に必要な資料と行動を週次で更新し、納得度を維持",
+    title: "再生計画伴走",
+    description: "月次/週次の実行レビューと金融機関交渉支援で成果の定着まで伴走",
   },
+];
+
+const heroPainScenarios = [
+  "黒字なのに資金が残らず、銀行面談で次の一手を問われている",
+  "生成AIの検証は進んだが、現場のKPIと結びつかず成果が見えない",
+  "改善計画の提出期限が迫り、資料づくりと現場調整が間に合わない",
 ];
 
 const heroIntroCopy = {
   short:
-    "粗利・資金・人材のズレをAIが即スキャンし、診断士が実行条件と交渉材料まで翻訳。財務が減速する前に、再生の羅針盤・優先アクション・金融機関への提示資料を48時間で揃えます。",
+    "AI×経営改善で“もう一度伸びる会社”へ。年商5,000万円〜15億円の経営者専用に、資金繰りと成長の方程式を最短3ヶ月で描き切ります。",
   extended:
-    "生成AIが抽出した歪みを色分けし、現場ヒアリングで得た制約条件を診断士が整合。経営改善計画策定支援補助金のスケジュールと要件を踏まえた再生シナリオを構築し、銀行説明・現場アクション・経営会議のストーリーを一本化して意思決定リードタイムを平均1/3に短縮します。",
+    "生成AIが抽出した財務・現場データの歪みを診断士が補正し、再生計画の物語と数字を一本化。金融機関が求める根拠資料と現場の実行タスクを同じダッシュボードで管理し、意思決定リードタイムを平均1/3に短縮します。補助金・条件変更・新規投資の検討まで、伴走しながら成果を定着させます。",
 };
 
 const HeroSection = () => {
@@ -161,6 +167,19 @@ const HeroSection = () => {
                     <p className="text-xs leading-relaxed text-slate-100/80">{description}</p>
                   </div>
                 ))}
+              </div>
+              <div className="space-y-3 rounded-3xl border border-white/12 bg-white/5 p-5 shadow-[0_18px_45px_rgba(3,16,36,0.35)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/85">
+                  眠れない夜に起きていること
+                </p>
+                <ul className="space-y-2 text-left text-sm leading-relaxed text-slate-100/85">
+                  {heroPainScenarios.map((scenario) => (
+                    <li key={scenario} className="flex items-start gap-2">
+                      <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                      <span>{scenario}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">
                 {heroIntroCopy.short}

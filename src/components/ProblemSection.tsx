@@ -195,13 +195,13 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            現場で起きていること
+            Reality｜直面する停滞サイクル
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            福岡・九州の中小企業再生で頻発する課題｜判断の軸を一枚に集約し、未来を共有する
+            年商5,000万円〜15億円の経営者が夜中に見返す、3つの警告サイン
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            勇気や根性だけでは再生は加速しません。市場の揺らぎ、資金の波形、現場の実感を同じキャンバスに載せ、「どこから、どんな順番で」動くのかを揃える仕組みが必要です。生成AIと専門家の視点を束ね、断片的な情報を“未来の設計図”として再構築します。
+            管理部門と現場の人数が限られた規模では、粗利・資金・人材のわずかな歪みがすぐに全社へ伝播します。ここでは無料相談前のヒアリングで頻出する声をもとに、「いま何が止まっているのか」を立体的に再現しました。自社の状況と照らし合わせながら読み進めてください。
           </p>
         </ScrollReveal>
 

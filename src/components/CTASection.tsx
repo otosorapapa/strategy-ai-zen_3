@@ -3,6 +3,7 @@ import {
   AlertCircle,
   ArrowLeft,
   ArrowRight,
+  Award,
   Building2,
   CalendarClock,
   CheckCircle2,
@@ -197,6 +198,27 @@ const testimonialVideo = {
   ],
 };
 
+const trustBoardEntries = [
+  {
+    category: "金融機関",
+    logoLabel: "福岡銀行",
+    comment: "再生計画の前提が金融庁ガイドラインと整合しており、稟議の指摘事項が半減。貸出継続判断を後押しできた。",
+    endorsement: "2023年 地域金融共創アワード 優秀賞",
+  },
+  {
+    category: "自治体",
+    logoLabel: "福岡県",
+    comment: "産業振興課との連携で人材再配置プログラムを共同実施。ダッシュボードでKPIを共有し、議会報告にも活用。",
+    endorsement: "2024年 DXパートナー公式採択",
+  },
+  {
+    category: "補助金",
+    logoLabel: "経営改善計画策定支援補助金",
+    comment: "採択された企業の平均投資回収期間が14ヶ月。資料テンプレが監査法人レビューでも高評価。",
+    endorsement: "累計20件超採択／審査員推奨コメント獲得",
+  },
+];
+
 const CTASection = () => {
   const { toast } = useToast();
   const formId = useId();
@@ -311,6 +333,46 @@ const CTASection = () => {
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
             PASフレームで痛点を深掘りしたうえで、AI診断と専門家の伴走によりSolutionへ橋渡し。補助金活用シミュレーションや金融機関との合意形成資料まで揃え、どの会議でも迷わず意思決定できる状態を設計します。
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-8 rounded-[28px] border border-white/12 bg-white/5 p-6 shadow-[0_28px_75px_rgba(3,14,32,0.55)] backdrop-blur"
+        >
+          <div className="space-y-4 text-left">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+              Trust Board
+            </p>
+            <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+              <h3 className="text-xl font-semibold text-white md:text-2xl">第三者が認める信頼性と成果の裏付け</h3>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/70">金融機関・自治体・補助金の声</p>
+            </div>
+            <p className="max-w-3xl text-sm leading-relaxed text-slate-200/85">
+              連携先からの推薦コメントと受賞歴を公開。ロゴ付きの証跡を用意し、社内決裁や金融機関への説明にそのまま添付いただけます。
+            </p>
+          </div>
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
+            {trustBoardEntries.map((entry) => (
+              <div
+                key={entry.logoLabel}
+                className="flex h-full flex-col gap-4 rounded-3xl border border-white/15 bg-white/10 p-5 text-left text-sm leading-relaxed text-slate-100/90"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/15 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/80">
+                    {entry.category}
+                  </span>
+                  <span className="inline-flex items-center justify-center rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-semibold text-cyan-100">
+                    {entry.logoLabel}
+                  </span>
+                </div>
+                <p className="text-sm leading-relaxed">{entry.comment}</p>
+                <div className="mt-auto flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.26em] text-cyan-100/85">
+                  <Award className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                  <span className="normal-case tracking-normal text-slate-100/90">{entry.endorsement}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </ScrollReveal>
 
         <ScrollReveal

@@ -224,13 +224,13 @@ const SolutionSection = () => {
         <div className="container mx-auto max-w-6xl px-4">
           <ScrollReveal variant="fade-up" className="space-y-6 text-center">
             <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-              48H診断から180日伴走までの道筋
+              AI診断×専門家伴走の実行ロードマップ
             </span>
             <h2 className="text-3xl font-bold leading-tight md:text-[2.75rem] md:leading-[1.2]">
-              AI×中小企業診断士が描く「再成長の設計図」──3フェーズで意思決定と実行を同期
+              資金繰りに強い経営体制を、AI診断と専門家伴走で段階構築する
             </h2>
             <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-              Day0-7でAIが粗利・資金・人材の歪みを抽出し、Day7-30で診断士が改善計画を共創、Day30-180で実行と金融機関交渉を伴走します。判断のストーリーと数字が同じ画面に揃うことで、年商5,000万円〜15億円規模の企業でも迷わず前進できる体制を整えます。
+              Day0-7でAIが粗利・資金・人材の歪みを抽出し、Day7-30で診断士が改善シナリオを設計、Day30-180で実行と金融機関交渉を伴走する。判断根拠とキャッシュインパクトが同じ画面に揃い、年商5,000万円〜15億円規模でも迷いなく前進できる体制を固める。
             </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {insightPills.map((pill) => (

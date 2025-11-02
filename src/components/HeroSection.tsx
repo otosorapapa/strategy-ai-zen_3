@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 
 const heroBullets = [
-  "粗利・資金・人材の歪みをAIが色分けし、優先度と緊急度を示したヒートマップを48時間で共有",
-  "診断士が再生シナリオを文章と図解で翻訳。銀行・現場・役員会でそのまま使える改善計画ドラフトを整備",
-  "週次レビューでダッシュボードと行動チェックリストを更新し、金融機関向け説明資料まで一気通貫で提供",
+  "粗利率・運転資本・人員稼働をAIが同時診断し、緊急度を色分けしたヒートマップを48時間で提示。",
+  "診断士が財務ストーリーと施策の相関を整理し、銀行協議と現場実行にそのまま使える改善計画を仕立てる。",
+  "週次レビューでKPIダッシュボードとタスクを更新し、資金繰り会議と交渉資料を一気通貫で同期する。",
 ];
 
 const blueprintSteps = [
@@ -49,9 +49,9 @@ const trustSignals = [
 ];
 
 const heroValueBullets = [
-  "年商5,000万〜15億の経営者専用",
-  "生成AI×中小企業診断士",
-  "金融機関との交渉に耐える計画策定",
+  "運転資本と粗利を72時間で再評価",
+  "生成AI×診断士の意思決定伴走",
+  "金融機関協議まで整う計画テンプレ",
 ];
 
 const heroImpactStats = [
@@ -137,9 +137,9 @@ const heroPainScenarios = [
 
 const heroIntroCopy = {
   short:
-    "半年で銀行融資に強い経営改善計画を描き切り、資金繰りと成長の両立を実現。AIと診断士が経営者の意思決定を一本化します。",
+    "AIの資金繰りシミュレーションと診断士の管理会計設計で、半年以内に銀行稟議に耐える経営改善計画を仕上げる。",
   extended:
-    "生成AIが抽出した財務・現場データの歪みを診断士が補正し、再生計画の物語と数字を一本化。金融機関が求める根拠資料と現場の実行タスクを同じダッシュボードで管理し、意思決定リードタイムを平均1/3に短縮します。補助金・条件変更・新規投資の検討まで、伴走しながら成果を定着させます。",
+    "生成AIが財務・需要・稼働データの歪みを即座に抽出し、診断士が再生ストーリーと定量根拠を統合。金融機関向け資料と現場タスクを同じダッシュボードで運用し、意思決定リードタイムを平均1/3に圧縮する。補助金活用や投資判断まで含め、資金繰りに強い体制へ定着させる。",
 };
 
 const ctaTrustBadges = [
@@ -169,17 +169,17 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="fade-in-section section-spacing relative overflow-hidden bg-gradient-to-b from-[#061530] via-[#0a1f48] to-[#031024] text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.25),_transparent_65%)]" aria-hidden="true" />
+    <section className="fade-in-section section-spacing relative overflow-hidden bg-gradient-to-b from-[#020d21] via-[#062047] to-[#010713] text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(104,194,255,0.24),_transparent_68%)]" aria-hidden="true" />
       <div className="layout-shell relative z-10">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:items-start">
           <div className="space-y-10">
             <div className="space-y-6">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-                成果 × 期間 × 手段
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
+                資金繰り × 意思決定 × 実行
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
-                半年で銀行融資に強い経営改善計画を、AIと専門家で最短構築。
+                資金繰りに強い経営体制を、AIとプロの伴走で即構築する。
               </h1>
               <ul className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/80 md:text-base">
                 {heroValueBullets.map((item) => (

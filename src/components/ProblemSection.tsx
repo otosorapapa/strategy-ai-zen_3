@@ -199,10 +199,10 @@ const ProblemSection = () => {
             Reality｜直面する停滞サイクル
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            年商5,000万円〜15億円の経営者が夜中に見返す、3つの警告サイン
+            資金繰りを崩す兆候を断ち切るために押さえるべき3つの停滞要因
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            管理部門と現場の人数が限られた規模では、粗利・資金・人材のわずかな歪みがすぐに全社へ伝播します。ここでは無料相談前のヒアリングで頻出する声をもとに、「いま何が止まっているのか」を立体的に再現しました。自社の状況と照らし合わせながら読み進めてください。
+            粗利率の鈍化や運転資本の目減りは、限られた人員体制の中で瞬時に全社へ波及する。AIヒアリングで集まった声を基に、資金繰りを毀損する構造を立体的に整理した。自社のKPIと照合し、止血すべき論点を即断してほしい。
           </p>
         </ScrollReveal>
 
@@ -251,11 +251,11 @@ const ProblemSection = () => {
                   Proof Sandwich
                 </span>
                 <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
-                  経営者の納得を生む第三者評価と伴走実績
+                  行政・金融・専門メディアが裏付ける財務再構築の信頼基盤
                 </h3>
               </div>
               <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                行政認定・金融機関との共創・専門メディア掲載を挟み込むことで、意思決定層に「任せられる理由」を明快に提示します。
+                行政認定・地域金融機関との共創・専門メディア露出という三層の証跡で、取締役会が委任判断を下せる根拠を明示する。
               </p>
             </div>
             <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -289,11 +289,11 @@ const ProblemSection = () => {
                   Causality Pillars
                 </span>
                 <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
-                  因果・論理・デザイン・スマート・納得の5軸を一枚で成立
+                  因果と統制を両立させる5つの設計軸
                 </h3>
               </div>
               <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                「見る→理解→納得→行動」が滑らかに進むよう、経営者が重視する5要素を指標と導線で束ねました。カードの下部には即時に伝わる成果指標を配置しています。
+                意思決定を止める摩擦を減らすため、経営者が重視する五要素を指標と導線で束ねた。各カードには即断に効く数値指標を併記している。
               </p>
             </div>
             <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
@@ -346,10 +346,10 @@ const ProblemSection = () => {
                 Pattern Interrupt
               </div>
               <h3 className="text-2xl font-semibold leading-snug md:text-[1.75rem]">
-                「次の一手」がひと目で伝わるコンテキストを、会議冒頭で共有できていますか？
+                資金繰りシナリオを会議冒頭で共有できる意思決定キャンバス
               </h3>
               <p className="text-sm leading-relaxed text-slate-200/90 md:text-base">
-                読み切れないレポートではなく、<span className="text-cyan-200">状況・意図・判断</span>が同期した1枚を提示することで、経営陣と現場の思考速度を揃えます。図解とナラティブを並走させることで理解の負荷を下げ、議論は「どのように実行するか」へ早々に移行します。
+                <span className="text-cyan-200">状況・意図・判断</span>を一枚に揃え、財務と現場の思考速度を同期させる。議題は即座に実行設計へ移り、交渉資料も同じストーリーで更新される。
               </p>
               <ul className="grid gap-3 text-sm text-slate-200/90 md:grid-cols-2">
                 <li className="flex items-start gap-2">

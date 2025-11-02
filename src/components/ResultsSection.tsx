@@ -1,5 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import resultBlueprint from "@/assets/hero-consulting (1).jpg";
+import resultBlueprint from "@/assets/dashboard-preview.jpg";
 import manufacturingLeader from "@/assets/growth-chart.jpg";
 import wholesaleLeader from "@/assets/financial-analysis.jpg";
 import serviceLeader from "@/assets/ai-illustration.jpg";
@@ -311,7 +311,7 @@ const ResultsSection = () => {
           >
             <img
               src={resultBlueprint}
-              alt="経営陣とコンサルタントが再生プランのホワイトボードを囲み、数値とアクションを照合している様子"
+              alt="週次スナップショットで資金余力やCVRを俯瞰できるAIダッシュボードの画面"
               className="h-64 w-full object-cover md:h-full"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#010b1c]/95 via-[#020e24]/40 to-transparent" />

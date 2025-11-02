@@ -61,18 +61,21 @@ const BeforeAfterJourneySection = () => {
   };
 
   return (
-    <section className="fade-in-section relative overflow-hidden bg-[#031024] py-24 text-white">
+    <section
+      id="before-after-section"
+      className="fade-in-section relative overflow-hidden bg-[#031024] py-24 text-white"
+    >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_rgba(5,132,198,0.18),_transparent_60%)]" aria-hidden="true" />
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/90">
-            Before → After Story
+            Stage 02｜感じていること
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            年商5,000万〜15億円の経営者が「再生の再現性」を取り戻すまでの感情ジャーニー
+            年商5,000万〜15億円の経営者が抱く不安と希望を、ビフォー／アフターの感情ジャーニーで描き切る
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-100/85 md:text-lg">
-            私たちは経営者の感情の起伏に寄り添いながら、AIと診断士の伴走で意思決定の孤独を解消します。ビフォー／アフターの物語を描くことで、社内外の共感と合意形成が進みます。
+            モールスコピー第二段階の「感じていること」を補強するパートです。焦り・孤独感・安堵といった感情の変化をストーリーで可視化し、読者が「自分のことだ」と心で理解できるよう再構成しました。
           </p>
         </ScrollReveal>
 

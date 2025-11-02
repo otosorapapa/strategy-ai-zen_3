@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 
 const metricHighlights = [
   {
@@ -211,6 +212,14 @@ const DashboardShowcase = () => {
           </ScrollReveal>
         </div>
       </div>
+
+      <SectionMicroCta
+        variant="dark"
+        eyebrow="Micro CTA"
+        title="ダッシュボードの操作感を、共有画面で一緒に確認"
+        description="キャッシュ・粗利・現場タスクの可視化例をデモし、貴社データを載せた場合の構成や更新サイクルをその場でご提案します。"
+        ctaId="dashboard-demo"
+      />
     </section>
   );
 };

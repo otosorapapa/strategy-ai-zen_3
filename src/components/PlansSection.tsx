@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -504,6 +505,13 @@ const PlansSection = () => {
           </ScrollReveal>
         </div>
       </div>
+
+      <SectionMicroCta
+        eyebrow="Micro CTA"
+        title="プランの違いや補助金活用の可否を、その場で診断"
+        description="貴社の売上規模や体制を伺い、伴走スタンダードと成長アクセラレートのどちらが適合するか、補助金活用を含めた費用感と導入スケジュールを無料相談でお伝えします。"
+        ctaId="plans-guidance"
+      />
     </section>
   );
 };

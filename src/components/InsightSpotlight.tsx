@@ -10,6 +10,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import blueprintFlowVisual from "@/assets/insight-blueprint-flow.svg";
 
 const insightHighlights = [
@@ -354,6 +355,13 @@ const InsightSpotlight = () => {
           </div>
         </div>
       </div>
+
+      <SectionMicroCta
+        eyebrow="Micro CTA"
+        title="設計図の骨子を、無料相談で実際のテンプレに重ね合わせ"
+        description="因果マップや会議テンプレートのサンプルを使いながら、現状の資料とのギャップと補うべきアウトラインを可視化します。"
+        ctaId="insight-blueprint"
+      />
     </section>
   );
 };

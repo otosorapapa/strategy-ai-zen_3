@@ -5,6 +5,7 @@ import representativeImage from "@/assets/representative_.jpg";
 import dashboardPreview from "@/assets/dashboard-preview.jpg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import { CheckCircle2 } from "lucide-react";
 
 type FAQ = {
@@ -16,6 +17,50 @@ type FAQ = {
 };
 
 const faqs: FAQ[] = [
+  {
+    question: "費用の目安と支払い方法は？",
+    lead: "月額18万円〜の伴走プランに成果コミットメントを付帯し、未達時は返金または翌月無料をお選びいただけます。",
+    metric: "¥180k~",
+    metricLabel: "月額目安",
+    answer: (
+      <div className="space-y-4 text-base text-[#1e3359]/85">
+        <p>
+          伴走スタンダード（¥180,000/月）と成長アクセラレート（¥280,000/月）の2プランをご用意。いずれも初月トライアル付きで、合意した成果指標を満たせなかった場合は返金または翌月無料サポートを選択可能です。
+        </p>
+        <div className="grid gap-4 rounded-2xl border border-[#0b1f3f]/10 bg-white/85 p-4 md:grid-cols-2">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">伴走スタンダード</p>
+            <ul className="mt-2 space-y-1.5 text-sm">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
+                <span>粗利・資金繰りの土台を3ヶ月で構築し、週次レビューと金融資料を整備。</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
+                <span>推奨体制：社長 + 管理/営業責任者。平均投資回収2.7ヶ月（例）。</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">成長アクセラレート</p>
+            <ul className="mt-2 space-y-1.5 text-sm">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
+                <span>AI需要予測・投資シナリオ運用を伴走し、Slack常時サポートを含む週次伴走。</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
+                <span>推奨体制：経営陣 + PMO。平均投資回収3.1ヶ月（例）。</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p className="text-sm text-[#1e3359]/75">
+          お支払いは銀行振込または請求書払いに対応。補助金を活用する場合は採択スケジュールに合わせた請求タイミングも調整可能です。
+        </p>
+      </div>
+    ),
+  },
   {
     question: "無料相談では何が分かりますか？",
     lead: "48時間以内に優先仮説と改善ロードマップの骨子をご提示します。",
@@ -417,6 +462,13 @@ const FAQSection = () => {
           </div>
         </div>
       </div>
+
+      <SectionMicroCta
+        eyebrow="Micro CTA"
+        title="費用・補助金・導入スケジュールをまとめた回答シートをお送りします"
+        description="FAQで触れた論点を踏まえ、無料相談後に貴社専用のQ&Aシートと次のステップをお渡しします。迷いが残る場合はチャットでも個別質問が可能です。"
+        ctaId="faq-summary"
+      />
     </section>
   );
 };

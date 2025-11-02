@@ -4,7 +4,9 @@ import {
   BarChart3,
   BrainCircuit,
   Building2,
+  CalendarClock,
   CheckCircle2,
+  ClipboardCheck,
   FileSpreadsheet,
   Gauge,
   GanttChart,
@@ -20,6 +22,7 @@ import {
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import decisionOpsMock from "@/assets/roi-chart.jpg";
 import solutionIllustration from "@/assets/ai-analysis (1).jpg";
 import growthChart from "@/assets/growth-chart.jpg";
@@ -181,6 +184,37 @@ const workflowSteps = [
     title: "STEP 2｜実行＆金融連携",
     detail:
       "施策の進捗とキャッシュ波形を同時にトラッキング。金融機関向け資料、モニタリングレポート、現場タスクまで一気通貫で整備します。",
+  },
+];
+
+const implementationTimeline = [
+  {
+    phase: "Day 0-2",
+    title: "無料相談とAIスキャンで現状把握",
+    detail: "経営・財務データとヒアリング内容を集約し、優先仮説メモと再生ヒートマップを48時間以内に共有。",
+    deliverable: "優先仮説メモ／リスクヒートマップ",
+    icon: CalendarClock,
+  },
+  {
+    phase: "Week 1-2",
+    title: "再生キャンバスとKPIを合意",
+    detail: "診断士がAI提案を検証し、粗利・資金・現場の指標を一本化。役員会向けの意思決定キャンバスを整備。",
+    deliverable: "意思決定キャンバス／週次レビュー設計図",
+    icon: ClipboardCheck,
+  },
+  {
+    phase: "Week 3-4",
+    title: "金融機関・現場と資料連動",
+    detail: "銀行説明シナリオと現場タスクを同期し、必要資料・証憑をテンプレ化。交渉準備を短期間で完了。",
+    deliverable: "金融機関連携パッケージ",
+    icon: ShieldCheck,
+  },
+  {
+    phase: "Week 5-6",
+    title: "週次運用で成果検証を開始",
+    detail: "AIレポートと実行ログを週次で更新し、粗利とキャッシュの変化をモニタリング。補助金活用の可否も同時に判断。",
+    deliverable: "週次ダッシュボード／成果コミットメントシート",
+    icon: TrendingUp,
   },
 ];
 
@@ -560,6 +594,61 @@ const SolutionSection = () => {
           </ScrollReveal>
         </div>
       </div>
+
+      <ScrollReveal
+        variant="fade-up"
+        className="mt-16 rounded-[36px] border border-[#0b1f3f]/12 bg-gradient-to-br from-[#f2f7ff] via-white to-[#e8f4ff] p-8 shadow-[0_30px_80px_rgba(9,30,70,0.15)]"
+      >
+        <div className="space-y-6">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div className="space-y-2">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#0584c6]/20 bg-[#f2f9ff] px-4 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+                導入までの流れ（最短6週間）
+              </span>
+              <h3 className="text-2xl font-semibold text-[#0b1f3f] md:text-[1.9rem]">
+                現状把握から週次運用までを6週間で滑らかにつなぐ導線
+              </h3>
+            </div>
+            <p className="max-w-xl text-sm leading-relaxed text-[#1e3359]/80">
+              期間ごとに必要な資料とアクションを並走支援。金融機関との調整や補助金活用の可否判断まで、同じドキュメント群で意思決定を進められます。
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {implementationTimeline.map((stage) => {
+              const Icon = stage.icon;
+              return (
+                <div
+                  key={stage.phase}
+                  className="flex h-full flex-col gap-4 rounded-[28px] border border-[#0584c6]/15 bg-white/95 p-6 shadow-[0_22px_60px_rgba(5,94,160,0.16)]"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0584c6]/75">
+                      {stage.phase}
+                    </span>
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0584c6]/12 text-[#0584c6]">
+                      <Icon className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-base font-semibold text-[#0b1f3f]">{stage.title}</p>
+                    <p className="text-sm leading-relaxed text-[#1e3359]/80">{stage.detail}</p>
+                  </div>
+                  <div className="mt-auto rounded-2xl border border-dashed border-[#0584c6]/25 bg-[#f3f8ff] px-4 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]/85">
+                    {stage.deliverable}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <SectionMicroCta
+        eyebrow="Micro CTA"
+        title="導入フローの詳細は無料相談で貴社向けにカスタマイズ"
+        description="最短6週間の流れをベースに、現在の顧問体制や金融機関との調整状況に合わせてロードマップをその場で描き直します。"
+        ctaId="solution-flow"
+      />
     </section>
   );
 };

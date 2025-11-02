@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { PRIMARY_CTA, SECONDARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
@@ -224,6 +225,14 @@ const PainChecklistSection = () => {
           </ScrollReveal>
         </div>
       </div>
+
+      <SectionMicroCta
+        eyebrow="Micro CTA"
+        title="チェック結果をもとに、48時間で優先仮説メモをお届け"
+        description="選んだ症状に合わせたヒアリング項目とデータリストを準備し、無料相談後に再生ヒートマップと次の一手をメールで共有します。"
+        ctaId="pain-checklist"
+        variant="subtle"
+      />
     </section>
   );
 };

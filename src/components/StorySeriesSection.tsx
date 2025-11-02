@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import { Button } from "@/components/ui/button";
 import { PRIMARY_CTA } from "@/lib/ctaVariants";
 import { cn } from "@/lib/utils";
@@ -205,6 +206,14 @@ const StorySeriesSection = () => {
           </ScrollReveal>
         </div>
       </div>
+
+      <SectionMicroCta
+        variant="dark"
+        eyebrow="Micro CTA"
+        title="ストーリーで描いた未来を、45分の相談で現実の計画へ"
+        description="エピソードで触れた課題や感情に合わせ、実際のAIレポートとアクションプランをお見せしながら貴社に置き換えます。"
+        ctaId="story-series"
+      />
     </section>
   );
 };

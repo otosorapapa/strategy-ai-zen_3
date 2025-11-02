@@ -8,6 +8,7 @@ import {
   Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SectionMicroCta from "@/components/SectionMicroCta";
 import supportVisual from "@/assets/strategic-meeting.jpg";
 
 const kpiSnapshots = [
@@ -234,6 +235,13 @@ const SecurityPrivacySection = () => {
           </div>
         </ScrollReveal>
       </div>
+
+      <SectionMicroCta
+        eyebrow="Micro CTA"
+        title="守秘体制や支援体制の詳細も、無料相談で具体的にご説明"
+        description="NDAや権限設計、週次レビューの進め方など、気になるリスク項目を洗い出しながらチェックリスト形式で回答します。"
+        ctaId="security-support"
+      />
     </section>
   );
 };

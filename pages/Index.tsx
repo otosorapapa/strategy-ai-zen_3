@@ -19,9 +19,6 @@ import SectionNavigationMap from "@/components/SectionNavigationMap";
 import ComparisonSection from "@/components/ComparisonSection";
 import PainChecklistSection from "@/components/PainChecklistSection";
 import MidPageCtaSection from "@/components/MidPageCtaSection";
-import BeforeAfterJourneySection from "@/components/BeforeAfterJourneySection";
-import SegmentBenefitsSection from "@/components/SegmentBenefitsSection";
-import MorseCopySection from "@/components/MorseCopySection";
 
 const Index = () => {
   useInteractiveCtaFeedback();
@@ -32,14 +29,11 @@ const Index = () => {
       <StructuredData />
       <StickyCtaBar />
       <HeroSection />
-      <MorseCopySection />
       <SectionNavigationMap />
       <PainChecklistSection />
       <InsightSpotlight />
       <ProblemSection />
-      <BeforeAfterJourneySection />
       <SolutionSection />
-      <SegmentBenefitsSection />
       <ComparisonSection />
       <AIWorkflowShowcase />
       <ResultsSection />

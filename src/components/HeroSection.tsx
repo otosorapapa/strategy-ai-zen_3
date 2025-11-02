@@ -22,7 +22,7 @@ import {
 
 const heroBullets = [
   "粗利・資金・人材をAIが同時解析し、優先順位を色分け",
-  "診断士が48時間で“次の一手”とリスクラインを文書化",
+  "年商5,000万〜15億円の経営者に特化した“次の一手”を48時間で提示",
   "銀行・現場が共有できる指標ボードと実行チェックリストを整備",
 ];
 
@@ -125,9 +125,9 @@ const heroProcessSteps = [
 
 const heroIntroCopy = {
   short:
-    "粗利・資金・人材のズレをAIが即スキャンし、診断士が実行条件と交渉材料まで翻訳。財務が減速する前に、再生の羅針盤・優先アクション・金融機関への提示資料を48時間で揃えます。",
+    "年商5,000万〜15億円の経営者が直面する粗利・資金・人材のズレを、AIが即スキャンし診断士が行動順序と交渉材料まで翻訳。財務が減速する前に、再生の羅針盤・優先アクション・金融機関への提示資料を48時間で揃えます。",
   extended:
-    "生成AIが抽出した歪みを色分けし、現場ヒアリングで得た制約条件を診断士が整合。経営改善計画策定支援補助金のスケジュールと要件を踏まえた再生シナリオを構築し、銀行説明・現場アクション・経営会議のストーリーを一本化して意思決定リードタイムを平均1/3に短縮します。",
+    "生成AIが抽出した歪みを色分けし、現場ヒアリングで得た制約条件を診断士が整合。経営改善計画策定支援補助金の要件を踏まえ、年商5,000万〜15億円の企業規模に合わせた再生シナリオを構築。銀行説明・現場アクション・経営会議のストーリーを一本化して意思決定リードタイムを平均1/3に短縮します。",
 };
 
 const HeroSection = () => {
@@ -146,10 +146,10 @@ const HeroSection = () => {
           <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-                使命｜判断力を取り戻す伴走
+                年商5,000万〜15億円の経営者へ｜判断力を取り戻す伴走
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
-                48時間で再生の羅針盤を手に。AI診断と診断士伴走で「次の一手」を同じ画面に。
+                48時間で「社長の孤独」を解きほぐす。AI診断と診断士伴走で再生シナリオと交渉材料を同じ画面に。
               </h1>
               <div className="grid gap-3 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
                 {heroProcessSteps.map(({ icon: Icon, title, description }) => (
@@ -363,7 +363,7 @@ const HeroSection = () => {
                 </a>
               </div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-200/80">
-                代表・古町（中小企業診断士）が直接ヒアリング｜初回30分で論点を棚卸し、翌営業日に再生仮説と優先シナリオを提示
+                代表・古町（中小企業診断士）が直接ヒアリング｜年商5,000万〜15億円の経営者に特化した論点棚卸しと翌営業日の再生仮説提示
               </p>
               <div className="flex flex-wrap items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-[0.75rem] uppercase tracking-[0.22em] text-cyan-100/80">
                 {trustSignals.map(({ icon: Icon, label }) => (

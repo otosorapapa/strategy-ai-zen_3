@@ -22,7 +22,7 @@ export type TertiaryCtaContent = {
 
 export const PRIMARY_CTA: PrimaryCtaContent = {
   id: "primary",
-  label: "AIと専門家が描く“再生の設計図”を無料で確認する",
+  label: "年商5,000万〜15億円の社長専用｜AI×診断士の再生設計図を無料確認",
   benefitCopy: "生成AI診断と専門家コメントを同時に受け取る",
   benefitCopyAlt: "粗利・資金・現場の再生シナリオを事前に把握",
   supportText:

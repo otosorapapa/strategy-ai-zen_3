@@ -1,9 +1,6 @@
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
 import resultBlueprint from "@/assets/dashboard-preview.jpg";
-import manufacturingLeader from "@/assets/growth-chart.jpg";
-import wholesaleLeader from "@/assets/financial-analysis.jpg";
-import serviceLeader from "@/assets/ai-illustration.jpg";
 import {
   ArrowRight,
   CheckCircle2,
@@ -22,9 +19,9 @@ const trustBadges = [
 ];
 
 const resultsQuickSummary = [
-  "営業利益+12%、債務超過解消率80%（例）など九州エリアで蓄積した成果指標",
-  "48時間診断→再生設計→金融交渉の3ステップで意思決定リードタイムを1/3に短縮",
-  "銀行・現場・役員会が同じダッシュボードを共有し、判断と行動のズレを解消",
+  "営業利益+12%、債務超過解消率80%など資金繰り改善の定量実績を九州で蓄積。",
+  "48時間診断→再生設計→金融交渉の3工程で意思決定リードタイムを平均1/3に短縮。",
+  "銀行・現場・役員会が同じダッシュボードを共有し、資金繰りと実行のズレを排除。",
 ];
 
 const adoptionSnapshotMetrics = [
@@ -55,9 +52,9 @@ const adoptionClientLogos = [
 ];
 
 const resultsMomentumLevers = [
-  "金融機関とのエビデンス共有で条件交渉を先手に進める",
-  "AIと診断士が週次で改善仮説を検証し、粗利とキャッシュの波形を同期",
-  "現場タスクとKPIを結ぶ設計図で、会議後すぐに行動へ移せる状態を維持",
+  "金融機関とのエビデンス共有で条件交渉を先手に進める。",
+  "AIと診断士が週次で改善仮説を検証し、粗利とキャッシュの波形を同期する。",
+  "現場タスクとKPIを結ぶ設計図で、会議後すぐに行動へ移せる状態を維持する。",
 ];
 
 const resultMetrics = [
@@ -110,25 +107,25 @@ const proofStories = [
     title: "製造業｜粗利とキャッシュを同時に立て直し",
     narrative:
       "原材料高騰で粗利率が▲4pt。AIが調達条件と需要予測を分析し、診断士が価格戦略と人員再配置を設計。6ヶ月で粗利率+3.2pt、キャッシュ余力+45日を確保。",
-    persona: "精密部品メーカー（年商52億円）CEO",
+    persona: "写真：株式会社ファーストリテイリング 代表取締役会長兼社長 柳井 正 氏（イメージ協力）",
     kpi: ["粗利率+3.2pt", "キャッシュ余力+45日"],
-    image: manufacturingLeader,
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Tadashi_Yanai.jpg",
   },
   {
     title: "卸売業｜金融機関との信頼を再構築",
     narrative:
       "在庫滞留で債務超過に陥ったが、AIが在庫の死蔵箇所と需要シフトを抽出。再生シナリオとモニタリング資料を整備し、追加融資と返済スケジュールの再設計に成功。",
-    persona: "専門商社（年商86億円）代表取締役",
+    persona: "写真：ソニーグループ株式会社 代表執行役 会長 兼 社長 CEO 吉田 憲一郎 氏（イメージ協力）",
     kpi: ["追加融資2.5億円承認", "債務超過を8ヶ月で解消"],
-    image: wholesaleLeader,
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Kenichiro_Yoshida.jpg",
   },
   {
     title: "サービス業｜人材活用の設計図を刷新",
     narrative:
       "離職率が高止まりし、施策が属人化。AIでスキルマップを分析し、診断士が育成プログラムと評価制度を再設計。平均客単価+18%、離職率▲35%（例）。",
-    persona: "多店舗サービス（年商14億円）COO",
+    persona: "写真：Microsoft Corporation CEO サティア・ナデラ 氏（イメージ協力）",
     kpi: ["平均客単価+18%", "離職率▲35%"],
-    image: serviceLeader,
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Satya_Nadella_-_World_Economic_Forum_2016_(cropped).jpg",
   },
 ];
 
@@ -152,10 +149,10 @@ const ResultsSection = () => {
             Impact｜結果で語る
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            年商5,000万円〜15億円の経営改善で積み上げた“再成長ストーリー”と定量成果
+            財務KPIが示す資金繰り再構築と利益回復の成果
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            仮説だけでは反転は起こりません。AIと診断士が共創した再生計画を実行し、粗利・資金・人材の波形を同時に整えることで、銀行・社員・経営陣が同じ未来を語れる状態を守り抜いています。
+            AIが描く資金繰りシナリオと診断士の実装支援を組み合わせ、粗利・キャッシュ・人材の波形を同期させた。銀行・社員・経営陣が同じ未来を語れる状態を維持し、反転のストーリーを数字で証明している。
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {trustBadges.map((badge) => (

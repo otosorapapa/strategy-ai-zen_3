@@ -48,6 +48,12 @@ const trustSignals = [
   { icon: Timer, label: "48時間以内の初回レポート共有" },
 ];
 
+const heroValueBullets = [
+  "年商5,000万〜15億の経営者専用",
+  "生成AI×中小企業診断士",
+  "金融機関との交渉に耐える計画策定",
+];
+
 const heroImpactStats = [
   {
     icon: LineChart,
@@ -99,7 +105,7 @@ const heroVideoSummary = {
   description:
     "無料相談から6ヶ月の伴走までの流れをストーリー形式で紹介。どのタイミングでAIと専門家が関わるかを把握できます。",
   highlights: [
-    "初回30分ヒアリングで棚卸しする論点と必要データ",
+    "初回45分ヒアリングで棚卸しする論点と必要データ",
     "AIヒートマップと改善計画ドラフトのサンプル",
     "金融機関面談・補助金申請までのマイルストーン",
   ],
@@ -108,7 +114,7 @@ const heroVideoSummary = {
 const heroProcessSteps = [
   {
     icon: Compass,
-    title: "無料相談 30分",
+    title: "無料相談 45分",
     description: "経営者の悩みを棚卸しし、AI初期診断に必要なデータと進め方を整理",
   },
   {
@@ -131,10 +137,28 @@ const heroPainScenarios = [
 
 const heroIntroCopy = {
   short:
-    "AI×経営改善で“もう一度伸びる会社”へ。年商5,000万円〜15億円の経営者専用に、資金繰りと成長の方程式を最短3ヶ月で描き切ります。",
+    "半年で銀行融資に強い経営改善計画を描き切り、資金繰りと成長の両立を実現。AIと診断士が経営者の意思決定を一本化します。",
   extended:
     "生成AIが抽出した財務・現場データの歪みを診断士が補正し、再生計画の物語と数字を一本化。金融機関が求める根拠資料と現場の実行タスクを同じダッシュボードで管理し、意思決定リードタイムを平均1/3に短縮します。補助金・条件変更・新規投資の検討まで、伴走しながら成果を定着させます。",
 };
+
+const ctaTrustBadges = [
+  {
+    icon: Landmark,
+    headline: "福岡銀行グループ連携",
+    description: "金融機関レビュー向け資料を共同整備",
+  },
+  {
+    icon: BriefcaseBusiness,
+    headline: "伴走180社超",
+    description: "改善計画・再生支援の導入実績",
+  },
+  {
+    icon: LineChart,
+    headline: "融資稟議サポート",
+    description: "銀行交渉に耐えるKPIと根拠を提示",
+  },
+];
 
 const HeroSection = () => {
   const [isDetailOpen, setIsDetailOpen] = useState(false);
@@ -152,11 +176,22 @@ const HeroSection = () => {
           <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-                使命｜判断力を取り戻す伴走
+                成果 × 期間 × 手段
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
-                48時間で再生の羅針盤を手に。AI診断と診断士伴走で「次の一手」を同じ画面に。
+                半年で銀行融資に強い経営改善計画を、AIと専門家で最短構築。
               </h1>
+              <ul className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/80 md:text-base">
+                {heroValueBullets.map((item) => (
+                  <li
+                    key={item}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2"
+                  >
+                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
               <div className="grid gap-3 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
                 {heroProcessSteps.map(({ icon: Icon, title, description }) => (
                   <div key={title} className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4">
@@ -381,8 +416,23 @@ const HeroSection = () => {
                   {TERTIARY_CTA.label}
                 </a>
               </div>
+              <div className="grid gap-3 rounded-2xl border border-white/12 bg-white/5 p-4 text-left text-xs text-slate-100/80 md:grid-cols-3">
+                {ctaTrustBadges.map(({ icon: Icon, headline, description }) => (
+                  <div key={headline} className="flex items-start gap-3 rounded-xl bg-[#0b1f3f]/60 p-3">
+                    <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full bg-cyan-500/20 text-cyan-100">
+                      <Icon className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                    <div className="space-y-1">
+                      <p className="text-[0.75rem] font-semibold uppercase tracking-[0.24em] text-cyan-100/80">
+                        {headline}
+                      </p>
+                      <p className="text-[0.78rem] leading-relaxed text-slate-100/80">{description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-200/80">
-                代表・古町（中小企業診断士）が直接ヒアリング｜初回30分で論点を棚卸し、翌営業日に再生仮説と優先シナリオを提示
+                代表・古町（中小企業診断士）が直接ヒアリング｜初回45分で論点を棚卸し、翌営業日に再生仮説と優先シナリオを提示
               </p>
               <div className="flex flex-wrap items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-[0.75rem] uppercase tracking-[0.22em] text-cyan-100/80">
                 {trustSignals.map(({ icon: Icon, label }) => (

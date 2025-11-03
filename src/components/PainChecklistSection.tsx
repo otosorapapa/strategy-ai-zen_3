@@ -13,6 +13,9 @@ const painPatterns = [
   {
     id: "cash-bottleneck",
     title: "入金タイミングと支払いが合わず、資金繰りが枯渇しがち",
+    summaryTag: "キャッシュギャップ",
+    summary:
+      "入出金のズレと銀行資料の更新遅れで、資金ショートの不安が常につきまとう",
     signals: [
       "毎月の支払いシミュレーションがExcelの手作業に依存している",
       "金融機関との面談で根拠資料の更新が追いつかない",
@@ -34,6 +37,9 @@ const painPatterns = [
   {
     id: "gross-margin",
     title: "粗利率が下がり、利益改善の打ち手が定まらない",
+    summaryTag: "粗利ダウン",
+    summary:
+      "値上げや投資判断が止まり、粗利低下の要因が曖昧なまま現場が動けない",
     signals: [
       "価格転嫁・値上げの意思決定が社内で停滞している",
       "稼働の高いラインほど粗利が圧迫されている",
@@ -55,6 +61,9 @@ const painPatterns = [
   {
     id: "people-process",
     title: "人材稼働が分断され、現場の改善が前に進まない",
+    summaryTag: "現場分断",
+    summary:
+      "タスクとKPIが噛み合わず、改善プロジェクトが属人的に止まってしまう",
     signals: [
       "担当者ごとにToDoが属人化し、会議で同じ議論が繰り返される",
       "採用・育成の指標が定まらず、離職が止まらない",
@@ -89,6 +98,7 @@ const fallbackRecommendation = {
 
 const PainChecklistSection = () => {
   const [selectedCauses, setSelectedCauses] = useState<string[]>([]);
+  const [expandedPattern, setExpandedPattern] = useState<string | null>(null);
 
   const activeRecommendation = useMemo(() => {
     if (!selectedCauses.length) {
@@ -102,11 +112,23 @@ const PainChecklistSection = () => {
 
   const toggleCause = (causeId: string) => {
     setSelectedCauses((prev) => {
-      if (prev.includes(causeId)) {
+      const isAlreadySelected = prev.includes(causeId);
+      setExpandedPattern((current) => {
+        if (isAlreadySelected) {
+          return current === causeId ? null : current;
+        }
+        return causeId;
+      });
+
+      if (isAlreadySelected) {
         return prev.filter((id) => id !== causeId);
       }
       return [...prev, causeId];
     });
+  };
+
+  const toggleExpand = (patternId: string) => {
+    setExpandedPattern((current) => (current === patternId ? null : patternId));
   };
 
   const handleAction = () => {
@@ -139,6 +161,31 @@ const PainChecklistSection = () => {
           </p>
         </ScrollReveal>
 
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-10 rounded-[28px] border border-[#0b1f3f]/12 bg-white/70 p-6 shadow-[0_20px_55px_rgba(6,21,48,0.12)]"
+        >
+          <div className="space-y-4 text-left text-[#1e3359]/80">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]/75">
+              症状ダイジェスト
+            </p>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {painPatterns.map((pattern) => (
+                <div
+                  key={`${pattern.id}-summary`}
+                  className="rounded-[20px] border border-[#0b1f3f]/10 bg-white/90 p-4 shadow-[0_14px_35px_rgba(6,21,48,0.08)]"
+                >
+                  <p className="text-sm font-semibold text-[#0b1f3f]">{pattern.summaryTag}</p>
+                  <p className="mt-2 text-xs leading-relaxed">{pattern.summary}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-[#1e3359]/70">
+              詳細チェックリストは各カードの「症状詳細を見る」から確認できます。所要時間は約10秒です。
+            </p>
+          </div>
+        </ScrollReveal>
+
         <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-start">
           <ScrollReveal
             variant="fade-up"
@@ -147,13 +194,14 @@ const PainChecklistSection = () => {
             {painPatterns.map((pattern) => {
               const Icon = pattern.icon;
               const isSelected = selectedCauses.includes(pattern.id);
+              const isExpanded = expandedPattern === pattern.id;
 
               return (
                 <label
                   key={pattern.id}
                   className={cn(
                     "group flex cursor-pointer flex-col gap-4 rounded-[24px] border px-5 py-4 transition",
-                    isSelected
+                    isSelected || isExpanded
                       ? "border-[#0584c6] bg-[#eef7ff] shadow-[0_18px_40px_rgba(5,132,198,0.18)]"
                       : "border-[#0b1f3f]/10 bg-white/70 hover:border-[#0584c6]/60 hover:bg-[#f6fbff]"
                   )}
@@ -164,21 +212,58 @@ const PainChecklistSection = () => {
                       onCheckedChange={() => toggleCause(pattern.id)}
                       aria-label={`${pattern.title}を選択する`}
                     />
-                    <div className="flex-1 space-y-3 text-left">
-                      <div className="flex items-center gap-3">
-                        <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0584c6]/10 text-[#0584c6]">
-                          <Icon className="h-5 w-5" aria-hidden="true" />
+                    <div className="flex-1 space-y-4 text-left">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div className="flex items-center gap-3">
+                          <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0584c6]/10 text-[#0584c6]">
+                            <Icon className="h-5 w-5" aria-hidden="true" />
+                          </span>
+                          <p className="text-left text-lg font-semibold text-[#0b1f3f] md:text-[1.1rem]">{pattern.title}</p>
+                        </div>
+                        <span className="inline-flex items-center rounded-full border border-[#0584c6]/30 bg-[#0584c6]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-[#0584c6]">
+                          {pattern.summaryTag}
                         </span>
-                        <p className="text-left text-lg font-semibold text-[#0b1f3f] md:text-[1.1rem]">{pattern.title}</p>
                       </div>
-                      <ul className="space-y-2 text-sm leading-relaxed text-[#1e3359]/80">
-                        {pattern.signals.map((signal) => (
-                          <li key={signal} className="flex items-start gap-2">
-                            <Stethoscope className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
-                            <span>{signal}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <p className="text-sm leading-relaxed text-[#1e3359]/80">{pattern.summary}</p>
+                      <div
+                        className={cn(
+                          "grid overflow-hidden transition-[grid-template-rows] duration-500",
+                          isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                        )}
+                        aria-hidden={!isExpanded}
+                        id={`pain-signals-${pattern.id}`}
+                      >
+                        <div className="min-h-0">
+                          <ul className="space-y-2 pt-1 text-sm leading-relaxed text-[#1e3359]/80">
+                            {pattern.signals.map((signal) => (
+                              <li key={signal} className="flex items-start gap-2">
+                                <Stethoscope className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+                                <span>{signal}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          toggleExpand(pattern.id);
+                        }}
+                        className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]/80 transition hover:text-[#0584c6]"
+                        aria-expanded={isExpanded}
+                        aria-controls={`pain-signals-${pattern.id}`}
+                      >
+                        {isExpanded ? "症状詳細を閉じる" : "症状詳細を見る"}
+                        <ArrowRight
+                          className={cn(
+                            "h-3.5 w-3.5 transition-transform",
+                            isExpanded ? "rotate-90" : "translate-x-0"
+                          )}
+                          aria-hidden="true"
+                        />
+                      </button>
                     </div>
                   </div>
                 </label>

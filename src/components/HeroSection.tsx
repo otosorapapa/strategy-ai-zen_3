@@ -54,6 +54,27 @@ const heroValueBullets = [
   "金融機関協議まで整う計画テンプレ",
 ];
 
+const heroSummaryCards = [
+  {
+    icon: Timer,
+    eyebrow: "要約 01",
+    title: "48時間で危険ラインを色分け",
+    description: "資金繰りと粗利の優先順位をAIヒートマップで即把握",
+  },
+  {
+    icon: Sparkle,
+    eyebrow: "要約 02",
+    title: "診断士が計画を現場仕様に翻訳",
+    description: "ヒアリングで実行条件を整理し、会議資料とタスクに落とし込む",
+  },
+  {
+    icon: Landmark,
+    eyebrow: "要約 03",
+    title: "銀行交渉と補助金申請まで一気通貫",
+    description: "再交渉・稟議・補助金の資料を共通ダッシュボードで共有",
+  },
+];
+
 const heroImpactStats = [
   {
     icon: LineChart,
@@ -135,6 +156,12 @@ const heroPainScenarios = [
   "改善計画の提出期限が迫り、資料づくりと現場調整が間に合わない",
 ];
 
+const heroPainSummaryTags = [
+  "黒字でもキャッシュが残らない",
+  "AI投資が利益と直結しない",
+  "改善計画の締切が目前",
+];
+
 const heroIntroCopy = {
   short:
     "AIの資金繰りシミュレーションと診断士の管理会計設計で、半年以内に銀行稟議に耐える経営改善計画を仕上げる。",
@@ -192,189 +219,216 @@ const HeroSection = () => {
                   </li>
                 ))}
               </ul>
-              <div className="grid gap-3 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
-                {heroProcessSteps.map(({ icon: Icon, title, description }) => (
-                  <div key={title} className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4">
-                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+            </div>
+            <div className="space-y-6">
+              <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
+                {heroSummaryCards.map(({ icon: Icon, title, description, eyebrow }) => (
+                  <div key={title} className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4">
+                    <div className="flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
                       <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
-                      {title}
+                      {eyebrow}
                     </div>
+                    <p className="text-sm font-semibold text-white/90">{title}</p>
                     <p className="text-xs leading-relaxed text-slate-100/80">{description}</p>
                   </div>
                 ))}
               </div>
-              <div className="space-y-3 rounded-3xl border border-white/12 bg-white/5 p-5 shadow-[0_18px_45px_rgba(3,16,36,0.35)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/85">
-                  眠れない夜に起きていること
-                </p>
-                <ul className="space-y-2 text-left text-sm leading-relaxed text-slate-100/85">
-                  {heroPainScenarios.map((scenario) => (
-                    <li key={scenario} className="flex items-start gap-2">
-                      <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
-                      <span>{scenario}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
               <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-lg">
                 {heroIntroCopy.short}
               </p>
-              <div className="max-w-3xl space-y-3">
-                <div
-                  className={cn(
-                    "grid overflow-hidden transition-all duration-500",
-                    isDetailOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
-                  )}
-                  aria-hidden={!isDetailOpen}
-                >
-                  <div
-                    id="hero-detail-copy"
-                    className="min-h-0 text-[1.05rem] leading-relaxed text-slate-100/80 md:text-lg"
-                  >
-                    {heroIntroCopy.extended}
-                  </div>
-                </div>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="sm"
-                  className="group h-auto w-fit rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90"
-                  onClick={() => setIsDetailOpen((prev) => !prev)}
-                  aria-expanded={isDetailOpen}
-                  aria-controls="hero-detail-copy"
-                >
-                  <span className="flex items-center gap-2 text-[0.7rem] normal-case tracking-[0.08em] text-white/80 group-hover:text-white">
-                    {isDetailOpen ? "詳細を閉じる" : "詳細を開いて効果シナリオを見る"}
-                    <ArrowRight
-                      className={cn(
-                        "h-4 w-4 transition-transform",
-                        isDetailOpen ? "rotate-90" : "translate-x-0",
-                      )}
-                      aria-hidden="true"
-                    />
-                  </span>
-                </Button>
-              </div>
-              <div className="space-y-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">
-                  3つの選ばれる理由
+              <div className="rounded-3xl border border-white/12 bg-white/5 p-5 shadow-[0_18px_45px_rgba(3,16,36,0.35)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/85">
+                  眠れない夜に起きている代表的な3症状
                 </p>
-                <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 sm:grid-cols-3">
-                  {heroReasonHighlights.map(({ icon: Icon, title, description, eyebrow }) => (
-                    <div
-                      key={title}
-                      className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4 shadow-[0_18px_45px_rgba(3,16,36,0.4)]"
+                <div className="mt-3 flex flex-wrap gap-2 text-left text-xs text-slate-100/80 md:text-sm">
+                  {heroPainSummaryTags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1"
                     >
-                      <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
-                        <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
-                        {eyebrow}
-                      </div>
-                      <p className="text-sm font-semibold text-white/90">{title}</p>
-                      <p className="text-xs leading-relaxed text-slate-100/75">{description}</p>
-                    </div>
+                      <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                      {tag}
+                    </span>
                   ))}
                 </div>
+                <p className="mt-4 text-[0.8rem] leading-relaxed text-slate-100/75">
+                  詳細な症状と改善ロードマップは「詳細を見る」から確認できます。該当する項目が1つでもあれば、無料診断で具体的な優先順位をご提示します。
+                </p>
               </div>
-              <div className="grid gap-6 rounded-3xl border border-white/15 bg-white/5 p-5 shadow-[0_22px_55px_rgba(3,16,36,0.45)]">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/85">
-                  <PlayCircle className="h-4 w-4" aria-hidden="true" />
-                  {heroVideoSummary.title}
-                </div>
-                <div className="grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center">
-                  <div className="aspect-video w-full overflow-hidden rounded-[20px] border border-white/15 bg-black/60 shadow-lg">
-                    <iframe
-                      src={heroVideoSummary.url}
-                      title={heroVideoSummary.title}
-                      className="h-full w-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="space-y-3 text-left text-sm leading-relaxed text-slate-100/85">
-                    <p>{heroVideoSummary.description}</p>
-                    <ul className="space-y-2 text-xs text-slate-100/75">
-                      {heroVideoSummary.highlights.map((highlight) => (
-                        <li key={highlight} className="flex items-start gap-2">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/80">
-                      まずは動画で全体像を掴んでからフォームへ
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-4 rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
-              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200">
-                <Sparkle className="h-4 w-4" aria-hidden="true" />
-                48H Blueprint Preview
-              </div>
-              <ul className="space-y-3 text-left text-sm leading-relaxed text-slate-100/85 md:text-base">
-                {heroBullets.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-200" aria-hidden="true" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-3">
-              {heroImpactStats.map((metric) => {
-                const Icon = metric.icon;
-
-                return (
-                  <div
-                    key={metric.label}
-                    className="rounded-3xl border border-white/15 bg-[#0b1f3f]/60 p-5 shadow-[0_20px_45px_rgba(2,12,30,0.4)] backdrop-blur"
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-cyan-500/20 text-cyan-100">
-                        <Icon className="h-5 w-5" aria-hidden="true" />
-                      </span>
-                      <p className="text-2xl font-bold text-white">{metric.value}</p>
-                    </div>
-                    <p className="mt-2 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
-                      {metric.label}
-                    </p>
-                    <p className="mt-2 text-xs leading-relaxed text-slate-100/75">{metric.helper}</p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="grid gap-6 rounded-[28px] border border-white/15 bg-white/5 p-6 shadow-[0_18px_55px_rgba(3,16,36,0.4)] backdrop-blur">
-              <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-                <div className="space-y-4">
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200/90">
-                    再生ストーリーを3枚で把握
-                  </h2>
-                  <div className="grid gap-4 sm:grid-cols-3">
-                    {blueprintSteps.map((step) => (
-                      <div
-                        key={step.title}
-                        className="rounded-2xl border border-white/15 bg-[#0b1f3f]/60 p-4 shadow-[0_12px_30px_rgba(2,12,30,0.35)]"
-                      >
-                        <div className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
-                          {step.title}
+              <div
+                className={cn(
+                  "grid overflow-hidden transition-[grid-template-rows] duration-500",
+                  isDetailOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                )}
+                aria-hidden={!isDetailOpen}
+              >
+                <div id="hero-detail-content" className="min-h-0 space-y-8">
+                  <div className="grid gap-3 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
+                    {heroProcessSteps.map(({ icon: Icon, title, description }) => (
+                      <div key={title} className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4">
+                        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                          <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                          {title}
                         </div>
-                        <p className="mt-2 text-sm leading-relaxed text-slate-100/85">{step.description}</p>
+                        <p className="text-xs leading-relaxed text-slate-100/80">{description}</p>
                       </div>
                     ))}
                   </div>
-                </div>
-                <div className="relative mx-auto w-full max-w-[280px] rounded-[24px] border border-white/20 bg-[#031024]/80 p-6 text-center shadow-[0_20px_45px_rgba(3,16,36,0.45)]">
-                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">KPIストーリー</div>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-100/80">
-                    生成AIが示す優先指標と改善幅を、診断士が意思決定に使えるストーリーへと翻訳。数値の裏側にある行動と交渉のポイントを一枚で共有します。
-                  </p>
+                  <div className="space-y-3 rounded-3xl border border-white/12 bg-white/5 p-5 shadow-[0_18px_45px_rgba(3,16,36,0.35)]">
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/85">
+                      眠れない夜に起きていること
+                    </p>
+                    <ul className="space-y-2 text-left text-sm leading-relaxed text-slate-100/85">
+                      {heroPainScenarios.map((scenario) => (
+                        <li key={scenario} className="flex items-start gap-2">
+                          <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                          <span>{scenario}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/80 md:text-lg">
+                    {heroIntroCopy.extended}
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">
+                      3つの選ばれる理由
+                    </p>
+                    <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 sm:grid-cols-3">
+                      {heroReasonHighlights.map(({ icon: Icon, title, description, eyebrow }) => (
+                        <div
+                          key={title}
+                          className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4 shadow-[0_18px_45px_rgba(3,16,36,0.4)]"
+                        >
+                          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                            <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+                            {eyebrow}
+                          </div>
+                          <p className="text-sm font-semibold text-white/90">{title}</p>
+                          <p className="text-xs leading-relaxed text-slate-100/75">{description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="grid gap-6 rounded-3xl border border-white/15 bg-white/5 p-5 shadow-[0_22px_55px_rgba(3,16,36,0.45)]">
+                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/85">
+                      <PlayCircle className="h-4 w-4" aria-hidden="true" />
+                      {heroVideoSummary.title}
+                    </div>
+                    <div className="grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-center">
+                      <div className="aspect-video w-full overflow-hidden rounded-[20px] border border-white/15 bg-black/60 shadow-lg">
+                        <iframe
+                          src={heroVideoSummary.url}
+                          title={heroVideoSummary.title}
+                          className="h-full w-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="space-y-3 text-left text-sm leading-relaxed text-slate-100/85">
+                        <p>{heroVideoSummary.description}</p>
+                        <ul className="space-y-2 text-xs text-slate-100/75">
+                          {heroVideoSummary.highlights.map((highlight) => (
+                            <li key={highlight} className="flex items-start gap-2">
+                              <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                              <span>{highlight}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/80">
+                          まずは動画で全体像を掴んでからフォームへ
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="space-y-4 rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
+                    <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200">
+                      <Sparkle className="h-4 w-4" aria-hidden="true" />
+                      48H Blueprint Preview
+                    </div>
+                    <ul className="space-y-3 text-left text-sm leading-relaxed text-slate-100/85 md:text-base">
+                      {heroBullets.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-200" aria-hidden="true" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-3">
+                    {heroImpactStats.map((metric) => {
+                      const Icon = metric.icon;
+
+                      return (
+                        <div
+                          key={metric.label}
+                          className="rounded-3xl border border-white/15 bg-[#0b1f3f]/60 p-5 shadow-[0_20px_45px_rgba(2,12,30,0.4)] backdrop-blur"
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-cyan-500/20 text-cyan-100">
+                              <Icon className="h-5 w-5" aria-hidden="true" />
+                            </span>
+                            <p className="text-2xl font-bold text-white">{metric.value}</p>
+                          </div>
+                          <p className="mt-2 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
+                            {metric.label}
+                          </p>
+                          <p className="mt-2 text-xs leading-relaxed text-slate-100/75">{metric.helper}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="grid gap-6 rounded-[28px] border border-white/15 bg-white/5 p-6 shadow-[0_18px_55px_rgba(3,16,36,0.4)] backdrop-blur">
+                    <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                      <div className="space-y-4">
+                        <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200/90">
+                          再生ストーリーを3枚で把握
+                        </h2>
+                        <div className="grid gap-4 sm:grid-cols-3">
+                          {blueprintSteps.map((step) => (
+                            <div
+                              key={step.title}
+                              className="rounded-2xl border border-white/15 bg-[#0b1f3f]/60 p-4 shadow-[0_12px_30px_rgba(2,12,30,0.35)]"
+                            >
+                              <div className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+                                {step.title}
+                              </div>
+                              <p className="mt-2 text-sm leading-relaxed text-slate-100/85">{step.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="relative mx-auto w-full max-w-[280px] rounded-[24px] border border-white/20 bg-[#031024]/80 p-6 text-center shadow-[0_20px_45px_rgba(3,16,36,0.45)]">
+                        <div className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">KPIストーリー</div>
+                        <p className="mt-3 text-sm leading-relaxed text-slate-100/80">
+                          生成AIが示す優先指標と改善幅を、診断士が意思決定に使えるストーリーへと翻訳。数値の裏側にある行動と交渉のポイントを一枚で共有します。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="group h-auto w-fit rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90"
+                onClick={() => setIsDetailOpen((prev) => !prev)}
+                aria-expanded={isDetailOpen}
+                aria-controls="hero-detail-content"
+              >
+                <span className="flex items-center gap-2 text-[0.7rem] normal-case tracking-[0.08em] text-white/80 group-hover:text-white">
+                  {isDetailOpen ? "詳細を閉じて概要に戻る" : "詳細を見る｜進め方と成果指標を確認"}
+                  <ArrowRight
+                    className={cn(
+                      "h-4 w-4 transition-transform",
+                      isDetailOpen ? "rotate-90" : "translate-x-0",
+                    )}
+                    aria-hidden="true"
+                  />
+                </span>
+              </Button>
             </div>
 
             <div className="space-y-4">

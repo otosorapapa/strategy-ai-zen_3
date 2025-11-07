@@ -66,19 +66,19 @@ const authorityStack: AuthorityBadge[] = [
 
 const proofHighlights = [
   {
-    label: "Board Adoption",
-    value: "意思決定承認率 97%",
-    note: "経営／金融双方のチェックを同時通過させる統制ログ。",
+    label: "経営会議での評価",
+    value: "承認判断が揺らがない",
+    note: "経営と金融の視点を同じ統制ログで提示し、決裁が迷いません。",
   },
   {
-    label: "Negotiation Lead Time",
-    value: "交渉準備 ▲45%",
-    note: "事前に必要資料を洗い出し、差し戻しを未然に防止。",
+    label: "交渉準備のスピード",
+    value: "差し戻しを未然に防ぐ",
+    note: "必要資料を先回りで整え、会議までの準備時間を圧縮します。",
   },
   {
-    label: "Capital Confidence",
-    value: "資金調達評価 Aランク",
-    note: "監査証憑の連動でキャッシュアウトの不確実性を削減。",
+    label: "資金調達の信頼感",
+    value: "外部評価が安定",
+    note: "監査証憑とダッシュボードを連動させ、資金不安を抑えます。",
   },
 ];
 
@@ -199,15 +199,15 @@ const trustSignals = [
 ];
 
 const problemQuickSummary = [
-  "粗利・キャッシュ・現場の情報が分断され、意思決定の場までに熱量が失われている",
-  "生成AIの提案が実装フェーズに届かず、投資判断が属人的な感覚に依存している",
-  "金融機関や取引先への説明が後手になり、資金繰りと信頼が同時に削られている",
+  "市場と現場の兆しが別々に管理され、会議の場で迷いが生まれている",
+  "生成AIと中小企業診断士が業界・顧客・コストを多面的に分析し、貴社仕様の管理アプリで判断軸を揃えられる",
+  "外部環境を常時監視し、補助金活用まで視野に入れた5か年の見通しで堂々と交渉できる",
 ];
 
 const problemNextActions = [
-  "48時間で粗利・資金・人材の歪みをヒートマップ化し、議論のスタート地点を揃える",
-  "AIスコアと現場ヒアリングを結ぶ意思決定ログを整え、合意までのリードタイムを短縮",
-  "金融機関向けストーリーと現場タスクを同期させ、外部説明の先手を取る",
+  "短期間で粗利・資金・人材の歪みを可視化し、議論の起点を共有する",
+  "生成AI解析と現場ヒアリングを結ぶ判断ログを整え、優先順位の合意を速める",
+  "貴社専用アプリで金融機関向け資料と現場タスクを同期させ、補助金申請にも備える",
 ];
 
 const ProblemSection = () => {
@@ -219,10 +219,10 @@ const ProblemSection = () => {
             Reality｜直面する停滞サイクル
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            資金繰りを崩す兆候を断ち切るために押さえるべき3つの停滞要因
+            未来を選び取る経営判断を止める3つの停滞要因
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            粗利率の鈍化や運転資本の目減りは、限られた人員体制の中で瞬時に全社へ波及する。AIヒアリングで集まった声を基に、資金繰りを毀損する構造を立体的に整理した。自社のKPIと照合し、止血すべき論点を即断してほしい。
+            粗利の鈍化や運転資本の目減りは、情報が分断されたままでは一気に全社へ広がります。生成AIが収集した外部データと現場ヒアリングを重ね、資金繰りを揺らす構造と機会を同じ座標で整理しました。次の一手を胸を張って選べるよう、自社の指標と照らし合わせてください。
           </p>
         </ScrollReveal>
 
@@ -270,14 +270,14 @@ const ProblemSection = () => {
                 <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
                   <div className="space-y-2">
                     <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
-                      Proof Sandwich
+                      信頼の重ね合わせ
                     </span>
                     <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
                       行政・金融・専門メディアが裏付ける財務再構築の信頼基盤
                     </h3>
                   </div>
                   <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                    行政認定・地域金融機関との共創・専門メディア露出という三層の証跡で、取締役会が委任判断を下せる根拠を明示する。
+                    行政認定、地域金融機関との共創、専門メディアでの紹介という三層の証跡で、経営陣が委任判断を下せる根拠を示します。
                   </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -323,9 +323,9 @@ const ProblemSection = () => {
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#0b1e3f]/70 via-transparent to-[#030916]/85" />
                 <figcaption className="absolute bottom-4 left-4 right-4 space-y-2 rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">Board Confidence Lens</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">経営会議の信頼レンズ</p>
                   <p className="text-sm leading-relaxed text-slate-100/90">
-                    対外監査・金融審査で求められる証憑動線を1枚に集約。意思決定の裏付けを資料と議事で同時に残せます。
+                    対外監査や金融機関が求める証憑の流れを一枚に集約。判断の裏付けを資料と議事で同時に残せます。
                   </p>
                 </figcaption>
               </figure>

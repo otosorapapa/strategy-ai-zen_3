@@ -123,7 +123,7 @@ const HeroSection = () => {
               {heroIntroCopy.short}
             </p>
 
-            <ul className="grid gap-3 text-left text-sm text-slate-100/85 md:grid-cols-2 md:text-[0.95rem]">
+            <ul className="grid gap-3 text-left text-sm text-slate-100/85 md:grid-cols-2 md:text-base">
               {heroValueBullets.map((item) => (
                 <li
                   key={item}
@@ -179,7 +179,7 @@ const HeroSection = () => {
             <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
               {heroSummaryCards.map(({ icon: Icon, title, description, eyebrow }) => (
                 <div key={title} className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4">
-                  <div className="flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                  <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
                     <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
                     {eyebrow}
                   </div>
@@ -189,7 +189,7 @@ const HeroSection = () => {
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-[0.75rem] uppercase tracking-[0.22em] text-cyan-100/80">
+            <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm uppercase tracking-[0.22em] text-cyan-100/80">
               {trustSignals.map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2 rounded-xl bg-white/5 px-3 py-2">
                   <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
@@ -208,13 +208,13 @@ const HeroSection = () => {
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0 space-y-3 bg-gradient-to-t from-[#020b1c]/95 via-[#041226]/60 to-transparent px-6 pb-6 pt-10 text-left">
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/85">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/85">
                   Blueprint Preview
                 </p>
                 <p className="text-sm leading-relaxed text-slate-100/85">
                   48時間で抽出した資金圧迫の兆しと現場の制約条件を、一目で理解できる再生ボードに整理。次の会議で示せるドラフトが整います。
                 </p>
-                <div className="flex flex-wrap items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-cyan-100/85">
+                <div className="flex flex-wrap items-center gap-2 text-sm font-semibold uppercase tracking-[0.22em] text-cyan-100/85">
                   <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1">
                     <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
                     優先論点リスト
@@ -234,7 +234,7 @@ const HeroSection = () => {
               <div className="mt-4 grid gap-4 sm:grid-cols-3">
                 {heroBoardroomInsights.map(({ label, value, description }) => (
                   <div key={label} className="rounded-2xl border border-white/12 bg-[#0b1f3f]/60 p-4 text-left">
-                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.26em] text-cyan-100/80">{label}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.26em] text-cyan-100/80">{label}</p>
                     <p className="mt-1 text-xl font-bold text-white">{value}</p>
                     <p className="mt-2 text-xs leading-relaxed text-slate-100/80">{description}</p>
                   </div>
@@ -257,7 +257,7 @@ const HeroSection = () => {
                       </span>
                       <p className="text-2xl font-bold text-white">{metric.value}</p>
                     </div>
-                    <p className="mt-2 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
+                    <p className="mt-2 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
                       {metric.label}
                     </p>
                     <p className="mt-2 text-xs leading-relaxed text-slate-100/75">{metric.helper}</p>

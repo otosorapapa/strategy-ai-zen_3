@@ -234,7 +234,7 @@ const SecurityPrivacySection = () => {
                         <p className="text-sm font-semibold">{pillar.title}</p>
                       </div>
                       <p className="text-xs text-white/85">{pillar.description}</p>
-                      <ul className="space-y-2 text-[0.7rem] text-white/75">
+                      <ul className="space-y-2 text-sm text-white/75">
                         {pillar.bullets.map((point) => (
                           <li key={point} className="flex items-start gap-1.5">
                             <span className="mt-[3px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan-200" aria-hidden="true" />
@@ -309,7 +309,7 @@ const SecurityPrivacySection = () => {
             {trustSignals.map((signal) => (
               <span
                 key={signal}
-                className="rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-2 text-[0.65rem] text-[#0b1f3f]/70 shadow-[0_12px_28px_rgba(8,32,68,0.08)]"
+                className="rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-2 text-xs text-[#0b1f3f]/70 shadow-[0_12px_28px_rgba(8,32,68,0.08)]"
               >
                 {signal}
               </span>

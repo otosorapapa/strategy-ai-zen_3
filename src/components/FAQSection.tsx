@@ -448,7 +448,7 @@ const FAQSection = () => {
                       <span className="inline-flex items-center rounded-full bg-[#0b1f3f]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]">
                         {faq.metric}
                       </span>
-                      <span className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#1e3359]/50">
+                      <span className="text-sm font-semibold uppercase tracking-[0.32em] text-[#1e3359]/50">
                         {faq.metricLabel}
                       </span>
                     </div>

@@ -77,10 +77,10 @@ const DashboardShowcase = () => {
                   className="rounded-3xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur"
                 >
                   <p className="text-3xl font-black text-cyan-100 md:text-4xl">{metric.value}</p>
-                  <p className="mt-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+                  <p className="mt-2 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
                     {metric.label}
                   </p>
-                  <p className="mt-3 text-[0.8rem] leading-relaxed text-slate-200/75">{metric.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-200/75">{metric.description}</p>
                 </div>
               ))}
             </div>
@@ -92,7 +92,7 @@ const DashboardShowcase = () => {
                     key={title}
                     className="rounded-[28px] border border-white/10 bg-gradient-to-br from-[#062147] via-[#041735] to-[#021024] p-5 text-left"
                   >
-                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/70">Case</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/70">Case</p>
                     <p className="mt-2 text-sm font-semibold leading-snug text-white">{title}</p>
                   </div>
                 )
@@ -133,7 +133,7 @@ const DashboardShowcase = () => {
                           style={{ height: `${Math.max(10, ((45 - index * 4) / 50) * 100)}%` }}
                         />
                       </div>
-                      <span className="text-[0.55rem] text-white/60">{label}</span>
+                      <span className="text-xs text-white/60">{label}</span>
                     </div>
                   ))}
                 </div>
@@ -163,7 +163,7 @@ const DashboardShowcase = () => {
                         <p className="font-semibold text-white/80">{item.label}</p>
                         <p className="text-white/60">{item.helper}</p>
                       </div>
-                      <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-cyan-200">
+                      <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">
                         {item.status}
                       </span>
                     </li>
@@ -204,7 +204,7 @@ const DashboardShowcase = () => {
                   <p>Wed｜現場チーム：改善タスク進捗共有</p>
                   <p>Fri｜ZEN伴走：AIレポートと交渉資料を更新</p>
                 </div>
-                <div className="mt-4 rounded-full bg-white/10 px-3 py-1 text-center text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-cyan-200">
+                <div className="mt-4 rounded-full bg-white/10 px-3 py-1 text-center text-xs font-semibold uppercase tracking-[0.24em] text-cyan-200">
                   実行ログは自動保存
                 </div>
               </div>

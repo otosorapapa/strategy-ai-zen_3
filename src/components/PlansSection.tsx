@@ -425,7 +425,7 @@ const PlansSection = () => {
                           <h3 className="text-2xl font-semibold text-foreground md:text-[1.85rem]">返金・成果保証プログラム</h3>
                         </div>
                       </div>
-                      <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-primary/80 shadow-sm">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/80 px-3 py-1 text-sm font-semibold uppercase tracking-[0.32em] text-primary/80 shadow-sm">
                         リスクゼロ
                       </span>
                     </div>
@@ -482,7 +482,7 @@ const PlansSection = () => {
                   <ol className="mt-5 space-y-4">
                     {guaranteeSteps.map((step, index) => (
                       <li key={step.title} className="rounded-2xl border border-secondary/25 bg-white/90 p-4 shadow-inner">
-                        <div className="flex items-center justify-between text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-secondary/70">
+                        <div className="flex items-center justify-between text-sm font-semibold uppercase tracking-[0.28em] text-secondary/70">
                           <span>{step.period}</span>
                           {index < guaranteeSteps.length - 1 && (
                             <span className="inline-flex items-center gap-1 text-secondary">

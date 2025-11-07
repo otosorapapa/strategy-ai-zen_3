@@ -109,7 +109,7 @@ const StickyCtaBar = () => {
           </div>
 
           <div className="flex flex-col items-center gap-2 md:items-start">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-highlight">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-highlight">
               所要時間 約60秒｜必須入力2項目から
             </p>
             <div className="flex w-full items-center gap-3 md:gap-4">

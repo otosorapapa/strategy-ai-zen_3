@@ -3,23 +3,23 @@ import { ArrowRight, CircleDashed, Compass, Layers, Workflow } from "lucide-reac
 const navigationItems = [
   {
     id: "why-section",
-    label: "背景",
-    title: "停滞の正体を見極める",
-    description: "資金・粗利・現場の分断要因と失速パターンを3分で把握",
+    label: "原点",
+    title: "停滞の原因と機会を見極める",
+    description: "資金・粗利・現場の分断要因と失速パターンを数分で整理",
     icon: Compass,
   },
   {
     id: "what-section",
-    label: "提供価値",
-    title: "AI×診断士の設計図を確認",
-    description: "経営判断の材料と伴走体制をシンプルに理解",
+    label: "約束",
+    title: "AI×診断士が届ける価値を把握",
+    description: "意思決定の質・速さ・先見性を高める仕組みを理解",
     icon: Layers,
   },
   {
     id: "how-section",
-    label: "進め方",
-    title: "週次サイクルで前進させる",
-    description: "週次ワークフローと実行伴走の具体的な進め方を確認",
+    label: "前進",
+    title: "週次サイクルで実装する道筋",
+    description: "調査・計画・伴走の流れと成果物を確認",
     icon: Workflow,
   },
 ];
@@ -35,7 +35,7 @@ const SectionNavigationMap = () => {
               Navigation Map
             </div>
             <p className="max-w-3xl text-[0.95rem] leading-relaxed">
-              「背景→提供価値→進め方」の順に読み進めることで、再生の全体像と次のアクションを迷わず把握できます。気になるセクションから即座にアクセスしてください。
+              「原点→約束→前進」の順に読み進めることで、再生の全体像と次に取るべき行動が自然と見えてきます。気になるセクションから即座にアクセスしてください。
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">

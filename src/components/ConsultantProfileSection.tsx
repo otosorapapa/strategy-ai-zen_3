@@ -1,6 +1,5 @@
-import { Award, Banknote, BarChart3, Building2, FileCheck, ShieldCheck } from "lucide-react";
+import { Award, Banknote, BarChart3, Building2, FileCheck, ShieldCheck, User } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import profilePhoto from "@/assets/representative.jpg";
 
 const profileStats = [
   {
@@ -63,13 +62,12 @@ const ConsultantProfileSection = () => {
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(5,132,198,0.15),_transparent_65%)]" aria-hidden="true" />
             <div className="relative flex flex-col items-center gap-5">
-              <div className="h-48 w-48 overflow-hidden rounded-full border-4 border-white shadow-[0_20px_45px_rgba(8,30,70,0.25)]">
-                <img
-                  src={profilePhoto}
-                  alt="代表診断士・古町の顔写真"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
+              <div
+                className="flex h-48 w-48 items-center justify-center rounded-full border-4 border-white bg-[radial-gradient(circle_at_top,_rgba(5,132,198,0.35),_rgba(11,31,63,0.9))] shadow-[0_20px_45px_rgba(8,30,70,0.25)]"
+                role="img"
+                aria-label="代表診断士・古町のプロフィールイメージ"
+              >
+                <User className="h-16 w-16 text-white/80" aria-hidden="true" />
               </div>
               <div className="text-center text-[#0b1f3f]">
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]">代表 / 中小企業診断士</p>

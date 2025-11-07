@@ -37,7 +37,7 @@ const SectionNavigationMap = () => {
               <CircleDashed className="h-4 w-4" aria-hidden="true" />
               Navigation Map
             </div>
-            <p className="max-w-3xl text-[0.95rem] leading-relaxed">
+            <p className="max-w-3xl text-base leading-relaxed">
               「背景→提供価値→進め方」の順に読み進めることで、なぜ変革が必要なのか、何を受け取れるのか、どう進めれば先を読めるのかが一気に掴めます。経営者が自信をもって判断できる流れを、そのままページ構成に落とし込んでいます。
             </p>
           </div>

@@ -58,7 +58,7 @@ const SectionMicroCta = ({
           {eyebrow && (
             <span
               className={cn(
-                "inline-flex items-center gap-2 rounded-full px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] md:text-xs",
+                "inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] md:text-xs",
                 variant === "dark"
                   ? "border border-white/20 bg-white/10 text-white/85"
                   : "border border-primary/20 bg-white/80 text-primary/80",

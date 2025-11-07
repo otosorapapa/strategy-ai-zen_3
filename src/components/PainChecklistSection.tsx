@@ -220,7 +220,7 @@ const PainChecklistSection = () => {
               )}
             >
               <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0b1f3f]/6 via-transparent to-[#0584c6]/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" aria-hidden="true" />
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">
+              <p className="text-sm font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">
                 {signal.label}
               </p>
               <p className="mt-3 text-3xl font-bold text-[#0b1f3f]">{signal.value}</p>

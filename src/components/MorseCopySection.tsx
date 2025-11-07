@@ -112,7 +112,7 @@ const MorseCopySection = () => {
                 className="group relative flex h-full flex-col gap-5 rounded-[28px] border border-[#0b1f3f]/10 bg-white/90 p-7 shadow-[0_32px_80px_rgba(11,31,63,0.12)] transition duration-300 hover:-translate-y-1 hover:border-[#0584c6]/40 hover:shadow-[0_40px_110px_rgba(5,132,198,0.18)]"
               >
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f6f9ff] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]/80">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#f6f9ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]/80">
                     {stage.label}
                   </span>
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0584c6]/12 text-[#0584c6]">

@@ -88,11 +88,11 @@ const BeforeAfterJourneySection = () => {
               >
                 <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
                   <span>{step.stage}</span>
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-[0.65rem] text-white/85">感情: {step.emotion}</span>
+                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/85">感情: {step.emotion}</span>
                 </div>
                 <div className="mt-4 space-y-3">
                   <p className="text-sm font-semibold text-white/90 md:text-base">{step.label}</p>
-                  <p className="text-sm leading-relaxed text-slate-100/80 md:text-[0.95rem]">{step.description}</p>
+                  <p className="text-sm leading-relaxed text-slate-100/80 md:text-base">{step.description}</p>
                 </div>
                 {index < journeySteps.length - 1 && (
                   <ArrowRight
@@ -128,7 +128,7 @@ const BeforeAfterJourneySection = () => {
                     <div className="space-y-1 text-slate-100/85">
                       <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/80">{signal.label}</p>
                       <p className="text-xl font-bold text-white">{signal.value}</p>
-                      <p className="text-[0.8rem] leading-relaxed text-slate-100/70">{signal.helper}</p>
+                      <p className="text-sm leading-relaxed text-slate-100/70">{signal.helper}</p>
                     </div>
                   </div>
                 );

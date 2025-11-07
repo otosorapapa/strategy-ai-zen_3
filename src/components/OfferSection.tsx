@@ -174,10 +174,10 @@ const OfferSection = () => {
               >
                 <div className="space-y-6">
                   <div className="flex items-center justify-between gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-full border border-[#0584c6]/20 bg-[#f2f9ff] px-4 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-[#0584c6]">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-[#0584c6]/20 bg-[#f2f9ff] px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0584c6]">
                       {card.step}
                     </span>
-                    <span className="inline-flex items-center gap-2 rounded-full bg-[#0b1f3f]/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-white">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-[#0b1f3f]/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-white">
                       <Icon className="h-3.5 w-3.5" aria-hidden="true" />
                       {card.label}
                     </span>
@@ -203,7 +203,7 @@ const OfferSection = () => {
                 <div className="space-y-4">
                   {card.stat && (
                     <div className="rounded-3xl bg-[#f2f7ff] px-5 py-4 text-left shadow-inner shadow-white/40 ring-1 ring-[#0584c6]/10">
-                      <p className="text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]/80">
+                      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]/80">
                         {card.stat.label}
                       </p>
                       <p className="mt-1 text-3xl font-bold text-[#0b1f3f]">{card.stat.value}</p>
@@ -241,7 +241,7 @@ const OfferSection = () => {
               className="h-full w-full object-cover"
               loading="lazy"
             />
-            <span className="absolute -bottom-2 right-0 inline-flex items-center rounded-full bg-[#0584c6] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-white">
+            <span className="absolute -bottom-2 right-0 inline-flex items-center rounded-full bg-[#0584c6] px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-white">
               Voice
             </span>
           </div>

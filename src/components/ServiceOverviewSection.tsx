@@ -257,7 +257,7 @@ const ServiceOverviewSection = () => {
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
-                <p className="text-[0.95rem] leading-relaxed text-slate-600">{item.description}</p>
+                <p className="text-base leading-relaxed text-slate-600">{item.description}</p>
               </ScrollReveal>
             );
           })}
@@ -285,11 +285,11 @@ const ServiceOverviewSection = () => {
                 delay={380 + index * 100}
                 className="group relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-secondary/40 bg-white/95 p-8 text-left shadow-[0px_32px_70px_-48px_rgba(7,84,110,0.58)] backdrop-blur"
               >
-                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-secondary-foreground">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.28em] text-secondary-foreground">
                   {step.step}
                 </span>
                 <h4 className="text-xl font-semibold leading-snug text-slate-900">{step.title}</h4>
-                <p className="text-[0.95rem] leading-relaxed text-slate-600">{step.detail}</p>
+                <p className="text-base leading-relaxed text-slate-600">{step.detail}</p>
                 <div className="pointer-events-none absolute inset-x-8 bottom-0 hidden h-24 rounded-full bg-gradient-to-b from-secondary/20 to-transparent opacity-0 blur-xl transition duration-300 group-hover:opacity-100 md:block" />
               </ScrollReveal>
             ))}
@@ -327,7 +327,7 @@ const ServiceOverviewSection = () => {
                     <h4 className="text-lg font-semibold text-slate-900">{item.title}</h4>
                     <p className="text-sm leading-relaxed text-slate-600">{item.description}</p>
                   </div>
-                  <span className="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-primary/80">
+                  <span className="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.3em] text-primary/80">
                     {item.metric}
                   </span>
                   <div className="pointer-events-none absolute inset-x-6 -bottom-6 hidden h-12 rounded-full bg-gradient-to-b from-primary/15 to-transparent blur-md transition duration-300 group-hover:opacity-80 md:block" />

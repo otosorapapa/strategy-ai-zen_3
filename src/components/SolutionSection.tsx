@@ -269,7 +269,7 @@ const SolutionSection = () => {
         >
           <div className="grid gap-4 sm:gap-6 md:grid-cols-2 md:items-stretch">
             <div className="space-y-4 rounded-[24px] border border-white/60 bg-white px-5 py-6 shadow-[0_18px_45px_rgba(9,27,60,0.12)]">
-              <p className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+              <p className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
                 30秒サマリー
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-[#1a335c]/85">
@@ -282,7 +282,7 @@ const SolutionSection = () => {
               </ul>
             </div>
             <div className="space-y-4 rounded-[24px] border border-[#0584c6]/25 bg-white px-5 py-6 shadow-[0_18px_45px_rgba(5,120,180,0.12)]">
-              <p className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+              <p className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
                 次のアクション
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-[#1a335c]/85">
@@ -341,7 +341,7 @@ const SolutionSection = () => {
             <p className="text-sm leading-relaxed text-[#1e3359]/80">
               週次の再生スタンドアップでは、AIが弾き出した仮説と専門家の知見を照合し、役員会の論点整理・金融機関への説明・現場タスクを一本化。迷いなく投資判断が下せるようロジックを階層化します。
             </p>
-            <div className="grid gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60 sm:grid-cols-2">
+            <div className="grid gap-2 text-sm font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60 sm:grid-cols-2">
               {trustSignals.map((signal) => (
                 <span key={signal} className="rounded-full border border-[#0b1f3f]/15 bg-white/75 px-3 py-1 text-center">
                   {signal}
@@ -357,7 +357,7 @@ const SolutionSection = () => {
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
-              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl bg-[#0b1f3f]/85 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white/90">
+              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl bg-[#0b1f3f]/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-white/90">
                 <span>Executive Review</span>
                 <ArrowUpRight className="h-4 w-4 text-cyan-200" aria-hidden="true" />
               </figcaption>
@@ -441,7 +441,7 @@ const SolutionSection = () => {
                       </span>
                       <p className="text-base font-semibold text-[#0b1f3f]">{stage.title}</p>
                     </div>
-                    <span className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
                       <Gauge className="h-3.5 w-3.5" aria-hidden="true" />
                       {stage.kpi}
                     </span>
@@ -466,7 +466,7 @@ const SolutionSection = () => {
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
-              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl bg-[#0b1f3f]/85 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-white/90">
+              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl bg-[#0b1f3f]/85 px-4 py-2 text-sm font-semibold uppercase tracking-[0.28em] text-white/90">
                 <span>Before</span>
                 <ArrowRight className="h-4 w-4 text-cyan-200" aria-hidden="true" />
                 <span>After</span>
@@ -516,7 +516,7 @@ const SolutionSection = () => {
                 <LineChart className="h-6 w-6" aria-hidden="true" />
               </div>
               <div className="space-y-1 text-left">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/60">視線誘導レポート</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/60">視線誘導レポート</p>
                 <p className="text-sm font-semibold leading-relaxed text-[#0b1f3f]">理事会資料にも転用できる因果証跡が自動生成</p>
               </div>
             </div>
@@ -527,7 +527,7 @@ const SolutionSection = () => {
               const phase = String(index + 1).padStart(2, "0");
               return (
                 <div key={node.title} className="relative h-full rounded-3xl border border-white/60 bg-white p-6 shadow-[0_22px_60px_rgba(8,25,54,0.12)]">
-                  <div className="flex items-center justify-between text-[0.65rem] font-semibold uppercase tracking-[0.26em] text-[#0b1f3f]/60">
+                  <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.26em] text-[#0b1f3f]/60">
                     <span className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/12 px-3 py-1 text-[#0584c6]">
                       Phase {phase}
                     </span>
@@ -645,7 +645,7 @@ const SolutionSection = () => {
         <div className="space-y-6">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div className="space-y-2">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#0584c6]/20 bg-[#f2f9ff] px-4 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#0584c6]/20 bg-[#f2f9ff] px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
                 導入までの流れ（最短6週間）
               </span>
               <h3 className="text-2xl font-semibold text-[#0b1f3f] md:text-[1.9rem]">

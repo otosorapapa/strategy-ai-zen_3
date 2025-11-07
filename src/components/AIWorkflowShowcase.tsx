@@ -110,7 +110,7 @@ const AIWorkflowShowcase = () => {
         >
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <p className="inline-flex items-center gap-2 rounded-full bg-[#eff5ff] px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0f2647]">
+              <p className="inline-flex items-center gap-2 rounded-full bg-[#eff5ff] px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-[#0f2647]">
                 30秒サマリー
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-[#143057]/80">
@@ -123,7 +123,7 @@ const AIWorkflowShowcase = () => {
               </ul>
             </div>
             <div className="space-y-3 rounded-[24px] border border-[#2b7df4]/25 bg-[#f3f8ff] p-5">
-              <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#2b7df4]">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-[#2b7df4]">
                 次のアクション
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-[#143057]/80">
@@ -142,7 +142,7 @@ const AIWorkflowShowcase = () => {
           {trustSignals.map((signal) => (
             <span
               key={signal}
-              className="inline-flex items-center gap-2 rounded-full border border-[#0f2647]/10 bg-white px-4 py-1.5 text-[0.78rem] font-medium text-[#0f2647]/80 shadow-[0_12px_30px_rgba(8,26,51,0.08)]"
+              className="inline-flex items-center gap-2 rounded-full border border-[#0f2647]/10 bg-white px-4 py-1.5 text-sm font-medium text-[#0f2647]/80 shadow-[0_12px_30px_rgba(8,26,51,0.08)]"
             >
               <ShieldCheck className="h-3.5 w-3.5 text-[#3b82f6]" aria-hidden="true" />
               {signal}
@@ -176,7 +176,7 @@ const AIWorkflowShowcase = () => {
                             </span>
                             <h3 className="text-xl font-semibold tracking-tight text-[#0b1f3f]">{item.title}</h3>
                           </div>
-                          <p className="text-[0.95rem] leading-relaxed text-[#1a335c]/80">{item.description}</p>
+                          <p className="text-base leading-relaxed text-[#1a335c]/80">{item.description}</p>
                           {index === 1 && (
                             <div className="grid gap-4 rounded-2xl border border-[#2b7df4]/10 bg-gradient-to-br from-[#f4f9ff] to-white p-4 sm:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
                               <div className="space-y-2">
@@ -261,7 +261,7 @@ const AIWorkflowShowcase = () => {
                     <p className="mt-1 text-xs font-semibold uppercase tracking-[0.22em] text-[#0f2647]/70">
                       {metric.label}
                     </p>
-                    <p className="mt-2 text-[0.7rem] leading-relaxed text-[#143057]/75">{metric.detail}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#143057]/75">{metric.detail}</p>
                   </div>
                 ))}
               </div>

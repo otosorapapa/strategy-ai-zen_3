@@ -232,7 +232,7 @@ const BeforeAfterCard = ({
       <div className="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-secondary/10 blur-2xl transition-opacity duration-500 group-hover:opacity-70" aria-hidden="true" />
       <div className="flex items-center justify-between gap-3 text-secondary-foreground">
         <p className="text-lg font-semibold tracking-tight">{item.title}</p>
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-secondary/30 bg-white/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.26em] text-secondary-foreground/80">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-secondary/30 bg-white/80 px-3 py-1 text-sm font-semibold uppercase tracking-[0.26em] text-secondary-foreground/80">
           <ArrowDownRight className="h-3.5 w-3.5" aria-hidden="true" />
           -{item.before.value - item.after.value}分
         </span>
@@ -240,13 +240,13 @@ const BeforeAfterCard = ({
 
       <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-4 rounded-2xl border border-secondary/30 bg-white/90 p-4 shadow-inner">
         <div className="space-y-1">
-          <span className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-muted-foreground">Before</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">Before</span>
           <p className="text-2xl font-semibold text-muted-foreground">
             <AnimatedCounter value={item.before.value} suffix={item.before.unit} duration={800} />
           </p>
         </div>
         <div className="space-y-1 text-right">
-          <span className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-primary/90">After</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/90">After</span>
           <p className="text-2xl font-semibold text-primary">
             <AnimatedCounter value={item.after.value} suffix={item.after.unit} duration={800} />
           </p>
@@ -269,7 +269,7 @@ const AIBenefitsSection = () => {
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
           <div className="space-y-10">
             <ScrollReveal className="space-y-6" variant="fade">
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[0.9rem] font-semibold uppercase tracking-[0.32em] text-primary">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-base font-semibold uppercase tracking-[0.32em] text-primary">
                 <BrainCircuit className="h-4 w-4" aria-hidden="true" />
                 CxOのための生成AI運用基盤
               </span>
@@ -302,12 +302,12 @@ const AIBenefitsSection = () => {
                     delay={index * 90}
                     className="relative flex h-full flex-col gap-4 rounded-3xl border border-primary/10 bg-gradient-to-br from-white via-primary/5 to-white p-6 shadow-card"
                   >
-                    <span className="inline-flex w-max items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-primary">
+                    <span className="inline-flex w-max items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold uppercase tracking-[0.24em] text-primary">
                       <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
                       STEP {index + 1}
                     </span>
                     <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-[0.95rem] leading-relaxed text-muted-foreground">{item.description}</p>
+                    <p className="text-base leading-relaxed text-muted-foreground">{item.description}</p>
                     {index < causalityHighlights.length - 1 && (
                       <span className="absolute -right-10 top-1/2 hidden h-px w-16 -translate-y-1/2 bg-gradient-to-r from-primary/40 to-accent/50 md:block" aria-hidden="true" />
                     )}
@@ -341,7 +341,7 @@ const AIBenefitsSection = () => {
                         suffix={metric.suffix}
                       />
                     </p>
-                    <p className="mt-2 text-[0.8rem] font-medium text-secondary-foreground/80">{metric.label}</p>
+                    <p className="mt-2 text-sm font-medium text-secondary-foreground/80">{metric.label}</p>
                   </div>
                 ))}
               </div>
@@ -365,7 +365,7 @@ const AIBenefitsSection = () => {
                 <div className="space-y-6">
                   <div className="space-y-4">
                     <h3 className="text-3xl font-semibold leading-tight text-foreground">地方製造業での導入ストーリー</h3>
-                    <p className="text-[0.98rem] leading-relaxed text-muted-foreground">
+                    <p className="text-base leading-relaxed text-muted-foreground">
                       営業日報・受発注・会計の3データをAIがリアルタイム照合し、粗利インパクトとキャッシュ変動を先読み。翌朝には顧客別の提案書と投資対効果が自動生成され、社長は採用すべきシナリオを選ぶだけ。粗利率は19%から26%へ改善し、役員会は攻めの投資案件を議論する時間を再設計できました。
                     </p>
                   </div>
@@ -376,7 +376,7 @@ const AIBenefitsSection = () => {
                         delay={index * 70}
                         className="flex h-full flex-col gap-2 rounded-2xl border border-primary/20 bg-white/90 p-4 shadow-inner"
                       >
-                        <div className="flex items-center justify-between text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-primary/70">
+                        <div className="flex items-center justify-between text-sm font-semibold uppercase tracking-[0.28em] text-primary/70">
                           <span>{stat.label}</span>
                           <ArrowUpRight className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
                         </div>
@@ -418,7 +418,7 @@ const AIBenefitsSection = () => {
                           delay={index * 90}
                           className="flex gap-4 rounded-2xl border border-primary/15 bg-gradient-to-r from-primary/8 via-white to-white p-4 shadow-sm"
                         >
-                          <div className="flex h-14 w-14 flex-col items-center justify-center rounded-xl bg-primary/12 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-primary">
+                          <div className="flex h-14 w-14 flex-col items-center justify-center rounded-xl bg-primary/12 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
                             {item.phase}
                           </div>
                           <div className="space-y-1">
@@ -464,15 +464,15 @@ const AIBenefitsSection = () => {
                               <Icon className="h-7 w-7" aria-hidden="true" />
                             </span>
                             <div>
-                              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-primary/70">CAUSAL LOGIC</p>
+                              <p className="text-xs font-semibold uppercase tracking-[0.4em] text-primary/70">CAUSAL LOGIC</p>
                               <h3 className="mt-2 text-2xl font-semibold text-foreground">{feature.title}</h3>
                             </div>
                           </div>
                           <div className="flex flex-wrap items-center gap-2">
-                            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/90 px-4 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-primary/80 shadow-sm">
+                            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/90 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.32em] text-primary/80 shadow-sm">
                               因果連動テンプレ
                             </span>
-                            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-primary shadow-sm">
+                            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.32em] text-primary shadow-sm">
                               即時検証
                               <ArrowDownRight className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
                             </span>
@@ -481,18 +481,18 @@ const AIBenefitsSection = () => {
                         <div className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
                           <div className="space-y-5">
                             <div className="rounded-2xl border border-primary/12 bg-white/95 p-5 shadow-inner">
-                              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-primary/70">Executive Summary</p>
-                              <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">{feature.description}</p>
+                              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/70">Executive Summary</p>
+                              <p className="mt-2 text-base leading-relaxed text-muted-foreground">{feature.description}</p>
                             </div>
                             <div className="rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/8 via-white to-accent/10 p-5 text-primary/90 shadow-inner">
-                              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-primary/80">論理シナリオ</p>
+                              <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/80">論理シナリオ</p>
                               <p className="mt-2 text-sm leading-relaxed">{feature.narrative}</p>
                             </div>
                           </div>
                           <div className="flex h-full flex-col gap-4 rounded-[1.8rem] border border-primary/10 bg-white/92 p-5 shadow-inner ring-1 ring-primary/10">
-                            <div className="flex items-center justify-between text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-primary/60">
+                            <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.32em] text-primary/60">
                               <span>成果指標</span>
-                              <span className="inline-flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-[0.65rem] font-semibold tracking-[0.32em] text-white shadow-lg">
+                              <span className="inline-flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-xs font-semibold tracking-[0.32em] text-white shadow-lg">
                                 REAL-TIME
                               </span>
                             </div>
@@ -508,8 +508,8 @@ const AIBenefitsSection = () => {
                               key={insight.label}
                               className="rounded-2xl border border-primary/10 bg-white/92 p-4 text-left shadow-inner transition-shadow duration-500 group-hover:shadow-lg"
                             >
-                              <p className="text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-primary/70">{insight.label}</p>
-                              <p className="mt-2 text-[0.82rem] leading-relaxed text-muted-foreground">{insight.detail}</p>
+                              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">{insight.label}</p>
+                              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{insight.detail}</p>
                             </div>
                           ))}
                         </div>
@@ -524,7 +524,7 @@ const AIBenefitsSection = () => {
           <div className="space-y-8">
             <ScrollReveal className="rounded-3xl border border-secondary/30 bg-white/85 p-7 shadow-card" variant="fade">
               <h3 className="text-2xl font-semibold text-secondary-foreground">数字でわかる即効メリット</h3>
-              <p className="mt-2 text-[0.95rem] text-secondary-foreground/80">
+              <p className="mt-2 text-base text-secondary-foreground/80">
                 生成AIが全社データを横断し、意思決定に必要なレポートとアクションを同時生成。削減できる時間と増える価値を、経営陣が一目で評価できます。
               </p>
               <div className="mt-6 grid gap-5 sm:grid-cols-2">
@@ -564,7 +564,7 @@ const AIBenefitsSection = () => {
                                 )}
                               </span>
                               <div className="space-y-1">
-                                <p className="text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-primary/70">{item.phase}</p>
+                                <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/70">{item.phase}</p>
                                 <h4 className="text-[1.05rem] font-semibold text-foreground">{item.title}</h4>
                               </div>
                             </div>
@@ -572,9 +572,9 @@ const AIBenefitsSection = () => {
                               <Icon className="h-5 w-5" aria-hidden="true" />
                             </span>
                           </div>
-                          <p className="text-[0.95rem] leading-relaxed text-muted-foreground">{item.detail}</p>
+                          <p className="text-base leading-relaxed text-muted-foreground">{item.detail}</p>
                           <div className="rounded-2xl border border-dashed border-primary/30 bg-primary/5 px-4 py-3 shadow-inner">
-                            <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-primary/70">Deliverable</p>
+                            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/70">Deliverable</p>
                             <p className="mt-1 text-sm font-semibold text-primary/90">{item.deliverable}</p>
                           </div>
                         </div>

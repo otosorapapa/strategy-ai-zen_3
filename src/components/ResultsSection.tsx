@@ -190,7 +190,7 @@ const ResultsSection = () => {
             {trustBadges.map((badge) => (
               <span
                 key={badge}
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-cyan-100/90"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-100/90"
               >
                 <ShieldCheck className="h-4 w-4 text-cyan-200" />
                 {badge}
@@ -205,7 +205,7 @@ const ResultsSection = () => {
         >
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
                 30秒サマリー
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-slate-200/85">
@@ -218,7 +218,7 @@ const ResultsSection = () => {
               </ul>
             </div>
             <div className="space-y-3 rounded-[24px] border border-cyan-300/30 bg-cyan-500/10 p-5">
-              <p className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+              <p className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100">
                 成果を引き上げるレバー
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-slate-100/85">
@@ -299,7 +299,7 @@ const ResultsSection = () => {
           className="mt-10 grid gap-6 rounded-[32px] border border-white/12 bg-white/10 p-6 shadow-[0_26px_60px_rgba(1,10,28,0.5)] backdrop-blur"
         >
           <div className="space-y-4 text-left">
-            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
               測定プロセス公開
             </p>
             <h3 className="text-2xl font-semibold text-white md:text-[1.8rem]">成果データの測定期間と定義を公開</h3>
@@ -427,7 +427,7 @@ const ResultsSection = () => {
                 className="relative flex flex-1 flex-col gap-4 overflow-hidden rounded-[28px] border border-white/12 bg-gradient-to-br from-[#062147] via-[#041536] to-[#021024] p-6"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+                  <span className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
                     {step.phase}
                   </span>
                   <Icon className="h-5 w-5 text-cyan-200" />
@@ -453,7 +453,7 @@ const ResultsSection = () => {
           className="mt-14 grid gap-6 rounded-[32px] border border-white/12 bg-white/5 p-8 text-left shadow-[0_30px_80px_rgba(2,12,32,0.55)] backdrop-blur md:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]"
         >
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
               金融機関からの声
             </div>
             <p className="text-lg font-semibold leading-relaxed text-white md:text-xl">
@@ -497,14 +497,14 @@ const ResultsSection = () => {
                   className="h-14 w-14 rounded-full object-cover ring-2 ring-cyan-300/40"
                 />
                 <div className="flex flex-col">
-                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/70">
+                  <span className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/70">
                     支援事例
                   </span>
                   <p className="text-sm font-semibold text-white/90">{story.persona}</p>
                 </div>
               </div>
               <h3 className="text-lg font-semibold text-white md:text-xl">{story.title}</h3>
-              <p className="text-sm leading-relaxed text-slate-200/85 md:text-[0.95rem]">
+              <p className="text-sm leading-relaxed text-slate-200/85 md:text-base">
                 {story.narrative}
               </p>
               <div className="mt-auto flex flex-wrap gap-2">

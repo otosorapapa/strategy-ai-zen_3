@@ -418,30 +418,30 @@ const ProblemSection = () => {
             </figure>
             <div className="space-y-5">
               <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Pattern Interrupt
+                視点転換
               </div>
               <h3 className="text-2xl font-semibold leading-snug md:text-[1.75rem]">
-                資金繰りシナリオを会議冒頭で共有できる意思決定キャンバス
+                会議冒頭で経営改善の筋道をそろえる意思決定キャンバス
               </h3>
               <p className="text-sm leading-relaxed text-slate-200/90 md:text-base">
-                <span className="text-cyan-200">状況・意図・判断</span>を一枚に揃え、財務と現場の思考速度を同期させる。議題は即座に実行設計へ移り、交渉資料も同じストーリーで更新される。
+                <span className="text-cyan-200">状況・意図・判断</span>を一枚に束ね、財務と現場の思考速度を揃える。議題はすぐに実行設計へ移り、交渉資料も同じストーリーで更新される。
               </p>
               <ul className="grid gap-3 text-sm text-slate-200/90 md:grid-cols-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Dual Coding｜財務・現場・リスクの3層を一画面で可視化。</span>
+                  <span>財務・現場・リスクの三層を同時表示し、議論の土台を共通化。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Gaze Cueing｜視線誘導で議論の順序を固定し、迷いを減らす。</span>
+                  <span>視線誘導を設計し、話す順番と考える順番を整えて迷いを減らす。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Picture Superiority｜キーメッセージに象徴アイコンを添え記憶に残す。</span>
+                  <span>要点に象徴アイコンを添え、共通言語として記憶に残す。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Isolation Effect｜重要指標を色面で分離し、判断基準を強調。</span>
+                  <span>重要指標を色で分離し、判断基準を一目で確認できるようにする。</span>
                 </li>
               </ul>
             </div>
@@ -455,26 +455,26 @@ const ProblemSection = () => {
           >
             <div className="space-y-4">
               <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Executive Signal
+                経営判断の兆し
               </div>
               <h3 className="text-left text-2xl font-semibold leading-snug text-white md:text-[1.75rem]">
-                数字・現場・資金のズレは、放置すると資金繰りの選択肢を確実に削ります。
+                判断が遅れると、現場の信頼と資金繰りの選択肢は瞬く間に狭まります。
               </h3>
               <p className="text-left text-sm leading-relaxed text-slate-200/90 md:text-[0.95rem]">
-                下記のシグナルが同時に表れている企業では、意思決定会議のリードタイムが倍近くまで伸びがちです。早期に設計図を可視化し、判断の土台を揃えることが重要です。
+                私たちは業界動向・競合・顧客のデータを診断士と生成AIで束ね、次の打ち手を描き切る計画づくりを支援します。会議に臨む前に状況を整理し、経営者自身が指揮をとり続けられる状態を整えます。
               </p>
               <ul className="grid gap-3 text-sm text-slate-200/85 md:grid-cols-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>現場ヒアリングで抽出したリードタイムのボトルネックを即座に数値化。</span>
+                  <span>業界・競合・顧客・コストを多面的に洗い出し、会議前に次の一手を提示する生成AIダッシュボード。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>財務モデルと商談パイプラインを連携させ、意思決定の基準を統一。</span>
+                  <span>財務・商談・現場の数字を一画面で同期し、5年先を見越した改善シナリオを即座に描画。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>資金調達シナリオと投資配分を併記し、納得度の高い判断を支援。</span>
+                  <span>策定後も診断士が伴走し、補助金の活用も視野に入れて計画とアプリを更新。</span>
                 </li>
               </ul>
             </div>
@@ -515,7 +515,7 @@ const ProblemSection = () => {
             className="relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-[#0b264f] via-[#061632] to-[#010b1d] p-8 shadow-[0_35px_80px_rgba(1,11,29,0.55)]"
           >
             <div className="flex items-center justify-between gap-4 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
-              <span>Dual Coding</span>
+              <span>視覚と言葉の連動</span>
               <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.65rem] text-cyan-100">
                 課題マップ（要約）
               </span>
@@ -528,10 +528,10 @@ const ProblemSection = () => {
             />
             <figcaption className="mt-6 space-y-3 text-[0.9rem] leading-relaxed text-slate-200/85">
               <p>
-                収益の漏れ・AI活用の停滞・対外説明の遅延は、同じ根にある「判断の設計図不在」が引き起こす連鎖です。視線誘導の矢印が示すとおり、数字と現場の分断が資金繰りの選択肢を削っています。
+                収益の漏れ、生成AIの停滞、対外説明の遅延は、共通の設計図がないことが原因です。数字と現場を一つの物語にまとめれば、次の手を打つ自信が戻ります。
               </p>
               <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">
-                Proof Point｜再設計後は粗利+3.2pt／交渉回答スピード▲45%（例）
+                実例｜再設計後は粗利+3.2pt／交渉回答スピード▲45%（一例）
               </p>
             </figcaption>
           </ScrollReveal>

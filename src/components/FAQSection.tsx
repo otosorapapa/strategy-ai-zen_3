@@ -19,74 +19,74 @@ type FAQ = {
 const faqs: FAQ[] = [
   {
     question: "費用の目安と支払い方法は？",
-    lead: "月額18万円〜の伴走プランに成果コミットメントを付帯し、未達時は返金または翌月無料をお選びいただけます。",
-    metric: "¥180k~",
+    lead: "結果にこだわる定額伴走で、歩みが止まれば費用調整を選べます。",
+    metric: "18万円〜",
     metricLabel: "月額目安",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
         <p>
-          伴走スタンダード（¥180,000/月）と成長アクセラレート（¥280,000/月）の2プランをご用意。いずれも初月トライアル付きで、合意した成果指標を満たせなかった場合は返金または翌月無料サポートを選択可能です。
+          標準伴走（月額18万円）と成長加速（月額28万円）の二本立て。いずれも初月はお試し期間とし、取り決めた指標に届かなければ返金または翌月無料サポートをお選びいただけます。
         </p>
         <div className="grid gap-4 rounded-2xl border border-[#0b1f3f]/10 bg-white/85 p-4 md:grid-cols-2">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">伴走スタンダード</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">標準伴走プラン</p>
             <ul className="mt-2 space-y-1.5 text-sm">
               <li className="flex items-start gap-2">
                 <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-                <span>粗利・資金繰りの土台を3ヶ月で構築し、週次レビューと金融資料を整備。</span>
+                <span>粗利と資金繰りの土台を3か月で整え、週次の振り返りと金融資料を整備します。</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-                <span>推奨体制：社長 + 管理/営業責任者。平均投資回収2.7ヶ月（例）。</span>
+                <span>推奨体制：経営者と管理担当。投資回収の目安は約2.7か月（実績値）。</span>
               </li>
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">成長アクセラレート</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">成長加速プラン</p>
             <ul className="mt-2 space-y-1.5 text-sm">
               <li className="flex items-start gap-2">
                 <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-                <span>AI需要予測・投資シナリオ運用を伴走し、Slack常時サポートを含む週次伴走。</span>
+                <span>AIによる需要予測と投資シナリオの運用を伴走し、常時チャット相談と週次訪問を組み合わせます。</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-                <span>推奨体制：経営陣 + PMO。平均投資回収3.1ヶ月（例）。</span>
+                <span>推奨体制：経営陣と推進担当。投資回収の目安は約3.1か月（実績値）。</span>
               </li>
             </ul>
           </div>
         </div>
         <p className="text-sm text-[#1e3359]/75">
-          お支払いは銀行振込または請求書払いに対応。補助金を活用する場合は採択スケジュールに合わせた請求タイミングも調整可能です。
+          お支払いは銀行振込または請求書払いに対応。国の補助金を使う場合も、採択のスケジュールに合わせた請求タイミングを柔軟に整えます。
         </p>
       </div>
     ),
   },
   {
     question: "無料相談では何が分かりますか？",
-    lead: "48時間以内に優先仮説と改善ロードマップの骨子をご提示します。",
-    metric: "48h",
+    lead: "48時間以内に、経営判断の核心と初動計画を見える化します。",
+    metric: "48時間",
     metricLabel: "初期診断",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
         <p>
-          財務・顧客・業務の3視点から現状データを解析し、課題の因果関係を可視化した「優先仮説メモ」と、改善アクションの初動プランをお渡しします。
+          財務・顧客・業務の三つの視点から現状を分析し、課題どうしのつながりを整理した「優先仮説メモ」と、改善アクションの初動プランをお渡しします。
         </p>
         <div className="grid gap-4 rounded-2xl bg-[#e9f0ff]/80 p-4 md:grid-cols-2">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">Deliverables</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">お渡しする資料</p>
             <p className="mt-1 font-semibold text-[#0b1f3f]">AI起点の優先仮説メモ</p>
-            <p className="mt-2 text-sm text-[#1e3359]/75">主要KPIのドライバーを矢印で連結し、意思決定の焦点を一枚で共有します。</p>
+            <p className="mt-2 text-sm text-[#1e3359]/75">主要指標を矢印で結び、判断の焦点を一枚で共有できる形にします。</p>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">意思決定のポイント</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">判断のポイント</p>
             <ul className="mt-1 space-y-1.5 text-sm">
               <li className="flex items-start gap-2">
                 <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-                <span>粗利・在庫・キャッシュの感度をシミュレーションし、優先順位を納得感ある形で提示。</span>
+                <span>粗利・在庫・資金の感度を試算し、優先順位を納得しやすい形で提示します。</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-                <span>改善のROIが高い仮説に対し、ToDoと担当配置の初期案をセットで共有。</span>
+                <span>効果が見込める仮説ごとに、やるべきことと担当配置の初期案をセットで共有します。</span>
               </li>
             </ul>
           </div>
@@ -95,77 +95,84 @@ const faqs: FAQ[] = [
     ),
   },
   {
-    question: "補助金の申請支援は可能ですか？",
-    lead: "経営改善計画策定支援補助金の申請要件から書類作成まで伴走します。",
-    metric: "Full",
-    metricLabel: "補助金対応",
+    question: "補助金の活用も相談できますか？",
+    lead: "国の補助金を前提とした資金づくりも、計画立案と同じ歩幅で支援します。",
+    metric: "伴走",
+    metricLabel: "補助金支援",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
         <p>
-          初回相談時に補助金活用の意向とスケジュールを確認し、必要な財務指標や実行体制をヒアリングします。48時間で申請可否の見立てと不足情報を棚卸しし、経営改善計画のドラフトアウトラインを共有します。
+          初回相談で補助金を使いたい目的と時期を伺い、必要な数字や体制を整理します。48時間以内に活用の見通しと不足情報の棚卸し表を共有し、計画書づくりと並行して準備を進めます。
         </p>
         <div className="grid gap-4 rounded-2xl border border-[#0b1f3f]/10 bg-white/85 p-4 md:grid-cols-2">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">提供するサポート</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">支援内容</p>
             <ul className="mt-1 space-y-1.5 text-sm">
               <li className="flex items-start gap-2">
                 <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-                <span>金融機関ヒアリング用の論点メモと申請スケジュールの設計</span>
+                <span>金融機関との打合せで使える論点メモと提出スケジュールを設計します。</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-                <span>経営改善計画書（様式5号）ドラフトの作成と差分レビュー</span>
+                <span>経営改善計画のドラフトを作り、必要書類の差分をその場で確認します。</span>
               </li>
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">参考リソース</p>
-            <p className="mt-1 text-sm text-[#1e3359]/80">
-              詳細は中小企業庁の案内ページをご確認いただけます。
-              <br />
-              <a
-                href="https://www.chusho.meti.go.jp/keiei/saisei/05.html"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[#0b5cff] underline decoration-dotted underline-offset-4"
-              >
-                経営改善計画策定支援事業（公式サイト）
-              </a>
-            </p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">進め方</p>
+            <ul className="mt-1 space-y-1.5 text-sm">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
+                <span>初回面談後48時間で不足資料リストと役割分担をお送りします。</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
+                <span>必要に応じて面談やプレゼンにも同席し、準備の要点を整理します。</span>
+              </li>
+            </ul>
           </div>
         </div>
+        <p className="text-sm text-[#1e3359]/75">
+          採択結果が見えない段階でも、再挑戦の準備や金融機関との調整までワンチームで支えます。
+        </p>
       </div>
     ),
   },
   {
-    question: "福岡エリアで補助金を活用した再生事例はありますか？",
-    lead: "福岡市・北九州市の中小企業で『福岡 中小企業再生 補助金』検索ニーズに対応した実績があります。",
+    question: "福岡エリアでの支援実績はありますか？",
+    lead: "福岡市・北九州市を中心に、地域の商習慣を踏まえた再生支援を重ねています。",
     metric: "福岡",
     metricLabel: "地域実績",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
         <p>
-          製造・卸売・サービスの各業種で、経営改善計画策定支援補助金を活用した再生事例があります。福岡県内の主要金融機関と連携し、補助金採択後もキャッシュフロー監視と週次レビューを継続することで、再生計画の実効性を高めています。
+          製造・卸売・サービスなど幅広い業種で、金融機関や専門家と連携しながら計画づくりと実行を支えてきました。現場の声を拾い上げ、地域特有の調達サイクルや商談の進め方に合わせて対策を編み上げます。
         </p>
         <div className="grid gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-white/85 p-4 text-sm text-[#1e3359]/80">
-          <div className="font-semibold text-[#0b1f3f]">代表的な成果指標</div>
-          <ul className="space-y-2">
-            <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
-              <span>福岡市内製造業：補助金採択後6ヶ月で営業利益+9%、資金繰り耐性+30日を達成。</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
-              <span>北九州市の卸売業：追加融資と補助金を併用し、債務超過を8ヶ月で解消。</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
-              <span>サービス業：福岡観光需要に合わせたDX投資を補助金で支援し、平均客単価+15%を実現。</span>
-            </li>
-          </ul>
+          <div className="flex items-start gap-3">
+            <CheckCircle2 className="mt-1 h-5 w-5 text-[#0b5cff]" aria-hidden="true" />
+            <div>
+              <p className="font-semibold text-[#0b1f3f]">製造業</p>
+              <span>設備投資と在庫コントロールを両立し、3か月で黒字転換の目処を共有。</span>
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <CheckCircle2 className="mt-1 h-5 w-5 text-[#0b5cff]" aria-hidden="true" />
+            <div>
+              <p className="font-semibold text-[#0b1f3f]">卸売業</p>
+              <span>主要仕入先との条件見直しを支援し、資金の安定化を実現。</span>
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <CheckCircle2 className="mt-1 h-5 w-5 text-[#0b5cff]" aria-hidden="true" />
+            <div>
+              <p className="font-semibold text-[#0b1f3f]">サービス業</p>
+              <span>来店データを分析し、単価向上と来店頻度アップの両輪で回復を支援。</span>
+            </div>
+          </div>
         </div>
-        <p className="text-sm">
-          福岡エリア特有の金融慣行や商習慣を踏まえ、補助金の採択後も「福岡 中小企業再生 補助金」で検索される論点（資金繰り表の更新、モニタリング資料、銀行との協議記録）をテンプレート化しています。無料相談では、エリア別の参考シナリオを具体的にお見せします。
+        <p className="text-sm text-[#1e3359]/75">
+          福岡エリアで蓄積したテンプレートと会議運営の型を持ち込み、地域ならではのスピード感で前進させます。無料相談では、業種別のシナリオを具体的にお見せします。
         </p>
       </div>
     ),
@@ -173,25 +180,25 @@ const faqs: FAQ[] = [
   {
     question: "フォーム入力はどれくらい時間がかかりますか？",
     lead: "所要時間は約60秒。必須項目はメールアドレスと会社規模だけです。",
-    metric: "60sec",
+    metric: "約60秒",
     metricLabel: "入力時間",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
         <p>
-          STEP1ではメールアドレスと会社規模を入力し、仮説メモをお送りする準備を整えます。STEP2で会社名・担当者名・任意の課題を共有いただくと、翌営業日までに再生仮説メモと優先アクション案をお届けします。
+          手順1ではメールアドレスと会社規模を入力し、仮説メモをお送りする準備を整えます。手順2で会社名・担当者名・任意の課題を共有いただくと、翌営業日までに再生仮説メモと優先アクション案をお届けします。
         </p>
         <div className="grid gap-3 rounded-2xl border border-dashed border-[#0b1f3f]/15 bg-white/80 p-4 shadow-sm">
           <div className="flex items-start gap-3">
             <CheckCircle2 className="mt-1 h-5 w-5 text-[#0b5cff]" aria-hidden="true" />
             <div>
-              <p className="text-sm font-semibold text-[#0b1f3f]">STEP1（約30秒）</p>
+              <p className="text-sm font-semibold text-[#0b1f3f]">手順1（約30秒）</p>
               <p className="text-sm text-[#1e3359]/75">メール・会社規模のみ入力で次に進め、優先仮説メモの準備が開始されます。</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <CheckCircle2 className="mt-1 h-5 w-5 text-[#0b5cff]" aria-hidden="true" />
             <div>
-              <p className="text-sm font-semibold text-[#0b1f3f]">STEP2（約30秒）</p>
+              <p className="text-sm font-semibold text-[#0b1f3f]">手順2（約30秒）</p>
               <p className="text-sm text-[#1e3359]/75">会社名・ご担当者名・任意の課題を共有いただくと、翌営業日に優先アクション案をお送りします。</p>
             </div>
           </div>
@@ -202,25 +209,25 @@ const faqs: FAQ[] = [
   {
     question: "データが整っていなくても大丈夫ですか？",
     lead: "紙・Excelベースからスタートし、90日で分析が回る土台を整備します。",
-    metric: "90d",
+    metric: "90日",
     metricLabel: "データ整備",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
         <p>
-          現状の帳票を棚卸しし、必要項目をテンプレート化。OCRとRPAを活用して自動入力を設計し、段階的にデータレイクへ移行します。
+          現状の帳票を棚卸しし、必要項目をテンプレート化。AIによる文字認識と自動処理を活用して入力を効率化し、段階的にデータ基盤へ移行します。
         </p>
         <div className="rounded-2xl border border-dashed border-[#0b1f3f]/15 bg-white/70 p-4 shadow-sm">
           <dl className="grid gap-3 md:grid-cols-2">
             <div>
-              <dt className="text-xs uppercase tracking-[0.28em] text-[#0b1f3f]/60">Phase1</dt>
+              <dt className="text-xs uppercase tracking-[0.28em] text-[#0b1f3f]/60">第1段階</dt>
               <dd className="mt-1 text-sm text-[#1e3359]/80">既存帳票を収集し、欠損・粒度・更新頻度を見える化。</dd>
             </div>
             <div>
-              <dt className="text-xs uppercase tracking-[0.28em] text-[#0b1f3f]/60">Phase2</dt>
+              <dt className="text-xs uppercase tracking-[0.28em] text-[#0b1f3f]/60">第2段階</dt>
               <dd className="mt-1 text-sm text-[#1e3359]/80">テンプレート化とガバナンス設計を実施し、業務の止まらない移行計画を策定。</dd>
             </div>
             <div>
-              <dt className="text-xs uppercase tracking-[0.28em] text-[#0b1f3f]/60">Phase3</dt>
+              <dt className="text-xs uppercase tracking-[0.28em] text-[#0b1f3f]/60">第3段階</dt>
               <dd className="mt-1 text-sm text-[#1e3359]/80">ダッシュボードと連動させ、日次の経営指標を自動集計。</dd>
             </div>
           </dl>
@@ -231,7 +238,7 @@ const faqs: FAQ[] = [
   {
     question: "金融機関との交渉はどこまで支援してくれますか？",
     lead: "交渉戦略・資料・場の設計までワンストップで伴走します。",
-    metric: "End-to-End",
+    metric: "全体支援",
     metricLabel: "交渉支援",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
@@ -252,9 +259,9 @@ const faqs: FAQ[] = [
     ),
   },
   {
-    question: "社内にAIやDXの担当者がいません。",
+    question: "社内にAIやデジタル活用の担当者がいません。",
     lead: "現場マネージャーが自走できるよう、週次伴走と育成フレームを提供します。",
-    metric: "Weekly",
+    metric: "週次伴走",
     metricLabel: "伴走体制",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
@@ -265,7 +272,7 @@ const faqs: FAQ[] = [
           <ul className="space-y-2 text-sm">
             <li className="flex items-start gap-2">
               <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-              <span>週次レビューでKPIの意味合いと改善仮説の打ち手を整理。</span>
+              <span>週次レビューで重要指標（KPI）の意味合いと改善仮説の打ち手を整理。</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
@@ -273,7 +280,7 @@ const faqs: FAQ[] = [
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[#0b5cff]" />
-              <span>ChatGPT等のプロンプト集と、部門別の成功事例ライブラリを提供。</span>
+              <span>対話型AI（ChatGPT等）の活用例と、部門別の成功事例ライブラリを提供。</span>
             </li>
           </ul>
         </div>
@@ -282,8 +289,8 @@ const faqs: FAQ[] = [
   },
   {
     question: "費用と期間の目安は？",
-    lead: "月額18万円〜。6ヶ月で再生のKPIが経営判断に耐える状態を整えます。",
-    metric: "¥180k〜",
+    lead: "月額18万円〜。6ヶ月で再生の重要指標が経営判断に耐える状態を整えます。",
+    metric: "18万円〜",
     metricLabel: "投資水準",
     answer: (
       <div className="space-y-4 text-base text-[#1e3359]/85">
@@ -292,16 +299,16 @@ const faqs: FAQ[] = [
         </p>
         <div className="grid gap-4 rounded-2xl bg-gradient-to-br from-white via-[#eef3ff] to-white p-4 md:grid-cols-3">
           <div>
-            <p className="text-xs uppercase tracking-[0.24em] text-[#0b1f3f]/60">Phase1</p>
-            <p className="mt-1 text-sm text-[#1e3359]/80">トライアル：重点KPIの改善仮説を検証し、投資判断の妥当性を数値化。</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#0b1f3f]/60">第1段階</p>
+            <p className="mt-1 text-sm text-[#1e3359]/80">お試し期間：重要指標（KPI）の改善仮説を検証し、投資判断の妥当性を数値化。</p>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.24em] text-[#0b1f3f]/60">Phase2</p>
-            <p className="mt-1 text-sm text-[#1e3359]/80">本導入：資金繰り・人員・需要予測を横串管理し、再生計画のPDCAを高速化。</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#0b1f3f]/60">第2段階</p>
+            <p className="mt-1 text-sm text-[#1e3359]/80">本導入：資金繰り・人員・需要予測を横串管理し、再生計画の改善サイクルを加速。</p>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.24em] text-[#0b1f3f]/60">Phase3</p>
-            <p className="mt-1 text-sm text-[#1e3359]/80">半年後：投資判断資料を定例化し、銀行・株主との対話を一貫したストーリーで牽引。</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#0b1f3f]/60">第3段階</p>
+            <p className="mt-1 text-sm text-[#1e3359]/80">半年後：投資判断資料を定例化し、金融機関や株主との対話を一つの物語で牽引。</p>
           </div>
         </div>
       </div>
@@ -332,7 +339,7 @@ const FAQSection = () => {
                   </span>
                 </h2>
                 <p className="text-[1.05rem] leading-relaxed text-[#1e3359]/85 md:text-lg">
-                  中小企業の再生を支える経営者の皆さまに、意思決定の根拠を明瞭に伝えるためのFAQです。因果関係を可視化し、納得感のある伴走体制を整えています。
+                  変化の気配をいち早く捉え、次の一手を堂々と示したい経営者のための質問集です。未来の兆しと足元の数字を結び付け、腹落ちする意思決定を後押しします。
                 </p>
               </div>
             </ScrollReveal>
@@ -350,7 +357,7 @@ const FAQSection = () => {
                 loading="lazy"
               />
               <figcaption className="mt-4 text-center text-sm font-medium text-[#1e3359]/75">
-                課題→介入→成果を3コマで整理したナラティブ・ビジュアライゼーションで、現場にも共有しやすい構成。
+                課題・打ち手・成果のつながりを一目で共有できる図解で、現場にも伝わる物語を形にします。
               </figcaption>
             </ScrollReveal>
 
@@ -358,18 +365,18 @@ const FAQSection = () => {
               {[
                 {
                   value: "3週間",
-                  label: "資金繰りの可視化",
-                  description: "キャッシュの流出入と因果を可視化し、金融機関との対話をリード。",
+                  label: "資金繰りの見える化",
+                  description: "資金の動きと背景を整理し、金融機関との面談で胸を張れる説明資料を共創。",
                 },
                 {
                   value: "+18%",
-                  label: "粗利率改善の平均値",
-                  description: "高粗利商品の稼働率をAIで予測し、販売計画を組み替え。",
+                  label: "粗利率改善の事例中央値",
+                  description: "利益を生む商品構成をAIで試算し、納得感のある販売計画に組み替えます。",
                 },
                 {
                   value: "94%",
-                  label: "プロジェクト継続率",
-                  description: "週次伴走と成果ダッシュボードで離脱を抑止。",
+                  label: "伴走継続率",
+                  description: "週次伴走と成果ダッシュボードで前進を可視化し、チームが自ら語れる状態を育てます。",
                 },
               ].map((item) => (
                 <div
@@ -406,7 +413,7 @@ const FAQSection = () => {
                 </div>
                 <div className="rounded-2xl border border-[#0b1f3f]/10 bg-white/80 p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">伴走チーム</p>
-                  <p className="mt-2 text-sm text-[#1e3359]/75">財務・DX・人材開発のスペシャリストがクロスファンクショナルで支援。</p>
+                  <p className="mt-2 text-sm text-[#1e3359]/75">財務・デジタル活用・人材開発の専門家が横断的に支援。</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -425,9 +432,9 @@ const FAQSection = () => {
                 loading="lazy"
               />
               <div className="absolute inset-x-6 bottom-6 rounded-2xl bg-[#0b1f3f]/90 p-4 text-white shadow-lg">
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/70">Dual Coding</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/70">視覚と言葉の連携</p>
                 <p className="mt-2 text-sm leading-relaxed text-white/90">
-                  KPIの相関と改善前後のギャップを1画面で可視化。文章だけでは伝わりにくい優先順位を、視覚とテキストで同期させます。
+                  指標のつながりと改善前後の差を一画面に整理。言葉だけでは伝わりづらい優先順位を、図とコメントでそろえます。
                 </p>
               </div>
             </ScrollReveal>
@@ -464,9 +471,9 @@ const FAQSection = () => {
       </div>
 
       <SectionMicroCta
-        eyebrow="Micro CTA"
+        eyebrow="追加のご案内"
         title="費用・補助金・導入スケジュールをまとめた回答シートをお送りします"
-        description="FAQで触れた論点を踏まえ、無料相談後に貴社専用のQ&Aシートと次のステップをお渡しします。迷いが残る場合はチャットでも個別質問が可能です。"
+        description="FAQで触れた論点を整理し、無料相談後に貴社専用の回答シートと次の一歩をお届けします。迷いが残る場合はチャットでいつでもご相談いただけます。"
         ctaId="faq-summary"
       />
     </section>

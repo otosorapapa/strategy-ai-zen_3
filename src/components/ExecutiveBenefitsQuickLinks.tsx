@@ -218,7 +218,7 @@ const ExecutiveBenefitsQuickLinks = () => {
                   <span className="text-lg text-foreground">{benefit.proof.highlight}</span>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">{benefit.title}</h3>
-                <p className="text-[0.95rem] leading-relaxed text-muted-foreground">{benefit.description}</p>
+                <p className="text-base leading-relaxed text-muted-foreground">{benefit.description}</p>
                 <a
                   href={benefit.href}
                   className={cn(

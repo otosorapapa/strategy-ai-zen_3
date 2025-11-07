@@ -340,7 +340,7 @@ const CTASection = () => {
           className="mt-8 rounded-[28px] border border-white/12 bg-white/5 p-6 shadow-[0_28px_75px_rgba(3,14,32,0.55)] backdrop-blur"
         >
           <div className="space-y-4 text-left">
-            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
               Trust Board
             </p>
             <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
@@ -358,7 +358,7 @@ const CTASection = () => {
                 className="flex h-full flex-col gap-4 rounded-3xl border border-white/15 bg-white/10 p-5 text-left text-sm leading-relaxed text-slate-100/90"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/15 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/80">
+                  <span className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/15 px-3 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100/80">
                     {entry.category}
                   </span>
                   <span className="inline-flex items-center justify-center rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-semibold text-cyan-100">
@@ -380,7 +380,7 @@ const CTASection = () => {
           className="mt-10 grid gap-6 rounded-[28px] border border-white/12 bg-white/10 p-6 text-left shadow-[0_30px_80px_rgba(3,14,32,0.55)] backdrop-blur lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]"
         >
           <div className="space-y-4">
-            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
               診断レポート サンプルで確認
             </p>
             <h3 className="text-xl font-semibold leading-relaxed text-white md:text-2xl">
@@ -514,11 +514,11 @@ const CTASection = () => {
                           : "border-white/15 bg-white/5 text-slate-200/80 hover:border-cyan-200/40 hover:text-white",
                       )}
                     >
-                      <span className="text-[0.65rem] uppercase tracking-[0.3em] text-cyan-200/80">{option.badge}</span>
-                      <span className="mt-1 block text-[0.95rem] leading-snug">{option.title}</span>
+                      <span className="text-xs uppercase tracking-[0.3em] text-cyan-200/80">{option.badge}</span>
+                      <span className="mt-1 block text-base leading-snug">{option.title}</span>
                       <span
                         className={cn(
-                          "mt-3 inline-flex items-center gap-2 text-[0.7rem] font-semibold",
+                          "mt-3 inline-flex items-center gap-2 text-sm font-semibold",
                           isSelected
                             ? "text-cyan-100"
                             : "text-cyan-100/70 group-hover:text-cyan-50",
@@ -581,7 +581,7 @@ const CTASection = () => {
                       <MessageCircleQuestion className="h-4 w-4" aria-hidden="true" />
                       <span className="text-left">
                         {shortcut.label}
-                        <span className="block text-[0.7rem] font-normal text-[#1e3359]/70">{shortcut.description}</span>
+                        <span className="block text-sm font-normal text-[#1e3359]/70">{shortcut.description}</span>
                       </span>
                     </a>
                   ))}
@@ -680,8 +680,8 @@ const CTASection = () => {
                                   : "border-[#d1dcf5] bg-white text-[#1e3359]/80 hover:border-[#0584c6]/60 hover:text-[#0b1f3f]",
                               )}
                             >
-                              <span className="text-[0.75rem] font-semibold">{option.label}</span>
-                              <span className="text-[0.7rem] text-[#1e3359]/70">{option.description}</span>
+                              <span className="text-sm font-semibold">{option.label}</span>
+                              <span className="text-sm text-[#1e3359]/70">{option.description}</span>
                             </button>
                           );
                         })}

@@ -19,6 +19,16 @@ export default {
       },
     },
     extend: {
+      fontSize: {
+        xs: ["0.86rem", { lineHeight: "1.55" }],
+        sm: ["0.98rem", { lineHeight: "1.6" }],
+        base: ["1.08rem", { lineHeight: "1.7" }],
+        lg: ["1.24rem", { lineHeight: "1.75" }],
+        xl: ["1.45rem", { lineHeight: "1.55" }],
+        "2xl": ["1.78rem", { lineHeight: "1.45" }],
+        "3xl": ["2.15rem", { lineHeight: "1.35" }],
+        "4xl": ["2.55rem", { lineHeight: "1.25" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -232,7 +232,7 @@ const ProblemSection = () => {
         >
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
-              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
+              <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
                 30秒サマリー
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-slate-200/85">
@@ -245,7 +245,7 @@ const ProblemSection = () => {
               </ul>
             </div>
             <div className="space-y-3 rounded-[24px] border border-cyan-300/30 bg-cyan-500/10 p-5">
-              <p className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+              <p className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100">
                 次のアクション
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-slate-100/85">
@@ -269,7 +269,7 @@ const ProblemSection = () => {
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
                   <div className="space-y-2">
-                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100">
                       信頼の裏付け層
                     </span>
                     <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
@@ -286,7 +286,7 @@ const ProblemSection = () => {
                       key={highlight.label}
                       className="flex h-full flex-col justify-between rounded-2xl border border-cyan-300/20 bg-[#0a1f48]/55 p-4 shadow-[0_18px_45px_rgba(4,20,48,0.45)]"
                     >
-                      <span className="text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/70">
+                      <span className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/70">
                         {highlight.label}
                       </span>
                       <p className="mt-3 text-lg font-semibold text-cyan-100">{highlight.value}</p>
@@ -340,7 +340,7 @@ const ProblemSection = () => {
               <div className="space-y-6">
                 <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
                   <div className="space-y-2">
-                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100">
                       経営判断フレーム
                     </span>
                     <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
@@ -360,7 +360,7 @@ const ProblemSection = () => {
                         className="group relative flex h-full flex-col gap-4 rounded-2xl border border-cyan-300/25 bg-gradient-to-br from-white/8 via-white/4 to-white/[0.05] p-5 shadow-[0_26px_70px_rgba(4,22,56,0.45)] transition-transform duration-300 hover:-translate-y-1"
                       >
                         <div className="flex items-center justify-between gap-3">
-                          <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/15 px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-cyan-100">
+                          <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100">
                             {pillar.focus}
                           </span>
                           <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
@@ -369,7 +369,7 @@ const ProblemSection = () => {
                         </div>
                         <h4 className="text-base font-semibold text-white">{pillar.title}</h4>
                         <p className="text-sm leading-relaxed text-slate-200/85">{pillar.description}</p>
-                        <span className="mt-auto inline-flex w-max items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/12 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
+                        <span className="mt-auto inline-flex w-max items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100">
                           <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
                           {pillar.metric}
                         </span>
@@ -379,7 +379,7 @@ const ProblemSection = () => {
                 </div>
               </div>
               <figure className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-cyan-300/20 bg-[#091d3d]/70 p-6">
-                <div className="flex items-center justify-between gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/75">
+                <div className="flex items-center justify-between gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/75">
                   <span>Blueprint Signal</span>
                   <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-cyan-100/90">因果マッピング</span>
                 </div>
@@ -412,12 +412,12 @@ const ProblemSection = () => {
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
-              <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/45 px-4 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-white/85 backdrop-blur">
+              <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/45 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-white/85 backdrop-blur">
                 Dual Coding Canvas
               </figcaption>
             </figure>
             <div className="space-y-5">
-              <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
+              <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-100">
                 視点転換
               </div>
               <h3 className="text-2xl font-semibold leading-snug md:text-[1.75rem]">
@@ -454,13 +454,13 @@ const ProblemSection = () => {
             className="flex h-full flex-col justify-between gap-6 rounded-[2rem] border border-white/12 bg-white/5 p-8 shadow-[0_35px_80px_rgba(5,20,45,0.55)]"
           >
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
+              <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-100">
                 経営判断の兆し
               </div>
               <h3 className="text-left text-2xl font-semibold leading-snug text-white md:text-[1.75rem]">
                 判断が遅れると、現場の信頼と資金繰りの選択肢は瞬く間に狭まります。
               </h3>
-              <p className="text-left text-sm leading-relaxed text-slate-200/90 md:text-[0.95rem]">
+              <p className="text-left text-sm leading-relaxed text-slate-200/90 md:text-base">
                 私たちは業界動向・競合・顧客のデータを診断士と生成AIで束ね、次の打ち手を描き切る計画づくりを支援します。会議に臨む前に状況を整理し、経営者自身が指揮をとり続けられる状態を整えます。
               </p>
               <ul className="grid gap-3 text-sm text-slate-200/85 md:grid-cols-2">
@@ -484,7 +484,7 @@ const ProblemSection = () => {
                   key={signal.label}
                   className="flex flex-col rounded-2xl border border-cyan-300/20 bg-[#0a1f48]/60 p-4"
                 >
-                  <span className="text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
+                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
                     {signal.label}
                   </span>
                   <span className="mt-3 text-xl font-semibold text-cyan-100">
@@ -496,7 +496,7 @@ const ProblemSection = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-6 flex flex-wrap items-center gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
+            <div className="mt-6 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
               {trustSignals.map((signal) => (
                 <span
                   key={signal}
@@ -516,7 +516,7 @@ const ProblemSection = () => {
           >
             <div className="flex items-center justify-between gap-4 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
               <span>視覚と言葉の連動</span>
-              <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.65rem] text-cyan-100">
+              <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-100">
                 課題マップ（要約）
               </span>
             </div>
@@ -526,7 +526,7 @@ const ProblemSection = () => {
               className="mt-6 w-full max-w-md self-center object-contain"
               loading="lazy"
             />
-            <figcaption className="mt-6 space-y-3 text-[0.9rem] leading-relaxed text-slate-200/85">
+            <figcaption className="mt-6 space-y-3 text-base leading-relaxed text-slate-200/85">
               <p>
                 収益の漏れ、生成AIの停滞、対外説明の遅延は、共通の設計図がないことが原因です。数字と現場を一つの物語にまとめれば、次の手を打つ自信が戻ります。
               </p>
@@ -545,7 +545,7 @@ const ProblemSection = () => {
               className="flex h-full flex-col gap-5 rounded-[1.8rem] border border-white/12 bg-gradient-to-br from-white/7 via-white/4 to-white/[0.02] p-6 shadow-[0_30px_70px_rgba(2,8,20,0.45)]"
             >
               <div className="flex items-center justify-between gap-3">
-                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100">
                   {pain.badge}
                 </span>
                 <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
@@ -557,13 +557,13 @@ const ProblemSection = () => {
                 <p className="text-sm leading-relaxed text-slate-200/90">{pain.description}</p>
               </div>
               <div className="rounded-2xl border border-cyan-300/20 bg-[#0a1f48]/70 p-4">
-                <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/70">
+                <span className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/70">
                   経営指標シグナル
                 </span>
                 <p className="mt-2 text-sm font-semibold text-cyan-100">{pain.signal}</p>
               </div>
               <div className="mt-auto space-y-3 rounded-2xl border border-white/12 bg-gradient-to-br from-[#081c3b]/90 via-[#06162f]/90 to-[#030d1f]/90 p-4">
-                <div className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                   因果の洞察
                 </div>
@@ -579,7 +579,7 @@ const ProblemSection = () => {
         >
           <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
             <div>
-              <span className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/85">
+              <span className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/85">
                 Narrative Visualization
               </span>
               <h3 className="mt-4 text-2xl font-semibold leading-snug text-white">
@@ -601,7 +601,7 @@ const ProblemSection = () => {
                     <span className="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/30 bg-cyan-400/10 text-sm font-semibold text-cyan-100">
                       0{index + 1}
                     </span>
-                    <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
+                    <span className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
                       {step.stage}
                     </span>
                   </div>
@@ -612,7 +612,7 @@ const ProblemSection = () => {
                 <h4 className="text-lg font-semibold text-white">{step.title}</h4>
                 <p className="text-sm leading-relaxed text-slate-200/85">{step.description}</p>
                 {index < narrativeFlow.length - 1 && (
-                  <div className="mt-4 flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/70">
+                  <div className="mt-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/70">
                     Next
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </div>

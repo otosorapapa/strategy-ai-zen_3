@@ -121,8 +121,8 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    line-height: 1.85;
+    font-size: clamp(1.08rem, 0.9vw + 0.92rem, 1.22rem);
+    line-height: 1.8;
     letter-spacing: 0.015em;
     width: 100%;
     min-height: 100%;

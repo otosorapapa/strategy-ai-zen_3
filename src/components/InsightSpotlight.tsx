@@ -177,12 +177,12 @@ const InsightSpotlight = () => {
                   key={item.label}
                   className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-[#0b1f3f]/12 bg-white/95 p-5 shadow-[0_18px_45px_rgba(11,31,63,0.12)] transition-transform duration-300 hover:-translate-y-1"
                 >
-                  <div className="text-[0.6rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">
+                  <div className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">
                     {item.label}
                   </div>
                   <p className="mt-3 text-2xl font-bold text-[#0584c6]">{item.value}</p>
                   <p className="mt-2 text-sm leading-relaxed text-[#1e3359]/75">{item.caption}</p>
-                  <span className="pointer-events-none absolute right-4 top-4 rounded-full border border-[#0584c6]/30 bg-[#0584c6]/10 px-3 py-1 text-[0.6rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]/90">
+                  <span className="pointer-events-none absolute right-4 top-4 rounded-full border border-[#0584c6]/30 bg-[#0584c6]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]/90">
                     Logic Map
                   </span>
                 </div>
@@ -261,7 +261,7 @@ const InsightSpotlight = () => {
                     <div className="grid gap-4 sm:grid-cols-3">
                       {blueprintAssurances.map((item) => (
                         <div key={item.metric} className="flex flex-col gap-2 rounded-2xl border border-white/50 bg-white/80 p-4 text-left shadow-[0_12px_32px_rgba(11,31,63,0.08)]">
-                          <span className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{item.title}</span>
+                          <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{item.title}</span>
                           <p className="text-lg font-semibold text-[#0584c6]">{item.metric}</p>
                           <p className="text-xs leading-relaxed text-[#1e3359]/70">{item.description}</p>
                         </div>
@@ -298,17 +298,17 @@ const InsightSpotlight = () => {
                         0{index + 1}
                       </span>
                       <div>
-                        <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">{item.badge}</span>
+                        <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">{item.badge}</span>
                         <h3 className="mt-1 text-lg font-semibold text-[#0b1f3f]">{item.title}</h3>
                       </div>
                     </div>
-                    <span className="inline-flex items-center rounded-full border border-[#0584c6]/25 bg-[#f0f6ff] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-[#0584c6]">
+                    <span className="inline-flex items-center rounded-full border border-[#0584c6]/25 bg-[#f0f6ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-[#0584c6]">
                       Leading Signal
                     </span>
                   </div>
                   <p className="text-sm leading-relaxed text-[#1e3359]/75">{item.description}</p>
                   <div className="mt-auto grid gap-2 rounded-2xl border border-[#0584c6]/20 bg-[#f0f6ff] p-4 text-sm text-[#0b1f3f]">
-                    <div className="flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
+                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
                       <TrendingUp className="h-4 w-4" aria-hidden="true" />
                       {item.metric}
                     </div>
@@ -340,7 +340,7 @@ const InsightSpotlight = () => {
                       0{index + 1}
                     </span>
                     <div className="space-y-1">
-                      <span className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{statement.title}</span>
+                      <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{statement.title}</span>
                       <p className="text-base font-semibold text-[#0b1f3f]">{statement.metric}</p>
                     </div>
                     <p className="flex-1 text-sm leading-relaxed text-[#1e3359]/75">{statement.description}</p>
@@ -363,7 +363,7 @@ const InsightSpotlight = () => {
                       key={metric.label}
                       className="rounded-2xl border border-white/60 bg-white/85 p-4 text-center shadow-[0_15px_35px_rgba(5,40,85,0.1)]"
                     >
-                      <div className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{metric.label}</div>
+                      <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{metric.label}</div>
                       <div className="mt-2 text-2xl font-bold text-[#0584c6]">{metric.value}</div>
                       <div className="mt-1 text-xs text-[#1e3359]/70">{metric.caption}</div>
                     </div>

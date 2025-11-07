@@ -100,7 +100,7 @@ const SegmentBenefitsSection = () => {
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0584c6]/12 text-[#0584c6]">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
-                  <span className="rounded-full bg-[#f2f7ff] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
+                  <span className="rounded-full bg-[#f2f7ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
                     {segment.value}
                   </span>
                 </div>

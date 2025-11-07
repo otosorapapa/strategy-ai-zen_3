@@ -26,13 +26,13 @@ type MidPageCta = {
 const ctaCards: MidPageCta[] = [
   {
     id: "diagnostic",
-    eyebrow: "15 MINUTE CHECK",
-    title: "15分ヒアリングで『資金繰り耐性スコア』をその場で受診",
+    eyebrow: "短時間ヒアリング",
+    title: "15分の対話で資金の耐性と次の一手を仮診断",
     description:
-      "AIDMAの『Desire→Memory』を切り替える短時間セッション。AIが直近12週間のキャッシュ波形を整理し、支払いインパクトの高い論点を色分けします。",
-    bullet: "銀行同席時に使えるキャッシュ耐性スナップショットと優先アクションを当日共有",
+      "急変する状況でも落ち着いて判断できるよう、生成AIが直近の資金推移と支払い予定を整理し、診断士が優先度を分かりやすく提示します。",
+    bullet: "銀行や社内共有に使える資金耐性メモと優先アクションを当日送付",
     action: {
-      label: "15分ヒアリングを予約して耐性スコアを確認",
+      label: "15分ヒアリングを予約して仮診断を受ける",
       type: "scroll",
       targetId: "cta-section",
       ctaId: "mid-cta-diagnostic",
@@ -42,19 +42,19 @@ const ctaCards: MidPageCta[] = [
   },
   {
     id: "case-study",
-    eyebrow: "INSIGHT KIT",
-    title: "成功事例レポートで、粗利と資金の立て直し方を体系的に把握",
+    eyebrow: "実例セット",
+    title: "成功事例レポートで粗利と資金の立て直し方を整理",
     description:
-      "AISASの『Search→Action』を刺激する資料パック。粗利+12%、債務超過解消率80%（例）の背景と、再現手順をまとめています。",
-    bullet: "事例別のタイムラインと金融機関コメントをPDFで即時ダウンロード",
+      "同規模企業の改善プロセスを、背景・判断のポイント・実行ステップの順にまとめた資料です。意思決定の裏付けとして使えるコメントや準備物も確認できます。",
+    bullet: "事例ごとの時間軸と金融機関コメントをPDFで即時ダウンロード",
     action: {
-      label: "成功事例レポートを今すぐ見る",
+      label: "成功事例レポートを今すぐ確認",
       type: "link",
       href: TERTIARY_CTA.href,
       ctaId: "mid-cta-case-study",
     },
     icon: FileText,
-    highlight: "スクロール途中で意思決定を後押しするセカンダリ導線",
+    highlight: "スクロール途中で迷いを断つための第2導線",
   },
 ];
 
@@ -79,14 +79,14 @@ const MidPageCtaSection = () => {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.18),_transparent_60%)]" aria-hidden="true" />
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
-          <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Conversion Bridge｜途中離脱を防ぐ
+          <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold tracking-[0.28em] text-cyan-200">
+            行動導線の工夫で途中離脱を防ぐ
           </span>
           <h2 id="mid-cta-heading" className="text-3xl font-bold leading-tight md:text-4xl">
-            迷いを行動に変える2つのセカンダリCTAでCVRを底上げ
+            迷いを抱えた瞬間に寄り添う2つの選択肢で行動を後押し
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/85 md:text-lg">
-            スクロール中に発生する「後で連絡すればいい」という心理的惰性を断つため、行動ハードルの異なる2種類のCTAを用意。CVR +18〜25%向上を狙った構成です。
+            経営者が気持ちを切り替えやすいタイミングで、負担の異なる導線を2種類用意しました。状況に合わせた選択肢があることで、次の一歩を素早く踏み出しやすくなります。
           </p>
         </ScrollReveal>
 
@@ -113,7 +113,7 @@ const MidPageCtaSection = () => {
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/75">{card.highlight}</p>
+                  <p className="text-xs font-semibold tracking-[0.26em] text-cyan-100/75">{card.highlight}</p>
                   <Button
                     type="button"
                     size="lg"
@@ -137,12 +137,12 @@ const MidPageCtaSection = () => {
           variant="fade-up"
           className="mt-12 grid gap-4 rounded-[28px] border border-white/12 bg-white/10 p-6 text-left shadow-[0_25px_60px_rgba(3,16,36,0.45)]"
         >
-          <div className="flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100/80">
+          <div className="flex flex-wrap items-center gap-4 text-xs font-semibold tracking-[0.26em] text-cyan-100/80">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
-            スクロール測定による想定効果｜平均滞在時間 +22%、CTAクリック率 +25% を目指した導線
+            スクロール測定による想定効果｜平均滞在時間 +22%、CTAクリック率 +25% を想定した導線
           </div>
           <p className="text-sm leading-relaxed text-slate-100/85">
-            主要セクションの読了地点にCTAを差し込むことで、AISAS/AIDMA双方の「Action」フェーズを強制的に喚起。中盤離脱が多かったユーザーにも即時の選択肢を提示します。
+            主要セクションの読了地点に導線を差し込み、検討中の方が次の選択肢をすぐに取れる構成としました。中盤で離脱しがちな方にも行動イメージを描いていただけます。
           </p>
         </ScrollReveal>
       </div>

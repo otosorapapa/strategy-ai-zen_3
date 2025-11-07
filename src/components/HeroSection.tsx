@@ -16,47 +16,47 @@ import {
 } from "lucide-react";
 
 const heroValueBullets = [
-  "変化の兆し・現場の声・数字を一枚に束ね、迷いを断つ判断軸を整える",
-  "生成AIが業界・顧客・コストを並行解析し、診断士が実行の道筋へ落とし込む",
-  "堂々と示せる経営改善計画とダッシュボードを短期間で整える",
+  "現場の声と数字を一体に整理し、迷いを減らす判断基準を共通化",
+  "生成AIが業界・顧客・コストを同時に読み解き、診断士が実行計画へ翻訳",
+  "金融機関や取引先に堂々と示せる経営改善計画と管理アプリを短期間で整備",
 ];
 
 const heroSummaryCards = [
   {
     icon: Timer,
     eyebrow: "初動",
-    title: "Day0→Day2で兆しを把握",
-    description: "生成AIが外部データと社内数値を突き合わせ、優先課題を色分け",
+    title: "Day0→Day2｜危険信号を即座に棚卸し",
+    description: "生成AIが外部環境と社内数値を重ね、急ぎの打ち手と備えを可視化",
   },
   {
     icon: Landmark,
     eyebrow: "設計",
-    title: "Day7で再生シナリオを描写",
-    description: "診断士が現場ヒアリングを重ね、実現性の高い打ち手に整理",
+    title: "Day7｜未来に向けた設計図を言語化",
+    description: "診断士がヒアリングを重ね、複数シナリオと判断根拠を整理",
   },
   {
     icon: BriefcaseBusiness,
     eyebrow: "展開",
-    title: "Day30で対外説明を更新",
-    description: "取引先や金融機関へ示せる根拠資料と行動計画を整備",
+    title: "Day30｜対外説明まで伴走",
+    description: "金融機関や主要取引先に胸を張って示せる資料と段取りを準備",
   },
 ];
 
 const heroBoardroomInsights = [
   {
     label: "判断の土台",
-    value: "全体像を一枚に",
-    description: "経営指標と現場ヒアリングを結びつけ、議論の出発点を統一",
+    value: "全員が同じ景色を共有",
+    description: "経営指標と現場ヒアリングをひとつの画面に束ね、議論の基準を揃える",
   },
   {
     label: "再生シナリオ",
-    value: "複数案を提示",
-    description: "投資余力と資金余裕を数値化し、打ち手の筋道を明確化",
+    value: "複数の打ち手を提示",
+    description: "投資余力と資金余裕を見える化し、次の行動を選びやすくする",
   },
   {
     label: "進行スピード",
-    value: "初回会議で合意",
-    description: "根拠資料と段取りが揃い、議論を未来設計に集中",
+    value: "初回会議で前進",
+    description: "根拠資料と段取りが整い、議論を未来の選択へ集中できる",
   },
 ];
 
@@ -64,20 +64,20 @@ const heroImpactStats = [
   {
     icon: LineChart,
     value: "数字が語る",
-    label: "粗利と資金のギャップを同時に縮小",
-    helper: "6〜12カ月の伴走で得た実感を共有",
+    label: "粗利と資金の開きが同時に縮む体験を共有",
+    helper: "6〜12カ月の伴走で得た声をもとに改善の道筋を検証",
   },
   {
     icon: Activity,
     value: "対話が締まる",
-    label: "金融機関や取引先との協議が前倒し",
-    helper: "未来像と根拠を揃えて臨める",
+    label: "金融機関や取引先との協議が前倒しで進行",
+    helper: "未来像と根拠を揃えて臨めるから交渉が迷わない",
   },
   {
     icon: Target,
     value: "決断が冴える",
-    label: "合意形成までの時間を圧縮",
-    helper: "共通指標で議論できるから迷わない",
+    label: "合意形成までの時間を短縮",
+    helper: "共通指標で議論できるので一歩先を示しやすい",
   },
 ];
 
@@ -89,7 +89,7 @@ const trustSignals = [
 
 const heroIntroCopy = {
   short:
-    "変化の兆しは捉えていても、確信を持って一歩を示すには裏付けが欠かせません。生成AIが広い視野で兆候を読み、中小企業診断士が現場の温度感を整えます。貴社専用の経営改善計画と管理アプリを共に描き、胸を張って次の一手を語れる状態へ導きます。",
+    "変化が続く中でも会社の未来を守り抜く——その意志に応えるために、生成AIが兆候を読み解き、中小企業診断士が現場の温度をつかみます。業界・競合・顧客の分析から管理アプリの設計、再生計画の言語化までを一気通貫で支援し、胸を張って示せる経営判断を整えます。",
 };
 
 const HeroSection = () => {
@@ -108,14 +108,14 @@ const HeroSection = () => {
         <div className="grid gap-16 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
           <div className="space-y-10">
             <div className="space-y-6">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
-                AI × 診断士 × 再生設計図
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold tracking-[0.28em] text-[#7ec3ff]">
+                福岡発｜生成AIと診断士の経営改善伴走
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.45] md:text-4xl md:leading-[1.5] xl:text-[3.1rem]">
-                判断の速さと先見性を磨く経営改善支援を、生成AIと診断士が貴社仕様で届ける。
+                未来を諦めない経営者の決断を守る。生成AIと診断士が貴社仕様の経営改善計画を描き切ります。
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">
-                変化の荒波でも経営者が迷わず指揮を執れる舞台を整えることが私たちの使命です。生成AIと診断士の協働で停滞の要因を可視化し、意思決定の質と速さ、先を読む力を引き上げます。
+                目的は、変化の波に揺られても堂々と次の一手を示せる状態をつくること。業界の兆しと自社の強みを重ね、意思決定の質と速さ、先を読む力を磨き上げます。
               </p>
             </div>
 

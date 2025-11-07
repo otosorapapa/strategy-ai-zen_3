@@ -1,8 +1,8 @@
 import { ArrowRight, CheckCircle2, ClipboardList, FileText, Sparkles } from "lucide-react";
 
-import consultWorkshop from "@/assets/strategic-meeting.jpg";
+import consultWorkshop from "@/assets/strategy-planning.jpg";
 import diagnosisDashboard from "@/assets/financial-analysis.jpg";
-import materialsPreview from "@/assets/ai-illustration.jpg";
+import monitoringDashboard from "@/assets/dashboard-preview.jpg";
 import representativePortrait from "@/assets/representative_.jpg";
 
 import { Button } from "@/components/ui/button";
@@ -66,8 +66,8 @@ const offerCards = [
     label: "モニタリングと共有支援",
     step: "MENU 03",
     icon: FileText,
-    image: materialsPreview,
-    imageAlt: "ダッシュボードと会議資料を同期させた画面のイメージ",
+    image: monitoringDashboard,
+    imageAlt: "経営ダッシュボードと会議資料を同時に映した画面のイメージ",
     title: "進捗を見える化し、判断を止めない",
     description:
       "経営管理アプリとダッシュボードを事業者ごとに整え、進み具合とリスクを常に確認できる環境を提供します。数字と行動が同じ土台で更新されるため、説明責任も迷わず果たせます。",

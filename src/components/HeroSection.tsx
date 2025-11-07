@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import { Button, buttonVariants } from "@/components/ui/button";
-import heroStrategicMeetingImage from "@/assets/executive-strategy-meeting.jpg";
-import heroDashboardImage from "@/assets/hero-dashboard-analytics.jpg";
+import heroExecutiveBriefingImage from "@/assets/executive-meeting.jpg";
+import heroGrowthMetricsImage from "@/assets/growth-metrics.jpg";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
 import { cn } from "@/lib/utils";
@@ -212,21 +212,42 @@ const heroMethodPillars = [
   },
 ];
 
-const heroVisualSignals = [
+const heroLogicFlow = [
   {
-    label: "財務の歪み",
-    value: "17項目",
-    description: "債務超過や資金ショートを誘発する論点をレッドラインで提示",
+    stage: "Scan",
+    headline: "AIが45指標の因果を即可視化",
+    cause: "粗利率・在庫回転・回収サイトの歪みをヒートマップで赤信号化",
+    impact: "資金を圧迫するボトルネックと改善余地が経営会議で共有しやすい形に",
   },
   {
-    label: "シナリオ比較",
-    value: "12パターン",
-    description: "AIダッシュボードで粗利とキャッシュの推移を瞬時に試算",
+    stage: "Design",
+    headline: "診断士がストーリーと施策を統合",
+    cause: "銀行視点のリスクと現場の実行条件を突き合わせ",
+    impact: "意思決定を迷わせない3つの優先シナリオに整理",
   },
   {
-    label: "稟議通過率",
-    value: "94%",
-    description: "再生案件の稟議・条件変更で承認された割合（直近3年）",
+    stage: "Execute",
+    headline: "週次レビューで改善を着地",
+    cause: "タスク・KPI・資金繰りをダッシュボードで同期",
+    impact: "金融機関協議と現場進捗が同じ指標で動く体制に",
+  },
+];
+
+const heroBoardroomInsights = [
+  {
+    label: "キャッシュ余命",
+    value: "13.4週",
+    description: "想定入出金と調達余地を重ね、資金ショートのXデーを明確化",
+  },
+  {
+    label: "粗利改善幅",
+    value: "+9.8pt",
+    description: "重点SKUと稼働率の改善で見込める粗利インパクトを算出",
+  },
+  {
+    label: "意思決定リード",
+    value: "▼67%",
+    description: "経営会議〜現場実行までのリードタイムを平均1/3へ短縮",
   },
 ];
 
@@ -244,32 +265,79 @@ const HeroSection = () => {
       <div className="layout-shell relative z-10">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-start">
           <div className="space-y-12">
-            <div className="space-y-6">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
-                資金繰り × 意思決定 × 実行
-              </span>
-              <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
-                資金繰りに強い経営体制を、AIとプロの伴走で即構築する。
-              </h1>
-              <ul className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/80 md:text-base">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
+                  資金繰り × 意思決定 × 実行
+                </span>
+                <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
+                  資金繰りに強い経営体制を、AIとプロの伴走で即構築する。
+                </h1>
+                <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">
+                  Day0でAI診断を起動し、Day7でボード用の改善シナリオ、Day30で金融機関への交渉資料まで一気通貫で整えるエグゼクティブフレームです。
+                </p>
+              </div>
+              <ul className="grid gap-3 text-left text-sm text-slate-100/85 md:grid-cols-3 md:text-[0.95rem]">
                 {heroValueBullets.map((item) => (
                   <li
                     key={item}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2"
+                    className="group flex items-start gap-3 rounded-2xl border border-white/15 bg-white/5 p-3 shadow-[0_14px_32px_rgba(2,12,32,0.32)] transition hover:border-cyan-300/40 hover:bg-white/10"
                   >
-                    <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
-                    <span>{item}</span>
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-200">
+                      <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                    <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
-              <div className="grid gap-4 text-left sm:grid-cols-2 xl:grid-cols-3">
+              <div className="space-y-4 rounded-3xl border border-white/15 bg-white/10 p-6 shadow-[0_20px_48px_rgba(3,16,36,0.45)] backdrop-blur">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/85">因果ロジックフレーム</p>
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-[#0b1f3f]/60 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white/80">
+                    Board Level Story
+                  </span>
+                </div>
+                <div className="grid gap-4 md:grid-cols-3">
+                  {heroLogicFlow.map((flow, index) => (
+                    <div
+                      key={flow.stage}
+                      className="relative flex flex-col gap-3 rounded-2xl border border-white/15 bg-[#0b1f3f]/65 p-4 shadow-[0_14px_36px_rgba(3,16,36,0.45)]"
+                    >
+                      {index < heroLogicFlow.length - 1 && (
+                        <span
+                          className="absolute -right-6 top-1/2 hidden h-[2px] w-12 -translate-y-1/2 bg-gradient-to-r from-cyan-200/70 to-transparent md:block"
+                          aria-hidden="true"
+                        />
+                      )}
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/90">
+                          {flow.stage}
+                        </span>
+                        <span className="rounded-full border border-cyan-300/40 bg-cyan-500/10 px-2 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.24em] text-cyan-100/80">
+                          Causality
+                        </span>
+                      </div>
+                      <p className="text-sm font-semibold text-white/90">{flow.headline}</p>
+                      <div className="space-y-2 text-xs leading-relaxed text-slate-100/80">
+                        <p>{flow.cause}</p>
+                        <div className="rounded-xl border border-cyan-300/25 bg-cyan-500/10 p-3 text-[0.7rem] text-cyan-50/90">
+                          {flow.impact}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="grid gap-4 text-left md:grid-cols-3">
                 {heroMethodPillars.map(({ icon: Icon, title, description }) => (
                   <div
                     key={title}
-                    className="flex flex-col gap-3 rounded-3xl border border-white/15 bg-white/10 p-4 shadow-[0_16px_38px_rgba(3,16,36,0.4)] backdrop-blur-sm"
+                    className="flex flex-col gap-3 rounded-3xl border border-white/12 bg-[#081a36]/70 p-5 shadow-[0_16px_38px_rgba(3,16,36,0.45)] backdrop-blur-sm"
                   >
-                    <div className="flex items-center gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
-                      <Icon className="h-4 w-4" aria-hidden="true" />
+                    <div className="flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-cyan-500/15 text-cyan-100">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                      </span>
                       {title}
                     </div>
                     <p className="text-xs leading-relaxed text-slate-100/85">{description}</p>
@@ -556,60 +624,87 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="relative mx-auto flex w-full max-w-[560px] items-stretch justify-center">
-            <div className="relative w-full overflow-hidden rounded-[38px] border border-white/15 bg-white/5 shadow-[0_36px_95px_rgba(2,12,32,0.6)]">
-              <img
-                src={heroStrategicMeetingImage}
-                alt="代表・古町が経営陣と再生戦略のボードを前に議論している様子"
-                className="h-full w-full object-cover"
-                loading="lazy"
+          <div className="relative mx-auto flex w-full max-w-[560px]">
+            <div className="relative w-full rounded-[40px] border border-white/15 bg-gradient-to-br from-[#03112b]/85 via-[#041b35]/90 to-[#010713]/95 p-6 shadow-[0_42px_110px_rgba(3,12,32,0.65)]">
+              <div
+                className="pointer-events-none absolute inset-0 rounded-[40px] bg-[radial-gradient(circle_at_top,_rgba(104,194,255,0.18),_transparent_70%)]"
+                aria-hidden="true"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#020b1c]/90 via-[#051836]/45 to-transparent" aria-hidden="true" />
-              <div className="absolute left-6 top-6 space-y-3 rounded-3xl border border-white/20 bg-[#04122b]/70 p-4 shadow-[0_20px_55px_rgba(2,10,28,0.45)] backdrop-blur">
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-cyan-100/85">因果シミュレーション</p>
-                <div className="space-y-2 text-left text-xs leading-relaxed text-slate-100/85">
-                  <p>AIが抽出したキャッシュ阻害要因を、診断士が意思決定シナリオに翻訳。</p>
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">Heatmap &amp; Dashboard Review</p>
-                </div>
-              </div>
-              <div className="absolute right-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-1.5 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-white/85 shadow-[0_18px_45px_rgba(2,10,28,0.35)]">
-                Executive Session
-              </div>
-              <div className="absolute inset-x-5 bottom-5 space-y-4 rounded-3xl border border-white/15 bg-[#020b1c]/75 p-5 backdrop-blur">
-                <div className="grid gap-4 rounded-2xl border border-white/15 bg-[#04122b]/85 p-4 shadow-[0_20px_55px_rgba(2,12,30,0.45)]">
+              <div className="relative grid gap-6">
+                <div className="group relative overflow-hidden rounded-[28px] border border-white/15 bg-[#081830]/85 shadow-[0_28px_60px_rgba(2,12,32,0.55)]">
                   <img
-                    src={heroDashboardImage}
-                    alt="AIダッシュボードで財務シナリオを比較している画面"
-                    className="h-36 w-full rounded-xl object-cover"
+                    src={heroExecutiveBriefingImage}
+                    alt="代表・古町が経営陣とボードアジェンダを設計しているセッションの様子"
+                    className="h-full w-full object-cover"
                     loading="lazy"
                   />
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/80">シナリオ比較ダッシュボード</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#010914]/92 via-[#04152c]/55 to-transparent" aria-hidden="true" />
+                  <div className="absolute inset-x-5 bottom-5 space-y-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/85">
+                        Executive Diagnostic
+                      </span>
+                      <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-white/85">
+                        因果ヒートマップ
+                      </span>
+                    </div>
+                    <p className="text-left text-sm leading-relaxed text-slate-100/85">
+                      AIが抽出した資金圧迫の因果ネットワークを、診断士がボードアジェンダに翻訳。論点・仮説・想定インパクトが一目で揃います。
+                    </p>
+                    <div className="flex flex-wrap items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-cyan-100/85">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
+                        45 Key Drivers
+                      </span>
+                      <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
+                        Red / Amber Priority
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid gap-5 rounded-[28px] border border-white/15 bg-[#051226]/90 p-6 shadow-[0_28px_70px_rgba(3,12,32,0.55)]">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div>
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/85">
+                        Strategy Dashboard Snapshot
+                      </p>
+                      <p className="text-xs text-slate-100/70">CFO・金融機関・現場が同じ数値で意思決定</p>
+                    </div>
+                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-cyan-500/15 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-cyan-50">
+                      Confidence 92/100
+                    </span>
+                  </div>
+                  <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+                    <img
+                      src={heroGrowthMetricsImage}
+                      alt="AIダッシュボードで経営KPIを俯瞰する画面"
+                      className="h-40 w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="grid gap-3 sm:grid-cols-3">
-                    {heroVisualSignals.map(({ label, value, description }) => (
+                    {heroBoardroomInsights.map((insight) => (
                       <div
-                        key={label}
-                        className="rounded-2xl border border-white/15 bg-white/10 p-3 text-left text-xs text-slate-100/80 shadow-[0_12px_32px_rgba(2,12,30,0.35)]"
+                        key={insight.label}
+                        className="rounded-2xl border border-white/15 bg-white/5 p-3 text-left text-xs text-slate-100/85 shadow-[0_14px_32px_rgba(2,12,32,0.4)]"
                       >
-                        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/80">{label}</p>
-                        <p className="text-lg font-bold text-white">{value}</p>
-                        <p className="mt-1 leading-relaxed">{description}</p>
+                        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/80">{insight.label}</p>
+                        <p className="text-lg font-bold text-white">{insight.value}</p>
+                        <p className="mt-1 leading-relaxed">{insight.description}</p>
                       </div>
                     ))}
                   </div>
-                </div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/80">48h Discovery</p>
-                <p className="text-sm leading-relaxed text-slate-100/85">
-                  生成AIの示す優先指標を代表・古町が現場の温度感で補正。初回セッションで未来像とリスクラインを描き切ります。
-                </p>
-                <div className="flex flex-wrap items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-cyan-100/80">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
-                    48h仮説共有
-                  </span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
-                    週次レビュー設計
-                  </span>
+                  <div className="flex flex-wrap items-center gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-cyan-100/80">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
+                      Next Action Deck
+                    </span>
+                    <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
+                      Bank Ready Docs
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

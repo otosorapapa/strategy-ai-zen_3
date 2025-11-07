@@ -150,17 +150,17 @@ const InsightSpotlight = () => {
           <div className="mx-auto w-full max-w-2xl space-y-12 lg:max-w-none">
             <ScrollReveal variant="fade-up" className="space-y-4">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-                意思決定が鈍る本質
+                創和の使命
               </span>
               <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-                経営の灯が揺らぐ理由は、情熱ではなく「未来を指し示す設計図」の不在にある
+                情熱を力に変える舞台を整え、経営者が堂々と次の一手を選び取れる状態をつくる
               </h2>
               <div className="space-y-4 text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
                 <p>
-                  再生案件で出会う経営者は、誰もが挑戦を続けています。それでも資金繰りが乱れ、人が疲弊していくのは、次の四半期を描く共通キャンバスが欠けているから。月次資料づくりに追われる間に、未来を読む時間が削られてしまうのです。
+                  どの案件でも、原価や採用の変化を把握していても、数字と現場の肌感覚が別々に管理されていました。月次資料を整えるだけで時間が尽き、未来の仮説づくりに手が回らない──それが停滞の正体です。
                 </p>
                 <p>
-                  私たちが存在する理由は、経営者がもう一度、胸を張って自社の判断力と可能性を語れる環境を用意すること。生成AIが抽出する兆しと診断士が積み上げた経験知を重ね、再び前に進むためのストーリーと座標軸を描き出します。
+                  創和経営コンサルティングは、生成AIが示す兆しと診断士の現場ヒアリングを重ね合わせ、判断の座標軸を揃えます。経営会議の議題設定から実行の優先順位までを一本化し、経営者が胸を張って道を示せる状態をともに整えます。
                 </p>
               </div>
             </ScrollReveal>

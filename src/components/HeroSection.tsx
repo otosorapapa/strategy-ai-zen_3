@@ -16,80 +16,80 @@ import {
 } from "lucide-react";
 
 const heroValueBullets = [
-  "経営判断に必要な指標を一画面に集約",
-  "生成AIと診断士が行動の優先度を調整",
-  "銀行面談にそのまま使える資料を整備",
+  "未来の兆しと現場の声を一本化した再生設計図",
+  "生成AIの先読みと診断士の現場知で優先順位を整理",
+  "役員会と金融機関に堂々と示せる根拠資料を即日共有",
 ];
 
 const heroSummaryCards = [
   {
     icon: Timer,
-    eyebrow: "要約 01",
-    title: "48時間で優先論点を提示",
-    description: "資金と粗利の危険サインをヒートマップで即把握",
+    eyebrow: "Outline 01",
+    title: "Day0→Day2で兆候を見える化",
+    description: "資金と粗利のゆらぎをAIが解析し、緊急度順に提示",
   },
   {
     icon: Landmark,
-    eyebrow: "要約 02",
-    title: "現場が動ける改善計画を共創",
-    description: "ヒアリングで実行条件を確認し、会議資料とタスクに反映",
+    eyebrow: "Outline 02",
+    title: "Day7で再生シナリオを合意",
+    description: "診断士が現場ヒアリングを重ね、実行条件を整理",
   },
   {
     icon: BriefcaseBusiness,
-    eyebrow: "要約 03",
-    title: "社外説明にそのまま使える設計図",
-    description: "銀行やパートナーとの対話に必要な根拠資料を一本化",
+    eyebrow: "Outline 03",
+    title: "Day30で社外説明を更新",
+    description: "銀行・取引先との対話に使える設計図と根拠を整備",
   },
 ];
 
 const heroBoardroomInsights = [
   {
-    label: "キャッシュ余命",
-    value: "13.4週",
-    description: "入出金と調達余地を重ね、資金ショートのXデーを明確化",
+    label: "資金の見通し",
+    value: "先6カ月を俯瞰",
+    description: "入出金と調達余地を重ね、資金ショートの不安を先回り",
   },
   {
-    label: "粗利改善幅",
-    value: "+9.8pt",
-    description: "重点SKUと稼働率の改善で見込める粗利インパクトを算出",
+    label: "粗利の改善余地",
+    value: "数％台を想定",
+    description: "重点商品と稼働率の歪みを分解し、着手順を整理",
   },
   {
-    label: "意思決定リード",
-    value: "▼67%",
-    description: "会議から現場実行までのリードタイムを平均1/3へ短縮",
+    label: "判断の速さ",
+    value: "会議1回で合意",
+    description: "共通指標と根拠資料が揃い、迷いなく意思決定へ移行",
   },
 ];
 
 const heroImpactStats = [
   {
     icon: LineChart,
-    value: "改善実感",
-    label: "利益と資金のギャップが縮む",
-    helper: "6〜12ヶ月の伴走で得た経営者の声",
+    value: "数字が語る",
+    label: "粗利と資金のギャップが縮小",
+    helper: "6〜12カ月の伴走で実感した経営者の声",
   },
   {
     icon: Activity,
-    value: "再生に前進",
-    label: "金融機関との協議が滑らか",
-    helper: "根拠を共有することで交渉の主導権を取り戻した事例",
+    value: "交渉が進む",
+    label: "金融機関との対話が前倒し",
+    helper: "根拠資料を共有し、話題を未来設計へ誘導",
   },
   {
     icon: Target,
-    value: "判断が速い",
-    label: "合意形成までの時間が短く",
-    helper: "共通指標で議論できるため迷いが減少",
+    value: "決断が速い",
+    label: "合意形成までの時間を圧縮",
+    helper: "共通指標で議論できるため判断が迷わない",
   },
 ];
 
 const trustSignals = [
   { icon: Landmark, label: "中小企業庁 登録支援機関" },
-  { icon: BriefcaseBusiness, label: "再生・改善案件の伴走実績多数" },
+  { icon: BriefcaseBusiness, label: "福岡発の再生支援を多数伴走" },
   { icon: LineChart, label: "現場運用と財務管理を統合した支援体制" },
 ];
 
 const heroIntroCopy = {
   short:
-    "AIの資金繰りシミュレーションと診断士の設計力で、半年以内に胸を張って示せる経営改善計画をつくり上げる。",
+    "資金繰りの重圧や主要人材の疲弊に向き合う経営者へ。生成AIが読み解く兆しと診断士が積み上げた現場知を重ね、貴社専用の再生設計図を描き直します。",
 };
 
 const HeroSection = () => {
@@ -109,13 +109,13 @@ const HeroSection = () => {
           <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
-                資金繰り × 意思決定 × 実行
+                AI × 診断士 × 再生設計図
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.45] md:text-4xl md:leading-[1.5] xl:text-[3.1rem]">
-                資金繰りに強い経営体制を、AIとプロの伴走で即構築する。
+                未来を先読みする経営改善の設計図を、AIと専門家で描き直す。
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">
-                Day0でAI診断を起動し、Day7でボード用の改善シナリオ、Day30で金融機関への交渉資料まで一気通貫で整えるエグゼクティブフレームです。
+                努力を続けても成果が追いつかない停滞は、未来を読み解く座標軸が揃っていないだけ。初回診断から伴走支援まで一貫したフレームで、判断力と行動力を取り戻します。
               </p>
             </div>
 
@@ -209,19 +209,19 @@ const HeroSection = () => {
               />
               <div className="absolute inset-x-0 bottom-0 space-y-3 bg-gradient-to-t from-[#020b1c]/95 via-[#041226]/60 to-transparent px-6 pb-6 pt-10 text-left">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/85">
-                  Executive Diagnostic
+                  Blueprint Preview
                 </p>
                 <p className="text-sm leading-relaxed text-slate-100/85">
-                  AIが抽出した資金圧迫の因果ネットワークを、診断士がボードアジェンダに翻訳。論点・仮説・想定インパクトが一目で揃います。
+                  48時間で抽出した資金圧迫の兆しと現場の制約条件を、一目で理解できる再生ボードに整理。次の会議で示せるドラフトが整います。
                 </p>
                 <div className="flex flex-wrap items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-cyan-100/85">
                   <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1">
                     <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
-                    45 Key Drivers
+                    優先論点リスト
                   </span>
                   <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1">
                     <CheckCircle2 className="h-3.5 w-3.5 text-cyan-200" aria-hidden="true" />
-                    Red / Amber Priority
+                    リスクライン付き
                   </span>
                 </div>
               </div>
@@ -229,7 +229,7 @@ const HeroSection = () => {
 
             <div className="rounded-[28px] border border-white/15 bg-white/5 p-6 shadow-[0_28px_70px_rgba(3,16,36,0.45)]">
               <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/90">
-                Boardroom Snapshot
+                再生ボード サンプル
               </h2>
               <div className="mt-4 grid gap-4 sm:grid-cols-3">
                 {heroBoardroomInsights.map(({ label, value, description }) => (

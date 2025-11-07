@@ -113,15 +113,15 @@ const trustSignals = [
 ];
 
 const solutionQuickSummary = [
-  "AIが粗利・キャッシュ・需要データを重ね合わせ、判断を止める論点を即時に抽出",
-  "診断士が現場ヒアリングで実行条件を翻訳し、週次運用の筋道を描く",
-  "金融機関向け資料と現場タスクを同期させ、戦略と行動のズレを解消",
+  "生成AIが外部環境と財務データを重ね、歪みの原因と兆候を整理",
+  "診断士が現場ヒアリングで実行条件を確認し、再生シナリオを描く",
+  "経営管理アプリと資料を連動させ、社内外への説明を一本化",
 ];
 
 const solutionNextActions = [
-  "初回相談でAI初期スコアと現場課題を棚卸し、優先仮説メモを即日共有",
-  "ZENスキャンで粗利・キャッシュの改善幅とリスクを定量化し、役員会の議題へ接続",
-  "週次レビューで交渉資料と実行タスクを同時更新し、判断リードタイムを1/3に短縮",
+  "初回相談（オンライン30分）で課題と外部環境を棚卸し",
+  "仮診断（約2週間）でAI分析とヒアリング結果を再生ヒートマップに整理",
+  "再生設計ワークショップで優先施策と目標を合意し、伴走支援を開始",
 ];
 
 const causewayStages = [
@@ -230,7 +230,7 @@ const implementationTimeline = [
   {
     phase: "Week 5-6",
     title: "週次運用で成果検証を開始",
-    detail: "AIレポートと実行ログを週次で更新し、粗利とキャッシュの変化をモニタリング。補助金活用の可否も同時に判断。",
+    detail: "AIレポートと実行ログを週次で更新し、粗利とキャッシュの変化をモニタリング。意思決定の記録を残し、次の改善サイクルへつなぐ。",
     deliverable: "週次ダッシュボード／成果コミットメントシート",
     icon: TrendingUp,
   },
@@ -242,13 +242,13 @@ const SolutionSection = () => {
         <div className="container mx-auto max-w-6xl px-4">
           <ScrollReveal variant="fade-up" className="space-y-6 text-center">
             <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-              AI診断×専門家伴走の実行ロードマップ
+              提供価値｜判断力・速さ・先見性
             </span>
             <h2 className="text-3xl font-bold leading-tight md:text-[2.75rem] md:leading-[1.2]">
-              資金繰りに強い経営体制を、AI診断と専門家伴走で段階構築する
+              生成AIの予測力と診断士の洞察力を束ね、判断の質・速さ・先読みを同時に実現
             </h2>
             <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-              Day0-7でAIが粗利・資金・人材の歪みを抽出し、Day7-30で診断士が改善シナリオを設計、Day30-180で実行と金融機関交渉を伴走する。判断根拠とキャッシュインパクトが同じ画面に揃い、年商5,000万円〜15億円規模でも迷いなく前進できる体制を固める。
+              外部環境を常時モニタリングする生成AIが兆しを捉え、診断士が現場の制約と照合。整ったデータは一枚のダッシュボードに集約され、経営会議では選択肢を比較するだけで次の一手に移れます。根拠とストーリーが揃うから、社内外への説明も滑らかです。
             </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {insightPills.map((pill) => (

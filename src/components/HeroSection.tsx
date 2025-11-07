@@ -16,29 +16,29 @@ import {
 } from "lucide-react";
 
 const heroValueBullets = [
-  "未来の兆しと現場の声を一本化した再生設計図",
-  "生成AIの先読みと診断士の現場知で優先順位を整理",
-  "役員会と金融機関に堂々と示せる根拠資料を即日共有",
+  "業界・競合・顧客の変化をAIが常時分析し、判断の焦点を提示",
+  "診断士がSWOTとコスト構造を整理し、再生シナリオの筋道を決定",
+  "専用ダッシュボードと管理アプリで、会議と金融機関説明を同期",
 ];
 
 const heroSummaryCards = [
   {
     icon: Timer,
     eyebrow: "Outline 01",
-    title: "Day0→Day2で兆候を見える化",
-    description: "資金と粗利のゆらぎをAIが解析し、緊急度順に提示",
+    title: "Day0→Day2で兆候と課題を共有",
+    description: "AIが業界データと社内数値を重ね、緊急度の高い論点を可視化",
   },
   {
     icon: Landmark,
     eyebrow: "Outline 02",
-    title: "Day7で再生シナリオを合意",
-    description: "診断士が現場ヒアリングを重ね、実行条件を整理",
+    title: "Day7で再生方針を確定",
+    description: "診断士が現場ヒアリングを行い、計画書の骨子と数値前提を整理",
   },
   {
     icon: BriefcaseBusiness,
     eyebrow: "Outline 03",
-    title: "Day30で社外説明を更新",
-    description: "銀行・取引先との対話に使える設計図と根拠を整備",
+    title: "Day30で説明資料を完成",
+    description: "金融機関と社内共有に使えるダッシュボードとロードマップを整備",
   },
 ];
 
@@ -89,7 +89,7 @@ const trustSignals = [
 
 const heroIntroCopy = {
   short:
-    "資金繰りの重圧や主要人材の疲弊に向き合う経営者へ。生成AIが読み解く兆しと診断士が積み上げた現場知を重ね、貴社専用の再生設計図を描き直します。",
+    "生成AIが業界・外部環境・顧客データを横断分析し、中小企業診断士が経営管理アプリとダッシュボードを貴社仕様で構築。5か年を見据えた経営改善計画と実行サイクルを、伴走しながら磨き上げます。",
 };
 
 const HeroSection = () => {
@@ -109,13 +109,13 @@ const HeroSection = () => {
           <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
-                AI × 診断士 × 再生設計図
+                福岡発｜AI × 診断士の経営改善チーム
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.45] md:text-4xl md:leading-[1.5] xl:text-[3.1rem]">
-                未来を先読みする経営改善の設計図を、AIと専門家で描き直す。
+                兆しを読み切る経営改善ロードマップを、AI診断と専門家伴走で描く。
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">
-                努力を続けても成果が追いつかない停滞は、未来を読み解く座標軸が揃っていないだけ。初回診断から伴走支援まで一貫したフレームで、判断力と行動力を取り戻します。
+                景況の揺らぎや人員不足が続くいま、数字の裏付けなく進む判断は挑戦する意欲さえ削りかねません。創和経営コンサルティングは、次の会議で胸を張って打ち手を選べるよう、5年先まで見渡した意思決定の座標軸を整えます。
               </p>
             </div>
 

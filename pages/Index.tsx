@@ -25,6 +25,7 @@ import MidPageCtaSection from "@/components/MidPageCtaSection";
 import StorySeriesSection from "@/components/StorySeriesSection";
 import PlansSection from "@/components/PlansSection";
 import ConsultantProfileSection from "@/components/ConsultantProfileSection";
+import PurposeSection from "@/components/PurposeSection";
 
 const Index = () => {
   useInteractiveCtaFeedback();
@@ -34,6 +35,7 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden bg-canvas text-foreground">
       <StructuredData />
       <HeroSection />
+      <PurposeSection />
       <SectionNavigationMap />
       <ValuePropositionSection />
       <ServiceFlowSection />

@@ -62,6 +62,34 @@ const faqs: FAQ[] = [
     ),
   },
   {
+    question: "サポート期間と伴走頻度は？",
+    lead: "初動3ヶ月で再生土台を整え、12ヶ月で再投資余力の創出まで伴走するケースが中心です。",
+    metric: "12ヶ月",
+    metricLabel: "推奨期間",
+    answer: (
+      <div className="space-y-4 text-base text-[#1e3359]/85">
+        <p>
+          初月は48時間診断と週次レビューで意思決定の軸を固め、2〜3ヶ月目で再生シナリオと金融交渉資料を完成させます。その後は月次の資金計画見直しと週次ダッシュボード更新で行動を定着させ、12ヶ月で再投資余力と組織習慣の刷新を目指す設計です。
+        </p>
+        <div className="grid gap-4 rounded-2xl border border-[#0b1f3f]/10 bg-white/90 p-4 md:grid-cols-3">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">0-1ヶ月</p>
+            <p className="mt-1 text-sm text-[#1e3359]/80">48時間診断と週次レビューで改善余地を可視化。</p>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">2-3ヶ月</p>
+            <p className="mt-1 text-sm text-[#1e3359]/80">生成AIと診断士が再生シナリオ・資金計画・交渉資料を仕上げます。</p>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">4ヶ月以降</p>
+            <p className="mt-1 text-sm text-[#1e3359]/80">週次レビュー継続＋月次の金融協議サポートで実行と改善を回します。</p>
+          </div>
+        </div>
+        <p className="text-sm text-[#1e3359]/75">半年で成果が出た企業も継続率95%で伴走を延長。必要に応じて経営会議や金融機関連携の同席も可能です。</p>
+      </div>
+    ),
+  },
+  {
     question: "無料相談では何が分かりますか？",
     lead: "48時間以内に優先仮説と改善ロードマップの骨子をご提示します。",
     metric: "48h",
@@ -91,6 +119,37 @@ const faqs: FAQ[] = [
             </ul>
           </div>
         </div>
+      </div>
+    ),
+  },
+  {
+    question: "AIのデータ連携範囲はどこまで対応できますか？",
+    lead: "会計・販売・人材・CRMの主要クラウドに加え、CSVやExcelの取り込みにも対応します。",
+    metric: "20+",
+    metricLabel: "連携システム",
+    answer: (
+      <div className="space-y-4 text-base text-[#1e3359]/85">
+        <p>
+          主要な会計ソフト（freee、弥生会計、勘定奉行）、販売管理（kintone、楽楽販売）、人材管理（SmartHR）やCRM（Salesforce）とAPIで連携。オンプレシステムやExcel運用の場合は、SFTPと自動整形テンプレートで週次更新を実現します。
+        </p>
+        <div className="grid gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#e9f0ff]/70 p-4 text-sm text-[#1e3359]/80">
+          <div className="font-semibold text-[#0b1f3f]">代表的な連携例</div>
+          <ul className="space-y-1.5">
+            <li className="flex items-start gap-2">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
+              財務：freee会計、弥生会計、勘定奉行（CSV対応含む）
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
+              業務：kintone、楽楽販売、Googleスプレッドシート
+            </li>
+            <li className="flex items-start gap-2">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#0b5cff]" aria-hidden="true" />
+              人材：SmartHR、カオナビ、人事労務freee
+            </li>
+          </ul>
+        </div>
+        <p className="text-sm text-[#1e3359]/75">個人情報や機密データは暗号化した上で管理アプリに同期し、アクセス権限も役割別に設定します。紙・Excel管理の企業でも、48時間で初期データを取り込めるテンプレートをご用意しています。</p>
       </div>
     ),
   },

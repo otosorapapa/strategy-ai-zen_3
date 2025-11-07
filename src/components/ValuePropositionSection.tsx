@@ -1,43 +1,34 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import {
-  BrainCircuit,
-  ClipboardList,
-  LayoutDashboard,
-  Timer,
-} from "lucide-react";
+import { BarChart3, ClipboardList, LayoutDashboard, LifeBuoy } from "lucide-react";
 
-const valuePropositions = [
+const valueCards = [
   {
-    title: "生成AIと診断士の融合",
-    icon: BrainCircuit,
-    bullets: [
-      "社内外の数値を横断解析し、兆しとリスクを色分け",
-      "診断士が現場ヒアリングで裏付け、意思決定に必要な言葉に翻訳",
-    ],
+    title: "未来志向の再生計画",
+    description: "粗利率やキャッシュの改善余地を一目で把握できる設計図を提示します。",
+    metric: "+3pt",
+    metricLabel: "平均粗利率改善幅",
+    icon: BarChart3,
   },
   {
-    title: "専門家が設計する再生シナリオ",
-    icon: ClipboardList,
-    bullets: [
-      "粗利・資金・人材の改善仮説を3パターン以上で提示",
-      "金融機関説明用の根拠と実行ロードマップを同時に整備",
-    ],
-  },
-  {
-    title: "カスタマイズ可能なダッシュボード",
+    title: "カスタマイズ型ダッシュボード",
+    description: "AIが週次で社内外データを同期し、診断士が制約とリスクを一枚に整理。",
+    metric: "7日",
+    metricLabel: "導入までの目安",
     icon: LayoutDashboard,
-    bullets: [
-      "部門ごとのKPIとキャッシュの見通しを一画面で確認",
-      "週次レビュー用の議事録テンプレートと連動",
-    ],
   },
   {
-    title: "48時間診断と週次レビュー",
-    icon: Timer,
-    bullets: [
-      "48時間以内に優先課題と対策メモを共有",
-      "伴走期間中は週次で進捗レビューとリスケ対応を実施",
-    ],
+    title: "継続的な伴走支援",
+    description: "週次レビューで進捗と交渉資料を更新し、決断の瞬間をサポートします。",
+    metric: "95%",
+    metricLabel: "伴走継続率（過去3年）",
+    icon: LifeBuoy,
+  },
+  {
+    title: "補助金活用サポート",
+    description: "経営改善支援補助金の要件整理から書類準備まで、実行計画と並走。",
+    metric: "70%",
+    metricLabel: "採択実績（2024年度）",
+    icon: ClipboardList,
   },
 ];
 
@@ -51,34 +42,35 @@ const ValuePropositionSection = () => {
               Value Proposition
             </span>
             <h2 className="text-balance text-3xl font-semibold leading-tight md:text-[2.4rem]">
-              未来を描き直すための4つの価値提案
+              再挑戦を支える提供価値
             </h2>
             <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-100/80 md:text-lg">
-              経営者が迷わず次の一手を選べるよう、計画づくりから実行、金融機関との連携までをワンチームで支援します。
+              未来志向の計画と日々の意思決定をつなげ、数字と現場の感覚を同じダッシュボードで共有できる環境を整備します。
             </p>
           </ScrollReveal>
 
           <div className="grid gap-6 md:grid-cols-2 xl:gap-8">
-            {valuePropositions.map(({ title, icon: Icon, bullets }) => (
+            {valueCards.map(({ title, description, metric, metricLabel, icon: Icon }) => (
               <ScrollReveal
                 key={title}
                 variant="fade-up"
-                className="flex h-full flex-col gap-4 rounded-[28px] border border-white/10 bg-white/5 p-6 text-left shadow-[0_22px_60px_rgba(4,18,45,0.45)]"
+                className="flex h-full flex-col justify-between gap-6 rounded-[28px] border border-white/10 bg-gradient-to-br from-white/8 via-white/6 to-white/4 p-6 text-left shadow-[0_22px_60px_rgba(4,18,45,0.45)]"
               >
-                <div className="flex items-center gap-3 text-white">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/20 text-cyan-100">
-                    <Icon className="h-6 w-6" aria-hidden="true" />
-                  </span>
-                  <h3 className="text-lg font-semibold leading-snug md:text-xl">{title}</h3>
+                <div className="space-y-4 text-slate-100/85">
+                  <div className="flex items-center gap-3 text-white">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/20 text-cyan-100">
+                      <Icon className="h-6 w-6" aria-hidden="true" />
+                    </span>
+                    <h3 className="text-lg font-semibold leading-snug md:text-xl">{title}</h3>
+                  </div>
+                  <p className="text-sm leading-relaxed md:text-base">{description}</p>
                 </div>
-                <ul className="space-y-2 text-sm leading-relaxed text-slate-100/85 md:text-base">
-                  {bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-2">
-                      <span className="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-cyan-300" aria-hidden="true" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-cyan-100/90">
+                  <span className="text-2xl font-bold text-white">{metric}</span>
+                  <span className="text-right text-xs font-semibold uppercase tracking-[0.26em] text-cyan-100/70">
+                    {metricLabel}
+                  </span>
+                </div>
               </ScrollReveal>
             ))}
           </div>

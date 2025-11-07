@@ -8,17 +8,20 @@ import {
   Activity,
   ArrowRight,
   BriefcaseBusiness,
+  BrainCircuit,
   CheckCircle2,
   Landmark,
+  LayoutDashboard,
+  LifeBuoy,
   LineChart,
   Target,
   Timer,
 } from "lucide-react";
 
-const heroValueBullets = [
-  "初回48時間で経営陣の共通認識を固め、意思決定スピードを引き上げる",
-  "AIが拾う兆しを診断士が物語に翻訳し、未来の粗利と資金の見通しを描き切る",
-  "金融機関・現場・経営陣の三者が同じ根拠で動けるダッシュボードと計画書を提供",
+const heroKeyPhrases = [
+  { icon: BrainCircuit, label: "生成AIと診断士が描く未来地図" },
+  { icon: LayoutDashboard, label: "カスタマイズ型管理アプリ" },
+  { icon: LifeBuoy, label: "伴走支援" },
 ];
 
 const heroSummaryCards = [
@@ -87,13 +90,6 @@ const trustSignals = [
   { icon: LineChart, label: "診断士が監修するAI経営改善支援" },
 ];
 
-const heroIntroCopy = {
-  mission:
-    "地方企業がもう一度挑戦できる土台をつくる――それが私たちのミッションです。数字に追われて意思決定が止まる瞬間こそ、未来を語る材料を揃えるべきだと信じています。",
-  short:
-    "生成AIと診断士の協働で意思決定の質・速さ・先見性を同時に高めます。断片的な情報を一本のストーリーに束ね、再建計画・実行ロードマップ・ダッシュボードをワンセットで届けます。",
-};
-
 const HeroSection = () => {
   const scrollToContact = () => {
     const target = document.getElementById("cta-section");
@@ -113,34 +109,31 @@ const HeroSection = () => {
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
                 AI × 診断士 × 再生設計図
               </span>
-              <p className="text-xs font-semibold tracking-[0.32em] text-cyan-200/90">
-                {heroIntroCopy.mission}
-              </p>
               <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.2] tracking-tight md:text-[3.1rem] md:leading-[1.2] md:tracking-[-0.01em] xl:text-[3.6rem]">
-                生成AIと診断士が描く未来地図で、経営再生の意思決定を再起動する
+                地方企業が再挑戦できる土台を築く
               </h1>
               <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-                粗利・資金・人材の行方を一枚のシナリオにまとめ、次の経営会議で合意がとれる状態へ。差別化されたAI×専門家チームが「なぜ今動くのか」を示し、企業の存在意義を再確認する対話を導きます。
+                数字と現場の声を一枚の物語に束ね、経営者が次の一手を胸を張って選べる環境を整えます。生成AIの分析と診断士の伴走が、地域企業の情熱を確かな戦略に変えていきます。
               </p>
             </div>
 
             <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-              {heroIntroCopy.short}
+              初回48時間で粗利率・資金・人材の改善余地を可視化し、次の経営会議の討議時間を大幅に短縮する診断レポートを提示。未来シナリオと行動順序を揃え、迷いなく動き出せる状態を共に整えます。
             </p>
 
-            <ul className="grid gap-3 text-left text-sm text-slate-100/85 md:grid-cols-2 md:text-base">
-              {heroValueBullets.map((item) => (
-                <li
-                  key={item}
-                  className="group flex items-start gap-3 rounded-2xl border border-white/15 bg-white/5 p-4 shadow-[0_14px_32px_rgba(2,12,32,0.32)] transition hover:border-cyan-300/40 hover:bg-white/10"
+            <div className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/90 md:gap-4 md:text-base">
+              {heroKeyPhrases.map(({ icon: Icon, label }) => (
+                <span
+                  key={label}
+                  className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-semibold uppercase tracking-[0.18em] text-cyan-100/90 shadow-[0_14px_32px_rgba(2,12,32,0.26)] backdrop-blur"
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/15 text-cyan-200">
-                    <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/15 text-cyan-200">
+                    <Icon className="h-4 w-4" aria-hidden="true" />
                   </span>
-                  <span className="leading-relaxed">{item}</span>
-                </li>
+                  {label}
+                </span>
               ))}
-            </ul>
+            </div>
 
             <div className="flex flex-wrap items-center gap-4">
               <Button

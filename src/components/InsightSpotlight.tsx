@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   ArrowUpRight,
   BadgeCheck,
   BarChart3,
@@ -11,7 +10,7 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
-import blueprintFlowVisual from "@/assets/process-flow-infographic.jpg";
+import blueprintFlowVisual from "@/assets/insight-blueprint-flow.svg";
 
 const insightHighlights = [
   {
@@ -280,39 +279,33 @@ const InsightSpotlight = () => {
                 現場ヒアリングと財務診断から抽出された「再生が止まる瞬間」の兆候です。どれか一つでも該当すれば、設計図の再構築が急務です。
               </p>
             </ScrollReveal>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {rootCauseNarrative.map((item, index) => (
                 <ScrollReveal
                   key={item.title}
                   variant="fade-up"
-                  className="relative flex h-full flex-col gap-4 rounded-3xl border border-[#0b1f3f]/12 bg-white/95 p-6 shadow-[0_24px_60px_rgba(11,31,63,0.12)]"
+                  className="flex h-full flex-col gap-5 rounded-3xl border border-[#0b1f3f]/12 bg-white/95 p-6 shadow-[0_24px_60px_rgba(11,31,63,0.12)]"
                 >
-                  {index < rootCauseNarrative.length - 1 && (
-                    <span
-                      className="pointer-events-none absolute left-[24px] top-[88px] hidden h-[calc(100%-96px)] w-px bg-gradient-to-b from-[#0584c6]/50 to-transparent sm:block"
-                      aria-hidden="true"
-                    />
-                  )}
-                  <div className="flex items-center gap-4">
-                    <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0584c6]/12 text-sm font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
-                      {item.badge.split(" ")[1]}
-                      <span
-                        className="absolute -left-[18px] top-1/2 hidden h-px w-6 -translate-y-1/2 bg-gradient-to-r from-transparent via-[#0584c6]/40 to-[#0584c6]/80 sm:block"
-                        aria-hidden="true"
-                      />
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-start gap-3">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#0584c6]/30 bg-[#0584c6]/10 text-sm font-semibold text-[#0584c6]">
+                        0{index + 1}
+                      </span>
+                      <div>
+                        <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">{item.badge}</span>
+                        <h3 className="mt-1 text-lg font-semibold text-[#0b1f3f]">{item.title}</h3>
+                      </div>
                     </div>
-                    <div>
-                      <span className="text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">{item.badge}</span>
-                      <h3 className="mt-1 text-lg font-semibold text-[#0b1f3f]">{item.title}</h3>
-                    </div>
+                    <span className="inline-flex items-center rounded-full border border-[#0584c6]/25 bg-[#f0f6ff] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-[#0584c6]">
+                      Leading Signal
+                    </span>
                   </div>
                   <p className="text-sm leading-relaxed text-[#1e3359]/75">{item.description}</p>
-                  <div className="grid gap-3 rounded-2xl border border-[#0584c6]/20 bg-[#f0f6ff] p-4 text-sm text-[#0b1f3f]">
-                    <div className="flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
+                  <div className="mt-auto grid gap-2 rounded-2xl border border-[#0584c6]/20 bg-[#f0f6ff] p-4 text-sm text-[#0b1f3f]">
+                    <div className="flex items-center gap-2 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
                       <TrendingUp className="h-4 w-4" aria-hidden="true" />
-                      Leading Signal
+                      {item.metric}
                     </div>
-                    <p className="font-semibold text-[#0584c6]">{item.metric}</p>
                     <p className="text-[#1e3359]/75">{item.signal}</p>
                   </div>
                 </ScrollReveal>
@@ -331,39 +324,26 @@ const InsightSpotlight = () => {
                   「再生の設計図」が整うと、判断の根拠と行動が一体化し、次の会議を待たずに動けるようになります。
                 </p>
               </div>
-              <ol className="relative grid gap-5">
+              <div className="grid gap-6 md:grid-cols-3">
                 {hopeStatements.map((statement, index) => (
-                  <li
+                  <div
                     key={statement.title}
-                    className="relative flex flex-col gap-4 rounded-3xl border border-[#0b1f3f]/12 bg-white/85 p-5 text-sm leading-relaxed text-[#1e3359]/80 shadow-[0_20px_55px_rgba(11,31,63,0.12)]"
+                    className="flex h-full flex-col gap-5 rounded-3xl border border-[#0b1f3f]/12 bg-white/85 p-6 text-sm leading-relaxed text-[#1e3359]/80 shadow-[0_20px_55px_rgba(11,31,63,0.12)]"
                   >
-                    {index < hopeStatements.length - 1 && (
-                      <span
-                        className="pointer-events-none absolute left-[28px] top-[92px] hidden h-[calc(100%-104px)] w-px bg-gradient-to-b from-[#0584c6]/40 to-transparent md:block"
-                        aria-hidden="true"
-                      />
-                    )}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#0584c6]/30 bg-[#0584c6]/10 text-sm font-semibold text-[#0584c6]">
-                          0{index + 1}
-                        </span>
-                        <div>
-                          <span className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{statement.title}</span>
-                          <p className="text-base font-semibold text-[#0b1f3f]">{statement.metric}</p>
-                        </div>
-                      </div>
-                      {index < hopeStatements.length - 1 && (
-                        <ArrowRight className="hidden h-5 w-5 text-[#0584c6] md:block" aria-hidden="true" />
-                      )}
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#0584c6]/30 bg-[#0584c6]/10 text-sm font-semibold text-[#0584c6]">
+                      0{index + 1}
+                    </span>
+                    <div className="space-y-1">
+                      <span className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{statement.title}</span>
+                      <p className="text-base font-semibold text-[#0b1f3f]">{statement.metric}</p>
                     </div>
-                    <p>{statement.description}</p>
+                    <p className="flex-1 text-sm leading-relaxed text-[#1e3359]/75">{statement.description}</p>
                     <div className="inline-flex items-center gap-2 rounded-full border border-[#0584c6]/20 bg-[#f0f6ff] px-3 py-1 text-xs font-semibold text-[#0584c6]">
                       KPI Anchor｜{statement.kpi}
                     </div>
-                  </li>
+                  </div>
                 ))}
-              </ol>
+              </div>
               <div className="grid gap-4 rounded-3xl border border-[#0584c6]/25 bg-[#0584c6]/10 p-6 text-[#0b1f3f]">
                 <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
                   <TrendingUp className="h-5 w-5 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />

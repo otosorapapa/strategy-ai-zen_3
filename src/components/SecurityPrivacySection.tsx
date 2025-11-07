@@ -16,19 +16,19 @@ import supportVisual from "@/assets/strategic-meeting.jpg";
 
 const kpiSnapshots = [
   {
-    title: "仮説提示まで",
+    title: "初動提案",
     value: "48h",
-    description: "初回診断後48時間以内に因果構造と優先論点を整理。経営判断が止まらない状態をつくります。",
+    description: "初回ヒアリングから48時間以内に因果構造と優先打ち手を提示。迷いなく次の会議に臨めます。",
   },
   {
-    title: "週次ボード",
-    value: "90%",
-    description: "週次レビュー参加率。Slack連携で全員の視線をKPIと進捗に誘導し、推進力を維持。",
+    title: "先読みボード",
+    value: "Weekly",
+    description: "週次レビューでAI解析と現場メモを統合し、変化の兆しとリスクを一目で判断できる体制を維持。",
   },
   {
     title: "金融機関連携",
-    value: "3営業日",
-    description: "必要資料の再構成・承認プロセスを3営業日以内に完結。説明責任とスピードを両立。",
+    value: "迅速",
+    description: "共有資料をAIで再構成し、診断士が語り口を整備。金融機関説明までの準備負担を抑えます。",
   },
 ];
 
@@ -37,29 +37,29 @@ const supportItems = [
     icon: Users,
     title: "専門家チームの伴走",
     description:
-      "代表・古町（中小企業診断士）を中心に、財務・人材・販売の専門家が案件ごとにチームを編成。経営会議のファシリテーションまで支援します。",
-    evidence: "因果性と論理性を担保するディスカッション議事をその場で可視化。",
+      "代表・古町（中小企業診断士）を中心に、財務・人材・販売の専門家が案件ごとにチームを編成。生成AIが抽出した洞察を基に、経営管理アプリとダッシュボードを企業仕様に調整し、未来像を共通言語化します。",
+    evidence: "意思決定の根拠と現場の気づきを同時に記録し、次の会議までの行動が一目で伝わります。",
   },
   {
     icon: BookOpen,
     title: "運用ガイドと教育プログラム",
     description:
-      "AIプロンプト集、判断ログのテンプレート、現場向けトレーニングを提供。導入初月は週次で伴走し、社内にノウハウが残る仕組みを整えます。",
-    evidence: "納得性の高いロールプレイとリファレンス動画をクラウドで共有。",
+      "AIプロンプト集、判断ログのテンプレート、現場向けトレーニングを提供。導入初月は週次で伴走し、社内で自走できる意思決定スタイルを育てます。",
+    evidence: "現場がすぐ使える手順書と対話例をクラウドで共有し、チーム全体の理解を底上げ。",
   },
   {
     icon: Lock,
     title: "データガバナンスと守秘体制",
     description:
       "暗号化クラウドとアクセス権限管理を徹底。NDA締結・監査ログ共有・契約終了時のデータ削除まで透明性を担保します。",
-    evidence: "スマートな権限移行フローで現場と経営が同じ基準で運用可能。",
+    evidence: "権限移行やデータ削除を可視化し、誰が見ても安心できる運用ルールを維持。",
   },
   {
     icon: Award,
     title: "信頼を裏付ける認定と実績",
     description:
-      "経営革新等支援機関としての認定に加え、九州を中心に100社以上の再生プロジェクトを支援。金融機関との共同プロジェクトも豊富です。",
-    evidence: "九州北部5行との共同スキームで平均粗利+3.2ptを実現した実績。",
+      "経営革新等支援機関としての認定に加え、九州を中心に再生プロジェクトを数多く支援。金融機関や自治体との共同支援も蓄積しています。",
+    evidence: "九州北部の複数金融機関と連携したスキームで、信頼される説明体制を磨いてきました。",
   },
 ];
 
@@ -67,22 +67,22 @@ const processSteps = [
   {
     label: "STEP 1",
     title: "初回相談（30分）",
-    detail: "経営課題と外部環境を棚卸し。AIで抽出した初期シグナルと優先論点をその場で共有します。",
+    detail: "経営課題と事業の存在意義を棚卸し。生成AIが抽出した初期シグナルと優先論点を共有し、目指す姿を言語化します。",
   },
   {
     label: "STEP 2",
     title: "仮診断（2週間）",
-    detail: "データを預かり、生成AIが粗利・キャッシュの歪みをヒートマップ化。診断士が現場ヒアリングを実施。",
+    detail: "財務・顧客・商品データを預かり、生成AIが粗利や資金の歪みを可視化。診断士が現場ヒアリングで強みと課題を整理します。",
   },
   {
     label: "STEP 3",
     title: "再生設計ワークショップ",
-    detail: "複数シナリオを比較し、優先施策と数値目標を合意。金融機関へ伝えるストーリーも整理します。",
+    detail: "複数シナリオを比較し、優先施策とマイルストーンを合意。国の補助金の活用可否も診断士が整理し、金融機関に伝えるストーリーを磨き上げます。",
   },
   {
     label: "STEP 4",
     title: "実行伴走（3〜12ヶ月）",
-    detail: "週次レビューと月次ボードで進捗とリスクを確認。必要に応じて計画をリライトし続けます。",
+    detail: "週次レビューと月次ボードで進捗とリスクを確認。外部環境の変化も常時モニタリングし、5年計画をアップデートし続けます。",
   },
 ];
 
@@ -122,13 +122,13 @@ const SecurityPrivacySection = () => {
       <div className="relative z-[1] mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70 shadow-[0_10px_25px_rgba(8,40,75,0.08)]">
-            Support System
+            経営改善支援フロー
           </span>
           <h2 className="mt-6 text-3xl font-bold leading-tight md:text-4xl">
-            再生の道のりを一緒に歩むための、導入ステップと伴走体制
+            変化を先取りして立て直す、生成AI×診断士の共同伴走プログラム
           </h2>
           <p className="mx-auto mt-4 max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/85 md:text-lg">
-            因果で語れる経営再生の筋道を、初動から実行まで切れ目なくデザイン。判断の根拠・現場の納得・データの安心を同時に整える伴走スキームで、年商5,000万円〜15億円規模の企業変革を加速させます。
+            激変する市場でも自社の強みを語り切れるよう、業界・競合・顧客・コスト構造を多面的に把握し、生成AIで即座に要点化。診断士が経営管理アプリとダッシュボードを事業者ごとに組み上げ、5年先のシナリオと今打つべき一手を同じ画面で共有します。経営者が胸を張って前に進める判断環境を整えます。
           </p>
         </ScrollReveal>
 
@@ -136,10 +136,10 @@ const SecurityPrivacySection = () => {
           <ScrollReveal variant="fade-up" className="space-y-6">
             <div className="inline-flex items-center gap-3 rounded-full bg-white/80 px-5 py-2 text-sm font-semibold text-[#0b1f3f] shadow-[0_16px_40px_rgba(6,27,70,0.08)]">
               <ShieldCheck className="h-5 w-5 text-[#0584c6]" aria-hidden="true" />
-              戦略・財務・現場を一枚のロジックで束ねる伴走体制
+              診断士と生成AIが描く、次の一手に迷わない判断軸
             </div>
             <p className="text-base leading-relaxed text-[#1e3359]/80">
-              仮説の提示から施策の実装まで、AIが提示するインサイトと専門家の判断を統合。各フェーズで重視すべき因果関係を可視化し、現場の合意形成を高速化します。
+              事業の存在意義と市場の変化を重ね合わせ、仮説検証から施策実行までを一気通貫で支援。AIが抽出した兆しを診断士が裏付け、意思決定ログに落とし込むことで、現場と金融機関の双方に納得感のあるストーリーを築きます。
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
               {kpiSnapshots.map((snapshot) => (
@@ -193,16 +193,16 @@ const SecurityPrivacySection = () => {
             </p>
             <h3 className="text-2xl font-semibold text-[#0b1f3f]">生成AIの安全性・再現性を支える技術設計</h3>
             <p className="text-sm leading-relaxed text-[#1e3359]/80">
-              再生案件で扱う機微情報を守りつつ、毎回同じ品質で意思決定ログを生成するために技術スタックを標準化しています。モデル・データ・学習フローを三層で制御し、専門家によるレビューを必須化することで、判断のぶれを抑制します。
+              再生案件で扱う機微情報を守りながら、毎回同じ視点で判断材料を提供できるよう技術基盤を統一。モデル・データ・学習フローを三層で制御し、診断士のレビューを必須化することで、迷いのない意思決定を後押しします。
             </p>
             <ul className="space-y-3 text-sm leading-relaxed text-[#1e3359]/78">
               <li className="flex items-start gap-2">
                 <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
-                <span>アクセス権限は案件単位で付与し、共有時はワンタイムトークンで期限管理。</span>
+                <span>アクセス権限は案件単位で付与し、共有時は期限付きトークンで管理。誰が閲覧したかを即時確認できます。</span>
               </li>
               <li className="flex items-start gap-2">
                 <Target className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
-                <span>週次レビューで生成結果の再現率・一貫性を計測し、閾値を下回ればモデル設定をロールバック。</span>
+                <span>週次レビューで生成結果の再現率と一貫性を確認し、基準を下回れば即時にモデル設定を見直します。</span>
               </li>
             </ul>
           </div>

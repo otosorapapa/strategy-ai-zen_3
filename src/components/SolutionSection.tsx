@@ -113,15 +113,15 @@ const trustSignals = [
 ];
 
 const solutionQuickSummary = [
-  "生成AIが外部環境と財務データを重ね、歪みの原因と兆候を整理",
-  "診断士が現場ヒアリングで実行条件を確認し、再生シナリオを描く",
-  "経営管理アプリと資料を連動させ、社内外への説明を一本化",
+  "生成AIが外部環境と財務データを重ね、変化の芽を整理",
+  "診断士が現場ヒアリングで実行条件を確認し、実現できる計画にまとめる",
+  "経営管理アプリと資料を連動させ、社内外への説明を迷わせない",
 ];
 
 const solutionNextActions = [
-  "初回相談（オンライン30分）で課題と外部環境を棚卸し",
-  "仮診断（約2週間）でAI分析とヒアリング結果を再生ヒートマップに整理",
-  "再生設計ワークショップで優先施策と目標を合意し、伴走支援を開始",
+  "オンライン相談30分で現状と外部環境を一緒に確認",
+  "仮診断2週間でAI分析とヒアリング結果を整理して共有",
+  "共同検討会で優先施策と支援の進め方を決め、伴走支援を開始",
 ];
 
 const causewayStages = [
@@ -208,30 +208,30 @@ const workflowSteps = [
 const implementationTimeline = [
   {
     phase: "Day 0-2",
-    title: "無料相談とAIスキャンで現状把握",
-    detail: "経営・財務データとヒアリング内容を集約し、優先仮説メモと再生ヒートマップを48時間以内に共有。",
-    deliverable: "優先仮説メモ／リスクヒートマップ",
+    title: "初回相談とAI診断で課題の核心を把握",
+    detail: "経営・財務データとヒアリング内容を集約し、優先課題メモと警戒領域マップを48時間以内に共有。",
+    deliverable: "優先課題メモ／警戒領域マップ",
     icon: CalendarClock,
   },
   {
     phase: "Week 1-2",
-    title: "再生キャンバスとKPIを合意",
-    detail: "診断士がAI提案を検証し、粗利・資金・現場の指標を一本化。役員会向けの意思決定キャンバスを整備。",
-    deliverable: "意思決定キャンバス／週次レビュー設計図",
+    title: "将来像と指標を一本化",
+    detail: "診断士がAI提案を検証し、粗利・資金・現場の指標を整理。役員会で説明しやすい判断シートを整備。",
+    deliverable: "判断シート／週次レビュー設計図",
     icon: ClipboardCheck,
   },
   {
     phase: "Week 3-4",
-    title: "金融機関・現場と資料連動",
-    detail: "銀行説明シナリオと現場タスクを同期し、必要資料・証憑をテンプレ化。交渉準備を短期間で完了。",
+    title: "金融機関と現場に同じ資料で共有",
+    detail: "金融機関向け説明と現場タスクを同期し、必要資料を共通テンプレートに整理。調整準備を短期間で完了。",
     deliverable: "金融機関連携パッケージ",
     icon: ShieldCheck,
   },
   {
     phase: "Week 5-6",
-    title: "週次運用で成果検証を開始",
-    detail: "AIレポートと実行ログを週次で更新し、粗利とキャッシュの変化をモニタリング。意思決定の記録を残し、次の改善サイクルへつなぐ。",
-    deliverable: "週次ダッシュボード／成果コミットメントシート",
+    title: "週次運用で未来の兆しを検証",
+    detail: "AIレポートと実行ログを週次で更新し、粗利とキャッシュの変化を追跡。判断の裏付けを残し、次の改善サイクルへつなぐ。",
+    deliverable: "週次ダッシュボード／実行コミットメントシート",
     icon: TrendingUp,
   },
 ];
@@ -242,13 +242,13 @@ const SolutionSection = () => {
         <div className="container mx-auto max-w-6xl px-4">
           <ScrollReveal variant="fade-up" className="space-y-6 text-center">
             <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-[#0b1f3f]/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-              提供価値｜判断力・速さ・先見性
+              使命｜挑戦を止めない経営改善パートナー
             </span>
             <h2 className="text-3xl font-bold leading-tight md:text-[2.75rem] md:leading-[1.2]">
-              生成AIの予測力と診断士の洞察力を束ね、判断の質・速さ・先読みを同時に実現
+              生成AIと診断士が、経営者の判断力を未来へ導く
             </h2>
             <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-              外部環境を常時モニタリングする生成AIが兆しを捉え、診断士が現場の制約と照合。整ったデータは一枚のダッシュボードに集約され、経営会議では選択肢を比較するだけで次の一手に移れます。根拠とストーリーが揃うから、社内外への説明も滑らかです。
+              外部環境を常時見張る生成AIが兆しを捉え、診断士が現場の条件と照らし合わせて実行できる道筋に整えます。整ったデータは一枚のダッシュボードに集まり、経営会議では根拠を示しながら堂々と次の一手に踏み出せます。
             </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {insightPills.map((pill) => (
@@ -653,7 +653,7 @@ const SolutionSection = () => {
               </h3>
             </div>
             <p className="max-w-xl text-sm leading-relaxed text-[#1e3359]/80">
-              期間ごとに必要な資料とアクションを並走支援。金融機関との調整や補助金活用の可否判断まで、同じドキュメント群で意思決定を進められます。
+              期間ごとに必要な資料とアクションを並走支援。金融機関との調整も同じ資料群で進むため、会議のたびに判断の根拠を示しながら次へ進めます。
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">

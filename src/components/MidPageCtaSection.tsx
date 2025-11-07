@@ -3,6 +3,7 @@ import { ComponentType, SVGProps } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { TERTIARY_CTA } from "@/lib/ctaVariants";
+import conversionMomentumVisual from "@/assets/success-metrics-visual.jpg";
 
 import { ArrowRight, CalendarClock, FileText, Sparkles, Target } from "lucide-react";
 
@@ -88,6 +89,30 @@ const MidPageCtaSection = () => {
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/85 md:text-lg">
             スクロール中に発生する「後で連絡すればいい」という心理的惰性を断つため、行動ハードルの異なる2種類のCTAを用意。CVR +18〜25%向上を狙った構成です。
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-12 overflow-hidden rounded-[32px] border border-white/12 bg-white/5 shadow-[0_28px_75px_rgba(3,16,36,0.45)]"
+        >
+          <figure className="relative flex flex-col overflow-hidden rounded-[30px]">
+            <div
+              className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-transparent to-slate-900/40"
+              aria-hidden="true"
+            />
+            <img
+              src={conversionMomentumVisual}
+              alt="CTAクリック率の向上を示すダッシュボードとチームのモニタリング風景"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+            <figcaption className="relative z-10 flex flex-col gap-2 px-6 py-4 text-left text-xs text-slate-100/80 md:flex-row md:items-center md:justify-between md:text-sm">
+              <span className="font-semibold uppercase tracking-[0.28em] text-cyan-200">Engagement Snapshot</span>
+              <span>
+                中盤のナーチャリング導線で可視化される指標イメージを添えることで、複数CTAの役割分担と改善効果を直感的に伝えます。
+              </span>
+            </figcaption>
+          </figure>
         </ScrollReveal>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">

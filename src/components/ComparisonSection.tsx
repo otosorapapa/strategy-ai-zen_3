@@ -7,6 +7,7 @@ import {
 
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
+import comparisonShowcase from "@/assets/comparison-chart.jpg";
 
 const comparisonRows = [
   {
@@ -63,6 +64,30 @@ const ComparisonSection = () => {
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
             予測困難な環境でも迷わず舵を切れるよう、生成AIと診断士が練り上げた計画づくりと伴走体制を比較形式でまとめました。自社にとっての次の一手を安心して選べる材料をご確認ください。
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal
+          variant="fade-up"
+          className="mt-12 overflow-hidden rounded-[32px] border border-[#0b1f3f]/10 bg-[#f2f7ff] shadow-[0_26px_70px_rgba(7,24,57,0.12)]"
+        >
+          <figure className="relative flex flex-col overflow-hidden rounded-[30px]">
+            <div
+              className="absolute inset-0 bg-gradient-to-br from-[#0b1f3f]/15 via-transparent to-[#0584c6]/20"
+              aria-hidden="true"
+            />
+            <img
+              src={comparisonShowcase}
+              alt="一般的な顧問体制とZEN Re-Designの比較指標を視覚化した分析ダッシュボード"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+            <figcaption className="relative z-10 flex flex-col gap-2 px-6 py-4 text-left text-sm text-[#0b1f3f]/80 md:flex-row md:items-center md:justify-between">
+              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]">Comparison Visual</span>
+              <span>
+                伴走体制ごとの成果ギャップを視覚的に伝えることで、表形式の比較と合わせて導入後の姿を具体的に想像できます。
+              </span>
+            </figcaption>
+          </figure>
         </ScrollReveal>
 
         <ScrollReveal

@@ -1,4 +1,8 @@
 import HeroSection from "@/components/HeroSection";
+import ValuePropositionSection from "@/components/ValuePropositionSection";
+import ServiceFlowSection from "@/components/ServiceFlowSection";
+import DashboardExampleSection from "@/components/DashboardExampleSection";
+import MeritsSection from "@/components/MeritsSection";
 import InsightSpotlight from "@/components/InsightSpotlight";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
@@ -31,6 +35,10 @@ const Index = () => {
       <StructuredData />
       <HeroSection />
       <SectionNavigationMap />
+      <ValuePropositionSection />
+      <ServiceFlowSection />
+      <DashboardExampleSection />
+      <MeritsSection />
       <PainChecklistSection />
       <StorySeriesSection />
       <InsightSpotlight />

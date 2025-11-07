@@ -10,6 +10,7 @@ import {
   FileCheck2,
   Loader2,
   MessageCircleQuestion,
+  Phone,
   ShieldCheck,
   Timer,
 } from "lucide-react";
@@ -29,6 +30,7 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
+import { PHONE_TEL_LINK } from "@/lib/phone";
 import { submitContactFormToWordPress } from "@/lib/wordpress";
 import { cn } from "@/lib/utils";
 
@@ -222,6 +224,7 @@ const trustBoardEntries = [
 const CTASection = () => {
   const { toast } = useToast();
   const formId = useId();
+  const formDomId = `cta-form-${formId}`;
   const [requestType, setRequestType] = useState<(typeof requestOptions)[number]["value"]>("consultation");
   const [companySize, setCompanySize] = useState<string | undefined>();
   const [company, setCompany] = useState("");
@@ -250,6 +253,11 @@ const CTASection = () => {
       }),
     );
   }, [currentStep]);
+
+  const handleScrollToForm = () => {
+    const formElement = document.getElementById(formDomId);
+    formElement?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -333,6 +341,29 @@ const CTASection = () => {
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
             まず背景と目指す姿を共有し、生成AIの分析結果と診断士の仮説を突き合わせます。そこから優先順位と段取りを描き、補助金の活用見込みや金融機関への説明資料まで一度に準備。どの会議でも胸を張って提案できる状態を整えます。
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Button
+              type="button"
+              variant="cta"
+              size="lg"
+              className="rounded-full px-10 py-4 text-sm font-bold md:text-base"
+              onClick={handleScrollToForm}
+              data-cta-id={`${PRIMARY_CTA.id}-cta-banner`}
+            >
+              <span className="flex items-center gap-2">
+                {PRIMARY_CTA.label}
+                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              </span>
+            </Button>
+            <a
+              href={PHONE_TEL_LINK}
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10 md:text-base"
+              aria-label="電話で無料相談を申し込む"
+            >
+              <Phone className="h-5 w-5" aria-hidden="true" />
+              092-231-2920
+            </a>
+          </div>
         </ScrollReveal>
 
         <ScrollReveal
@@ -588,7 +619,7 @@ const CTASection = () => {
                 </div>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form id={formDomId} onSubmit={handleSubmit} className="space-y-5">
                 <div className="flex flex-col gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#eef4ff] p-4 text-sm text-[#1e3359]/80">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">

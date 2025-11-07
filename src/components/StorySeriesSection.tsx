@@ -3,6 +3,7 @@ import SectionMicroCta from "@/components/SectionMicroCta";
 import { Button } from "@/components/ui/button";
 import { PRIMARY_CTA } from "@/lib/ctaVariants";
 import { cn } from "@/lib/utils";
+import storySeriesCollage from "@/assets/strategy-planning.jpg";
 import {
   ArrowRight,
   BookOpen,
@@ -156,6 +157,24 @@ const StorySeriesSection = () => {
             variant="fade-up"
             className="flex flex-col gap-6 rounded-[32px] border border-white/12 bg-white/5 p-8 shadow-[0_30px_80px_rgba(3,16,36,0.45)]"
           >
+            <figure className="group relative overflow-hidden rounded-[28px] border border-white/12 bg-[#0b1f3f]/60">
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 via-transparent to-cyan-200/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                aria-hidden="true"
+              />
+              <img
+                src={storySeriesCollage}
+                alt="生成AIの分析結果を囲んで議論する経営チームのイメージ"
+                className="relative z-10 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="relative z-10 flex items-center justify-between gap-4 px-5 py-4 text-left text-xs text-slate-100/75">
+                <span className="font-semibold uppercase tracking-[0.28em] text-cyan-200">Storyboard</span>
+                <span>
+                  Episode 2〜3で提示する資料群の雰囲気を視覚化し、共感から行動への橋渡しをイメージできるようにしました。
+                </span>
+              </figcaption>
+            </figure>
             <div className="space-y-4 text-left">
               <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/80">
                 Touch Point Design

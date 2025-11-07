@@ -20,6 +20,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
 import problemInfographic from "@/assets/problem-infographic.svg";
 import financialAnalysis from "@/assets/financial-analysis.jpg";
+import executiveStrategyMeeting from "@/assets/executive-strategy-meeting.jpg";
+import insightBlueprintFlow from "@/assets/insight-blueprint-flow.svg";
 
 type PainPoint = {
   badge: string;
@@ -59,6 +61,24 @@ const authorityStack: AuthorityBadge[] = [
     label: "日経XTECHなど専門メディア掲載",
     description: "AI×管理会計の導入事例が多数紹介され信頼性を担保",
     icon: Newspaper,
+  },
+];
+
+const proofHighlights = [
+  {
+    label: "Board Adoption",
+    value: "意思決定承認率 97%",
+    note: "経営／金融双方のチェックを同時通過させる統制ログ。",
+  },
+  {
+    label: "Negotiation Lead Time",
+    value: "交渉準備 ▲45%",
+    note: "事前に必要資料を洗い出し、差し戻しを未然に防止。",
+  },
+  {
+    label: "Capital Confidence",
+    value: "資金調達評価 Aランク",
+    note: "監査証憑の連動でキャッシュアウトの不確実性を削減。",
   },
 ];
 
@@ -245,37 +265,70 @@ const ProblemSection = () => {
             variant="fade-up"
             className="rounded-[1.6rem] border border-white/12 bg-white/5 p-6 shadow-[0_30px_80px_rgba(4,18,40,0.55)] backdrop-blur"
           >
-            <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
-              <div className="space-y-2">
-                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
-                  Proof Sandwich
-                </span>
-                <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
-                  行政・金融・専門メディアが裏付ける財務再構築の信頼基盤
-                </h3>
-              </div>
-              <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                行政認定・地域金融機関との共創・専門メディア露出という三層の証跡で、取締役会が委任判断を下せる根拠を明示する。
-              </p>
-            </div>
-            <div className="mt-6 grid gap-4 md:grid-cols-3">
-              {authorityStack.map((badge) => {
-                const Icon = badge.icon;
-                return (
-                  <div
-                    key={badge.label}
-                    className="flex h-full flex-col gap-3 rounded-2xl border border-cyan-300/25 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-4 shadow-[0_22px_50px_rgba(5,28,68,0.35)]"
-                  >
-                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
-                      <Icon className="h-5 w-5" aria-hidden="true" />
+            <div className="grid gap-6 xl:grid-cols-[minmax(0,0.67fr)_minmax(0,0.33fr)] xl:items-stretch">
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
+                  <div className="space-y-2">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                      Proof Sandwich
                     </span>
-                    <div className="space-y-1">
-                      <p className="text-sm font-semibold text-white">{badge.label}</p>
-                      <p className="text-xs leading-relaxed text-slate-200/85">{badge.description}</p>
-                    </div>
+                    <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
+                      行政・金融・専門メディアが裏付ける財務再構築の信頼基盤
+                    </h3>
                   </div>
-                );
-              })}
+                  <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
+                    行政認定・地域金融機関との共創・専門メディア露出という三層の証跡で、取締役会が委任判断を下せる根拠を明示する。
+                  </p>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {proofHighlights.map((highlight) => (
+                    <div
+                      key={highlight.label}
+                      className="flex h-full flex-col justify-between rounded-2xl border border-cyan-300/20 bg-[#0a1f48]/55 p-4 shadow-[0_18px_45px_rgba(4,20,48,0.45)]"
+                    >
+                      <span className="text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/70">
+                        {highlight.label}
+                      </span>
+                      <p className="mt-3 text-lg font-semibold text-cyan-100">{highlight.value}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-slate-200/75">{highlight.note}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {authorityStack.map((badge) => {
+                    const Icon = badge.icon;
+                    return (
+                      <div
+                        key={badge.label}
+                        className="flex h-full flex-col gap-3 rounded-2xl border border-cyan-300/25 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-4 shadow-[0_22px_50px_rgba(5,28,68,0.35)]"
+                      >
+                        <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
+                          <Icon className="h-5 w-5" aria-hidden="true" />
+                        </span>
+                        <div className="space-y-1">
+                          <p className="text-sm font-semibold text-white">{badge.label}</p>
+                          <p className="text-xs leading-relaxed text-slate-200/85">{badge.description}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <figure className="relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-[1.6rem] border border-cyan-300/20 bg-black/20">
+                <img
+                  src={executiveStrategyMeeting}
+                  alt="意思決定会議で財務の証跡と投資判断を確認する経営陣"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#0b1e3f]/70 via-transparent to-[#030916]/85" />
+                <figcaption className="absolute bottom-4 left-4 right-4 space-y-2 rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur">
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">Board Confidence Lens</p>
+                  <p className="text-sm leading-relaxed text-slate-100/90">
+                    対外監査・金融審査で求められる証憑動線を1枚に集約。意思決定の裏付けを資料と議事で同時に残せます。
+                  </p>
+                </figcaption>
+              </figure>
             </div>
           </ScrollReveal>
 
@@ -283,44 +336,66 @@ const ProblemSection = () => {
             variant="fade-up"
             className="overflow-hidden rounded-[1.8rem] border border-cyan-300/20 bg-gradient-to-br from-[#0b2346] via-[#071633] to-[#030d21] p-7 shadow-[0_32px_90px_rgba(3,16,36,0.62)]"
           >
-            <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
-              <div className="space-y-2">
-                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
-                  Causality Pillars
-                </span>
-                <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
-                  因果と統制を両立させる5つの設計軸
-                </h3>
-              </div>
-              <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                意思決定を止める摩擦を減らすため、経営者が重視する五要素を指標と導線で束ねた。各カードには即断に効く数値指標を併記している。
-              </p>
-            </div>
-            <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-              {causalityPillars.map((pillar) => {
-                const Icon = pillar.icon;
-                return (
-                  <div
-                    key={pillar.focus}
-                    className="group relative flex h-full flex-col gap-4 rounded-2xl border border-cyan-300/25 bg-gradient-to-br from-white/8 via-white/4 to-white/[0.05] p-5 shadow-[0_26px_70px_rgba(4,22,56,0.45)]"
-                  >
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/15 px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-cyan-100">
-                        {pillar.focus}
-                      </span>
-                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
-                        <Icon className="h-4 w-4" aria-hidden="true" />
-                      </span>
-                    </div>
-                    <h4 className="text-base font-semibold text-white">{pillar.title}</h4>
-                    <p className="text-sm leading-relaxed text-slate-200/85">{pillar.description}</p>
-                    <span className="mt-auto inline-flex w-max items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                      <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
-                      {pillar.metric}
+            <div className="grid gap-8 xl:grid-cols-[minmax(0,0.68fr)_minmax(0,0.32fr)] xl:items-start">
+              <div className="space-y-6">
+                <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
+                  <div className="space-y-2">
+                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
+                      Causality Pillars
                     </span>
+                    <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
+                      因果と統制を両立させる5つの設計軸
+                    </h3>
                   </div>
-                );
-              })}
+                  <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
+                    意思決定を止める摩擦を減らすため、経営者が重視する五要素を指標と導線で束ねた。各カードには即断に効く数値指標を併記している。
+                  </p>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {causalityPillars.map((pillar) => {
+                    const Icon = pillar.icon;
+                    return (
+                      <div
+                        key={pillar.focus}
+                        className="group relative flex h-full flex-col gap-4 rounded-2xl border border-cyan-300/25 bg-gradient-to-br from-white/8 via-white/4 to-white/[0.05] p-5 shadow-[0_26px_70px_rgba(4,22,56,0.45)] transition-transform duration-300 hover:-translate-y-1"
+                      >
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/15 px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.32em] text-cyan-100">
+                            {pillar.focus}
+                          </span>
+                          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-400/15 text-cyan-100">
+                            <Icon className="h-4 w-4" aria-hidden="true" />
+                          </span>
+                        </div>
+                        <h4 className="text-base font-semibold text-white">{pillar.title}</h4>
+                        <p className="text-sm leading-relaxed text-slate-200/85">{pillar.description}</p>
+                        <span className="mt-auto inline-flex w-max items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/12 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
+                          <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+                          {pillar.metric}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <figure className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-cyan-300/20 bg-[#091d3d]/70 p-6">
+                <div className="flex items-center justify-between gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/75">
+                  <span>Blueprint Signal</span>
+                  <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-cyan-100/90">因果マッピング</span>
+                </div>
+                <img
+                  src={insightBlueprintFlow}
+                  alt="因果関係の流れを視覚化した意思決定ブループリント"
+                  className="mt-6 w-full max-w-[320px] self-center object-contain"
+                  loading="lazy"
+                />
+                <figcaption className="mt-6 space-y-3 text-sm leading-relaxed text-slate-200/85">
+                  <p>
+                    KPIとリスクシグナルのつながりを矢印で示し、どの指標が意思決定を左右するかを一目で把握。経営会議で議題化すべき順番を揃えます。
+                  </p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Board Ready｜ストーリー化された証跡で納得形成を高速化</p>
+                </figcaption>
+              </figure>
             </div>
           </ScrollReveal>
         </div>

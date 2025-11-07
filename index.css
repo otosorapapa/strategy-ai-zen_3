@@ -112,6 +112,7 @@ All colors MUST be HSL.
     overflow-x: hidden;
     overscroll-behavior-x: none;
     overscroll-behavior-y: contain;
+    font-size: clamp(16px, 0.5vw + 14px, 18.5px);
   }
 
   * {
@@ -121,9 +122,9 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Yu Gothic", sans-serif;
-    font-size: 18px;
-    line-height: 1.85;
-    letter-spacing: 0.015em;
+    font-size: clamp(1.05rem, 0.6vw + 0.95rem, 1.25rem);
+    line-height: 1.9;
+    letter-spacing: 0.018em;
     width: 100%;
     min-height: 100%;
     max-width: 100vw;
@@ -160,30 +161,30 @@ All colors MUST be HSL.
   }
 
   h1 {
-    font-size: clamp(1.85rem, 1.4vw + 1.4rem, 2.45rem);
+    font-size: clamp(2.2rem, 2vw + 1.6rem, 3.2rem);
     font-weight: 700;
   }
 
   h2 {
-    font-size: clamp(1.6rem, 1vw + 1.2rem, 2.05rem);
+    font-size: clamp(1.9rem, 1.4vw + 1.4rem, 2.6rem);
     font-weight: 650;
   }
 
   h3 {
-    font-size: clamp(1.35rem, 0.8vw + 1rem, 1.7rem);
+    font-size: clamp(1.55rem, 1vw + 1.1rem, 2.05rem);
     font-weight: 600;
   }
 
   h4 {
-    font-size: clamp(1.2rem, 0.6vw + 0.95rem, 1.45rem);
+    font-size: clamp(1.35rem, 0.8vw + 1.05rem, 1.65rem);
     font-weight: 600;
   }
 
   small,
   .text-meta,
   figcaption {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
   .serif-accent {
@@ -233,6 +234,84 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  .text-xs {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    letter-spacing: 0.02em;
+  }
+
+  .text-sm {
+    font-size: 1rem;
+    line-height: 1.65;
+    letter-spacing: 0.018em;
+  }
+
+  .text-base {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    letter-spacing: 0.015em;
+  }
+
+  .text-\[0\.55rem\] {
+    font-size: 0.7rem;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+  }
+
+  .text-\[0\.58rem\] {
+    font-size: 0.72rem;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+  }
+
+  .text-\[0\.6rem\] {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    letter-spacing: 0.035em;
+  }
+
+  .text-\[0\.62rem\] {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    letter-spacing: 0.035em;
+  }
+
+  .text-\[0\.65rem\] {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+  }
+
+  .text-\[0\.68rem\] {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    letter-spacing: 0.028em;
+  }
+
+  .text-\[0\.7rem\] {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.026em;
+  }
+
+  .text-\[0\.72rem\] {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    letter-spacing: 0.024em;
+  }
+
+  .text-\[0\.75rem\] {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    letter-spacing: 0.022em;
+  }
+
+  .text-\[0\.78rem\] {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    letter-spacing: 0.02em;
+  }
+
   .hero-curve-overlay {
     position: absolute;
     inset: 5% -20% -25% -20%;

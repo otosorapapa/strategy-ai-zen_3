@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 const heroValueBullets = [
-  "変化の兆し・現場の声・数字を一枚に束ね、迷いを断つ判断軸を整える",
-  "生成AIが業界・顧客・コストを並行解析し、診断士が実行の道筋へ落とし込む",
-  "堂々と示せる経営改善計画とダッシュボードを短期間で整える",
+  "市場の揺らぎと現場の声を一つに束ね、迷いなく選べる判断軸を整える",
+  "生成AIが業界・顧客・コストを並行解析し、診断士が実行しやすい道筋に翻訳",
+  "次の会議で語れる経営改善計画とダッシュボードを短期間で仕上げる",
 ];
 
 const heroSummaryCards = [
@@ -26,19 +26,19 @@ const heroSummaryCards = [
     icon: Timer,
     eyebrow: "初動",
     title: "Day0→Day2で兆しを把握",
-    description: "生成AIが外部データと社内数値を突き合わせ、優先課題を色分け",
+    description: "生成AIが外部データと社内数値を突き合わせ、注力すべき領域を色分け",
   },
   {
     icon: Landmark,
     eyebrow: "設計",
     title: "Day7で再生シナリオを描写",
-    description: "診断士が現場ヒアリングを重ね、実現性の高い打ち手に整理",
+    description: "診断士が現場ヒアリングを重ね、動かしやすい打ち手に整理",
   },
   {
     icon: BriefcaseBusiness,
     eyebrow: "展開",
     title: "Day30で対外説明を更新",
-    description: "取引先や金融機関へ示せる根拠資料と行動計画を整備",
+    description: "取引先や金融機関へ自信を持って示せる根拠資料と行動計画を整備",
   },
 ];
 
@@ -46,17 +46,17 @@ const heroBoardroomInsights = [
   {
     label: "判断の土台",
     value: "全体像を一枚に",
-    description: "経営指標と現場ヒアリングを結びつけ、議論の出発点を統一",
+    description: "経営指標と現場ヒアリングを重ね、議論の出発点を統一",
   },
   {
     label: "再生シナリオ",
     value: "複数案を提示",
-    description: "投資余力と資金余裕を数値化し、打ち手の筋道を明確化",
+    description: "投資余力と資金余裕を可視化し、打ち手の筋道を明確化",
   },
   {
     label: "進行スピード",
     value: "初回会議で合意",
-    description: "根拠資料と段取りが揃い、議論を未来設計に集中",
+    description: "根拠資料と段取りがそろい、議論を未来設計に集中",
   },
 ];
 
@@ -64,14 +64,14 @@ const heroImpactStats = [
   {
     icon: LineChart,
     value: "数字が語る",
-    label: "粗利と資金のギャップを同時に縮小",
-    helper: "6〜12カ月の伴走で得た実感を共有",
+    label: "粗利と資金のゆがみを同時に縮小",
+    helper: "6〜12カ月の伴走で得た現場の声を反映",
   },
   {
     icon: Activity,
     value: "対話が締まる",
     label: "金融機関や取引先との協議が前倒し",
-    helper: "未来像と根拠を揃えて臨める",
+    helper: "未来像と根拠をそろえて臨める",
   },
   {
     icon: Target,
@@ -89,7 +89,7 @@ const trustSignals = [
 
 const heroIntroCopy = {
   short:
-    "変化の兆しは捉えていても、確信を持って一歩を示すには裏付けが欠かせません。生成AIが広い視野で兆候を読み、中小企業診断士が現場の温度感を整えます。貴社専用の経営改善計画と管理アプリを共に描き、胸を張って次の一手を語れる状態へ導きます。",
+    "変化の兆しを掴んでいても、確信を持って一歩を示すには裏付けと共感が必要です。生成AIが広い視野で兆候を読み、中小企業診断士が現場の温度感を整えます。貴社専用の経営改善計画と管理アプリを共につくり、堂々と未来を語れる状態へ導きます。",
 };
 
 const HeroSection = () => {
@@ -112,10 +112,10 @@ const HeroSection = () => {
                 AI × 診断士 × 再生設計図
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.45] md:text-4xl md:leading-[1.5] xl:text-[3.1rem]">
-                判断の速さと先見性を磨く経営改善支援を、生成AIと診断士が貴社仕様で届ける。
+                迷わず選び抜ける意思決定基盤を、生成AIと診断士が貴社仕様で組み上げる。
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">
-                変化の荒波でも経営者が迷わず指揮を執れる舞台を整えることが私たちの使命です。生成AIと診断士の協働で停滞の要因を可視化し、意思決定の質と速さ、先を読む力を引き上げます。
+                変化の荒波でも経営者が迷わず指揮を執れる舞台を整えることが私たちの使命です。生成AIと診断士の協働で停滞の要因を可視化し、意思決定の質と速さ、先を読む力を同時に高めます。
               </p>
             </div>
 

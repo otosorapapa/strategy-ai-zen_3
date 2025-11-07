@@ -20,7 +20,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
 import problemInfographic from "@/assets/problem-infographic.svg";
 import financialAnalysis from "@/assets/financial-analysis.jpg";
-import executiveStrategyMeeting from "@/assets/executive-strategy-meeting.jpg";
+import executiveStrategyMeeting from "@/assets/hero-consulting.jpg";
 import insightBlueprintFlow from "@/assets/insight-blueprint-flow.svg";
 
 type PainPoint = {

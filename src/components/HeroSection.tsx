@@ -1,5 +1,5 @@
 import { Button, buttonVariants } from "@/components/ui/button";
-import heroExecutiveBriefingImage from "@/assets/executive-strategy-meeting.jpg";
+import heroExecutiveBriefingImage from "@/assets/hero-consulting.jpg";
 import heroGrowthMetricsImage from "@/assets/dashboard-preview.jpg";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";

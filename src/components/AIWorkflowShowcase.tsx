@@ -247,9 +247,9 @@ const AIWorkflowShowcase = () => {
               className="rounded-[32px] border border-[#0b1f3f]/8 bg-white/95 p-8 shadow-[0_35px_70px_rgba(7,23,48,0.16)] backdrop-blur"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#2b7df4]">成果と実行管理</p>
-              <h3 className="mt-3 text-2xl font-semibold text-[#0b1f3f]">短期間で「状況把握 → 戦略 → 交渉」の土台を整備</h3>
+              <h3 className="mt-3 text-2xl font-semibold text-[#0b1f3f]">変化を先読みし、経営改善の判断軸を短期間で共通化</h3>
               <p className="mt-3 text-sm leading-relaxed text-[#143057]/80">
-                現場ヒアリングとデータ取り込みを同時進行させ、初期フェーズで意思決定の材料を提示。早期に金融機関合意へ向けた対話ストーリーを固め、以降は週次で実行度をレビューします。
+                市場の揺らぎに遅れず舵を切るため、経営者の描く未来像と現場データをひとつの物語に束ねます。AIが示す将来シミュレーションを基に中小企業診断士が優先順位と交渉シナリオを設計し、週次レビューで行動と数字のズレを正します。
               </p>
               <div className="mt-6 grid gap-4 sm:grid-cols-3">
                 {impactMetrics.map((metric) => (
@@ -298,19 +298,19 @@ const AIWorkflowShowcase = () => {
               variant="fade-up"
               className="rounded-[28px] border border-dashed border-[#2b7df4]/30 bg-gradient-to-br from-[#f7fbff] to-white p-8 shadow-[0_24px_60px_rgba(14,35,73,0.12)]"
             >
-              <h4 className="text-lg font-semibold text-[#0b1f3f]">初回の無料セッションで確認する3つのポイント</h4>
+              <h4 className="text-lg font-semibold text-[#0b1f3f]">初回の無料セッションで未来像と段取りをそろえる3つの観点</h4>
               <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#143057]/80">
                 <li className="flex items-start gap-3">
                   <Sparkles className="mt-1 h-4 w-4 text-[#f97316]" aria-hidden="true" />
-                  <span>財務・商流データの取得状況とAI連携可否を診断し、初期段階で可視化できる指標を特定</span>
+                  <span>業界動向と自社の強みを洗い出し、守り抜く価値と挑戦の領域を言語化</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Sparkles className="mt-1 h-4 w-4 text-[#f97316]" aria-hidden="true" />
-                  <span>金融機関・主要ステークホルダーの論点を整理し、交渉資料のアウトラインと必要証憑を棚卸し</span>
+                  <span>AI分析で将来5年の収益イメージと交渉資料の骨子を描き、取引先へ胸を張って示せる道筋を明確化</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Sparkles className="mt-1 h-4 w-4 text-[#f97316]" aria-hidden="true" />
-                  <span>経営チームの役割分担と意思決定プロセスを合意形成し、最初の30日プランを共通理解化</span>
+                  <span>カスタム経営管理アプリで週次アクションを可視化し、関係者全員が同じスピードで動ける運用に落とし込む</span>
                 </li>
               </ul>
             </ScrollReveal>
@@ -319,8 +319,8 @@ const AIWorkflowShowcase = () => {
 
         <SectionMicroCta
           eyebrow="Micro CTA"
-          title="ワークフローの全体像を、45分の無料相談で自社仕様に描き換え"
-          description="AIが生成する資料サンプルや金融機関との対話テンプレートをお見せしながら、貴社のKPIと現状データに合わせた導入シナリオをご提案します。"
+          title="45分の無料相談で、貴社の再生ストーリーを共に描き直す"
+          description="AIが提示する試算と中小企業診断士の洞察を並べ、貴社のKPIと現状データに沿った導入シナリオをご提案。対外説明でも誇りをもって語れる計画へと磨き上げます。"
           ctaId="workflow-overview"
           variant="subtle"
         />

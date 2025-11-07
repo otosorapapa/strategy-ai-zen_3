@@ -348,7 +348,7 @@ const InsightSpotlight = () => {
                 <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
                   <TrendingUp className="h-5 w-5 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
                   <span>
-                    48時間の初期診断で「歪みの見取り図」を提示し、2週目から再生シナリオと優先施策の比較検証を開始します。資金調達・人材再配置・販管費最適化を一つのタイムラインにまとめ、意思決定を加速させます。
+                    48時間の初期診断で未来の兆候と「歪みの見取り図」を示し、2週目から再生シナリオと優先施策の比較検証へ進みます。資金調達・人材再配置・販管費の見直しを一つの進行表に束ね、判断の速さと確かさを引き上げます。
                   </span>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-3">
@@ -371,8 +371,8 @@ const InsightSpotlight = () => {
 
       <SectionMicroCta
         eyebrow="Micro CTA"
-        title="設計図の骨子を、無料相談で実際のテンプレに重ね合わせ"
-        description="因果マップや会議テンプレートのサンプルを使いながら、現状の資料とのギャップと補うべきアウトラインを可視化します。"
+        title="未来の設計図を、無料相談で自社の判断軸に重ねる"
+        description="因果マップや会議用テンプレートのサンプルを並べ、自社資料とのずれと補うべき要点を可視化。次の会議で堂々と語れる骨子を一緒に描きます。"
         ctaId="insight-blueprint"
       />
     </section>

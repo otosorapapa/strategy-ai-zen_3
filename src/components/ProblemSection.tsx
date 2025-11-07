@@ -380,7 +380,7 @@ const ProblemSection = () => {
               </div>
               <figure className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-cyan-300/20 bg-[#091d3d]/70 p-6">
                 <div className="flex items-center justify-between gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/75">
-                  <span>Blueprint Signal</span>
+                  <span>意思決定ブループリント</span>
                   <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-cyan-100/90">因果マッピング</span>
                 </div>
                 <img
@@ -393,7 +393,7 @@ const ProblemSection = () => {
                   <p>
                     KPIとリスクシグナルのつながりを矢印で示し、どの指標が意思決定を左右するかを一目で把握。経営会議で議題化すべき順番を揃えます。
                   </p>
-                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Board Ready｜ストーリー化された証跡で納得形成を高速化</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">会議準備完了｜ストーリー化された証跡で納得形成を高速化</p>
                 </figcaption>
               </figure>
             </div>
@@ -413,35 +413,35 @@ const ProblemSection = () => {
                 loading="lazy"
               />
               <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/45 px-4 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-white/85 backdrop-blur">
-                Dual Coding Canvas
+                意思決定キャンバス
               </figcaption>
             </figure>
             <div className="space-y-5">
               <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Pattern Interrupt
+                会議を整える仕掛け
               </div>
               <h3 className="text-2xl font-semibold leading-snug md:text-[1.75rem]">
-                資金繰りシナリオを会議冒頭で共有できる意思決定キャンバス
+                先を読む議題で経営を導く意思決定キャンバス
               </h3>
               <p className="text-sm leading-relaxed text-slate-200/90 md:text-base">
-                <span className="text-cyan-200">状況・意図・判断</span>を一枚に揃え、財務と現場の思考速度を同期させる。議題は即座に実行設計へ移り、交渉資料も同じストーリーで更新される。
+                地域で挑む経営者が胸を張って次の手を示せるよう、私たちは会議冒頭で未来像を共有できる場を整えました。生成AIと中小企業診断士が描いた経営ストーリーを一枚のキャンバスに束ね、議題をその場で実行計画へ変換します。金融機関やチームと同じ未来像を見ながら動けるので、判断の速さと先を読む力がそろいます。
               </p>
               <ul className="grid gap-3 text-sm text-slate-200/90 md:grid-cols-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Dual Coding｜財務・現場・リスクの3層を一画面で可視化。</span>
+                  <span>三層同期表示｜財務・現場・リスクを同時に映し出し、判断の根拠を即確認。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Gaze Cueing｜視線誘導で議論の順序を固定し、迷いを減らす。</span>
+                  <span>視線ナビゲーション｜議論の流れを揃え、迷いを減らす。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Picture Superiority｜キーメッセージに象徴アイコンを添え記憶に残す。</span>
+                  <span>記憶定着アイコン｜要点に象徴を添え、会議後も共通認識を保つ。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Isolation Effect｜重要指標を色面で分離し、判断基準を強調。</span>
+                  <span>重要指標ハイライト｜色分けで優先度を示し、行動の順序をそろえる。</span>
                 </li>
               </ul>
             </div>

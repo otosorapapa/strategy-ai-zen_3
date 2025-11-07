@@ -199,15 +199,15 @@ const trustSignals = [
 ];
 
 const problemQuickSummary = [
-  "粗利・キャッシュ・現場の情報が分断され、意思決定の場までに熱量が失われている",
-  "生成AIの提案が実装フェーズに届かず、投資判断が属人的な感覚に依存している",
-  "金融機関や取引先への説明が後手になり、資金繰りと信頼が同時に削られている",
+  "生成AIと中小企業診断士が業界・競合・顧客の兆候を同時分析し、判断に必要な材料を一画面に束ねる",
+  "事業者ごとに設計した管理アプリとダッシュボードで、粗利・資金・現場の数字を同じ物差しで語れる",
+  "計画書と実行ログを連動させ、社内外へ堂々と示せる説明力と先読みの行動力を磨き上げる",
 ];
 
 const problemNextActions = [
-  "48時間で粗利・資金・人材の歪みをヒートマップ化し、議論のスタート地点を揃える",
-  "AIスコアと現場ヒアリングを結ぶ意思決定ログを整え、合意までのリードタイムを短縮",
-  "金融機関向けストーリーと現場タスクを同期させ、外部説明の先手を取る",
+  "48時間で粗利・資金・人材の歪みをヒートマップ化し、議論の出発点と優先順位を共有",
+  "業界データと現場ヒアリングを照合した意思決定ログを構築し、合意形成までの時間を圧縮",
+  "月次レビューで計画と実績の差分を整え、外部説明と現場タスクを同じストーリーで更新",
 ];
 
 const ProblemSection = () => {
@@ -216,13 +216,13 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Reality｜直面する停滞サイクル
+            理念｜福岡の現場を先読みで守り抜く理由
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            資金繰りを崩す兆候を断ち切るために押さえるべき3つの停滞要因
+            先回りの判断軸を整え、胸を張って未来を語れる経営を取り戻す
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            粗利率の鈍化や運転資本の目減りは、限られた人員体制の中で瞬時に全社へ波及する。AIヒアリングで集まった声を基に、資金繰りを毀損する構造を立体的に整理した。自社のKPIと照合し、止血すべき論点を即断してほしい。
+            私たちが支援するのは、激しい変化の中でも地域の雇用と信用を守り抜きたい経営者です。生成AIと中小企業診断士の視点で業界・競合・顧客の兆候を読み解き、経営判断が後手に回る連鎖を断ち切ります。いま直面する不安の背景を言語化し、次に打つべき一手を迷わず選び取れる状態へ導きます。
           </p>
         </ScrollReveal>
 
@@ -233,7 +233,7 @@ const ProblemSection = () => {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-3">
               <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
-                30秒サマリー
+                提供価値の要点
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-slate-200/85">
                 {problemQuickSummary.map((item) => (
@@ -246,7 +246,7 @@ const ProblemSection = () => {
             </div>
             <div className="space-y-3 rounded-[24px] border border-cyan-300/30 bg-cyan-500/10 p-5">
               <p className="inline-flex items-center gap-2 rounded-full bg-cyan-500/15 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
-                次のアクション
+                実行ステップ
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-slate-100/85">
                 {problemNextActions.map((item) => (

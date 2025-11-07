@@ -144,10 +144,10 @@ const OfferSection = () => {
             4つのサービスメニュー
           </span>
           <h2 id="offer-heading" className="text-3xl font-bold leading-tight text-[#0b1f3f] md:text-4xl">
-            状況に合わせた四つのメニューで、再生計画の実装を最後まで支える
+            環境変化に揺らぐ局面でも、再生計画を実装まで導く四つのメニュー
           </h2>
           <p className="text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            現状分析、計画策定、モニタリング、経営者セッションの四つを組み合わせ、判断から実行までを一貫支援します。必要なところから着手できる柔軟な構成です。
+            現状分析・計画策定・モニタリング・経営者セッションを組み合わせ、判断から実行までを一貫支援します。課題の緊急度に合わせて着手でき、次の一歩を自信を持って選べる構成です。
           </p>
           <div className="mx-auto flex flex-wrap items-center justify-center gap-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">
             <span className="inline-flex items-center gap-2">
@@ -250,7 +250,7 @@ const OfferSection = () => {
               顧客の声と再現性
             </p>
             <p className="text-[1.05rem] leading-relaxed text-[#0b1f3f]">
-              「初回相談で即座に届いた“再生シグナル”のドラフトが、役員会での意思決定を加速させました。ZENの三つの入り口が、金融機関との交渉資料づくりと現場の動きを同時に進めるエンジンになりました。」
+              「初回相談から届いた再生シグナルの試案で、役員会の議題が一気に整い、取引先への説明も迷わなくなりました。ZENが用意した三つの入り口が、交渉資料づくりと現場アクションを同じ速度で進めてくれます。」
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-[#1e3359]/70">
               <span className="font-semibold text-[#0b1f3f]">年商86億円 製造業C社（再生支援）</span>
@@ -267,8 +267,8 @@ const OfferSection = () => {
 
       <SectionMicroCta
         eyebrow="Micro CTA"
-        title="三つの入り口のうち、いま最適な一歩を無料で設計"
-        description="無料相談・ZENスキャン・資料DLのどれを優先するか、現在の社内状況と意思決定スケジュールを伺いながら一緒に決めましょう。"
+        title="三つの入り口から、いま踏み出すべき一歩を無料で設計"
+        description="無料相談・ZENスキャン・資料DLのどれを優先するか、現在の社内状況と意思決定スケジュールを伺いながら整えていきます。"
         ctaId="offer-steps"
       />
     </section>

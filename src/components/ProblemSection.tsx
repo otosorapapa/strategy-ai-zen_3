@@ -49,72 +49,72 @@ type CausalityPillar = {
 const authorityStack: AuthorityBadge[] = [
   {
     label: "中小企業庁 認定支援機関",
-    description: "財務・再生支援で培った伴走力と統制ノウハウを提供",
+    description: "財務再構築と再生支援で磨いた伴走設計と統制知見を活用",
     icon: ShieldCheck,
   },
   {
     label: "地域金融機関との共創検証",
-    description: "九州地銀と意思決定ボードを共同開発し交渉再現性を確認",
+    description: "九州の地域銀行と意思決定ボードを共に磨き、実行性を検証",
     icon: Building2,
   },
   {
     label: "日経XTECHなど専門メディア掲載",
-    description: "AI×管理会計の導入事例が多数紹介され信頼性を担保",
+    description: "AIと管理会計を組み合わせた導入事例が紹介され、信頼が可視化",
     icon: Newspaper,
   },
 ];
 
 const proofHighlights = [
   {
-    label: "Board Adoption",
-    value: "意思決定承認率 97%",
-    note: "経営／金融双方のチェックを同時通過させる統制ログ。",
+    label: "意思決定の通過率",
+    value: "承認率 97%",
+    note: "経営と金融双方の確認を同時に進める統制ログ。",
   },
   {
-    label: "Negotiation Lead Time",
-    value: "交渉準備 ▲45%",
-    note: "事前に必要資料を洗い出し、差し戻しを未然に防止。",
+    label: "交渉準備の迅速化",
+    value: "準備時間 ▲45%",
+    note: "必要資料を先回りで整理し、差し戻しを防止。",
   },
   {
-    label: "Capital Confidence",
+    label: "資金面の安心感",
     value: "資金調達評価 Aランク",
-    note: "監査証憑の連動でキャッシュアウトの不確実性を削減。",
+    note: "監査証憑と連動し、資金流出の不確実さを抑制。",
   },
 ];
 
 const causalityPillars: CausalityPillar[] = [
   {
-    focus: "因果性",
-    title: "数字が語る背景を即座に把握",
-    description: "粗利・キャッシュ・需要指標をAIが因果グラフで同期。経営と現場が同じストーリーで議論できます。",
-    metric: "異常検知→打ち手提示 3分",
+    focus: "意思の源泉",
+    title: "数字の裏側にある物語を共有",
+    description: "粗利や資金、需要の指標を生成AIが結び付け、診断士が現場ヒアリングで裏づけ。全員が同じ前提で議論できます。",
+    metric: "異常検知→対策提示 3分",
     icon: BrainCircuit,
   },
   {
-    focus: "論理性",
-    title: "仮説検証の筋道を可視化",
-    description: "意思決定ロジックをテンプレ化し、採用/却下理由をダッシュボードで追跡。次の判断が迷いません。",
-    metric: "意思決定速度 2.1倍",
+    focus: "判断の芯",
+    title: "検証の筋道を一枚で整理",
+    description: "意思決定の手順を型として残し、採用や見送りの理由をダッシュボードに記録。次の判断まで迷いを残しません。",
+    metric: "判断速度 2.1倍",
     icon: Bolt,
   },
   {
-    focus: "デザイン性",
-    title: "判断材料をワンビューに整列",
-    description: "重要指標は色面で孤立させ、図解と文章を同期。処理負荷を減らし“見るだけでわかる”状態をつくります。",
+    focus: "理解の速さ",
+    title: "判断材料を一つの画面で把握",
+    description: "重要指標を色で分け、図と文章をそろえて表示。見るだけで次の一手が浮かぶ状態を整えます。",
     metric: "理解時間 ▲38%",
     icon: Palette,
   },
   {
-    focus: "スマート性",
-    title: "Slack連携で意思決定を自動推進",
-    description: "リスク閾値を超えると自動でアラートと代替案を送信。行動まで滑らかにつなぎます。",
+    focus: "先回り",
+    title: "即時アラートで行動まで滑らかに",
+    description: "リスクが基準を超えると自動で通知と代替案を送信。実行に至る流れが滞りません。",
     metric: "フォロー漏れ 0件",
     icon: Sparkles,
   },
   {
-    focus: "納得性",
-    title: "証跡が残るレビュー体験",
-    description: "会議で使った根拠資料が即座にPDF化。金融機関・株主への説明も同じストーリーで展開できます。",
+    focus: "共有の安心",
+    title: "説明責任を確かな形に残す",
+    description: "会議で使った根拠資料をすぐにPDF化し、金融機関や取引先にも同じストーリーで伝達できます。",
     metric: "交渉準備 ▲45%",
     icon: Handshake,
   },
@@ -123,72 +123,72 @@ const causalityPillars: CausalityPillar[] = [
 const painPoints: PainPoint[] = [
   {
     badge: "症状 01",
-    title: "数字と現場が別々に動く",
+    title: "数字と現場の声が噛み合わない",
     description:
-      "粗利とキャッシュの波形が噛み合わず、資料ごとに前提が異なる。経営会議に到達する頃には、判断の熱量が薄れてしまう。",
-    signal: "粗利率が沈み、運転資金の余白が目減り（例）",
-    insight: "報告経路が分断 → 合意形成までのリードタイムが長期化。現場は「どの数字を信じるか」で議論が止まる。",
+      "粗利と資金繰りの動きがそろわず、資料ごとに前提が違う。会議に届く頃には、決め切る勢いが失われてしまう。",
+    signal: "粗利率が沈み、運転資金の余白が縮小（例）",
+    insight: "報告の道筋が分断 → 合意までの時間が延び、現場は「どの数字を信じるか」で議論が止まる。",
     icon: AlertTriangle,
   },
   {
     badge: "症状 02",
-    title: "生成AIが成果につながらない",
+    title: "生成AIの成果が形にならない",
     description:
-      "PoCは進んでも、現場に届くのは読み切れないテキスト。評価指標が曖昧で、採択された施策が断片的に終わる。",
-    signal: "AI提案が選ばれず、ROIの検証も進まない",
-    insight: "AI活用のKPIが欠如 → 投資判断が感覚的になり、改善の優先順位が定まらない。",
+      "試行検証は進んでも、現場に届くのは読み切れない報告。評価の物差しが曖昧で、採択した施策が途中で止まる。",
+    signal: "AI提案が選ばれず、投資回収の検証も進まない",
+    insight: "AI活用の指標が欠ける → 投資判断が感覚頼みとなり、改善の優先順位が定まらない。",
     icon: AlertTriangle,
   },
   {
     badge: "症状 03",
-    title: "対外説明が後手に回る",
+    title: "対外説明が一歩遅れてしまう",
     description:
-      "金融機関・主要取引先との面談準備が属人化し、更新資料の整合に追われる。説明は常に“事後報告”で、交渉が後ろ倒しに。",
-    signal: "準備工数が膨らみ、追加質問が絶えない",
-    insight: "事前シナリオが不足 → 交渉リードタイムが長期化し、資金繰りの選択肢が目減りする。",
+      "金融機関や主要取引先との面談準備が人任せになり、資料の整合で手一杯。説明がいつも事後対応になり、交渉が遅れる。",
+    signal: "準備工数が膨らみ、追加質問が途切れない",
+    insight: "事前シナリオが不足 → 交渉の時間が伸び、資金繰りの選択肢が狭まる。",
     icon: AlertTriangle,
   },
 ];
 
 const executiveSignals = [
   {
-    label: "収益と資金の乖離",
+    label: "収益と資金のズレ",
     value: "粗利率低下 × 運転資金の圧迫",
-    note: "粗利率低下と運転資金減少が同時進行。",
+    note: "粗利率低下と運転資金減少が同時に進行。",
   },
   {
-    label: "AI活用の定着度",
+    label: "AI活用の定着",
     value: "採択率が伸びない",
-    note: "PoC止まりで現場のKPIに接続できない。",
+    note: "試行段階で止まり、現場の指標につながらない。",
   },
   {
     label: "対外説明のタイムラグ",
     value: "準備時間が増え続ける",
-    note: "資料更新が増え、交渉の主導権を失いがち。",
+    note: "資料更新が増え、交渉の主導権を握りにくい。",
   },
 ];
 
 const narrativeFlow = [
   {
-    stage: "Before",
-    title: "情報が散在し、意思決定が遅延",
+    stage: "現状",
+    title: "情報が散らばり、判断が遅れる",
     metric: "資料更新が雪だるま式に増加",
     description:
-      "部門ごとに数字の定義が異なり、経営会議は“数字合わせ”で終わる。現場には優先順位が降りてこない。",
+      "部門ごとに数字の定義が異なり、経営会議は数字合わせで終了。現場には優先順位が降りてこない。",
   },
   {
-    stage: "Intervention",
-    title: "生成AIと専門家で設計図化",
+    stage: "共創",
+    title: "生成AIと専門家で未来像を描く",
     metric: "判断会議が定期運用へ",
     description:
-      "AIが財務と市場を横断解析し、診断士が現場ヒアリングで実行条件を整理。単一の意思決定ボードに情報を統合。",
+      "生成AIが財務と市場を横断解析し、中小企業診断士が現場ヒアリングで実行条件を整理。5年先を見通した個別設計の意思決定ボードへ情報を統合。",
   },
   {
-    stage: "After",
-    title: "判断軸が揃い、行動が先手に",
+    stage: "成果",
+    title: "判断軸が揃い、行動が先回り",
     metric: "決裁リードタイムが大幅短縮",
     description:
-      "シナリオごとのアクションプランが共有され、部門横断で同じ未来像に沿って動ける。金融機関への説明も一貫。",
+      "シナリオ別の行動計画が共有され、カスタム開発した経営管理アプリを通じて部門横断で同じ未来を語れる。金融機関への説明も一貫し、胸を張って次の打ち手を示せる。",
   },
 ];
 
@@ -199,15 +199,15 @@ const trustSignals = [
 ];
 
 const problemQuickSummary = [
-  "粗利・キャッシュ・現場の情報が分断され、意思決定の場までに熱量が失われている",
-  "生成AIの提案が実装フェーズに届かず、投資判断が属人的な感覚に依存している",
-  "金融機関や取引先への説明が後手になり、資金繰りと信頼が同時に削られている",
+  "地域に根ざす企業が未来を語り続けるためには、数字と現場の語る物語を一つに束ねる必要がある",
+  "生成AIの知見が点在し、カスタム型の経営管理アプリに落とし込めないままでは、投資と行動の優先順位が揺らぎ挑戦の機会が失われてしまう",
+  "対外説明が遅れると資金繰りと信頼の両方が細り、次の挑戦を支える土台まで揺らいでしまう",
 ];
 
 const problemNextActions = [
-  "48時間で粗利・資金・人材の歪みをヒートマップ化し、議論のスタート地点を揃える",
-  "AIスコアと現場ヒアリングを結ぶ意思決定ログを整え、合意までのリードタイムを短縮",
-  "金融機関向けストーリーと現場タスクを同期させ、外部説明の先手を取る",
+  "48時間で粗利・資金・人材の歪みを色分けし、全員が同じ目的地を見据えて議論できるように整える",
+  "生成AIの分析と現場ヒアリングを結ぶ意思決定ログを用意し、合意形成までの流れを短縮する",
+  "金融機関向けの説明と現場タスクを一枚の設計図で同期させ、国の補助金も視野に入れた資金計画で外部との対話を先回りで支える",
 ];
 
 const ProblemSection = () => {
@@ -216,13 +216,13 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Reality｜直面する停滞サイクル
+            現実視点｜直面する停滞サイクル
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            資金繰りを崩す兆候を断ち切るために押さえるべき3つの停滞要因
+            未来への投資を守るために押さえるべき3つの停滞要因
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            粗利率の鈍化や運転資本の目減りは、限られた人員体制の中で瞬時に全社へ波及する。AIヒアリングで集まった声を基に、資金繰りを毀損する構造を立体的に整理した。自社のKPIと照合し、止血すべき論点を即断してほしい。
+            粗利率の鈍化や運転資本の目減りは、限られた人員体制の中でも瞬時に全社へ広がる。生成AIヒアリングで集まった声を基に、資金繰りを揺らす構造を立体的に整理した。自社の指標と照合し、守るべき未来のために即断してほしい。
           </p>
         </ScrollReveal>
 
@@ -270,7 +270,7 @@ const ProblemSection = () => {
                 <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
                   <div className="space-y-2">
                     <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
-                      Proof Sandwich
+                      信頼の三層証跡
                     </span>
                     <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
                       行政・金融・専門メディアが裏付ける財務再構築の信頼基盤
@@ -323,7 +323,7 @@ const ProblemSection = () => {
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#0b1e3f]/70 via-transparent to-[#030916]/85" />
                 <figcaption className="absolute bottom-4 left-4 right-4 space-y-2 rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">Board Confidence Lens</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">意思決定の信頼フィルター</p>
                   <p className="text-sm leading-relaxed text-slate-100/90">
                     対外監査・金融審査で求められる証憑動線を1枚に集約。意思決定の裏付けを資料と議事で同時に残せます。
                   </p>
@@ -341,7 +341,7 @@ const ProblemSection = () => {
                 <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
                   <div className="space-y-2">
                     <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
-                      Causality Pillars
+                      信頼設計の軸
                     </span>
                     <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
                       因果と統制を両立させる5つの設計軸
@@ -380,7 +380,7 @@ const ProblemSection = () => {
               </div>
               <figure className="relative flex h-full flex-col overflow-hidden rounded-[1.6rem] border border-cyan-300/20 bg-[#091d3d]/70 p-6">
                 <div className="flex items-center justify-between gap-3 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-200/75">
-                  <span>Blueprint Signal</span>
+                  <span>設計図シグナル</span>
                   <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-cyan-100/90">因果マッピング</span>
                 </div>
                 <img
@@ -391,9 +391,9 @@ const ProblemSection = () => {
                 />
                 <figcaption className="mt-6 space-y-3 text-sm leading-relaxed text-slate-200/85">
                   <p>
-                    KPIとリスクシグナルのつながりを矢印で示し、どの指標が意思決定を左右するかを一目で把握。経営会議で議題化すべき順番を揃えます。
+                    主要指標とリスクのつながりを矢印で示し、どの指標が意思決定を左右するかを一目で把握。経営会議で議題化すべき順番を揃えます。
                   </p>
-                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Board Ready｜ストーリー化された証跡で納得形成を高速化</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">経営会議対応｜ストーリー化された証跡で納得形成を高速化</p>
                 </figcaption>
               </figure>
             </div>
@@ -413,12 +413,12 @@ const ProblemSection = () => {
                 loading="lazy"
               />
               <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/45 px-4 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-white/85 backdrop-blur">
-                Dual Coding Canvas
+                意思決定キャンバス
               </figcaption>
             </figure>
             <div className="space-y-5">
               <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Pattern Interrupt
+                視点転換
               </div>
               <h3 className="text-2xl font-semibold leading-snug md:text-[1.75rem]">
                 資金繰りシナリオを会議冒頭で共有できる意思決定キャンバス
@@ -429,19 +429,19 @@ const ProblemSection = () => {
               <ul className="grid gap-3 text-sm text-slate-200/90 md:grid-cols-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Dual Coding｜財務・現場・リスクの3層を一画面で可視化。</span>
+                  <span>三層表示｜財務・現場・リスクを一画面で可視化。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Gaze Cueing｜視線誘導で議論の順序を固定し、迷いを減らす。</span>
+                  <span>視線誘導｜議論の順序を固定し、迷いを減らす。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Picture Superiority｜キーメッセージに象徴アイコンを添え記憶に残す。</span>
+                  <span>象徴表示｜重要メッセージにアイコンを添え記憶に残す。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Isolation Effect｜重要指標を色面で分離し、判断基準を強調。</span>
+                  <span>色分け強調｜重要指標を色で分け、判断基準を際立たせる。</span>
                 </li>
               </ul>
             </div>
@@ -455,7 +455,7 @@ const ProblemSection = () => {
           >
             <div className="space-y-4">
               <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Executive Signal
+                経営サイン
               </div>
               <h3 className="text-left text-2xl font-semibold leading-snug text-white md:text-[1.75rem]">
                 数字・現場・資金のズレは、放置すると資金繰りの選択肢を確実に削ります。
@@ -515,7 +515,7 @@ const ProblemSection = () => {
             className="relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-[#0b264f] via-[#061632] to-[#010b1d] p-8 shadow-[0_35px_80px_rgba(1,11,29,0.55)]"
           >
             <div className="flex items-center justify-between gap-4 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
-              <span>Dual Coding</span>
+              <span>視点連結</span>
               <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.65rem] text-cyan-100">
                 課題マップ（要約）
               </span>
@@ -531,7 +531,7 @@ const ProblemSection = () => {
                 収益の漏れ・AI活用の停滞・対外説明の遅延は、同じ根にある「判断の設計図不在」が引き起こす連鎖です。視線誘導の矢印が示すとおり、数字と現場の分断が資金繰りの選択肢を削っています。
               </p>
               <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">
-                Proof Point｜再設計後は粗利+3.2pt／交渉回答スピード▲45%（例）
+                成果例｜再設計後は粗利+3.2pt／交渉回答スピード▲45%（例）
               </p>
             </figcaption>
           </ScrollReveal>
@@ -580,7 +580,7 @@ const ProblemSection = () => {
           <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
             <div>
               <span className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/85">
-                Narrative Visualization
+                物語の可視化
               </span>
               <h3 className="mt-4 text-2xl font-semibold leading-snug text-white">
                 Before→介入→Afterを一枚で可視化し、全員が同じ未来を描ける状態へ。
@@ -613,7 +613,7 @@ const ProblemSection = () => {
                 <p className="text-sm leading-relaxed text-slate-200/85">{step.description}</p>
                 {index < narrativeFlow.length - 1 && (
                   <div className="mt-4 flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/70">
-                    Next
+                    次の段
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </div>
                 )}
@@ -632,7 +632,7 @@ const ProblemSection = () => {
                 3ステップの設計図は、経営会議のアジェンダと連動したダッシュボードとして提供。部署別アクション、資金手当て、外部説明資料を同じ更新サイクルで管理するため、意思決定の“前後関係”が途切れません。
               </p>
               <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Board Ready Package
+                経営会議パッケージ
               </span>
             </div>
           </div>
@@ -682,7 +682,7 @@ const ProblemSection = () => {
 
       <SectionMicroCta
         variant="dark"
-        eyebrow="Micro CTA"
+        eyebrow="ミニ案内"
         title="課題が刺さったら、48時間診断で現状と優先度を確認"
         description="無料相談で粗利・資金・現場の歪みをヒートマップ化し、どこから着手すべきかを専門家がコメントします。次の経営会議で使える要約メモをセットでお渡しします。"
         ctaId="problem-insights"

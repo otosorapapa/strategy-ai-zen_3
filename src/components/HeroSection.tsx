@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 const heroValueBullets = [
-  "粗利・資金・人材の指標を48時間で見える化し、意思決定の土台をそろえる",
-  "生成AIが抽出した兆しを診断士が裏付け、再生シナリオを実行できる計画に落とし込む",
-  "金融機関への提示資料と現場で使うダッシュボードを同時に整備する",
+  "初回48時間で経営陣の共通認識を固め、意思決定スピードを引き上げる",
+  "AIが拾う兆しを診断士が物語に翻訳し、未来の粗利と資金の見通しを描き切る",
+  "金融機関・現場・経営陣の三者が同じ根拠で動けるダッシュボードと計画書を提供",
 ];
 
 const heroSummaryCards = [
@@ -88,8 +88,10 @@ const trustSignals = [
 ];
 
 const heroIntroCopy = {
+  mission:
+    "地方企業がもう一度挑戦できる土台をつくる――それが私たちのミッションです。数字に追われて意思決定が止まる瞬間こそ、未来を語る材料を揃えるべきだと信じています。",
   short:
-    "経営判断を鈍らせる情報の断片を束ね、未来に向けた筋道を描き直す伴走サービスです。生成AIの分析と現場ヒアリングを重ね、再建計画・実行ロードマップ・ダッシュボードをワンセットで提供します。",
+    "生成AIと診断士の協働で意思決定の質・速さ・先見性を同時に高めます。断片的な情報を一本のストーリーに束ね、再建計画・実行ロードマップ・ダッシュボードをワンセットで届けます。",
 };
 
 const HeroSection = () => {
@@ -111,11 +113,14 @@ const HeroSection = () => {
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
                 AI × 診断士 × 再生設計図
               </span>
+              <p className="text-xs font-semibold tracking-[0.32em] text-cyan-200/90">
+                {heroIntroCopy.mission}
+              </p>
               <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.2] tracking-tight md:text-[3.1rem] md:leading-[1.2] md:tracking-[-0.01em] xl:text-[3.6rem]">
-                生成AI×中小企業診断士　会社の未来を描き直す『経営再生計画』
+                生成AIと診断士が描く未来地図で、経営再生の意思決定を再起動する
               </h1>
               <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-                売上・資金繰り・人材データを48時間で見える化し、福岡の経営改善チームが実行ロードマップを伴走。金融機関向けの根拠資料まで整備します。
+                粗利・資金・人材の行方を一枚のシナリオにまとめ、次の経営会議で合意がとれる状態へ。差別化されたAI×専門家チームが「なぜ今動くのか」を示し、企業の存在意義を再確認する対話を導きます。
               </p>
             </div>
 

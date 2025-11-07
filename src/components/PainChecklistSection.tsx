@@ -7,6 +7,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { PRIMARY_CTA, SECONDARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { cn } from "@/lib/utils";
 
+import executiveDashboard from "@/assets/financial-analysis.jpg";
+
 import { ArrowRight, ClipboardList, LifeBuoy, LineChart, Stethoscope } from "lucide-react";
 
 const painPatterns = [
@@ -96,6 +98,24 @@ const fallbackRecommendation = {
   },
 };
 
+const credibilitySignals = [
+  {
+    label: "診断レポート提出まで",
+    value: "48時間",
+    description: "財務・現場KPIの差分を可視化した速報レポートを、ヒアリング後すぐに共有。判断スピードを阻害しません。",
+  },
+  {
+    label: "累計改善インパクト",
+    value: "▲3.8pt",
+    description: "粗利率改善幅の平均値。原因特定から施策伴走までの一連プロセスを定型化し、再現性を担保しています。",
+  },
+  {
+    label: "経営層の満足度",
+    value: "9.4/10",
+    description: "年商5,000万円〜15億円の経営者へのアフターアンケート結果。仮説の納得感と意思決定の速さで評価されています。",
+  },
+] as const;
+
 const PainChecklistSection = () => {
   const [selectedCauses, setSelectedCauses] = useState<string[]>([]);
   const [expandedPattern, setExpandedPattern] = useState<string | null>(null);
@@ -163,7 +183,10 @@ const PainChecklistSection = () => {
 
         <ScrollReveal
           variant="fade-up"
-          className="mt-10 rounded-[28px] border border-[#0b1f3f]/12 bg-white/70 p-6 shadow-[0_20px_55px_rgba(6,21,48,0.12)]"
+          className={cn(
+            "mt-10 rounded-[28px] border border-[#0b1f3f]/12 p-6 shadow-[0_20px_55px_rgba(6,21,48,0.12)]",
+            "bg-white/75 backdrop-blur-sm"
+          )}
         >
           <div className="space-y-4 text-left text-[#1e3359]/80">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]/75">
@@ -184,6 +207,26 @@ const PainChecklistSection = () => {
               詳細チェックリストは各カードの「症状詳細を見る」から確認できます。所要時間は約10秒です。
             </p>
           </div>
+        </ScrollReveal>
+
+        <ScrollReveal variant="fade-up" className="mt-10 grid gap-4 md:grid-cols-3">
+          {credibilitySignals.map((signal) => (
+            <div
+              key={signal.label}
+              className={cn(
+                "group relative overflow-hidden rounded-3xl border border-[#0b1f3f]/10 bg-white/80 p-6 text-left",
+                "shadow-[0_18px_45px_rgba(6,21,48,0.12)] transition",
+                "hover:-translate-y-1 hover:border-[#0584c6]/40 hover:shadow-[0_30px_70px_rgba(5,132,198,0.18)]"
+              )}
+            >
+              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#0b1f3f]/6 via-transparent to-[#0584c6]/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" aria-hidden="true" />
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">
+                {signal.label}
+              </p>
+              <p className="mt-3 text-3xl font-bold text-[#0b1f3f]">{signal.value}</p>
+              <p className="mt-3 text-sm leading-relaxed text-[#1e3359]/75">{signal.description}</p>
+            </div>
+          ))}
         </ScrollReveal>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-start">
@@ -273,8 +316,24 @@ const PainChecklistSection = () => {
 
           <ScrollReveal
             variant="fade-up"
-            className="flex flex-col gap-6 rounded-[32px] border border-[#0b1f3f]/15 bg-white p-8 shadow-[0_28px_70px_rgba(6,21,48,0.16)]"
+            className="flex flex-col gap-8 rounded-[32px] border border-[#0b1f3f]/15 bg-white p-8 shadow-[0_28px_70px_rgba(6,21,48,0.16)]"
           >
+            <figure className="relative overflow-hidden rounded-[26px] border border-[#0584c6]/10 bg-[#eef7ff]">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(5,132,198,0.18),_transparent_55%)]" aria-hidden="true" />
+              <img
+                src={executiveDashboard}
+                alt="経営ダッシュボードの可視化イメージ"
+                className="relative z-10 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="relative z-10 flex items-center justify-between gap-4 px-5 py-4 text-left text-xs text-[#0b1f3f]/70">
+                <span className="font-semibold uppercase tracking-[0.28em] text-[#0584c6]">Evidence</span>
+                <span>
+                  財務ダッシュボードと現場ヒアリングを統合した「因果マッピング」で、改善仮説の納得性を引き上げます。
+                </span>
+              </figcaption>
+            </figure>
+
             <div className="space-y-3 text-left text-[#1e3359]/85">
               <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]/80">
                 Next Action Guide

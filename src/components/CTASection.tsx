@@ -33,6 +33,7 @@ import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
 import { submitContactFormToWordPress } from "@/lib/wordpress";
 import { cn } from "@/lib/utils";
+import testimonialCollaborationImage from "@/assets/executive-strategy-meeting.jpg";
 
 const requestOptions = [
   {
@@ -188,8 +189,9 @@ const trustReassurances = [
   "中小企業庁登録診断士チームが直接対応し補助金申請も伴走",
 ];
 
-const testimonialVideo = {
-  url: "https://www.youtube.com/embed/2Xc9gXyf2G4?rel=0",
+const testimonialFeature = {
+  image: testimonialCollaborationImage,
+  imageAlt: "金融機関の担当者と経営者が資料を確認するミーティングの様子",
   title: "地域金融機関との共創インタビュー",
   description:
     "福岡の地方銀行・企業再生部門との意見交換を収録。地域の事業を守る決断を速める理由と、胸を張って先を描く計画づくりの成果を共有しています。",
@@ -452,24 +454,23 @@ const CTASection = () => {
           variant="fade-up"
           className="mt-8 grid gap-6 rounded-[28px] border border-white/12 bg-white/5 p-6 shadow-[0_25px_70px_rgba(3,14,32,0.5)] backdrop-blur lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]"
         >
-          <div className="aspect-video w-full overflow-hidden rounded-[20px] border border-white/15 bg-black/70 shadow-lg">
-            <iframe
-              src={testimonialVideo.url}
-              title={testimonialVideo.title}
-              className="h-full w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+          <figure className="group relative aspect-video w-full overflow-hidden rounded-[20px] border border-white/15 bg-black/70 shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/15 via-transparent to-cyan-200/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" aria-hidden="true" />
+            <img
+              src={testimonialFeature.image}
+              alt={testimonialFeature.imageAlt}
+              className="h-full w-full object-cover"
               loading="lazy"
             />
-          </div>
+          </figure>
           <div className="flex flex-col justify-between gap-4 text-sm leading-relaxed text-slate-200/85">
             <div className="space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/85">金融機関の声</p>
-              <h3 className="text-xl font-semibold text-white md:text-2xl">{testimonialVideo.title}</h3>
-              <p>{testimonialVideo.description}</p>
+              <h3 className="text-xl font-semibold text-white md:text-2xl">{testimonialFeature.title}</h3>
+              <p>{testimonialFeature.description}</p>
             </div>
             <ul className="space-y-2">
-              {testimonialVideo.highlights.map((point) => (
+              {testimonialFeature.highlights.map((point) => (
                 <li key={point} className="flex items-start gap-2 text-sm">
                   <CheckCircle2 className="mt-1 h-4 w-4 flex-shrink-0 text-cyan-200" aria-hidden="true" />
                   <span>{point}</span>

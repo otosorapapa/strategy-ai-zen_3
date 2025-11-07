@@ -132,9 +132,9 @@ const companySizeOptions = [
 ];
 
 const sampleSummary = [
-  "再生設計図ドラフトのサンプル3枚と、銀行共有用テンプレート付き",
-  "粗利・キャッシュ・人材の改善ストーリーを色分けしたダッシュボード例",
-  "意思決定ログと週次レビューのチェックリストを同梱",
+  "将来像を示す計画ドラフト3枚と、銀行共有にそのまま使える資料テンプレート",
+  "粗利・資金・人材の流れをひと目で把握できるダッシュボード例",
+  "判断の過程を残せる会議メモと週次レビューのチェックリスト",
 ];
 
 const caseStudyHighlights = [
@@ -202,19 +202,19 @@ const trustBoardEntries = [
   {
     category: "金融機関",
     logoLabel: "福岡銀行",
-    comment: "再生計画の前提が金融庁ガイドラインと整合しており、稟議の指摘事項が半減。貸出継続判断を後押しできた。",
+    comment: "意思決定の根拠が明確になり、稟議での追加説明が最小限で済みました。資金支援の継続判断がスムーズでした。",
     endorsement: "2023年 地域金融共創アワード 優秀賞",
   },
   {
     category: "自治体",
     logoLabel: "福岡県",
-    comment: "産業振興課との連携で人材再配置プログラムを共同実施。ダッシュボードでKPIを共有し、議会報告にも活用。",
+    comment: "産業振興課との連携で人材再配置プランを実施。共有ダッシュボードで進捗を即時把握でき、議会報告も整理されました。",
     endorsement: "2024年 DXパートナー公式採択",
   },
   {
     category: "補助金",
     logoLabel: "経営改善計画策定支援補助金",
-    comment: "採択された企業の平均投資回収期間が14ヶ月。資料テンプレが監査法人レビューでも高評価。",
+    comment: "採択企業では費用回収の道筋が早期に見通せたと評価。資料テンプレートは専門機関のレビューでも安心感があると好評です。",
     endorsement: "累計20件超採択／審査員推奨コメント獲得",
   },
 ];
@@ -325,13 +325,13 @@ const CTASection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Action｜45分で再生シナリオを受け取る
+            Action｜45分で未来の再生シナリオを提示
           </span>
           <h2 id="cta-heading" className="text-3xl font-bold leading-tight md:text-4xl">
-            粗利・資金・人材の打ち手を45分で整理し、2週間で実行フェーズへ
+            変動の波を先に捉え、社内外から頼られる意思決定を最短で整備
           </h2>
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            PASフレームで痛点を深掘りしたうえで、AI診断と専門家の伴走によりSolutionへ橋渡し。補助金活用シミュレーションや金融機関との合意形成資料まで揃え、どの会議でも迷わず意思決定できる状態を設計します。
+            市況が揺らいでも自社の舵取りを任され続けるために、私たちは生成AIと中小企業診断士のチームで、貴社の未来像を共有できる計画づくりを支援します。業界・競合・顧客のデータを一気通貫で整理し、会議で迷わない判断材料と実行準備までを揃えます。独自に構築する経営管理アプリを通じて日々の進み具合を見える化し、福岡から継続的に寄り添いながら次の一手を一緒に固めます。
           </p>
         </ScrollReveal>
 
@@ -344,11 +344,11 @@ const CTASection = () => {
               Trust Board
             </p>
             <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-              <h3 className="text-xl font-semibold text-white md:text-2xl">第三者が認める信頼性と成果の裏付け</h3>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/70">金融機関・自治体・補助金の声</p>
+              <h3 className="text-xl font-semibold text-white md:text-2xl">信頼される判断を支える外部評価</h3>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/70">金融機関・自治体・支援機関の声</p>
             </div>
             <p className="max-w-3xl text-sm leading-relaxed text-slate-200/85">
-              連携先からの推薦コメントと受賞歴を公開。ロゴ付きの証跡を用意し、社内決裁や金融機関への説明にそのまま添付いただけます。
+              連携先から届いた評価コメントと受賞歴をまとめ、ロゴ付きの証跡として閲覧できます。資料はそのまま社内決裁や金融機関への共有に活用いただけ、リーダーとしての判断が確かな裏付けを持って伝わります。
             </p>
           </div>
           <div className="mt-6 grid gap-5 md:grid-cols-3">

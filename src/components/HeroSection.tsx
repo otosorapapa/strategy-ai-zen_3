@@ -270,7 +270,7 @@ const HeroSection = () => {
                 <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
                   資金繰り × 意思決定 × 実行
                 </span>
-                <h1 className="text-balance text-3xl font-bold leading-[1.35] md:text-4xl xl:text-[3.1rem]">
+                <h1 className="text-balance text-3xl font-bold leading-[1.45] md:text-4xl md:leading-[1.55] xl:text-[3.1rem]">
                   資金繰りに強い経営体制を、AIとプロの伴走で即構築する。
                 </h1>
                 <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">

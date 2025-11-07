@@ -171,13 +171,13 @@ const PainChecklistSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            Pain Scan｜資金繰りの詰まりを特定
+            背景共有｜停滞を生む見えない断片
           </span>
           <h2 id="pain-checklist-heading" className="text-3xl font-bold leading-tight text-[#0b1f3f] md:text-4xl">
-            福岡の資金繰り改善でよく詰まる3大パターン──自社はどこに当てはまりますか？
+            情熱は十分なのに前に進めない──その原因は情報がバラバラに積み上がっているからです
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
-            AIDMAの「Attention→Interest」を一気に越えるには、まず痛みを定量化することが近道です。下記のチェックリストから症状を選ぶと、最適な伴走プランとCTAをご案内します。
+            私たちが伴走してきた企業でも、数字と現場の手応えが別々に管理され、月次資料づくりで手一杯になるケースがほとんどでした。下のチェックリストは、その断片化がどこで起きているのかを整理するためのもの。該当する項目を選ぶだけで、何から整えるべきかが見えてきます。
           </p>
         </ScrollReveal>
 

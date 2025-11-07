@@ -84,38 +84,38 @@ const proofHighlights = [
 
 const causalityPillars: CausalityPillar[] = [
   {
-    focus: "因果性",
-    title: "数字が語る背景を即座に把握",
-    description: "粗利・キャッシュ・需要指標をAIが因果グラフで同期。経営と現場が同じストーリーで議論できます。",
-    metric: "異常検知→打ち手提示 3分",
+    focus: "背景理解",
+    title: "数字の裏にある動きをすぐ把握",
+    description: "業界・競合・顧客の調査結果と粗利・資金の推移をAIが結び付け、会議前に状況の意味を整理できます。",
+    metric: "業界×競合の信号を同時表示",
     icon: BrainCircuit,
   },
   {
-    focus: "論理性",
-    title: "仮説検証の筋道を可視化",
-    description: "意思決定ロジックをテンプレ化し、採用/却下理由をダッシュボードで追跡。次の判断が迷いません。",
-    metric: "意思決定速度 2.1倍",
+    focus: "計画設計",
+    title: "5年先を見据えた筋道を描く",
+    description: "外部環境の変化を常時監視し、生成AIと診断士が5か年の経営改善シナリオを段階ごとに提示します。",
+    metric: "改善シナリオを段階設計",
     icon: Bolt,
   },
   {
-    focus: "デザイン性",
-    title: "判断材料をワンビューに整列",
-    description: "重要指標は色面で孤立させ、図解と文章を同期。処理負荷を減らし“見るだけでわかる”状態をつくります。",
-    metric: "理解時間 ▲38%",
+    focus: "共有力",
+    title: "判断材料を一画面に束ねる",
+    description: "経営管理アプリとダッシュボードを事業者ごとにカスタマイズし、現場と経営が同じ土台で議論できます。",
+    metric: "会議資料を一枚で共有",
     icon: Palette,
   },
   {
-    focus: "スマート性",
-    title: "Slack連携で意思決定を自動推進",
-    description: "リスク閾値を超えると自動でアラートと代替案を送信。行動まで滑らかにつなぎます。",
-    metric: "フォロー漏れ 0件",
+    focus: "実行推進",
+    title: "現場の動きまで伴走",
+    description: "優先タスクと代替案を通知し、週次レビューで進捗と数値のつながりを確認。迷いなく行動へ移れます。",
+    metric: "行動タスクを自動通知",
     icon: Sparkles,
   },
   {
-    focus: "納得性",
-    title: "証跡が残るレビュー体験",
-    description: "会議で使った根拠資料が即座にPDF化。金融機関・株主への説明も同じストーリーで展開できます。",
-    metric: "交渉準備 ▲45%",
+    focus: "信頼獲得",
+    title: "説明責任を揃えた証跡を残す",
+    description: "会議の根拠資料を即座に整理し、金融機関や補助金申請にも使える形で共有。説明の主導権を握れます。",
+    metric: "資金支援の資料まで連携",
     icon: Handshake,
   },
 ];
@@ -341,14 +341,14 @@ const ProblemSection = () => {
                 <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
                   <div className="space-y-2">
                     <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
-                      Causality Pillars
+                      経営判断フレーム
                     </span>
                     <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
-                      因果と統制を両立させる5つの設計軸
+                      未来を見越して動くための5つの判断軸
                     </h3>
                   </div>
                   <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                    意思決定を止める摩擦を減らすため、経営者が重視する五要素を指標と導線で束ねた。各カードには即断に効く数値指標を併記している。
+                    経営改善をやり切る力を高めるために、専門家の伴走と生成AIが抽出した五つの視点を一つの導線に集約。業界調査や現場ヒアリングで得た数値と物語を結び、胸を張って選べる次の一手を示します。
                   </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -391,9 +391,9 @@ const ProblemSection = () => {
                 />
                 <figcaption className="mt-6 space-y-3 text-sm leading-relaxed text-slate-200/85">
                   <p>
-                    KPIとリスクシグナルのつながりを矢印で示し、どの指標が意思決定を左右するかを一目で把握。経営会議で議題化すべき順番を揃えます。
+                    KPIとリスクの結び付きを矢印で示し、判断を左右する指標を一目で確認。経営会議で話す順番まで揃い、迷いなく進められます。
                   </p>
-                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Board Ready｜ストーリー化された証跡で納得形成を高速化</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Board Ready｜ストーリー化した証拠で合意形成を速める</p>
                 </figcaption>
               </figure>
             </div>

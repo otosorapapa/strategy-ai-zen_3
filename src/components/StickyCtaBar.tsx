@@ -78,12 +78,13 @@ const StickyCtaBar = () => {
       <div className="mx-auto max-w-6xl px-3 sm:px-4">
         <div
           className={cn(
-            "flex flex-col gap-4 rounded-full border border-primary/10 bg-white/85 px-5 py-3 text-center shadow-card backdrop-blur-xl transition-all duration-500 md:flex-row md:items-center md:justify-between md:text-left",
+            "rounded-full border border-primary/10 bg-white/85 px-5 py-3 shadow-card backdrop-blur-xl transition-all duration-500",
+            "flex flex-col gap-4 text-center md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-6 md:px-6 md:text-left",
             isCompact ? "py-2" : "py-3",
             hasScrolled ? "opacity-100" : "opacity-95",
           )}
         >
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+          <div className="flex flex-col items-center gap-3 md:flex-row md:items-center md:justify-start md:gap-4">
             <Button
               type="button"
               variant="ghost"
@@ -107,21 +108,22 @@ const StickyCtaBar = () => {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-2 md:justify-end">
-            <div className="hidden flex-col gap-2 text-left md:flex md:w-56">
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-highlight">
-                所要時間 約60秒｜必須入力2項目から
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="relative h-2 flex-1 overflow-hidden rounded-full bg-highlight/10" aria-hidden="true">
-                  <div
-                    className="h-full rounded-full bg-highlight transition-all duration-500"
-                    style={{ width: `${(formStep / 2) * 100}%` }}
-                  />
-                </div>
-                <span className="text-xs font-semibold text-muted-foreground">STEP {formStep}/2</span>
+          <div className="flex flex-col items-center gap-2 text-left md:items-start">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-highlight">
+              所要時間 約60秒｜必須入力2項目から
+            </p>
+            <div className="flex w-full items-center gap-3">
+              <div className="relative h-2 flex-1 overflow-hidden rounded-full bg-highlight/10" aria-hidden="true">
+                <div
+                  className="h-full rounded-full bg-highlight transition-all duration-500"
+                  style={{ width: `${(formStep / 2) * 100}%` }}
+                />
               </div>
+              <span className="text-xs font-semibold text-muted-foreground">STEP {formStep}/2</span>
             </div>
+          </div>
+
+          <div className="flex flex-col items-center justify-center gap-3 md:flex-row md:justify-end md:gap-4">
             <Button
               type="button"
               variant="cta"

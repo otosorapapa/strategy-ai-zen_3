@@ -2,6 +2,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import planWorkflowVisual from "@/assets/dashboard-preview.jpg";
 import {
   ArrowRight,
   Check,
@@ -177,6 +178,27 @@ const PlansSection = () => {
             <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
               3ヶ月で管理会計と資金繰りの基盤を固め、6ヶ月で現場に成果を定着させるための2つのプランをご用意しています。
             </p>
+          </ScrollReveal>
+
+          <ScrollReveal variant="fade-up" className="mx-auto mb-12 max-w-5xl">
+            <figure className="group relative overflow-hidden rounded-[32px] border border-primary/15 bg-white/70 shadow-[0_30px_80px_rgba(15,23,42,0.12)] backdrop-blur">
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-primary/15 via-transparent to-accent/15 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                aria-hidden="true"
+              />
+              <img
+                src={planWorkflowVisual}
+                alt="月次ダッシュボードと伴走セッションの進行を俯瞰するプラン構成イメージ"
+                className="relative z-10 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="relative z-10 flex flex-col gap-2 px-6 py-4 text-left text-sm text-slate-700/85 md:flex-row md:items-center md:justify-between">
+                <span className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/80">Plan Visual</span>
+                <span>
+                  伴走セッションで共有するダッシュボードや週次レビューの雰囲気を補足し、サービス導入後の流れを直感的に理解できます。
+                </span>
+              </figcaption>
+            </figure>
           </ScrollReveal>
 
           <div className="mb-14 grid gap-8 md:grid-cols-[1.05fr_0.95fr]">

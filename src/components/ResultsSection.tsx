@@ -13,32 +13,32 @@ import {
 } from "lucide-react";
 
 const trustBadges = [
-  "中小企業診断士チーム常駐",
-  "金融機関連携テンプレ完備",
-  "福岡・九州100社超の伴走",
+  "生成AIと診断士の常駐タッグ",
+  "金融協議の準備資料を先回り整備",
+  "福岡・九州での再起支援100社超",
 ];
 
 const resultsQuickSummary = [
-  "営業利益+12%、債務超過解消率80%など資金繰り改善の定量実績を九州で蓄積。",
-  "48時間診断→再生設計→金融交渉の3工程で意思決定リードタイムを平均1/3に短縮。",
-  "銀行・現場・役員会が同じダッシュボードを共有し、資金繰りと実行のズレを排除。",
+  "九州の事業者が再挑戦を語れるよう、意思決定の遅れと迷いを断ち切る支援体制を整備。",
+  "生成AIと診断士が描く5年ビジョンと計画書で、資金繰りと再建ロードマップを一気通貫で提示。",
+  "経営陣・現場・金融機関が同じダッシュボードで48時間以内に次の手を決めるレビューを常設。",
 ];
 
 const adoptionSnapshotMetrics = [
   {
     label: "導入社数",
     value: "108社",
-    helper: "九州・西日本の伴走企業（過去3年累計）",
+    helper: "九州・西日本で伴走した企業（過去3年）",
   },
   {
-    label: "平均CV回復率",
+    label: "粗利・資金余力の回復",
     value: "180%",
-    helper: "再生後6ヶ月の粗利・キャッシュ改善スコア（中央値）",
+    helper: "再生後6ヶ月の改善スコア（中央値）",
   },
   {
     label: "金融機関同席率",
     value: "92%",
-    helper: "主要行・信金との週次レビュー同席割合",
+    helper: "主要行・信金との週次レビュー参加割合",
   },
 ];
 
@@ -52,9 +52,9 @@ const adoptionClientLogos = [
 ];
 
 const resultsMomentumLevers = [
-  "金融機関とのエビデンス共有で条件交渉を先手に進める。",
-  "AIと診断士が週次で改善仮説を検証し、粗利とキャッシュの波形を同期する。",
-  "現場タスクとKPIを結ぶ設計図で、会議後すぐに行動へ移せる状態を維持する。",
+  "金融機関と共有する根拠資料で交渉の主導権を握り、地域企業の進路を守り抜く。",
+  "AIと診断士が週次で改善仮説を検証し、粗利と現金の波形をそろえて先行指標を磨き込む。",
+  "現場タスクと指標を結ぶ行動計画で、会議直後から迷いなく動ける状態を保つ。",
 ];
 
 const measurementDefinitions = [
@@ -84,9 +84,9 @@ const measurementDefinitions = [
 ];
 
 const evidenceNotes = [
-  "サンプル企業は直近3年間の伴走案件のうち、経営改善計画を完遂したケースを抽出。",
-  "各指標はA/B比較ではなく、導入前12週間と導入後12週間の中央値を比較して算出。",
-  "測定プロセスはAIダッシュボードのログと専門家の月次レビュー記録で監査済み。",
+  "サンプル企業は直近3年間に計画を完遂した案件のみを抽出。",
+  "各指標は導入前後12週間の中央値を比較したシンプルな方法で算出。",
+  "測定プロセスはAIダッシュボードの記録と専門家の月次レビューで照合済み。",
 ];
 
 const resultMetrics = [
@@ -112,24 +112,24 @@ const resultMetrics = [
 
 const transformationFlow = [
   {
-    phase: "Week 1｜診断",
-    focus: "AI×専門家で財務・市場を同時走査",
-    deliverable: "リスクヒートマップと優先指標12項目",
+    phase: "1週目｜診断",
+    focus: "AIと診断士が財務と市場を同時に点検",
+    deliverable: "優先指標12項目とリスクマップ",
     signal: "現状把握の曖昧さを48時間で解消",
     icon: Gauge,
   },
   {
-    phase: "Week 2｜設計",
-    focus: "キャッシュ・粗利・組織の相関を分解",
+    phase: "2週目｜設計",
+    focus: "資金・粗利・組織のつながりを分解",
     deliverable: "施策シミュレーションと資金繰り3案",
-    signal: "実行条件とモニタリング軸を可視化",
+    signal: "実行条件と確認軸を見える化",
     icon: Landmark,
   },
   {
-    phase: "Week 4｜合意形成",
-    focus: "金融機関・現場の合意に必要な根拠を整理",
-    deliverable: "KPIダッシュボードと合意形成シナリオ",
-    signal: "意思決定リードタイムを1/3に短縮",
+    phase: "4週目｜合意形成",
+    focus: "金融機関と現場の合意に必要な根拠を整理",
+    deliverable: "指標ダッシュボードと合意形成シナリオ",
+    signal: "意思決定までの時間をおおむね3分の1に短縮",
     icon: ArrowRight,
   },
 ];
@@ -181,10 +181,10 @@ const ResultsSection = () => {
             Impact｜結果で語る
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            財務KPIが示す資金繰り再構築と利益回復の成果
+            意思決定を研ぎ澄ます資金繰り再構築と利益回復の実証
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            AIが描く資金繰りシナリオと診断士の実装支援を組み合わせ、粗利・キャッシュ・人材の波形を同期させた。銀行・社員・経営陣が同じ未来を語れる状態を維持し、反転のストーリーを数字で証明している。
+            地域のリーダーが未来像を力強く語れるよう、AIが描く資金繰りシナリオと診断士の実装支援を組み合わせ、粗利・キャッシュ・人材の波形をそろえ続けます。銀行・社員・経営陣が同じ未来図で連携し、反転のストーリーを数字で裏づけます。
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {trustBadges.map((badge) => (
@@ -300,7 +300,7 @@ const ResultsSection = () => {
         >
           <div className="space-y-4 text-left">
             <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/85">
-              Measurement Logic
+              測定プロセス公開
             </p>
             <h3 className="text-2xl font-semibold text-white md:text-[1.8rem]">成果データの測定期間と定義を公開</h3>
             <p className="text-sm leading-relaxed text-slate-100/80 md:text-base">
@@ -393,7 +393,7 @@ const ResultsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#010b1c]/95 via-[#020e24]/40 to-transparent" />
             <div className="relative mt-auto flex h-full flex-col justify-end gap-6 p-8">
               <div className="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">
-                Dual Coding
+                多層表示
               </div>
               <p className="text-lg font-semibold text-white md:text-xl">
                 財務・市場・人材の因果を重ねた「再生の設計図」を1枚で共有

@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
-import blueprintFlowVisual from "@/assets/insight-blueprint-flow.svg";
+import blueprintFlowVisual from "@/assets/process-flow-infographic.jpg";
 
 const insightHighlights = [
   {
@@ -46,6 +46,24 @@ const blueprintSignals = [
     label: "変革推進チーム",
     value: "部署横断で同期",
     caption: "現場ヒアリングで制約条件を棚卸し、意思決定を統一",
+  },
+];
+
+const blueprintAssurances = [
+  {
+    title: "因果整合",
+    metric: "Causality Trace",
+    description: "粗利・資金・現場指標の相関を色と位置で重ね、判断の根拠を可視化。",
+  },
+  {
+    title: "論点同期",
+    metric: "Agenda Sync",
+    description: "AIが抽出した争点を診断士が重み付けし、意思決定者の視座を統一。",
+  },
+  {
+    title: "実装耐性",
+    metric: "Execution Fit",
+    description: "部門別の制約条件と投資余地を同一レイヤーで示し、即時の合意形成に接続。",
   },
 ];
 
@@ -128,9 +146,9 @@ const InsightSpotlight = () => {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(5,132,198,0.12),_transparent_65%)]"
         aria-hidden="true"
       />
-      <div className="container relative mx-auto max-w-6xl px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-10">
+      <div className="container relative mx-auto max-w-7xl px-6">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.95fr]">
+          <div className="mx-auto w-full max-w-2xl space-y-12 lg:max-w-none">
             <ScrollReveal variant="fade-up" className="space-y-4">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
                 意思決定が鈍る本質
@@ -152,7 +170,7 @@ const InsightSpotlight = () => {
               {insightHighlights.map((item) => (
                 <div
                   key={item.label}
-                  className="group relative overflow-hidden rounded-2xl border border-[#0b1f3f]/12 bg-white/95 p-5 shadow-[0_18px_45px_rgba(11,31,63,0.12)] transition-transform duration-300 hover:-translate-y-1"
+                  className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-[#0b1f3f]/12 bg-white/95 p-5 shadow-[0_18px_45px_rgba(11,31,63,0.12)] transition-transform duration-300 hover:-translate-y-1"
                 >
                   <div className="text-[0.6rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">
                     {item.label}
@@ -171,7 +189,7 @@ const InsightSpotlight = () => {
                 {blueprintSignals.map((signal) => (
                   <div
                     key={signal.label}
-                    className="group relative overflow-hidden rounded-2xl border border-[#0b1f3f]/10 bg-white/80 p-5 shadow-[0_15px_45px_rgba(11,31,63,0.08)] transition-transform duration-300 hover:-translate-y-1"
+                    className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-[#0b1f3f]/10 bg-white/85 p-5 shadow-[0_15px_45px_rgba(11,31,63,0.08)] transition-transform duration-300 hover:-translate-y-1"
                   >
                     <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">
                       {signal.label}
@@ -199,40 +217,55 @@ const InsightSpotlight = () => {
 
           <ScrollReveal
             variant="fade-up"
-            className="relative rounded-[32px] border border-[#0b1f3f]/12 bg-white/95 p-8 shadow-[0_25px_65px_rgba(5,25,58,0.16)]"
+            className="relative lg:sticky lg:top-24"
           >
-            <div className="absolute -top-10 right-8 hidden rounded-2xl bg-[#0584c6] px-4 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-white shadow-lg lg:flex">
-              Blueprint Insight
-            </div>
-            <figure className="space-y-6">
-              <div className="relative overflow-hidden rounded-3xl border border-[#0b1f3f]/10 bg-[#f5f9ff]">
-                <img
-                  src={blueprintFlowVisual}
-                  alt="再生シナリオの全体図を俯瞰するタイムラインインフォグラフィック"
-                  className="h-full w-full object-cover"
-                />
+            <div className="relative rounded-[32px] border border-[#0b1f3f]/12 bg-white/95 p-8 shadow-[0_25px_65px_rgba(5,25,58,0.16)]">
+              <div className="absolute -top-10 right-8 hidden rounded-2xl bg-[#0584c6] px-4 py-3 text-xs font-semibold uppercase tracking-[0.28em] text-white shadow-lg lg:flex">
+                Blueprint Insight
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/70">
-                  <BarChart3 className="h-5 w-5 text-[#0584c6]" aria-hidden="true" />
-                  Dual Coding Framework
+              <figure className="space-y-7">
+                <div className="relative overflow-hidden rounded-3xl border border-[#0b1f3f]/10 bg-[#f5f9ff]">
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#0b1f3f]/5 via-transparent to-[#0584c6]/20 mix-blend-multiply" aria-hidden="true" />
+                  <img
+                    src={blueprintFlowVisual}
+                    alt="因果関係とタイムラインを俯瞰できる経営デザインのインフォグラフィック"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
-                <ul className="grid gap-3 text-sm leading-relaxed text-[#1e3359]/75">
-                  <li className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f7faff] p-4">
-                    <Lightbulb className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
-                    AIが市場データ・社内ログ・財務指標を同期し、先行指標の変化を色面で示します。
-                  </li>
-                  <li className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-white p-4">
-                    <Target className="mt-1 h-4 w-4 flex-shrink-0 text-[#0b1f3f]" aria-hidden="true" />
-                    診断士が現場ヒアリングで制約条件を言語化し、優先仮説とリスクを一枚で可視化します。
-                  </li>
-                  <li className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-white p-4">
-                    <Sparkles className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
-                    交渉資料・行動計画・資金計画を連動させ、次会議での意思決定をシミュレーションできます。
-                  </li>
-                </ul>
-              </div>
-            </figure>
+                <div className="space-y-5">
+                  <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/70">
+                    <BarChart3 className="h-5 w-5 text-[#0584c6]" aria-hidden="true" />
+                    Dual Coding Framework
+                  </div>
+                  <ul className="grid gap-3 text-sm leading-relaxed text-[#1e3359]/75">
+                    <li className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-[#f7faff] p-4">
+                      <Lightbulb className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+                      AIが市場データ・社内ログ・財務指標を同期し、先行指標の変化を色面で示します。
+                    </li>
+                    <li className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-white p-4">
+                      <Target className="mt-1 h-4 w-4 flex-shrink-0 text-[#0b1f3f]" aria-hidden="true" />
+                      診断士が現場ヒアリングで制約条件を言語化し、優先仮説とリスクを一枚で可視化します。
+                    </li>
+                    <li className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/10 bg-white p-4">
+                      <Sparkles className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+                      交渉資料・行動計画・資金計画を連動させ、次会議での意思決定をシミュレーションできます。
+                    </li>
+                  </ul>
+                  <div className="grid gap-4 rounded-3xl border border-[#0b1f3f]/10 bg-[#f2f7ff] p-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]">Executive Proof Points</p>
+                    <div className="grid gap-4 sm:grid-cols-3">
+                      {blueprintAssurances.map((item) => (
+                        <div key={item.metric} className="flex flex-col gap-2 rounded-2xl border border-white/50 bg-white/80 p-4 text-left shadow-[0_12px_32px_rgba(11,31,63,0.08)]">
+                          <span className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{item.title}</span>
+                          <p className="text-lg font-semibold text-[#0584c6]">{item.metric}</p>
+                          <p className="text-xs leading-relaxed text-[#1e3359]/70">{item.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </figure>
+            </div>
           </ScrollReveal>
         </div>
 

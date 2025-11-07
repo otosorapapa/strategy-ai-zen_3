@@ -94,7 +94,7 @@
   <rect x="306" y="382" width="128" height="36" rx="14" fill="rgba(14,165,233,0.16)" />
   <text x="370" y="404" text-anchor="middle" fill="#0EA5E9" font-size="12" font-weight="600">意思決定リードタイム▲42%</text>
   <text x="184" y="144" text-anchor="middle" fill="#0F172A" font-size="18" font-weight="700">外部シグナル</text>
-  <text x="184" y="170" text-anchor="middle" fill="#2563EB" font-size="14" font-weight="700">需給・金利・取引条件</text>
+  <text x="184" y="170" text-anchor="middle" fill="#2563EB" font-size="14" font-weight="700">需給・取引条件・資金余力</text>
   <text x="184" y="194" text-anchor="middle" fill="#64748B" font-size="12">週次で自動収集</text>
   <rect x="122" y="206" width="122" height="32" rx="14" fill="rgba(14,165,233,0.12)" />
   <text x="183" y="228" text-anchor="middle" fill="#0F172A" font-size="12" font-weight="600">リスク早期警戒スコア</text>

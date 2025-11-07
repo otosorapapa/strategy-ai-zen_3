@@ -20,7 +20,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
 import problemInfographic from "@/assets/problem-infographic.svg";
 import financialAnalysis from "@/assets/financial-analysis.jpg";
-import executiveStrategyMeeting from "@/assets/executive-strategy-meeting.jpg";
+import executiveMeetingReview from "@/assets/executive-meeting.jpg";
 import insightBlueprintFlow from "@/assets/insight-blueprint-flow.svg";
 
 type PainPoint = {
@@ -316,8 +316,8 @@ const ProblemSection = () => {
               </div>
               <figure className="relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-[1.6rem] border border-cyan-300/20 bg-black/20">
                 <img
-                  src={executiveStrategyMeeting}
-                  alt="意思決定会議で財務の証跡と投資判断を確認する経営陣"
+                  src={executiveMeetingReview}
+                  alt="財務監査に備えて証跡資料と投資判断を照合する経営陣"
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />

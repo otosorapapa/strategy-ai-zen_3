@@ -22,11 +22,11 @@ export type TertiaryCtaContent = {
 
 export const PRIMARY_CTA: PrimaryCtaContent = {
   id: "primary",
-  label: "無料相談を予約する（45分）",
+  label: "無料相談メールフォームに申し込む",
   benefitCopy: "生成AI診断と専門家コメントを同時に受け取る",
   benefitCopyAlt: "粗利・資金・現場の再生シナリオを事前に把握",
   supportText:
-    "・株式会社創和経営コンサルティング（福岡）の中小企業診断士が直接ヒアリングし、再生を阻む論点とデータ環境を45分で整理します。\n・翌営業日に“再生の設計図”ドラフト（例）と優先アクション候補をご共有します。",
+    "・株式会社創和経営コンサルティング（福岡）の中小企業診断士が45分で現状を整理し、48時間以内に再生の設計図ドラフトをご提示します。\n・お急ぎの方はお電話（092-231-2920）でも承ります。",
 };
 
 export const SECONDARY_CTA: SecondaryCtaContent = {

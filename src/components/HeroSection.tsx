@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 const heroValueBullets = [
-  "市場の兆しと現場の声を一枚にまとめ、迷いなく指示できる判断軸を整える",
-  "生成AIで業界・顧客・コストを横断分析し、中小企業診断士が実行計画に落とし込む",
-  "胸を張って示せる経営改善計画と管理ダッシュボードを短期間で整える",
+  "粗利・資金・人材の指標を48時間で見える化し、意思決定の土台をそろえる",
+  "生成AIが抽出した兆しを診断士が裏付け、再生シナリオを実行できる計画に落とし込む",
+  "金融機関への提示資料と現場で使うダッシュボードを同時に整備する",
 ];
 
 const heroSummaryCards = [
@@ -89,7 +89,7 @@ const trustSignals = [
 
 const heroIntroCopy = {
   short:
-    "変化の速度が増すほど、経営者には確かな根拠と勇気が求められます。生成AIが外部環境と社内データを照らし合わせ、中小企業診断士が現場と未来像を整理。貴社専用の経営改善計画と管理アプリを共に描き、堂々と次の一手を示せる状態へ導きます。",
+    "経営判断を鈍らせる情報の断片を束ね、未来に向けた筋道を描き直す伴走サービスです。生成AIの分析と現場ヒアリングを重ね、再建計画・実行ロードマップ・ダッシュボードをワンセットで提供します。",
 };
 
 const HeroSection = () => {
@@ -111,11 +111,11 @@ const HeroSection = () => {
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
                 AI × 診断士 × 再生設計図
               </span>
-              <h1 className="text-balance text-3xl font-bold leading-[1.45] md:text-4xl md:leading-[1.5] xl:text-[3.1rem]">
-                変化の波を味方にする決断力を磨き、生成AIと診断士が貴社仕様の再生設計図を届けます。
+              <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.2] tracking-tight md:text-[3.1rem] md:leading-[1.2] md:tracking-[-0.01em] xl:text-[3.6rem]">
+                生成AI×中小企業診断士　会社の未来を描き直す『経営再生計画』
               </h1>
-              <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">
-                「今の判断が未来を左右する」局面で、迷わず指揮を執れる舞台を整えることが私たちの使命です。生成AIと診断士の協働で停滞の要因を可視化し、意思決定の質と速さ、先を読む力を底上げします。
+              <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
+                売上・資金繰り・人材データを48時間で見える化し、福岡の経営改善チームが実行ロードマップを伴走。金融機関向けの根拠資料まで整備します。
               </p>
             </div>
 
@@ -163,7 +163,7 @@ const HeroSection = () => {
                 aria-label="電話で相談する"
               >
                 <Timer className="mr-2 h-5 w-5" aria-hidden="true" />
-                まずは48時間の初期診断から
+                092-231-2920
               </a>
               <a
                 href={TERTIARY_CTA.href}

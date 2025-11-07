@@ -15,12 +15,46 @@ import {
 } from "lucide-react";
 import { PRIMARY_CTA, SECONDARY_CTA } from "@/lib/ctaVariants";
 
+const accentStyles = {
+  primary: {
+    icon: "bg-primary/10 text-primary",
+    featureIcon: "bg-primary/10 text-primary",
+    outcomeIcon: "bg-primary/15 text-primary",
+    targetChip: "border border-primary/30 bg-primary/5 text-primary",
+    price: "text-primary",
+    tableIcon: "bg-primary/10 text-primary",
+    tableCol: "bg-background",
+    mobileBadge: "bg-primary/10 text-primary",
+  },
+  secondary: {
+    icon: "bg-secondary/15 text-secondary",
+    featureIcon: "bg-secondary/15 text-secondary",
+    outcomeIcon: "bg-secondary/20 text-secondary",
+    targetChip: "border border-secondary/30 bg-secondary/10 text-secondary",
+    price: "text-secondary",
+    tableIcon: "bg-secondary/20 text-secondary",
+    tableCol: "bg-secondary/5",
+    mobileBadge: "bg-secondary/15 text-secondary",
+  },
+  highlight: {
+    icon: "bg-highlight/15 text-highlight",
+    featureIcon: "bg-highlight/15 text-highlight",
+    outcomeIcon: "bg-highlight/20 text-highlight",
+    targetChip: "border border-highlight/30 bg-highlight/10 text-highlight",
+    price: "text-highlight",
+    tableIcon: "bg-highlight/20 text-highlight",
+    tableCol: "bg-highlight/5",
+    mobileBadge: "bg-highlight/15 text-highlight",
+  },
+} as const;
+
 const plans = [
   {
     name: "伴走スタンダード",
     summary: "管理会計と資金繰りの基盤づくりを3ヶ月で固める",
     target: "年商3〜8億円 / 管理部と営業責任者が兼務している企業",
     price: "180,000",
+    accent: "primary" as const,
     metrics: [
       { label: "平均投資回収", value: "2.7ヶ月" },
       { label: "継続率", value: "91%" },
@@ -45,6 +79,7 @@ const plans = [
     summary: "AIと伴走PMOで全社の改善と新規投資を同時推進",
     target: "年商8〜15億円 / 管理部に専任1〜2名 / DXを本格化したい企業",
     price: "280,000",
+    accent: "secondary" as const,
     metrics: [
       { label: "平均投資回収", value: "3.1ヶ月" },
       { label: "継続率", value: "94%" },
@@ -64,41 +99,84 @@ const plans = [
     subsidy: "大型投資に向けた金融機関交渉シナリオとレポーティング体制を共同設計",
     popular: true,
   },
+  {
+    name: "共創エンタープライズ",
+    summary: "複数拠点・部門を横断した変革をAIとPMOで全社統合",
+    target:
+      "年商15〜40億円 / 専任管理部門と事業部PMOが存在 / グループ横断で管理高度化したい企業",
+    price: "480,000",
+    accent: "highlight" as const,
+    metrics: [
+      { label: "平均投資回収", value: "4.5ヶ月" },
+      { label: "継続率", value: "97%" },
+      { label: "推奨体制", value: "経営陣 + 事業部長 + 本社DX室" },
+    ],
+    features: [
+      "隔週の経営/現場レビュー＋常駐PMOサポート",
+      "全社KPIと部門別収益の統合ダッシュボード構築",
+      "AIによる需要・在庫シミュレーションの多拠点連携",
+      "投資案件・M&Aのデューデリ支援と財務モデリング",
+      "海外・グループ会社を含むリスク管理と内部統制の再設計",
+    ],
+    outcomes: [
+      "全社EBITDAマージン+5.6pt、キャッシュ創出力年1.8億円改善（導入12ヶ月平均）",
+      "グループ横断プロジェクトの意思決定リードタイムを40%短縮",
+    ],
+    subsidy:
+      "グループ全体での金融機関・投資家向けコミュニケーションを設計し、中計・資本政策の合意形成を支援",
+    popular: false,
+  },
 ];
-
 const comparisonPoints = [
   {
     label: "伴走頻度",
-    starter: "月1回（経営会議の事前レビュー含む）",
-    premium: "月2回＋Slack/Teams常時サポート",
+    descriptions: [
+      "月1回（経営会議の事前レビュー含む）",
+      "月2回＋Slack/Teams常時サポート",
+      "月2回＋現場常駐PMOと役員週次レビュー",
+    ],
   },
   {
     label: "データ連携範囲",
-    starter: "会計・販売・在庫データのテンプレ連携",
-    premium: "基幹/施工/勤怠/CRMまでフル連携",
+    descriptions: [
+      "会計・販売・在庫データのテンプレ連携",
+      "基幹/施工/勤怠/CRMまでフル連携",
+      "グループ会計・SCM・SFA・人事/労務まで統合",
+    ],
   },
   {
     label: "AI活用レベル",
-    starter: "営業・資金繰りのAIレポートを月次提供",
-    premium: "需要予測・案件スコアリングをリアルタイム運用",
+    descriptions: [
+      "営業・資金繰りのAIレポートを月次提供",
+      "需要予測・案件スコアリングをリアルタイム運用",
+      "全社シミュレーションと最適配分を意思決定会議へ即時反映",
+    ],
   },
   {
     label: "金融機関連携",
-    starter: "四半期ごとの面談資料アップデートと想定問答の共有",
-    premium: "月次のモニタリングレポートと面談サマリーの共同作成",
+    descriptions: [
+      "四半期ごとの面談資料アップデートと想定問答の共有",
+      "月次のモニタリングレポートと面談サマリーの共同作成",
+      "主要行・証券・投資家向けマルチレポーティングと資本政策伴走",
+    ],
   },
   {
     label: "人材/社内浸透",
-    starter: "マニュアルとKPIレビューのセット提供",
-    premium: "現場研修2回＋OKR運用と人材定着プログラム",
+    descriptions: [
+      "マニュアルとKPIレビューのセット提供",
+      "現場研修2回＋OKR運用と人材定着プログラム",
+      "役員・部長クラスのチェンジリーダー養成と多拠点ワークショップ",
+    ],
   },
   {
     label: "レポーティング",
-    starter: "週次ダッシュボードと月次レビュー",
-    premium: "週次ダッシュボード＋経営陣報告書＋投資家向けサマリー",
+    descriptions: [
+      "週次ダッシュボードと月次レビュー",
+      "週次ダッシュボード＋経営陣報告書＋投資家向けサマリー",
+      "週次・月次レポートに加え、中期経営計画と投資委員会資料を共通化",
+    ],
   },
 ];
-
 const guaranteeNotices = [
   "※ 初月は1ヶ月トライアル。成果指標に届かない場合は無償で改善計画を再提示し、継続判断いただけます",
   "※ 守秘義務契約（NDA）締結の上で財務・人事データを扱います",
@@ -151,7 +229,7 @@ const guaranteeSteps = [
 ];
 
 const PlansSection = () => {
-  const [standardPlan, premiumPlan] = plans;
+  const planAccents = plans.map((plan) => accentStyles[plan.accent]);
 
   const scrollToCta = () => {
     const section = document.getElementById("cta-section");
@@ -176,7 +254,7 @@ const PlansSection = () => {
             </div>
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground md:mb-6 md:text-5xl lg:text-6xl">料金プラン</h2>
             <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
-              3ヶ月で管理会計と資金繰りの基盤を固め、6ヶ月で現場に成果を定着させるための2つのプランをご用意しています。
+              3ヶ月で管理会計と資金繰りの基盤を固め、6ヶ月で現場に成果を定着させるための3つのプランをご用意しています。
             </p>
           </ScrollReveal>
 
@@ -201,14 +279,16 @@ const PlansSection = () => {
             </figure>
           </ScrollReveal>
 
-          <div className="mb-14 grid gap-8 md:grid-cols-[1.05fr_0.95fr]">
-            {plans.map((plan, index) => (
-              <ScrollReveal key={plan.name} variant="fade-up" delay={index * 120} className="h-full">
-                <Card
-                  className={`relative flex h-full flex-col gap-6 overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/95 p-7 shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant md:p-8 ${
-                    plan.popular
-                      ? "border-transparent shadow-[0_35px_80px_-35px_rgba(37,99,235,0.55)]"
-                      : ""
+          <div className="mb-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            {plans.map((plan, index) => {
+              const accent = accentStyles[plan.accent];
+              return (
+                <ScrollReveal key={plan.name} variant="fade-up" delay={index * 120} className="h-full">
+                  <Card
+                    className={`relative flex h-full flex-col gap-6 overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/95 p-7 shadow-card backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant md:p-8 ${
+                      plan.popular
+                        ? "border-transparent shadow-[0_35px_80px_-35px_rgba(37,99,235,0.55)]"
+                        : ""
                   }`}
                 >
                   {plan.popular && (
@@ -221,18 +301,18 @@ const PlansSection = () => {
                   <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent" aria-hidden="true" />
 
                   <div className="space-y-5 text-center">
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                    <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl ${accent.icon}`}>
                       <ShieldCheck className="h-6 w-6" aria-hidden="true" />
                     </div>
                     <div className="space-y-3">
                       <h3 className="text-2xl font-bold text-foreground md:text-4xl">{plan.name}</h3>
                       <p className="text-base leading-relaxed text-muted-foreground md:text-lg">{plan.summary}</p>
                     </div>
-                    <div className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary md:text-sm">
+                    <div className={`inline-flex items-center justify-center gap-2 rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-wider md:text-sm ${accent.targetChip}`}>
                       {plan.target}
                     </div>
                     <div className="flex items-baseline justify-center gap-2">
-                      <span className="text-4xl font-bold tracking-tight text-primary md:text-7xl">¥{plan.price}</span>
+                      <span className={`text-4xl font-bold tracking-tight md:text-7xl ${accent.price}`}>¥{plan.price}</span>
                       <span className="text-base text-muted-foreground md:text-xl">/ 月 (税抜)</span>
                     </div>
                   </div>
@@ -253,7 +333,7 @@ const PlansSection = () => {
                     <ul className="space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-3 text-left">
-                          <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                          <div className={`mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full ${accent.featureIcon}`}>
                             <Check className="h-4 w-4 md:h-5 md:w-5" />
                           </div>
                           <span className="text-sm leading-relaxed text-muted-foreground md:text-base">{feature}</span>
@@ -266,7 +346,7 @@ const PlansSection = () => {
                       <ul className="space-y-2.5">
                         {plan.outcomes.map((outcome) => (
                           <li key={outcome} className="flex items-start gap-3 text-sm text-muted-foreground md:text-base">
-                            <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
+                            <div className={`mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full ${accent.outcomeIcon}`}>
                               <Check className="h-3.5 w-3.5" aria-hidden="true" />
                             </div>
                             <span>{outcome}</span>
@@ -293,8 +373,9 @@ const PlansSection = () => {
                     </p>
                   </div>
                 </Card>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
 
           <ScrollReveal as="div" variant="fade-up" delay={220} className="mb-14">
@@ -308,18 +389,16 @@ const PlansSection = () => {
                     <ChevronDown className="h-4 w-4 transition-transform duration-300 group-open:rotate-180" aria-hidden="true" />
                   </summary>
                   <div className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
-                    <p>
-                      <span className="mr-2 inline-flex min-w-[88px] justify-center rounded-full bg-primary/10 px-2 py-1 text-xs font-semibold text-primary">
-                        スタンダード
-                      </span>
-                      {point.starter}
-                    </p>
-                    <p>
-                      <span className="mr-2 inline-flex min-w-[88px] justify-center rounded-full bg-secondary/15 px-2 py-1 text-xs font-semibold text-secondary">
-                        アクセラレート
-                      </span>
-                      {point.premium}
-                    </p>
+                    {plans.map((plan, planIndex) => (
+                      <p key={`${point.label}-${plan.name}`}>
+                        <span
+                          className={`mr-2 inline-flex min-w-[88px] justify-center rounded-full px-2 py-1 text-xs font-semibold ${planAccents[planIndex].mobileBadge}`}
+                        >
+                          {plan.name}
+                        </span>
+                        {point.descriptions[planIndex]}
+                      </p>
+                    ))}
                   </div>
                 </details>
               ))}
@@ -327,33 +406,26 @@ const PlansSection = () => {
 
             <div className="hidden overflow-x-auto md:block">
               <table className="w-full overflow-hidden rounded-[28px] border border-slate-200/80 bg-white/95 shadow-card backdrop-blur-sm">
-                <caption className="sr-only">伴走スタンダードと成長アクセラレートの具体的な提供内容の比較</caption>
+                <caption className="sr-only">{`${plans.map((plan) => plan.name).join("・")}の具体的な提供内容の比較`}</caption>
                 <colgroup>
                   <col className="w-[22%] bg-muted/40" />
-                  <col className="bg-background" />
-                  <col className="bg-secondary/10" />
+                  {plans.map((plan, index) => (
+                    <col key={plan.name} className={planAccents[index].tableCol} />
+                  ))}
                 </colgroup>
                 <thead className="bg-gradient-to-r from-primary/10 via-white to-accent/10">
                   <tr>
                     <th className="px-6 py-5 text-left text-base font-bold uppercase tracking-wide text-muted-foreground/80">
                       項目
                     </th>
-                    <th className="px-6 py-4 text-left">
-                      <div className="flex flex-col gap-1">
-                        <span className="text-lg font-bold text-foreground">{standardPlan.name}</span>
-                        <span className="text-xs font-medium text-muted-foreground">
-                          {standardPlan.summary}
-                        </span>
-                      </div>
-                    </th>
-                    <th className="px-6 py-4 text-left">
-                      <div className="flex flex-col gap-1">
-                        <span className="text-lg font-bold text-foreground">{premiumPlan.name}</span>
-                        <span className="text-xs font-medium text-muted-foreground">
-                          {premiumPlan.summary}
-                        </span>
-                      </div>
-                    </th>
+                    {plans.map((plan) => (
+                      <th key={plan.name} className="px-6 py-4 text-left">
+                        <div className="flex flex-col gap-1">
+                          <span className="text-lg font-bold text-foreground">{plan.name}</span>
+                          <span className="text-xs font-medium text-muted-foreground">{plan.summary}</span>
+                        </div>
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody>
@@ -365,22 +437,18 @@ const PlansSection = () => {
                       <td className="px-6 py-6 align-top text-sm font-semibold uppercase tracking-wide text-muted-foreground">
                         {point.label}
                       </td>
-                      <td className="px-6 py-6 text-sm text-foreground">
-                        <div className="flex items-start gap-3">
-                          <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                            <Check className="h-4 w-4" aria-hidden="true" />
+                      {plans.map((plan, planIndex) => (
+                        <td key={`${point.label}-${plan.name}`} className="px-6 py-6 text-sm text-foreground">
+                          <div className="flex items-start gap-3">
+                            <div
+                              className={`mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full ${planAccents[planIndex].tableIcon}`}
+                            >
+                              <Check className="h-4 w-4" aria-hidden="true" />
+                            </div>
+                            <p className="leading-relaxed text-muted-foreground md:text-base">{point.descriptions[planIndex]}</p>
                           </div>
-                          <p className="leading-relaxed text-muted-foreground md:text-base">{point.starter}</p>
-                        </div>
-                      </td>
-                      <td className="px-6 py-6 text-sm text-foreground">
-                        <div className="flex items-start gap-3">
-                          <div className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-secondary/20 text-secondary">
-                            <Check className="h-4 w-4" aria-hidden="true" />
-                          </div>
-                          <p className="leading-relaxed text-muted-foreground md:text-base">{point.premium}</p>
-                        </div>
-                      </td>
+                        </td>
+                      ))}
                     </tr>
                   ))}
                 </tbody>

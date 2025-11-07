@@ -464,9 +464,9 @@ const FAQSection = () => {
       </div>
 
       <SectionMicroCta
-        eyebrow="Micro CTA"
-        title="費用・補助金・導入スケジュールをまとめた回答シートをお送りします"
-        description="FAQで触れた論点を踏まえ、無料相談後に貴社専用のQ&Aシートと次のステップをお渡しします。迷いが残る場合はチャットでも個別質問が可能です。"
+        eyebrow="追加資料"
+        title="費用・補助金・導入スケジュールを一枚にまとめた回答シートをお届けします"
+        description="無料相談で伺った内容を整理し、貴社専用のQ&Aと次に踏み出す段取りをお渡しします。疑問が残る場合はチャットで個別に確認いただけます。"
         ctaId="faq-summary"
       />
     </section>

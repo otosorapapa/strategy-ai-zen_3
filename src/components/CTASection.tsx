@@ -325,13 +325,13 @@ const CTASection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Action｜45分で再生シナリオを受け取る
+            初動｜45分相談で羅針盤を共有
           </span>
           <h2 id="cta-heading" className="text-3xl font-bold leading-tight md:text-4xl">
-            粗利・資金・人材の打ち手を45分で整理し、2週間で実行フェーズへ
+            背景と狙いを45分で揃え、2週間で行動フェーズへ滑り込む
           </h2>
           <p className="mx-auto max-w-3xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            PASフレームで痛点を深掘りしたうえで、AI診断と専門家の伴走によりSolutionへ橋渡し。補助金活用シミュレーションや金融機関との合意形成資料まで揃え、どの会議でも迷わず意思決定できる状態を設計します。
+            まず背景と目指す姿を共有し、生成AIの分析結果と診断士の仮説を突き合わせます。そこから優先順位と段取りを描き、補助金の活用見込みや金融機関への説明資料まで一度に準備。どの会議でも胸を張って提案できる状態を整えます。
           </p>
         </ScrollReveal>
 
@@ -344,11 +344,11 @@ const CTASection = () => {
               Trust Board
             </p>
             <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-              <h3 className="text-xl font-semibold text-white md:text-2xl">第三者が認める信頼性と成果の裏付け</h3>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/70">金融機関・自治体・補助金の声</p>
+              <h3 className="text-xl font-semibold text-white md:text-2xl">第三者から届いた評価と選ばれ続ける理由</h3>
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-100/70">金融機関・自治体・支援ネットワーク</p>
             </div>
             <p className="max-w-3xl text-sm leading-relaxed text-slate-200/85">
-              連携先からの推薦コメントと受賞歴を公開。ロゴ付きの証跡を用意し、社内決裁や金融機関への説明にそのまま添付いただけます。
+              連携先から寄せられた推薦コメントや評価を開示しています。ロゴ付きの証跡をそろえ、社内決裁や金融機関への説明にそのまま添付いただけます。
             </p>
           </div>
           <div className="mt-6 grid gap-5 md:grid-cols-3">

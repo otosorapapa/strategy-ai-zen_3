@@ -154,7 +154,7 @@ const proofStories = [
   {
     title: "サービス業｜人材活用の設計図を刷新",
     narrative:
-      "離職率が高止まりし、施策が属人化。AIでスキルマップを分析し、診断士が育成プログラムと評価制度を再設計。平均客単価+18%、離職率▲35%（例）。",
+      "離職率が高止まりし、施策が属人化。AIでスキルマップを分析し、診断士が育成プログラムと評価フレームを再設計。平均客単価+18%、離職率▲35%（例）。",
     persona: "写真：Microsoft Corporation CEO サティア・ナデラ 氏（イメージ協力）",
     kpi: ["平均客単価+18%", "離職率▲35%"],
     image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Satya_Nadella_-_World_Economic_Forum_2016_(cropped).jpg",

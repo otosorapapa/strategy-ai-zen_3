@@ -20,8 +20,8 @@ const metricHighlights = [
 ];
 
 const covenantStatus = [
-  { label: "借入金利息支払比率", status: "クリア", helper: "最新月 158%" },
-  { label: "資金繰り予備日数", status: "注意", helper: "45日 → 37日" },
+  { label: "返済余力スコア", status: "安定", helper: "最新月 158%" },
+  { label: "資金クッション日数", status: "注意", helper: "45日 → 37日" },
   { label: "在庫回転日数", status: "改善中", helper: "68日 → 55日" },
 ];
 
@@ -155,7 +155,7 @@ const DashboardShowcase = () => {
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-[#0f1637]/70 p-5 text-white">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">Loan Covenant</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/60">金融対応サマリー</p>
                 <ul className="mt-3 space-y-3">
                   {covenantStatus.map((item) => (
                     <li key={item.label} className="flex items-start justify-between gap-3 text-xs">

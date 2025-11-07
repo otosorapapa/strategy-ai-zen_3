@@ -16,47 +16,47 @@ import {
 } from "lucide-react";
 
 const heroValueBullets = [
-  "未来の兆しと現場の声を一本化した再生設計図",
-  "生成AIの先読みと診断士の現場知で優先順位を整理",
-  "役員会と金融機関に堂々と示せる根拠資料を即日共有",
+  "変化の兆し・現場の声・数字を一枚に束ね、迷いを断つ判断軸を整備",
+  "生成AIが業界・顧客・コストを並行解析し、診断士が実行順へ落とし込む",
+  "胸を張って示せる経営改善計画とダッシュボードを短期間で仕上げる",
 ];
 
 const heroSummaryCards = [
   {
     icon: Timer,
-    eyebrow: "Outline 01",
-    title: "Day0→Day2で兆候を見える化",
-    description: "資金と粗利のゆらぎをAIが解析し、緊急度順に提示",
+    eyebrow: "初動",
+    title: "Day0→Day2で兆しを把握",
+    description: "生成AIが外部データと社内数値を突き合わせ、優先課題を色分け",
   },
   {
     icon: Landmark,
-    eyebrow: "Outline 02",
-    title: "Day7で再生シナリオを合意",
-    description: "診断士が現場ヒアリングを重ね、実行条件を整理",
+    eyebrow: "設計",
+    title: "Day7で再生シナリオを描写",
+    description: "診断士が現場ヒアリングを重ね、実現性の高い打ち手に整理",
   },
   {
     icon: BriefcaseBusiness,
-    eyebrow: "Outline 03",
-    title: "Day30で社外説明を更新",
-    description: "銀行・取引先との対話に使える設計図と根拠を整備",
+    eyebrow: "展開",
+    title: "Day30で対外説明を更新",
+    description: "取引先や金融機関へ示せる根拠資料と行動計画を整備",
   },
 ];
 
 const heroBoardroomInsights = [
   {
-    label: "資金の見通し",
-    value: "先6カ月を俯瞰",
-    description: "入出金と調達余地を重ね、資金ショートの不安を先回り",
+    label: "判断の土台",
+    value: "全体像を一枚に",
+    description: "経営指標と現場ヒアリングを結びつけ、議論の出発点を統一",
   },
   {
-    label: "粗利の改善余地",
-    value: "数％台を想定",
-    description: "重点商品と稼働率の歪みを分解し、着手順を整理",
+    label: "再生シナリオ",
+    value: "複数案を提示",
+    description: "投資余力と資金余裕を数値化し、打ち手の筋道を明確化",
   },
   {
-    label: "判断の速さ",
-    value: "会議1回で合意",
-    description: "共通指標と根拠資料が揃い、迷いなく意思決定へ移行",
+    label: "進行スピード",
+    value: "初回会議で合意",
+    description: "根拠資料と段取りが揃い、議論を未来設計に集中",
   },
 ];
 
@@ -64,32 +64,32 @@ const heroImpactStats = [
   {
     icon: LineChart,
     value: "数字が語る",
-    label: "粗利と資金のギャップが縮小",
-    helper: "6〜12カ月の伴走で実感した経営者の声",
+    label: "粗利と資金のギャップを同時に縮小",
+    helper: "6〜12カ月の伴走で得た実感を共有",
   },
   {
     icon: Activity,
-    value: "交渉が進む",
-    label: "金融機関との対話が前倒し",
-    helper: "根拠資料を共有し、話題を未来設計へ誘導",
+    value: "対話が締まる",
+    label: "金融機関や取引先との協議が前倒し",
+    helper: "未来像と根拠を揃えて臨める",
   },
   {
     icon: Target,
-    value: "決断が速い",
+    value: "決断が冴える",
     label: "合意形成までの時間を圧縮",
-    helper: "共通指標で議論できるため判断が迷わない",
+    helper: "共通指標で議論できるから迷わない",
   },
 ];
 
 const trustSignals = [
   { icon: Landmark, label: "中小企業庁 登録支援機関" },
-  { icon: BriefcaseBusiness, label: "福岡発の再生支援を多数伴走" },
-  { icon: LineChart, label: "現場運用と財務管理を統合した支援体制" },
+  { icon: BriefcaseBusiness, label: "福岡発｜再生支援の伴走実績" },
+  { icon: LineChart, label: "診断士が監修するAI経営改善支援" },
 ];
 
 const heroIntroCopy = {
   short:
-    "資金繰りの重圧や主要人材の疲弊に向き合う経営者へ。生成AIが読み解く兆しと診断士が積み上げた現場知を重ね、貴社専用の再生設計図を描き直します。",
+    "変化の気配は掴めていても、確信を持って一歩を示すには裏付けが要ります。生成AIが広い視野で兆候を読み、中小企業診断士が現場の温度感を整理。貴社に合わせた経営改善計画を共に描き、堂々と示せる状態へ引き上げます。",
 };
 
 const HeroSection = () => {
@@ -112,10 +112,10 @@ const HeroSection = () => {
                 AI × 診断士 × 再生設計図
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.45] md:text-4xl md:leading-[1.5] xl:text-[3.1rem]">
-                未来を先読みする経営改善の設計図を、AIと専門家で描き直す。
+                先を読む経営改善計画を、生成AIと診断士が貴社仕様でつくり上げる。
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">
-                努力を続けても成果が追いつかない停滞は、未来を読み解く座標軸が揃っていないだけ。初回診断から伴走支援まで一貫したフレームで、判断力と行動力を取り戻します。
+                経営者が迷わず判断し、周囲を率いるための舞台を整えることが私たちの使命です。停滞の原因を一つずつ可視化し、意思決定の質と速さ、将来を見通す力を引き上げます。
               </p>
             </div>
 

@@ -121,7 +121,7 @@ const faqs: FAQ[] = [
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/60">参考リソース</p>
             <p className="mt-1 text-sm text-[#1e3359]/80">
-              制度の詳細は中小企業庁の案内ページをご確認いただけます。
+              詳細は中小企業庁の案内ページをご確認いただけます。
               <br />
               <a
                 href="https://www.chusho.meti.go.jp/keiei/saisei/05.html"

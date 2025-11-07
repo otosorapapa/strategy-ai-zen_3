@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
-import supportVisual from "@/assets/strategic-meeting.jpg";
+import supportVisual from "@/assets/strategy-planning.jpg";
 
 const kpiSnapshots = [
   {

@@ -49,17 +49,17 @@ type CausalityPillar = {
 const authorityStack: AuthorityBadge[] = [
   {
     label: "中小企業庁 認定支援機関",
-    description: "再生支援の現場で磨いた統制設計と寄り添う支援体制",
+    description: "再生支援で磨いた管理設計と伴走体制で、攻めの決断を裏付け",
     icon: ShieldCheck,
   },
   {
     label: "地域金融機関との共創検証",
-    description: "九州地銀と意思決定ボードを共同構築し交渉の再現性を検証",
+    description: "九州の金融機関と意思決定ボードを共創し、現場で使える形を検証",
     icon: Building2,
   },
   {
     label: "日経XTECHなど専門メディア掲載",
-    description: "AIと管理会計の融合事例として紹介され、公開の場でも評価",
+    description: "生成AIと管理会計を組み合わせた事例として取り上げられ、信頼性を公に証明",
     icon: Newspaper,
   },
 ];
@@ -67,54 +67,54 @@ const authorityStack: AuthorityBadge[] = [
 const proofHighlights = [
   {
     label: "判断の確かさ",
-    value: "承認率 97%",
-    note: "経営と金融の確認プロセスを一つに束ね、会議で胸を張れる資料を整備。",
+    value: "審査の場で響く構成",
+    note: "経営と金融の確認手順を一つに束ね、会議で堂々と語れる資料を整えます。",
   },
   {
     label: "動き出す速さ",
-    value: "交渉準備 45%短縮",
-    note: "必要資料と打ち手を先回りで提示し、差し戻しのない段取りを実現。",
+    value: "交渉準備を一気に圧縮",
+    note: "必要資料と次の打ち手を先回りで示し、差し戻しのない段取りを実現します。",
   },
   {
     label: "先を読む安心感",
-    value: "資金調達評価 Aランク",
-    note: "監査証憑と将来シナリオを連動させ、資金計画の揺らぎを抑制。",
+    value: "資金戦略まで視野に",
+    note: "証憑と将来シナリオを連動させ、資金計画の揺らぎを抑えます。",
   },
 ];
 
 const causalityPillars: CausalityPillar[] = [
   {
     focus: "背景理解",
-    title: "数字の裏にある動きをすぐ把握",
-    description: "業界・競合・顧客の調査結果と粗利・資金の推移をAIが結び付け、会議前に状況の意味を整理できます。",
-    metric: "業界×競合の信号を同時表示",
+    title: "数字の裏側にある動きをすぐ把握",
+    description: "業界・競合・顧客の調査と粗利・資金の流れを生成AIが照らし合わせ、会議前に状況の意味を整理できます。",
+    metric: "業界と競合の兆しを同時表示",
     icon: BrainCircuit,
   },
   {
     focus: "計画設計",
     title: "5年先を見据えた筋道を描く",
-    description: "外部環境の変化を常時監視し、生成AIと診断士が5か年の経営改善シナリオを段階ごとに提示します。",
+    description: "外部環境の変化を常時見張り、生成AIと診断士が五年間の改善シナリオを段階ごとに提示します。",
     metric: "改善シナリオを段階設計",
     icon: Bolt,
   },
   {
     focus: "共有力",
     title: "判断材料を一画面に束ねる",
-    description: "経営管理アプリとダッシュボードを事業者ごとにカスタマイズし、現場と経営が同じ土台で議論できます。",
+    description: "クラウド型の管理画面を事業者ごとに仕立て、現場と経営が同じ基準で議論できます。",
     metric: "会議資料を一枚で共有",
     icon: Palette,
   },
   {
     focus: "実行推進",
     title: "現場の動きまで伴走",
-    description: "優先タスクと代替案を通知し、週次レビューで進捗と数値のつながりを確認。迷いなく行動へ移れます。",
+    description: "優先タスクと代替案を通知し、週次レビューで進捗と数字の結び付きを確認。迷いなく行動へ移れます。",
     metric: "行動タスクを自動通知",
     icon: Sparkles,
   },
   {
     focus: "信頼獲得",
     title: "説明責任を揃えた証跡を残す",
-    description: "会議の根拠資料を即座に整理し、金融機関や補助金申請にも使える形で共有。説明の主導権を握れます。",
+    description: "会議の根拠資料を即座に整理し、金融機関や公的支援への説明にも使える形で共有できます。",
     metric: "資金支援の資料まで連携",
     icon: Handshake,
   },
@@ -125,27 +125,27 @@ const painPoints: PainPoint[] = [
     badge: "症状 01",
     title: "数字と現場が別々に動く",
     description:
-      "粗利とキャッシュの波形が噛み合わず、資料ごとに前提が異なる。経営会議に到達する頃には、判断の熱量が薄れてしまう。",
+      "粗利と資金の流れが噛み合わず、資料ごとに前提が揺れる。経営会議までに勢いが薄れ、守りの判断に傾いてしまう。",
     signal: "粗利率が沈み、運転資金の余白が目減り（例）",
-    insight: "報告経路が分断 → 合意形成までのリードタイムが長期化。現場は「どの数字を信じるか」で議論が止まる。",
+    insight: "報告経路が分かれたままでは合意まで時間がかかり、現場で「どの数字を信じるか」が議論の壁になる。",
     icon: AlertTriangle,
   },
   {
     badge: "症状 02",
     title: "生成AIが成果につながらない",
     description:
-      "PoCは進んでも、現場に届くのは読み切れないテキスト。評価指標が曖昧で、採択された施策が断片的に終わる。",
-    signal: "AI提案が選ばれず、ROIの検証も進まない",
-    insight: "AI活用のKPIが欠如 → 投資判断が感覚的になり、改善の優先順位が定まらない。",
+      "試行段階は進んでも、現場に届くのは読み切れない文章。評価指標が曖昧で、採用された施策が途中で止まる。",
+    signal: "AI提案が選ばれず、投資対効果の検証も進まない",
+    insight: "AI活用の重要指標が曖昧なままでは投資判断が感覚頼りになり、改善の優先順位が定まらない。",
     icon: AlertTriangle,
   },
   {
     badge: "症状 03",
     title: "対外説明が後手に回る",
     description:
-      "金融機関・主要取引先との面談準備が属人化し、更新資料の整合に追われる。説明は常に“事後報告”で、交渉が後ろ倒しに。",
+      "金融機関や主要取引先との面談準備が個人任せで、更新資料の整合に追われる。説明が“事後報告”になり、交渉が遅れる。",
     signal: "準備工数が膨らみ、追加質問が絶えない",
-    insight: "事前シナリオが不足 → 交渉リードタイムが長期化し、資金繰りの選択肢が目減りする。",
+    insight: "事前シナリオが不足すると交渉までの時間が長くなり、資金繰りの選択肢が目減りする。",
     icon: AlertTriangle,
   },
 ];
@@ -154,12 +154,12 @@ const executiveSignals = [
   {
     label: "収益と資金の乖離",
     value: "粗利率低下 × 運転資金の圧迫",
-    note: "粗利率低下と運転資金減少が同時進行。",
+    note: "粗利率の落ち込みと資金の目詰まりが同時進行。",
   },
   {
     label: "AI活用の定着度",
-    value: "採択率が伸びない",
-    note: "PoC止まりで現場のKPIに接続できない。",
+    value: "採用判断が進まない",
+    note: "試行止まりで現場の重要指標につながらない。",
   },
   {
     label: "対外説明のタイムラグ",
@@ -170,44 +170,44 @@ const executiveSignals = [
 
 const narrativeFlow = [
   {
-    stage: "Before",
+    stage: "課題の現状",
     title: "情報が散在し、意思決定が遅延",
     metric: "資料更新が雪だるま式に増加",
     description:
       "部門ごとに数字の定義が異なり、経営会議は“数字合わせ”で終わる。現場には優先順位が降りてこない。",
   },
   {
-    stage: "Intervention",
+    stage: "改善の設計",
     title: "生成AIと専門家で設計図化",
     metric: "判断会議が定期運用へ",
     description:
-      "AIが財務と市場を横断解析し、診断士が現場ヒアリングで実行条件を整理。単一の意思決定ボードに情報を統合。",
+      "生成AIが財務と市場を横断解析し、診断士が現場ヒアリングで実行条件を整理。単一の意思決定ボードに情報を統合。",
   },
   {
-    stage: "After",
+    stage: "実行と定着",
     title: "判断軸が揃い、行動が先手に",
     metric: "決裁リードタイムが大幅短縮",
     description:
-      "シナリオごとのアクションプランが共有され、部門横断で同じ未来像に沿って動ける。金融機関への説明も一貫。",
+      "シナリオごとの行動計画が共有され、部門横断で同じ未来像に沿って動ける。金融機関への説明も一貫。",
   },
 ];
 
 const trustSignals = [
-  "地域金融機関と意思決定ボードを共同検証",
-  "経営会議での設計図レビューを継続支援",
-  "福岡発の再生支援案件を多数伴走",
+  "地域金融機関と意思決定ボードを共同検証し地域密着の信頼を獲得",
+  "経営会議での設計図レビューを継続支援し判断の土台を保持",
+  "福岡発の再生支援案件を数多く伴走し実行力を証明",
 ];
 
 const problemQuickSummary = [
-  "先を読む指針が欠けると、粗利・資金・現場の判断が分断され、会議が守りに傾いてしまう",
-  "生成AIが兆候を洗い出し、中小企業診断士が現場条件を重ねれば、未来の筋道が一枚のボードで揃う",
-  "根拠を整えたストーリーを共有できれば、取引先や社内メンバーとの対話が攻めの姿勢に変わる",
+  "地域の挑戦をつなぐには、粗利・資金・現場の動きを同じ地図で捉える覚悟が必要",
+  "生成AIが兆候を洗い出し、中小企業診断士が現場条件を重ねることで、未来の筋道が一枚のボードで揃う",
+  "根拠ある物語を共有すれば、取引先や社内との対話が前向きな協働へと変わる",
 ];
 
 const problemNextActions = [
   "48時間で粗利・資金・人材のゆがみを色分けし、議論の起点を明確にする",
-  "AI分析と現場ヒアリングを結んだ意思決定ログで、合意までの時間を縮める",
-  "金融機関や取引先へ伝える要点と現場タスクを同じ進行表で整え、先の一手を打つ",
+  "AI分析と現場ヒアリングを結んだ意思決定記録で、合意までの時間を縮める",
+  "金融機関や取引先へ伝える要点と現場タスクを同じ進行表で整え、次の一手を打つ",
 ];
 
 const ProblemSection = () => {
@@ -216,13 +216,13 @@ const ProblemSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">
-            Reality｜直面する停滞サイクル
+            Vision｜挑戦を前に進める土台
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            判断を曇らせる停滞を断ち、未来を先取りするための3つの焦点
+            地域の未来を見据えた意思決定を揺るぎなくする三つの焦点
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            粗利率の鈍化や運転資本の目減りを見落とすと、会議の結論が守りに傾き、挑み直す力が失われてしまう。AIヒアリングと診断士の現場視点で浮かび上がった停滞要因を整理し、次の会議で胸を張って語れる判断軸へつなげてほしい。
+            粗利率の鈍化や運転資本の目減りを見落とせば、会議の結論は守りに傾き、挑み直す力が削がれてしまう。生成AIの洞察と診断士の現場視点で停滞要因を洗い出し、次の会議で胸を張って語れる判断軸へと磨き上げてください。
           </p>
         </ScrollReveal>
 
@@ -277,7 +277,7 @@ const ProblemSection = () => {
                     </h3>
                   </div>
                   <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                    行政認定、地域金融機関との共同検証、専門メディアの評価を重ねることで、次の一手を選ぶ経営者の覚悟に確かな裏付けを添えます。
+                    行政認定や地域金融機関との共同検証、専門メディアの評価を重ね、次の一手を選ぶ経営者の矜持に確かな根拠を添えます。
                   </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -325,7 +325,7 @@ const ProblemSection = () => {
                 <figcaption className="absolute bottom-4 left-4 right-4 space-y-2 rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur">
                   <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">Board Confidence Lens</p>
                   <p className="text-sm leading-relaxed text-slate-100/90">
-                    対外監査や金融審査で問われる証憑の動線を一枚に集約。未来志向の判断過程を記録し、堂々と語れる資料へ仕上げます。
+                    対外監査や金融審査で問われる証憑の流れを一枚に集約。未来志向の判断過程を記録し、胸を張って共有できる資料へ整えます。
                   </p>
                 </figcaption>
               </figure>
@@ -348,7 +348,7 @@ const ProblemSection = () => {
                     </h3>
                   </div>
                   <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                    経営改善をやり切る力を高めるために、専門家の伴走と生成AIが抽出した五つの視点を一つの導線に集約。業界調査や現場ヒアリングで得た数値と物語を結び、胸を張って選べる次の一手を示します。
+                    経営改善をやり切る力を高めるため、生成AIと診断士が抽出した五つの視点を一つの導線に集約。業界調査や現場ヒアリングで得た数字と物語を結び、誇りを持って選べる次の一手を示します。
                   </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -391,9 +391,9 @@ const ProblemSection = () => {
                 />
                 <figcaption className="mt-6 space-y-3 text-sm leading-relaxed text-slate-200/85">
                   <p>
-                    KPIとリスクの結び付きを矢印で示し、判断を左右する指標を一目で確認。経営会議で話す順番まで揃い、迷いなく進められます。
+                    重要指標とリスクの結び付きを矢印で示し、判断を左右する視点を一目で確認。経営会議で話す順序まで整い、迷いなく進められます。
                   </p>
-                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Board Ready｜ストーリー化した証拠で合意形成を速める</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">Board Ready｜物語化した証拠で合意づくりを加速</p>
                 </figcaption>
               </figure>
             </div>
@@ -413,12 +413,12 @@ const ProblemSection = () => {
                 loading="lazy"
               />
               <figcaption className="absolute bottom-4 left-4 rounded-full border border-white/20 bg-black/45 px-4 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.32em] text-white/85 backdrop-blur">
-                Dual Coding Canvas
+                二層表示キャンバス
               </figcaption>
             </figure>
             <div className="space-y-5">
               <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Pattern Interrupt
+                意思決定キャンバスの仕組み
               </div>
               <h3 className="text-2xl font-semibold leading-snug md:text-[1.75rem]">
                 資金繰りシナリオを会議冒頭で共有できる意思決定キャンバス
@@ -429,19 +429,19 @@ const ProblemSection = () => {
               <ul className="grid gap-3 text-sm text-slate-200/90 md:grid-cols-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Dual Coding｜財務・現場・リスクの3層を一画面で可視化。</span>
+                  <span>二重表示｜財務・現場・リスクの三層を一画面で可視化。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Gaze Cueing｜視線誘導で議論の順序を固定し、迷いを減らす。</span>
+                  <span>視線誘導｜議論の順序を整え、迷いを減らす。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Picture Superiority｜キーメッセージに象徴アイコンを添え記憶に残す。</span>
+                  <span>象徴図解｜要点に象徴アイコンを添えて記憶に残す。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Isolation Effect｜重要指標を色面で分離し、判断基準を強調。</span>
+                  <span>強調配色｜重要指標を色面で分け、判断基準を際立たせる。</span>
                 </li>
               </ul>
             </div>
@@ -455,26 +455,26 @@ const ProblemSection = () => {
           >
             <div className="space-y-4">
               <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Executive Signal
+                経営シグナル
               </div>
               <h3 className="text-left text-2xl font-semibold leading-snug text-white md:text-[1.75rem]">
-                数字・現場・資金のズレは、放置すると資金繰りの選択肢を確実に削ります。
+                数字・現場・資金のズレは、放置すると資金繰りの選択肢を着実に削ります。
               </h3>
               <p className="text-left text-sm leading-relaxed text-slate-200/90 md:text-[0.95rem]">
-                下記のシグナルが同時に表れている企業では、意思決定会議のリードタイムが倍近くまで伸びがちです。早期に設計図を可視化し、判断の土台を揃えることが重要です。
+                これらの兆候が重なる企業では、意思決定会議までの準備が長期化しがちです。早期に設計図を可視化し、判断の土台を揃えることで、前向きな選択を維持できます。
               </p>
               <ul className="grid gap-3 text-sm text-slate-200/85 md:grid-cols-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>現場ヒアリングで抽出したリードタイムのボトルネックを即座に数値化。</span>
+                  <span>現場ヒアリングで拾った停滞要因を即座に数値化。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>財務モデルと商談パイプラインを連携させ、意思決定の基準を統一。</span>
+                  <span>財務モデルと商談状況を連携させ、意思決定の基準を統一。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>資金調達シナリオと投資配分を併記し、納得度の高い判断を支援。</span>
+                  <span>資金シナリオと投資配分を並べ、納得度の高い判断を支援。</span>
                 </li>
               </ul>
             </div>
@@ -515,7 +515,7 @@ const ProblemSection = () => {
             className="relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-[#0b264f] via-[#061632] to-[#010b1d] p-8 shadow-[0_35px_80px_rgba(1,11,29,0.55)]"
           >
             <div className="flex items-center justify-between gap-4 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200/80">
-              <span>Dual Coding</span>
+              <span>二層表示</span>
               <span className="rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.65rem] text-cyan-100">
                 課題マップ（要約）
               </span>
@@ -531,7 +531,7 @@ const ProblemSection = () => {
                 収益の漏れ・AI活用の停滞・対外説明の遅延は、同じ根にある「判断の設計図不在」が引き起こす連鎖です。視線誘導の矢印が示すとおり、数字と現場の分断が資金繰りの選択肢を削っています。
               </p>
               <p className="text-xs uppercase tracking-[0.28em] text-cyan-200/70">
-                Proof Point｜再設計後は粗利+3.2pt／交渉回答スピード▲45%（例）
+                Proof Point｜再設計後は粗利回復と交渉スピード向上が確認された事例
               </p>
             </figcaption>
           </ScrollReveal>
@@ -580,14 +580,14 @@ const ProblemSection = () => {
           <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
             <div>
               <span className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/85">
-                Narrative Visualization
+                ストーリー可視化
               </span>
               <h3 className="mt-4 text-2xl font-semibold leading-snug text-white">
-                Before→介入→Afterを一枚で可視化し、全員が同じ未来を描ける状態へ。
+                過去から未来への道筋を一枚で可視化し、全員が同じ未来を描ける状態へ。
               </h3>
             </div>
             <p className="text-sm leading-relaxed text-slate-200/80 md:max-w-sm">
-              設計図の再構築は、課題の分解と優先順位付けを同時に行います。矢印の通り、ストーリーに沿って視線を誘導することで、役員会でも即座に理解が進みます。
+              設計図の再構築は、課題の分解と優先順位付けを同時に進めます。矢印の通り、ストーリーに沿って視線を誘導することで、役員会でもすぐに理解が深まります。
             </p>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -613,7 +613,7 @@ const ProblemSection = () => {
                 <p className="text-sm leading-relaxed text-slate-200/85">{step.description}</p>
                 {index < narrativeFlow.length - 1 && (
                   <div className="mt-4 flex items-center gap-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/70">
-                    Next
+                    次の段階
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </div>
                 )}
@@ -632,7 +632,7 @@ const ProblemSection = () => {
                 3ステップの設計図は、経営会議のアジェンダと連動したダッシュボードとして提供。部署別アクション、資金手当て、外部説明資料を同じ更新サイクルで管理するため、意思決定の“前後関係”が途切れません。
               </p>
               <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Board Ready Package
+                Board Ready パッケージ
               </span>
             </div>
           </div>

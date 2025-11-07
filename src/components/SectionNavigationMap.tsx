@@ -4,22 +4,25 @@ const navigationItems = [
   {
     id: "why-section",
     label: "背景",
-    title: "停滞の正体を見極める",
-    description: "資金・粗利・現場の分断要因と失速パターンを3分で把握",
+    title: "停滞を断ち切る理由を共有",
+    description:
+      "資金・粗利・現場のどこで歪みが生まれているのかを明らかにし、意思決定の質を高める必然性を整理",
     icon: Compass,
   },
   {
     id: "what-section",
     label: "提供価値",
-    title: "AI×診断士の設計図を確認",
-    description: "経営判断の材料と伴走体制をシンプルに理解",
+    title: "専門家×生成AIの成果物を確認",
+    description:
+      "経営改善計画、カスタム管理アプリ、ダッシュボードがどのように判断スピードと先読み力を支えるかを提示",
     icon: Layers,
   },
   {
     id: "how-section",
     label: "進め方",
-    title: "週次サイクルで前進させる",
-    description: "週次ワークフローと実行伴走の具体的な進め方を確認",
+    title: "未来に備える段取りを描写",
+    description:
+      "48時間診断から伴走フェーズまでの進め方を通じ、堂々と舵を取れる状態をどう確立するかを解説",
     icon: Workflow,
   },
 ];
@@ -35,7 +38,7 @@ const SectionNavigationMap = () => {
               Navigation Map
             </div>
             <p className="max-w-3xl text-[0.95rem] leading-relaxed">
-              「背景→提供価値→進め方」の順に読み進めることで、再生の全体像と次のアクションを迷わず把握できます。気になるセクションから即座にアクセスしてください。
+              「背景→提供価値→進め方」の順に読み進めることで、なぜ変革が必要なのか、何を受け取れるのか、どう進めれば先を読めるのかが一気に掴めます。経営者が自信をもって判断できる流れを、そのままページ構成に落とし込んでいます。
             </p>
           </div>
           <div className="grid gap-4 md:grid-cols-3">

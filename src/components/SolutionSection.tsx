@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
-import decisionOpsMock from "@/assets/data-infographic-growth.jpg";
+import decisionOpsMock from "@/assets/kpi-dashboard.jpg";
 import solutionIllustration from "@/assets/executive-strategy-meeting.jpg";
 import growthChart from "@/assets/roi-chart.jpg";
 
@@ -304,7 +304,7 @@ const SolutionSection = () => {
           <figure className="relative">
             <img
               src={decisionOpsMock}
-              alt="粗利改善とキャッシュROIの相関チャートを多層でレビューしている経営会議のビジュアル"
+              alt="粗利改善とキャッシュROIを同時に可視化するKPIダッシュボードの画面"
               className="w-full object-cover"
               loading="lazy"
             />

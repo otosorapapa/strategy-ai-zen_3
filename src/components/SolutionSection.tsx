@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
-import decisionOpsMock from "@/assets/roi-chart.jpg";
-import solutionIllustration from "@/assets/ai-analysis (1).jpg";
-import growthChart from "@/assets/growth-chart.jpg";
+import decisionOpsMock from "@/assets/data-infographic-growth.jpg";
+import solutionIllustration from "@/assets/executive-strategy-meeting.jpg";
+import growthChart from "@/assets/roi-chart.jpg";
 
 const howPillars = [
   {
@@ -169,6 +169,24 @@ const keyProofPoints = [
   },
 ];
 
+const executionSignals = [
+  {
+    label: "意思決定リードタイム",
+    value: "▲38%",
+    description: "週次レビューの標準化で経営会議〜実行判断の遅延を大幅に短縮。",
+  },
+  {
+    label: "金融機関連携満足度",
+    value: "4.6/5",
+    description: "証憑とレポートの自動整備により、金融機関からの評価が安定。",
+  },
+  {
+    label: "現場タスク完遂率",
+    value: "92%",
+    description: "AIが優先度を提示し、専門家が実行条件を整備することで遂行率が向上。",
+  },
+];
+
 const workflowSteps = [
   {
     title: "STEP 0｜初期診断",
@@ -249,9 +267,9 @@ const SolutionSection = () => {
           variant="fade-up"
           className="mt-12 rounded-[32px] border border-[#0b1f3f]/10 bg-[#f4f8ff] p-7 shadow-[0_30px_80px_rgba(9,27,60,0.18)]"
         >
-          <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-            <div className="space-y-3">
-              <p className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+          <div className="grid gap-4 sm:gap-6 md:grid-cols-2 md:items-stretch">
+            <div className="space-y-4 rounded-[24px] border border-white/60 bg-white px-5 py-6 shadow-[0_18px_45px_rgba(9,27,60,0.12)]">
+              <p className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
                 30秒サマリー
               </p>
               <ul className="space-y-2 text-sm leading-relaxed text-[#1a335c]/85">
@@ -263,7 +281,7 @@ const SolutionSection = () => {
                 ))}
               </ul>
             </div>
-            <div className="space-y-3 rounded-[24px] border border-[#0584c6]/25 bg-white p-5">
+            <div className="space-y-4 rounded-[24px] border border-[#0584c6]/25 bg-white px-5 py-6 shadow-[0_18px_45px_rgba(5,120,180,0.12)]">
               <p className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
                 次のアクション
               </p>
@@ -310,43 +328,71 @@ const SolutionSection = () => {
 
         <ScrollReveal
           variant="fade-up"
-          className="mx-auto mt-10 flex flex-col items-center justify-between gap-6 rounded-[32px] border border-[#0b1f3f]/10 bg-gradient-to-r from-[#f3f7ff] via-white to-[#ebf4ff] px-8 py-10 shadow-[0_30px_90px_rgba(8,27,59,0.12)] md:flex-row"
+          className="mx-auto mt-10 grid gap-8 rounded-[32px] border border-[#0b1f3f]/10 bg-gradient-to-r from-[#f3f7ff] via-white to-[#ebf4ff] px-8 py-10 shadow-[0_30px_90px_rgba(8,27,59,0.12)] md:grid-cols-[1.05fr_0.95fr]"
         >
-          <div className="max-w-xl space-y-4 text-left">
+          <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
               <Gauge className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />
               Impact Snapshot
             </div>
-            <p className="text-lg font-semibold text-[#0b1f3f]">
-              「財務 × 現場 × キャッシュ」の三位一体管理で、経営判断の納得感を数値で裏付け。
+            <p className="text-xl font-semibold leading-8 text-[#0b1f3f]">
+              「財務 × 現場 × キャッシュ」を一つの画面に統合し、意思決定の納得感を高める因果ストーリーを即座に提示。
             </p>
             <p className="text-sm leading-relaxed text-[#1e3359]/80">
-              週次の再生スタンドアップで、AIが提示する仮説を診断士が根拠付け。各部門の動きと金融機関への説明を一つのキャンバスで同期し、次の一手を迷わず選べる状態を実現します。
+              週次の再生スタンドアップでは、AIが弾き出した仮説と専門家の知見を照合し、役員会の論点整理・金融機関への説明・現場タスクを一本化。迷いなく投資判断が下せるようロジックを階層化します。
             </p>
-            <div className="flex flex-wrap items-center gap-3 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">
+            <div className="grid gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60 sm:grid-cols-2">
               {trustSignals.map((signal) => (
-                <span key={signal} className="rounded-full border border-[#0b1f3f]/15 bg-white/70 px-3 py-1">
+                <span key={signal} className="rounded-full border border-[#0b1f3f]/15 bg-white/75 px-3 py-1 text-center">
                   {signal}
                 </span>
               ))}
             </div>
           </div>
-          <figure className="relative w-full max-w-sm overflow-hidden rounded-[28px] border border-white/60 shadow-[0_25px_70px_rgba(5,24,55,0.14)]">
-            <img
-              src={solutionIllustration}
-              alt="AI分析レポートをホワイトボードで検討しながら再生シナリオを組み立てる専門家チームの様子"
-              className="h-full w-full object-cover"
-              loading="lazy"
-            />
-            <figcaption className="absolute bottom-3 left-3 rounded-full bg-[#0b1f3f]/80 px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.24em] text-white/90">
-              Proof of Execution
-            </figcaption>
-          </figure>
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-1">
+            <figure className="relative overflow-hidden rounded-[28px] border border-white/65 bg-white shadow-[0_25px_70px_rgba(5,24,55,0.14)]">
+              <img
+                src={solutionIllustration}
+                alt="エグゼクティブチームが戦略会議でAIダッシュボードを確認する様子"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl bg-[#0b1f3f]/85 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-white/90">
+                <span>Executive Review</span>
+                <ArrowUpRight className="h-4 w-4 text-cyan-200" aria-hidden="true" />
+              </figcaption>
+            </figure>
+            <div className="flex h-full flex-col gap-4 rounded-[28px] border border-[#0b1f3f]/12 bg-white/95 p-6 shadow-[0_24px_60px_rgba(6,21,48,0.12)] backdrop-blur">
+              <div className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
+                視線誘導インサイト
+              </div>
+              <p className="text-lg font-semibold text-[#0b1f3f]">3つの論理フレームで「納得できる数字」を確保</p>
+              <ul className="space-y-3 text-sm leading-relaxed text-[#1e3359]/75">
+                {keyProofPoints.map((point) => {
+                  const Icon = point.icon;
+                  return (
+                    <li
+                      key={point.title}
+                      className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/8 bg-white p-3 shadow-[0_16px_40px_rgba(6,21,48,0.08)]"
+                    >
+                      <span className="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0584c6]/15 text-[#0584c6]">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                      </span>
+                      <div className="space-y-1">
+                        <p className="text-sm font-semibold text-[#0b1f3f]">{point.title}</p>
+                        <p className="text-xs text-[#1e3359]/70">{point.detail}</p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
         </ScrollReveal>
 
         <ScrollReveal
           variant="fade-up"
-          className="mt-10 grid gap-4 rounded-[28px] border border-[#0b1f3f]/10 bg-white/80 p-6 shadow-[0_30px_80px_rgba(6,21,48,0.08)] md:grid-cols-3"
+          className="mt-10 grid gap-6 rounded-[28px] border border-[#0b1f3f]/10 bg-white/90 p-6 shadow-[0_30px_80px_rgba(6,21,48,0.1)] md:grid-cols-3"
         >
           {impactHighlights.map((highlight) => {
             const Icon = highlight.icon;
@@ -426,30 +472,25 @@ const SolutionSection = () => {
                 <span>After</span>
               </figcaption>
             </figure>
-            <div className="space-y-4 rounded-[28px] border border-[#0b1f3f]/10 bg-white/90 p-6 shadow-[0_24px_60px_rgba(6,21,48,0.12)] backdrop-blur">
+            <div className="space-y-4 rounded-[28px] border border-[#0b1f3f]/10 bg-white/92 p-6 shadow-[0_24px_60px_rgba(6,21,48,0.12)] backdrop-blur">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
-                視線誘導インサイト
+                実行ステータス指標
               </div>
-              <p className="text-lg font-semibold text-[#0b1f3f]">3つの論理フレームで「納得できる数字」を確保</p>
-              <ul className="space-y-3 text-sm leading-relaxed text-[#1e3359]/75">
-                {keyProofPoints.map((point) => {
-                  const Icon = point.icon;
-                  return (
-                    <li
-                      key={point.title}
-                      className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/8 bg-white/95 p-3 shadow-[0_16px_40px_rgba(6,21,48,0.08)]"
-                    >
-                      <span className="mt-0.5 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#0584c6]/15 text-[#0584c6]">
-                        <Icon className="h-4 w-4" aria-hidden="true" />
-                      </span>
-                      <div>
-                        <p className="text-sm font-semibold text-[#0b1f3f]">{point.title}</p>
-                        <p className="text-xs text-[#1e3359]/70">{point.detail}</p>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
+              <p className="text-lg font-semibold text-[#0b1f3f]">実装と金融連携の“納得性”を示すシグナル</p>
+              <div className="space-y-3">
+                {executionSignals.map((signal) => (
+                  <div
+                    key={signal.label}
+                    className="flex items-start justify-between gap-4 rounded-2xl border border-[#0b1f3f]/8 bg-white/95 px-4 py-3 shadow-[0_16px_40px_rgba(6,21,48,0.08)]"
+                  >
+                    <div className="max-w-[60%] space-y-1 text-left">
+                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{signal.label}</p>
+                      <p className="text-xs text-[#1e3359]/70">{signal.description}</p>
+                    </div>
+                    <span className="text-xl font-bold text-[#0584c6]">{signal.value}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </ScrollReveal>
@@ -458,8 +499,8 @@ const SolutionSection = () => {
           variant="fade-up"
           className="mt-12 space-y-8 rounded-[32px] border border-[#0b1f3f]/10 bg-gradient-to-br from-white via-[#f7faff] to-[#eef4ff] p-8 shadow-[0_32px_90px_rgba(7,22,48,0.1)]"
         >
-          <div className="flex flex-col gap-5 text-center md:flex-row md:items-center md:justify-between md:text-left">
-            <div className="space-y-3">
+          <div className="grid gap-6 text-center md:grid-cols-[1.05fr_0.95fr] md:items-center md:text-left">
+            <div className="space-y-4">
               <span className="inline-flex items-center gap-2 rounded-full bg-[#0584c6]/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-[#0584c6]">
                 ロジックドリブンな再生設計
               </span>
@@ -470,11 +511,13 @@ const SolutionSection = () => {
                 データ統合で課題の発生源を炙り出し、優先施策の検証と現場浸透までを一気通貫に連結。各フェーズで生まれるKPIをトラストシグナルとして蓄積し、金融機関や株主への説明責任をスマートに果たせます。
               </p>
             </div>
-            <div className="flex items-center gap-3 rounded-3xl border border-[#0584c6]/30 bg-white/70 px-5 py-4 text-left shadow-[0_20px_45px_rgba(5,120,180,0.12)]">
-              <LineChart className="h-10 w-10 text-[#0584c6]" aria-hidden="true" />
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">視線誘導レポート</p>
-                <p className="text-sm font-semibold text-[#0b1f3f]">理事会資料にも転用できる証跡が自動生成</p>
+            <div className="grid gap-3 rounded-3xl border border-[#0584c6]/25 bg-white/75 px-5 py-4 text-left shadow-[0_20px_45px_rgba(5,120,180,0.12)] md:grid-cols-[auto_1fr] md:items-center">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0584c6]/12 text-[#0584c6]">
+                <LineChart className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <div className="space-y-1 text-left">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#0b1f3f]/60">視線誘導レポート</p>
+                <p className="text-sm font-semibold leading-relaxed text-[#0b1f3f]">理事会資料にも転用できる因果証跡が自動生成</p>
               </div>
             </div>
           </div>

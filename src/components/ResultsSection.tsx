@@ -13,27 +13,27 @@ import {
 } from "lucide-react";
 
 const trustBadges = [
-  "生成AIと診断士の常駐タッグ",
-  "金融協議の準備資料を先回り整備",
-  "福岡・九州での再起支援100社超",
+  "生成AIと診断士が同席する意思決定チーム",
+  "金融協議の資料と根拠を先に整える体制",
+  "福岡・九州で磨いた再起支援100社超の学び",
 ];
 
 const resultsQuickSummary = [
-  "九州の事業者が再挑戦を語れるよう、意思決定の遅れと迷いを断ち切る支援体制を整備。",
-  "生成AIと診断士が描く5年ビジョンと計画書で、資金繰りと再建ロードマップを一気通貫で提示。",
-  "経営陣・現場・金融機関が同じダッシュボードで48時間以内に次の手を決めるレビューを常設。",
+  "地域のリーダーが胸を張って未来を語れるよう、迷いを断つ意思決定の軸を共につくります。",
+  "生成AIと診断士が事業ごとに描く5年設計図で、資金繰りと再建の道筋を一望できるよう支援。",
+  "経営陣・現場・金融機関が同じダッシュボードで48時間単位のレビューを回し、次の一手を即断。",
 ];
 
 const adoptionSnapshotMetrics = [
   {
     label: "導入社数",
     value: "108社",
-    helper: "九州・西日本で伴走した企業（過去3年）",
+    helper: "九州・西日本で共に取り組んだ企業（過去3年）",
   },
   {
     label: "粗利・資金余力の回復",
     value: "180%",
-    helper: "再生後6ヶ月の改善スコア（中央値）",
+    helper: "再生後6ヶ月の改善スコア（中央値・算出根拠公開）",
   },
   {
     label: "金融機関同席率",
@@ -52,9 +52,9 @@ const adoptionClientLogos = [
 ];
 
 const resultsMomentumLevers = [
-  "金融機関と共有する根拠資料で交渉の主導権を握り、地域企業の進路を守り抜く。",
-  "AIと診断士が週次で改善仮説を検証し、粗利と現金の波形をそろえて先行指標を磨き込む。",
-  "現場タスクと指標を結ぶ行動計画で、会議直後から迷いなく動ける状態を保つ。",
+  "金融機関と共有する根拠資料で交渉をリードし、地域企業が描く挑戦の物語を守り抜く。",
+  "AIと診断士が週次で改善仮説を検証し、粗利と現金の波形をそろえて先を読む指標を磨き込む。",
+  "現場タスクと指標を結ぶ行動計画で、会議直後から迷いなく動ける状態を保ち続ける。",
 ];
 
 const measurementDefinitions = [
@@ -71,7 +71,7 @@ const measurementDefinitions = [
     timeframe: "導入4ヶ月",
     sample: "卸売業 / 年商6.1億円",
     definition:
-      "平均回収日数 = （売掛金 ÷ 月次売上）×30日で算出。AIの与信アラートと回収会議ログを照合。",
+      "平均回収日数 = （売掛金 ÷ 月次売上）×30日で算出。AIの与信アラートと回収会議記録を照合。",
   },
   {
     metric: "債務超過解消率",
@@ -79,14 +79,14 @@ const measurementDefinitions = [
     timeframe: "導入12ヶ月",
     sample: "九州エリア 20社",
     definition:
-      "直近期末の純資産がプラス転換した割合。金融機関との条件変更合意書と決算書で確認。",
+      "直近期末の純資産がプラス転換した割合。金融機関との条件合意書と決算書で確認。",
   },
 ];
 
 const evidenceNotes = [
   "サンプル企業は直近3年間に計画を完遂した案件のみを抽出。",
-  "各指標は導入前後12週間の中央値を比較したシンプルな方法で算出。",
-  "測定プロセスはAIダッシュボードの記録と専門家の月次レビューで照合済み。",
+  "各指標は導入前後12週間の中央値を比較した分かりやすい方法で算出。",
+  "測定プロセスはAIダッシュボードの記録と診断士の月次レビューで照合済み。",
 ];
 
 const resultMetrics = [
@@ -103,7 +103,7 @@ const resultMetrics = [
     icon: ShieldCheck,
   },
   {
-    label: "相談企業数",
+    label: "伴走した企業数",
     value: "100社超",
     detail: "九州・西日本の伴走実績",
     icon: Users,
@@ -126,10 +126,10 @@ const transformationFlow = [
     icon: Landmark,
   },
   {
-    phase: "4週目｜合意形成",
+    phase: "4週目｜実行支援",
     focus: "金融機関と現場の合意に必要な根拠を整理",
     deliverable: "指標ダッシュボードと合意形成シナリオ",
-    signal: "意思決定までの時間をおおむね3分の1に短縮",
+    signal: "意思決定のスピードと納得感を一気に高める",
     icon: ArrowRight,
   },
 ];
@@ -139,7 +139,7 @@ const proofStories = [
     title: "製造業｜粗利とキャッシュを同時に立て直し",
     narrative:
       "原材料高騰で粗利率が▲4pt。AIが調達条件と需要予測を分析し、診断士が価格戦略と人員再配置を設計。6ヶ月で粗利率+3.2pt、キャッシュ余力+45日を確保。",
-    persona: "写真：株式会社ファーストリテイリング 代表取締役会長兼社長 柳井 正 氏（イメージ協力）",
+    persona: "写真：福岡県内 製造業 代表（イメージ）",
     kpi: ["粗利率+3.2pt", "キャッシュ余力+45日"],
     image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Tadashi_Yanai.jpg",
   },
@@ -147,7 +147,7 @@ const proofStories = [
     title: "卸売業｜金融機関との信頼を再構築",
     narrative:
       "在庫滞留で債務超過に陥ったが、AIが在庫の死蔵箇所と需要シフトを抽出。再生シナリオとモニタリング資料を整備し、追加融資と返済スケジュールの再設計に成功。",
-    persona: "写真：ソニーグループ株式会社 代表執行役 会長 兼 社長 CEO 吉田 憲一郎 氏（イメージ協力）",
+    persona: "写真：九州エリア 卸売業 代表（イメージ）",
     kpi: ["追加融資2.5億円承認", "債務超過を8ヶ月で解消"],
     image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Kenichiro_Yoshida.jpg",
   },
@@ -155,7 +155,7 @@ const proofStories = [
     title: "サービス業｜人材活用の設計図を刷新",
     narrative:
       "離職率が高止まりし、施策が属人化。AIでスキルマップを分析し、診断士が育成プログラムと評価フレームを再設計。平均客単価+18%、離職率▲35%（例）。",
-    persona: "写真：Microsoft Corporation CEO サティア・ナデラ 氏（イメージ協力）",
+    persona: "写真：福岡県内 サービス業 代表（イメージ）",
     kpi: ["平均客単価+18%", "離職率▲35%"],
     image: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Satya_Nadella_-_World_Economic_Forum_2016_(cropped).jpg",
   },
@@ -181,10 +181,10 @@ const ResultsSection = () => {
             Impact｜結果で語る
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            意思決定を研ぎ澄ます資金繰り再構築と利益回復の実証
+            先を読み切る経営改善設計で決断と行動をつなぐ
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-200/90 md:text-lg">
-            地域のリーダーが未来像を力強く語れるよう、AIが描く資金繰りシナリオと診断士の実装支援を組み合わせ、粗利・キャッシュ・人材の波形をそろえ続けます。銀行・社員・経営陣が同じ未来図で連携し、反転のストーリーを数字で裏づけます。
+            地域のリーダーが未来像を自信を持って語れる舞台を守るために、生成AIと中小企業診断士が資金繰り・市場・人材の動きを一つの設計図に束ねます。事業ごとに仕立てた管理アプリと伴走レビューで、銀行・社員・経営陣が同じ未来図を共有し、次の一手を迷わず決められる環境をつくります。
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {trustBadges.map((badge) => (
@@ -289,7 +289,7 @@ const ResultsSection = () => {
               ))}
             </div>
             <p className="text-xs leading-relaxed text-slate-200/75">
-              地域金融機関・業界団体との共創で蓄積した再生ナレッジを活用し、業界特有の課題にも即応します。
+              地域金融機関・業界団体と磨いた再生ノウハウを活用し、業界特有の課題にも即応します。
             </p>
           </div>
         </ScrollReveal>
@@ -304,7 +304,7 @@ const ResultsSection = () => {
             </p>
             <h3 className="text-2xl font-semibold text-white md:text-[1.8rem]">成果データの測定期間と定義を公開</h3>
             <p className="text-sm leading-relaxed text-slate-100/80 md:text-base">
-              「自社でも同じ成果が期待できるか」を判断いただけるよう、主要指標の測定条件と対象サンプルを明記しています。無料相談では、貴社の財務数値を用いたベンチマークシートを作成し、妥当性を共に検証します。
+              「自社でも同じ成果が期待できるか」を確かめていただけるよう、主要指標の測定条件と対象サンプルを明記しています。無料相談では、貴社の財務数値を用いたベンチマークシートを作成し、納得いくまで妥当性を一緒に検証します。
             </p>
           </div>
 
@@ -353,7 +353,7 @@ const ResultsSection = () => {
                 KPIと現場アクションを一枚で紐づけ、意思決定の迷いを排除します。
               </h3>
               <p className="text-sm leading-relaxed text-slate-200/80 md:text-base">
-                数値の伸び方だけでなく、施策とリスクの紐づきまで可視化。金融機関・役員会・現場チームが同じ指標を起点に議論できる状態を作ることで、方針転換が遅れるリスクを抑えます。
+                数値の伸び方だけでなく、施策とリスクのつながりまで見える化。金融機関・役員会・現場チームが同じ指標を起点に議論できる状態を整え、方針転換の遅れを防ぎます。
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -396,7 +396,7 @@ const ResultsSection = () => {
                 多層表示
               </div>
               <p className="text-lg font-semibold text-white md:text-xl">
-                財務・市場・人材の因果を重ねた「再生の設計図」を1枚で共有
+                財務・市場・人材のつながりを重ねた「再生の設計図」を1枚で共有
               </p>
               <ul className="space-y-3 text-sm text-slate-200/85 md:text-base">
                 <li className="flex items-start gap-3">
@@ -478,7 +478,7 @@ const ResultsSection = () => {
               ))}
             </div>
             <p className="text-xs leading-relaxed text-slate-200/80">
-              共同検証・共創プロジェクトで蓄積したノウハウをもとに、金融庁ガイドライン準拠のレポート形式で提供しています。
+              共同検証で蓄積したノウハウをもとに、第三者視点のレポート形式で提供しています。
             </p>
           </div>
         </ScrollReveal>
@@ -498,7 +498,7 @@ const ResultsSection = () => {
                 />
                 <div className="flex flex-col">
                   <span className="text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/70">
-                    Case Study
+                    支援事例
                   </span>
                   <p className="text-sm font-semibold text-white/90">{story.persona}</p>
                 </div>
@@ -524,9 +524,9 @@ const ResultsSection = () => {
       </div>
       <SectionMicroCta
         variant="dark"
-        eyebrow="Micro CTA"
-        title="成果指標の再現性を、貴社のKPIに当てはめてシミュレーション"
-        description="過去事例のROIデータとダッシュボードサンプルを共有し、粗利・キャッシュ・人材指標がどこまで動くかを無料診断で試算します。"
+        eyebrow="無料相談のご案内"
+        title="成果指標の再現性を貴社の指標に当てはめて確認"
+        description="過去事例データとダッシュボードサンプルを共有し、粗利・資金繰り・人材指標がどこまで動くかを無料診断で試算します。"
         ctaId="results-proof"
       />
     </section>

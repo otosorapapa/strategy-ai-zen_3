@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { Button, buttonVariants } from "@/components/ui/button";
-import heroStrategicMeetingImage from "@/assets/executive-strategy-meeting.jpg";
+import heroStrategyPlanningImage from "@/assets/strategy-planning.jpg";
 import heroDashboardImage from "@/assets/hero-dashboard-analytics.jpg";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
@@ -154,6 +154,27 @@ const heroProcessSteps = [
   },
 ];
 
+const heroCausalityProofPoints = [
+  {
+    eyebrow: "Causality 01",
+    title: "粗利と資金繰りのレバーを同時設計",
+    description:
+      "粗利率・在庫回転・人員稼働を一枚の業務設計図に束ね、キャッシュイン/アウトのズレを即時に補正します。",
+  },
+  {
+    eyebrow: "Causality 02",
+    title: "AIシナリオを経営会議の論点へ翻訳",
+    description:
+      "生成AIが出した改善案を診断士が論点整理し、意思決定に必要な根拠資料と交渉シミュレーションへ落とし込みます。",
+  },
+  {
+    eyebrow: "Causality 03",
+    title: "金融機関の稟議基準と整合",
+    description:
+      "資金需要・投資回収・雇用維持の根拠を稟議プロセスに沿って提示し、条件変更交渉の納得感を高めます。",
+  },
+];
+
 const heroPainScenarios = [
   "黒字なのに資金が残らず、銀行面談で次の一手を問われている",
   "生成AIの検証は進んだが、現場のKPIと結びつかず成果が見えない",
@@ -262,19 +283,67 @@ const HeroSection = () => {
                   </li>
                 ))}
               </ul>
-              <div className="grid gap-4 text-left sm:grid-cols-2 xl:grid-cols-3">
-                {heroMethodPillars.map(({ icon: Icon, title, description }) => (
-                  <div
-                    key={title}
-                    className="flex flex-col gap-3 rounded-3xl border border-white/15 bg-white/10 p-4 shadow-[0_16px_38px_rgba(3,16,36,0.4)] backdrop-blur-sm"
-                  >
-                    <div className="flex items-center gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
-                      <Icon className="h-4 w-4" aria-hidden="true" />
-                      {title}
+              <div className="grid gap-6 xl:grid-cols-[minmax(0,0.68fr)_minmax(0,0.32fr)] xl:items-start">
+                <div className="grid gap-4 text-left sm:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
+                  {heroMethodPillars.map(({ icon: Icon, title, description }) => (
+                    <div
+                      key={title}
+                      className="flex flex-col gap-3 rounded-3xl border border-white/15 bg-white/10 p-4 shadow-[0_16px_38px_rgba(3,16,36,0.4)] backdrop-blur-sm"
+                    >
+                      <div className="flex items-center gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                        {title}
+                      </div>
+                      <p className="text-xs leading-relaxed text-slate-100/85">{description}</p>
                     </div>
-                    <p className="text-xs leading-relaxed text-slate-100/85">{description}</p>
+                  ))}
+                </div>
+                <aside className="flex h-full flex-col gap-4 rounded-3xl border border-white/15 bg-gradient-to-br from-white/15 via-white/5 to-transparent p-5 text-left shadow-[0_20px_55px_rgba(3,16,36,0.45)] backdrop-blur-sm">
+                  <div className="space-y-2">
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-cyan-200/90">Executive Brief</p>
+                    <p className="text-sm leading-relaxed text-slate-100/85">
+                      AI診断で抽出したボトルネックを診断士が因果マップに整理し、銀行・役員・現場を同じ指標で動かす準備を72時間で整えます。
+                    </p>
                   </div>
-                ))}
+                  <div className="grid gap-3 rounded-2xl border border-white/12 bg-[#04122b]/75 p-4 shadow-[0_16px_38px_rgba(3,16,36,0.45)]">
+                    {heroImpactStats.map((metric) => {
+                      const Icon = metric.icon;
+
+                      return (
+                        <div key={metric.label} className="flex items-center justify-between gap-4 rounded-xl bg-white/5 px-4 py-3">
+                          <div className="flex items-center gap-3">
+                            <span className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-cyan-500/15 text-cyan-100">
+                              <Icon className="h-[18px] w-[18px]" aria-hidden="true" />
+                            </span>
+                            <div className="space-y-1">
+                              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+                                {metric.label}
+                              </p>
+                              <p className="text-[0.72rem] text-slate-100/75">{metric.helper}</p>
+                            </div>
+                          </div>
+                          <p className="text-xl font-bold text-white">{metric.value}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="space-y-3 rounded-2xl border border-white/10 bg-white/5 p-4 shadow-[0_12px_30px_rgba(3,16,36,0.35)]">
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-cyan-100/80">72時間の進め方</p>
+                    <ul className="space-y-2 text-sm leading-relaxed text-slate-100/80">
+                      {heroProcessSteps.map(({ icon: Icon, title, description }) => (
+                        <li key={title} className="flex items-start gap-3">
+                          <span className="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded-full bg-cyan-500/15 text-cyan-100">
+                            <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+                          </span>
+                          <div className="space-y-1">
+                            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-cyan-100/85">{title}</p>
+                            <p className="text-xs text-slate-100/75">{description}</p>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </aside>
               </div>
             </div>
             <div className="space-y-6">
@@ -320,13 +389,11 @@ const HeroSection = () => {
                 aria-hidden={!isDetailOpen}
               >
                 <div id="hero-detail-content" className="min-h-0 space-y-8">
-                  <div className="grid gap-3 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
-                    {heroProcessSteps.map(({ icon: Icon, title, description }) => (
+                  <div className="grid gap-4 rounded-3xl border border-white/15 bg-white/5 p-4 text-left shadow-[0_18px_45px_rgba(3,16,36,0.4)] sm:grid-cols-3">
+                    {heroCausalityProofPoints.map(({ eyebrow, title, description }) => (
                       <div key={title} className="flex flex-col gap-2 rounded-2xl border border-white/10 bg-[#0b1f3f]/60 p-4">
-                        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200/90">
-                          <Icon className="h-4 w-4 text-cyan-200" aria-hidden="true" />
-                          {title}
-                        </div>
+                        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/85">{eyebrow}</p>
+                        <p className="text-sm font-semibold text-white/90">{title}</p>
                         <p className="text-xs leading-relaxed text-slate-100/80">{description}</p>
                       </div>
                     ))}
@@ -559,8 +626,8 @@ const HeroSection = () => {
           <div className="relative mx-auto flex w-full max-w-[560px] items-stretch justify-center">
             <div className="relative w-full overflow-hidden rounded-[38px] border border-white/15 bg-white/5 shadow-[0_36px_95px_rgba(2,12,32,0.6)]">
               <img
-                src={heroStrategicMeetingImage}
-                alt="代表・古町が経営陣と再生戦略のボードを前に議論している様子"
+                src={heroStrategyPlanningImage}
+                alt="代表・古町が経営会議で戦略プランをレビューしている様子"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />

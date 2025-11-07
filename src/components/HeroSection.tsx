@@ -16,29 +16,29 @@ import {
 } from "lucide-react";
 
 const heroValueBullets = [
-  "未来の兆しと現場の声を一本化した再生設計図",
-  "生成AIの先読みと診断士の現場知で優先順位を整理",
-  "役員会と金融機関に堂々と示せる根拠資料を即日共有",
+  "業界・顧客・コストの歪みを洗い出し、判断を迷わせる根を見極める",
+  "生成AIが変化の兆しを拾い、中小企業診断士が計画の骨子を磨き込む",
+  "会議・行動・社外説明を一つの指標ボードに束ね、次の場で堂々と示せる",
 ];
 
 const heroSummaryCards = [
   {
     icon: Timer,
     eyebrow: "Outline 01",
-    title: "Day0→Day2で兆候を見える化",
-    description: "資金と粗利のゆらぎをAIが解析し、緊急度順に提示",
+    title: "Day0→Day2で停滞の真因を解像",
+    description: "資金と粗利の揺らぎをAIが解析し、緊急度順に整理",
   },
   {
     icon: Landmark,
     eyebrow: "Outline 02",
-    title: "Day7で再生シナリオを合意",
-    description: "診断士が現場ヒアリングを重ね、実行条件を整理",
+    title: "Day7で未来像を言語化",
+    description: "診断士が現場ヒアリングを重ね、実行条件と役割を整備",
   },
   {
     icon: BriefcaseBusiness,
     eyebrow: "Outline 03",
-    title: "Day30で社外説明を更新",
-    description: "銀行・取引先との対話に使える設計図と根拠を整備",
+    title: "Day30で信頼できる外部説明へ",
+    description: "取引先との対話に使える設計図と根拠資料を更新",
   },
 ];
 
@@ -46,17 +46,17 @@ const heroBoardroomInsights = [
   {
     label: "資金の見通し",
     value: "先6カ月を俯瞰",
-    description: "入出金と調達余地を重ね、資金ショートの不安を先回り",
+    description: "入出金と調達余地を重ね、備えを前倒し",
   },
   {
     label: "粗利の改善余地",
     value: "数％台を想定",
-    description: "重点商品と稼働率の歪みを分解し、着手順を整理",
+    description: "重点商品と稼働率の歪みを分解し、打ち手の順序を決定",
   },
   {
     label: "判断の速さ",
     value: "会議1回で合意",
-    description: "共通指標と根拠資料が揃い、迷いなく意思決定へ移行",
+    description: "共通指標と根拠資料が揃い、迷いなく決断へ移行",
   },
 ];
 
@@ -89,7 +89,7 @@ const trustSignals = [
 
 const heroIntroCopy = {
   short:
-    "資金繰りの重圧や主要人材の疲弊に向き合う経営者へ。生成AIが読み解く兆しと診断士が積み上げた現場知を重ね、貴社専用の再生設計図を描き直します。",
+    "経営の灯が揺らぐのは、情熱ではなく未来を指し示す設計図が不足しているから。生成AIが読み解く兆しと診断士が積み上げた現場知を重ね、貴社専用の経営改善計画を描き直します。",
 };
 
 const HeroSection = () => {
@@ -112,10 +112,10 @@ const HeroSection = () => {
                 AI × 診断士 × 再生設計図
               </span>
               <h1 className="text-balance text-3xl font-bold leading-[1.45] md:text-4xl md:leading-[1.5] xl:text-[3.1rem]">
-                未来を先読みする経営改善の設計図を、AIと専門家で描き直す。
+                判断の霧を払い、未来を選び抜く経営改善設計を共創する。
               </h1>
               <p className="max-w-2xl text-sm leading-relaxed text-slate-100/80 md:text-base">
-                努力を続けても成果が追いつかない停滞は、未来を読み解く座標軸が揃っていないだけ。初回診断から伴走支援まで一貫したフレームで、判断力と行動力を取り戻します。
+                努力が報われない停滞は、状況をどう読むかの基準が揃っていないだけです。初回診断から伴走支援まで一貫した骨子で、意思決定の質・速さ・先見性を立て直します。
               </p>
             </div>
 

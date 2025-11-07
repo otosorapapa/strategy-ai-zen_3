@@ -12,7 +12,6 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import StructuredData from "@/components/StructuredData";
-import StickyCtaBar from "@/components/StickyCtaBar";
 import useInteractiveCtaFeedback from "@/hooks/useInteractiveCtaFeedback";
 import useFadeInSections from "@/hooks/useFadeInSections";
 import SectionNavigationMap from "@/components/SectionNavigationMap";
@@ -30,7 +29,6 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden bg-canvas text-foreground">
       <StructuredData />
-      <StickyCtaBar />
       <HeroSection />
       <SectionNavigationMap />
       <PainChecklistSection />

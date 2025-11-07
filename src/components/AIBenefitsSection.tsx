@@ -18,60 +18,60 @@ const features = [
     icon: BrainCircuit,
     title: "AI分析",
     description:
-      "議事録・販売・会計データを生成AIが解析し、粗利とキャッシュの異常値をリアルタイム通知。経営課題ごとの解決シナリオと期待利益まで提示します。",
-    narrative: "因果の仮説をAIが即時に生成し、人が確認する二重監査フロー。",
-    metric: { label: "利益創出までのリードタイム", value: "-45%" },
+      "議事録・販売・会計データを生成AIが束ね、粗利と資金の乱れをすぐに通知。経営者が選ぶべき一手と想定される効果を、迷いなく整理します。",
+    narrative: "AIが提案した仮説を診断士が照合し、意思決定までの確認を二重で行う流れ。",
+    metric: { label: "利益創出までの準備時間", value: "-45%" },
     insights: [
-      { label: "因果性", detail: "粗利とキャッシュの相関を自動学習し、要因と影響額を同じ画面で表示。" },
-      { label: "論理性", detail: "仮説→検証→改善のロジックをテンプレ化し、打ち手の採択理由を記録。" },
-      { label: "デザイン性", detail: "CxO視点のインタラクションで重要指標が一目で追える情報設計。" },
-      { label: "スマート性", detail: "異常検知からSlack通知まで自動でつなぎ、高速に判断が回せます。" },
-      { label: "納得性", detail: "経営陣レビュー用の根拠資料が同時生成され、会議で即承認が得られます。" },
+      { label: "因果性", detail: "粗利と資金の関係を自動学習し、要因と影響額を一つの画面に整理。" },
+      { label: "論理性", detail: "仮説→検証→改善の手順を型にし、打ち手の採択理由を記録します。" },
+      { label: "デザイン性", detail: "経営者が直感的に重要指標を追える情報配置で判断を支援。" },
+      { label: "スマート性", detail: "異常検知から社内連絡まで自動化し、判断の速さを保ちます。" },
+      { label: "納得性", detail: "会議で共有する根拠資料が同時に生成され、即座に合意形成が進みます。" },
     ],
   },
   {
     icon: LineChart,
     title: "管理会計ノウハウ",
     description:
-      "部門別KPIとキャッシュドライバーを整備し、生成AIが提案する打ち手を定量評価。数字が共通言語になり、議論が戦略に直結します。",
-    narrative: "KPIの定義と感度を明文化し、意思決定の論理を全員で共有。",
+      "部門別の指標と資金の動きを揃え、生成AIが示す施策を数字で評価。数字が共通言語となり、議論がそのまま戦略につながります。",
+    narrative: "指標の定義と変化の感度を明文化し、判断の根拠を全員で共有。",
     metric: { label: "粗利改善シナリオ自動提案", value: "12本" },
     insights: [
-      { label: "因果性", detail: "部門KPIとキャッシュドライバーを連動させ、粗利インパクトを因数分解。" },
-      { label: "論理性", detail: "意思決定フローを管理会計ロジックに沿って数式化し、再現性を確保。" },
-      { label: "デザイン性", detail: "スコアカードUIでボトルネックが色分けされ、対策優先度が直感で把握。" },
-      { label: "スマート性", detail: "自動で目標乖離を検知し、改善アクションのROIを算出。" },
-      { label: "納得性", detail: "数値背景とシナリオ比較を同時に提示し、関係者が同じ根拠で議論。" },
+      { label: "因果性", detail: "部門指標と資金の要因を連動させ、粗利への影響を分解します。" },
+      { label: "論理性", detail: "判断の流れを管理会計の考え方に沿って数式化し、再現性を持たせます。" },
+      { label: "デザイン性", detail: "ボトルネックが色分けされ、優先順位がひと目で分かります。" },
+      { label: "スマート性", detail: "目標との差を自動検知し、改善策の効果を計算します。" },
+      { label: "納得性", detail: "数値の背景とシナリオ比較を同時に提示し、同じ根拠で話し合えます。" },
     ],
   },
   {
     icon: PiggyBank,
     title: "資金繰り改善",
     description:
-      "入出金予定を自動同期し、生成AIが複数の投資・資金繰りシナリオをシミュレーション。資金ショートの確率や投資余力が一目で分かります。",
-    narrative: "資金ショート要因を分解し、余力を意思決定に反映する設計。",
+      "入出金予定を自動同期し、生成AIが複数の投資・資金繰り案を試算。資金不足の兆しや投資余力が即座に把握できます。",
+    narrative: "資金不足の要因を分解し、余力を判断に反映する設計。",
     metric: { label: "キャッシュ予測誤差", value: "-60%" },
     insights: [
-      { label: "因果性", detail: "入出金と受発注データを連携し、キャッシュ変動の原因を時系列で追跡。" },
-      { label: "論理性", detail: "資金ショート確率と要因寄与度を分解し、対処の優先順位を明示。" },
-      { label: "デザイン性", detail: "バンクビューに近いUIで警戒ゾーンが色分けされ、次の意思決定が迷わない。" },
-      { label: "スマート性", detail: "借入条件や為替を自動反映し、複数シナリオをワンクリックで比較。" },
-      { label: "納得性", detail: "リアルタイムの余力指標が提示され、投資判断の説明責任を果たせます。" },
+      { label: "因果性", detail: "入出金と受発注データを連携し、資金変動の理由を時間軸で追跡します。" },
+      { label: "論理性", detail: "資金不足の確率と要因を分けて示し、対処の優先順位を明確にします。" },
+      { label: "デザイン性", detail: "警戒ゾーンが色分けされ、次の判断が迷わず行えます。" },
+      { label: "スマート性", detail: "条件を自動反映し、複数案をワンクリックで比較します。" },
+      { label: "納得性", detail: "余力指標がリアルタイムで示され、投資判断の根拠を共有できます。" },
     ],
   },
   {
     icon: FileText,
     title: "金融機関連携",
     description:
-      "金融機関ごとの論点に沿って決算説明のストーリーを整理し、面談資料や議事メモを自動生成。借入条件や約定確認のフォローが効率化されます。",
-    narrative: "対外説明のロジックを標準化し、交渉の再現性を担保。",
+      "金融機関の視点に合わせて決算説明の流れを整理し、面談資料や議事メモを自動作成。借入条件の確認も漏れなく進められます。",
+    narrative: "対外説明の手順を標準化し、交渉の手応えを再現できるようにします。",
     metric: { label: "面談準備と議事作成時間", value: "-40%" },
     insights: [
-      { label: "因果性", detail: "決算・事業計画・キャッシュデータを紐づけ、面談論点を因果ストーリー化。" },
-      { label: "論理性", detail: "金融機関ごとの審査ロジックに沿った資料構成で交渉の根拠を明確化。" },
-      { label: "デザイン性", detail: "投資家向けスライド仕様で視覚と数字が揃い、説得力ある体験を提供。" },
-      { label: "スマート性", detail: "面談後のTODOや約定管理を自動通知し、抜け漏れのないフォロー体制。" },
-      { label: "納得性", detail: "交渉結果とKPI変化を記録し、経営陣が合意形成しやすいログを残せます。" },
+      { label: "因果性", detail: "決算・計画・資金データを結び、面談の論点を一連の流れに整理します。" },
+      { label: "論理性", detail: "金融機関の審査視点に沿った資料構成で交渉の根拠を明確にします。" },
+      { label: "デザイン性", detail: "視覚と数字が揃ったスライドで、説得力のある説明を支えます。" },
+      { label: "スマート性", detail: "面談後の対応事項や約定管理を自動通知し、抜け漏れを防ぎます。" },
+      { label: "納得性", detail: "交渉結果と指標の変化を記録し、経営陣の合意形成を促します。" },
     ],
   },
 ];
@@ -177,19 +177,19 @@ const automationFlow = [
 
 const causalityHighlights = [
   {
-    title: "因果が読める意思決定土台",
+    title: "なぜ変化したかをその場で共有",
     description:
-      "販売・会計・議事録をAIが一枚のダッシュボードに統合し、粗利やキャッシュの変動要因をリアルタイムに分解。異常値の原因が数値のまま追えるようになります。",
+      "販売・会計・議事録をAIが一枚のダッシュボードに統合し、粗利や資金の変動要因をリアルタイムに分解。異常値の理由を数字のまま共有できます。",
   },
   {
-    title: "判断の論理を共有",
+    title: "判断の筋道をそろえる",
     description:
-      "AIが施策ごとのインパクトとリスクを比較し、採用基準を管理会計フレームに沿って可視化。経営陣と現場が同じ根拠で議論できる状態をつくります。",
+      "AIが施策ごとの影響とリスクを比較し、採用基準を管理会計の考え方に沿って見える化。経営陣と現場が同じ根拠で議論できます。",
   },
   {
-    title: "実行と検証の高速化",
+    title: "実行と検証を切れ目なく",
     description:
-      "打ち手をプロジェクト化し、週次で進捗と効果を自動レビュー。効果が薄い施策は即座に差し替え、勝ち筋へ資源を集中投下できます。",
+      "打ち手をプロジェクト化し、週次で進捗と効果を自動レビュー。効果が薄い施策は早めに差し替え、成長につながる施策に集中できます。",
   },
 ];
 
@@ -271,14 +271,14 @@ const AIBenefitsSection = () => {
             <ScrollReveal className="space-y-6" variant="fade">
               <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-[0.9rem] font-semibold uppercase tracking-[0.32em] text-primary">
                 <BrainCircuit className="h-4 w-4" aria-hidden="true" />
-                CxOのための生成AI運用基盤
+                経営者のための生成AI伴走基盤
               </span>
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold leading-snug text-foreground md:text-4xl">
-                  <span className="serif-accent">利益構造を読み解き、判断と実行を同じ画面で完結させる</span>
+                  <span className="serif-accent">地域の挑戦を絶やさず、判断と実行を一画面で結び直す</span>
                 </h2>
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  年商5,000万円〜15億円の企業で繰り返し磨かれたナレッジをもとに、生成AIが利益とキャッシュの因果を分解。社長がその場で納得し、現場が迷わず動ける意思決定インフラを提供します。
+                  先の読めない環境でも胸を張って舵を取れるよう、生成AIと中小企業診断士が利益と資金の流れを可視化。経営管理アプリやダッシュボードを事業者ごとに整え、迷わず決めて動ける土台を形にします。
                 </p>
               </div>
             </ScrollReveal>
@@ -286,13 +286,13 @@ const AIBenefitsSection = () => {
             <div className="space-y-6">
               <div className="flex flex-col gap-3 rounded-3xl border border-primary/15 bg-white/80 p-6 shadow-card md:flex-row md:items-center md:justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/80">CAUSALITY DESIGN</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary/80">因果設計フレーム</p>
                   <h3 className="mt-2 text-2xl font-semibold text-foreground md:text-[2.1rem]">
                     因果を読み解く三層ロジックで納得と実行を同時に生む
                   </h3>
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground md:max-w-sm">
-                  AIが因果仮説を提示し、人が論理と現場の整合性を検証。経営者の判断がストーリーとして共有され、部門横断で動ける体制をつくります。
+                  AIが因果仮説を提示し、人が論理と現場の整合性を検証。判断の経緯を共有することで、社内外と誠実に向き合える意思決定を実現します。
                 </p>
               </div>
               <div className="grid gap-5 md:grid-cols-2">
@@ -439,7 +439,7 @@ const AIBenefitsSection = () => {
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-2 rounded-3xl border border-primary/20 bg-primary/10 p-6 shadow-card sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/80">VALUE PROOF</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary/80">価値の根拠</p>
                   <h3 className="mt-2 text-xl font-semibold text-foreground">CxOが重視する4つの仕組み</h3>
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:max-w-xs">
@@ -464,7 +464,7 @@ const AIBenefitsSection = () => {
                               <Icon className="h-7 w-7" aria-hidden="true" />
                             </span>
                             <div>
-                              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-primary/70">CAUSAL LOGIC</p>
+                              <p className="text-[0.65rem] font-semibold uppercase tracking-[0.4em] text-primary/70">因果ロジック</p>
                               <h3 className="mt-2 text-2xl font-semibold text-foreground">{feature.title}</h3>
                             </div>
                           </div>
@@ -481,7 +481,7 @@ const AIBenefitsSection = () => {
                         <div className="grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
                           <div className="space-y-5">
                             <div className="rounded-2xl border border-primary/12 bg-white/95 p-5 shadow-inner">
-                              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-primary/70">Executive Summary</p>
+                              <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-primary/70">要点整理</p>
                               <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">{feature.description}</p>
                             </div>
                             <div className="rounded-2xl border border-primary/20 bg-gradient-to-r from-primary/8 via-white to-accent/10 p-5 text-primary/90 shadow-inner">
@@ -574,7 +574,7 @@ const AIBenefitsSection = () => {
                           </div>
                           <p className="text-[0.95rem] leading-relaxed text-muted-foreground">{item.detail}</p>
                           <div className="rounded-2xl border border-dashed border-primary/30 bg-primary/5 px-4 py-3 shadow-inner">
-                            <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-primary/70">Deliverable</p>
+                            <p className="text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-primary/70">成果物</p>
                             <p className="mt-1 text-sm font-semibold text-primary/90">{item.deliverable}</p>
                           </div>
                         </div>

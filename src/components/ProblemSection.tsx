@@ -49,36 +49,36 @@ type CausalityPillar = {
 const authorityStack: AuthorityBadge[] = [
   {
     label: "中小企業庁 認定支援機関",
-    description: "財務・再生支援で培った伴走力と統制ノウハウを提供",
+    description: "再生支援の現場で磨いた統制設計と寄り添う支援体制",
     icon: ShieldCheck,
   },
   {
     label: "地域金融機関との共創検証",
-    description: "九州地銀と意思決定ボードを共同開発し交渉再現性を確認",
+    description: "九州地銀と意思決定ボードを共同構築し交渉の再現性を検証",
     icon: Building2,
   },
   {
     label: "日経XTECHなど専門メディア掲載",
-    description: "AI×管理会計の導入事例が多数紹介され信頼性を担保",
+    description: "AIと管理会計の融合事例として紹介され、公開の場でも評価",
     icon: Newspaper,
   },
 ];
 
 const proofHighlights = [
   {
-    label: "Board Adoption",
-    value: "意思決定承認率 97%",
-    note: "経営／金融双方のチェックを同時通過させる統制ログ。",
+    label: "判断の確かさ",
+    value: "承認率 97%",
+    note: "経営と金融の確認プロセスを一つに束ね、会議で胸を張れる資料を整備。",
   },
   {
-    label: "Negotiation Lead Time",
-    value: "交渉準備 ▲45%",
-    note: "事前に必要資料を洗い出し、差し戻しを未然に防止。",
+    label: "動き出す速さ",
+    value: "交渉準備 45%短縮",
+    note: "必要資料と打ち手を先回りで提示し、差し戻しのない段取りを実現。",
   },
   {
-    label: "Capital Confidence",
+    label: "先を読む安心感",
     value: "資金調達評価 Aランク",
-    note: "監査証憑の連動でキャッシュアウトの不確実性を削減。",
+    note: "監査証憑と将来シナリオを連動させ、資金計画の揺らぎを抑制。",
   },
 ];
 
@@ -270,14 +270,14 @@ const ProblemSection = () => {
                 <div className="flex flex-col gap-3 text-left md:flex-row md:items-center md:justify-between">
                   <div className="space-y-2">
                     <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-cyan-100">
-                      Proof Sandwich
+                      信頼の裏付け層
                     </span>
                     <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
-                      行政・金融・専門メディアが裏付ける財務再構築の信頼基盤
+                      地域を支える経営判断に揺るぎない根拠を
                     </h3>
                   </div>
                   <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                    行政認定・地域金融機関との共創・専門メディア露出という三層の証跡で、取締役会が委任判断を下せる根拠を明示する。
+                    行政認定、地域金融機関との共同検証、専門メディアの評価を重ねることで、次の一手を選ぶ経営者の覚悟に確かな裏付けを添えます。
                   </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -325,7 +325,7 @@ const ProblemSection = () => {
                 <figcaption className="absolute bottom-4 left-4 right-4 space-y-2 rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur">
                   <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">Board Confidence Lens</p>
                   <p className="text-sm leading-relaxed text-slate-100/90">
-                    対外監査・金融審査で求められる証憑動線を1枚に集約。意思決定の裏付けを資料と議事で同時に残せます。
+                    対外監査や金融審査で問われる証憑の動線を一枚に集約。未来志向の判断過程を記録し、堂々と語れる資料へ仕上げます。
                   </p>
                 </figcaption>
               </figure>

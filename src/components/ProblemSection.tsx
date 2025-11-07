@@ -49,36 +49,36 @@ type CausalityPillar = {
 const authorityStack: AuthorityBadge[] = [
   {
     label: "中小企業庁 認定支援機関",
-    description: "再生支援の現場で磨いた統制設計と寄り添う支援体制",
+    description: "再生支援で鍛えた統制設計と、経営者の覚悟に寄り添う支援体制",
     icon: ShieldCheck,
   },
   {
     label: "地域金融機関との共創検証",
-    description: "九州地銀と意思決定ボードを共同構築し交渉の再現性を検証",
+    description: "九州地銀と判断フレームを共同構築し、信頼される交渉の筋道を実証",
     icon: Building2,
   },
   {
     label: "日経XTECHなど専門メディア掲載",
-    description: "AIと管理会計の融合事例として紹介され、公開の場でも評価",
+    description: "AIと管理会計の融合事例として紹介され、公開の場での評価も獲得",
     icon: Newspaper,
   },
 ];
 
 const proofHighlights = [
   {
-    label: "判断の確かさ",
-    value: "承認率 97%",
-    note: "経営と金融の確認プロセスを一つに束ね、会議で胸を張れる資料を整備。",
+    label: "目指す姿",
+    value: "地域と仲間を守り抜く決断力",
+    note: "行政認定と外部評価を一つに束ね、対話のたびに誇りを支える物語を提示。",
   },
   {
-    label: "動き出す速さ",
-    value: "交渉準備 45%短縮",
-    note: "必要資料と打ち手を先回りで提示し、差し戻しのない段取りを実現。",
+    label: "提供する基盤",
+    value: "調査と生成AIで描く改善計画",
+    note: "業界・顧客・資金の変化を同時に捉え、次の一手を迷いなく選べる速度を確保。",
   },
   {
-    label: "先を読む安心感",
-    value: "資金調達評価 Aランク",
-    note: "監査証憑と将来シナリオを連動させ、資金計画の揺らぎを抑制。",
+    label: "実行のしくみ",
+    value: "カスタム管理アプリと伴走",
+    note: "ダッシュボードで進捗と資金の連動を可視化し、先を読む会議を継続。",
   },
 ];
 
@@ -273,11 +273,11 @@ const ProblemSection = () => {
                       信頼の裏付け層
                     </span>
                     <h3 className="text-xl font-semibold text-white md:text-[1.45rem]">
-                      地域を支える経営判断に揺るぎない根拠を
+                      地域を導く決断に胸を張れる根拠を
                     </h3>
                   </div>
                   <p className="text-sm leading-relaxed text-slate-200/85 md:max-w-xl">
-                    行政認定、地域金融機関との共同検証、専門メディアの評価を重ねることで、次の一手を選ぶ経営者の覚悟に確かな裏付けを添えます。
+                    行政認定、地域金融機関との共同検証、専門メディアの評価を重ね、会社を率いる決断が社員と地域の期待に応える証拠を備えました。
                   </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -323,9 +323,9 @@ const ProblemSection = () => {
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#0b1e3f]/70 via-transparent to-[#030916]/85" />
                 <figcaption className="absolute bottom-4 left-4 right-4 space-y-2 rounded-2xl border border-white/15 bg-white/10 p-4 text-left backdrop-blur">
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">Board Confidence Lens</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan-100/80">Decision Confidence Lens</p>
                   <p className="text-sm leading-relaxed text-slate-100/90">
-                    対外監査や金融審査で問われる証憑の動線を一枚に集約。未来志向の判断過程を記録し、堂々と語れる資料へ仕上げます。
+                    対外監査や金融審査で問われる証憑の動線を一枚に集約。未来志向の判断過程を記録し、堂々と語れる資料へ磨き上げます。
                   </p>
                 </figcaption>
               </figure>

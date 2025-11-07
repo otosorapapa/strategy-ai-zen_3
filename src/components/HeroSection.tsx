@@ -1,8 +1,9 @@
 import { useState } from "react";
 
 import { Button, buttonVariants } from "@/components/ui/button";
-import heroExecutiveBriefingImage from "@/assets/executive-meeting.jpg";
-import heroGrowthMetricsImage from "@/assets/growth-metrics.jpg";
+import heroExecutiveBriefingImage from "@/assets/executive-strategy-meeting.jpg";
+import heroGrowthMetricsImage from "@/assets/dashboard-preview.jpg";
+import heroBlueprintOverlay from "@/assets/insight-blueprint-flow.svg";
 import { PRIMARY_CTA, TERTIARY_CTA } from "@/lib/ctaVariants";
 import { PHONE_TEL_LINK } from "@/lib/phone";
 import { cn } from "@/lib/utils";
@@ -251,6 +252,51 @@ const heroBoardroomInsights = [
   },
 ];
 
+const heroCausalityMatrix = [
+  {
+    stage: "資金圧迫の原因",
+    issue: "売上は横ばいでも、回収サイトと在庫滞留がキャッシュを拘束",
+    aiInsight:
+      "AIが売掛回収78日・在庫回転6.2回の異常値を検知。資金余命13週・調達必要額1.8億円を即算出",
+    action:
+      "金融機関交渉前に支払サイト短縮と滞留SKUの削減アクションを優先タスクに設定",
+  },
+  {
+    stage: "粗利率低下の原因",
+    issue: "重点SKUの値引きと稼働率のばらつきが粗利を圧迫",
+    aiInsight:
+      "生成AIがSKU別の粗利貢献度と稼働率の相関を抽出し、赤字案件の共通条件を提示",
+    action:
+      "診断士が値付けと生産計画の改善シナリオを3案化し、役員会議で即意思決定できる体裁に整形",
+  },
+  {
+    stage: "人員稼働の歪み",
+    issue: "繁忙部門に工数が偏り、残業費と離職リスクが高止まり",
+    aiInsight:
+      "タスクログと勤怠データを統合し、ムダ時間と技能ギャップをヒートマップ化",
+    action:
+      "ボトルネック工程へ外部パートナー活用・自動化を提案し、3ヶ月で残業時間▲38%を見込む",
+  },
+];
+
+const heroEvidenceSignals = [
+  {
+    label: "Working Capital Release",
+    value: "▲1.8億円",
+    detail: "在庫・与信条件の同時是正シナリオで算出した6ヶ月のキャッシュ創出効果",
+  },
+  {
+    label: "EBITDA Uplift",
+    value: "+12.6%",
+    detail: "粗利改善と固定費是正を組み合わせた優先シナリオの中央値",
+  },
+  {
+    label: "Execution Velocity",
+    value: "1/3",
+    detail: "意思決定から現場タスク着手までのリードタイム短縮率（週次レビュー実績）",
+  },
+];
+
 const HeroSection = () => {
   const [isDetailOpen, setIsDetailOpen] = useState(false);
 
@@ -326,6 +372,51 @@ const HeroSection = () => {
                       </div>
                     </div>
                   ))}
+                </div>
+              </div>
+              <div className="relative overflow-hidden rounded-3xl border border-white/12 bg-[#081a36]/75 p-6 shadow-[0_22px_58px_rgba(3,16,36,0.45)] backdrop-blur">
+                <div className="relative z-10 space-y-5">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200/90">因果ドリルダウン</p>
+                    <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/40 bg-cyan-500/15 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-cyan-50">
+                      Evidence → Action
+                    </span>
+                  </div>
+                  <p className="max-w-3xl text-sm leading-relaxed text-slate-100/85">
+                    AI診断が示す「原因→数値根拠→意思決定」を一つの設計図で共有。役員・金融機関・現場が同じストーリーで納得できるように整理します。
+                  </p>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    {heroCausalityMatrix.map(({ stage, issue, aiInsight, action }) => (
+                      <div
+                        key={stage}
+                        className="flex flex-col gap-3 rounded-2xl border border-white/15 bg-[#0b1f3f]/65 p-4 shadow-[0_18px_40px_rgba(3,16,36,0.42)]"
+                      >
+                        <div className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-cyan-100/85">{stage}</div>
+                        <div className="space-y-3 text-xs leading-relaxed text-slate-100/85">
+                          <p className="font-semibold text-white/90">{issue}</p>
+                          <div className="rounded-2xl border border-cyan-300/30 bg-cyan-500/10 p-3 text-[0.72rem] text-cyan-50/90">
+                            {aiInsight}
+                          </div>
+                          <p>{action}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="grid gap-3 text-left md:grid-cols-3">
+                    {heroEvidenceSignals.map(({ label, value, detail }) => (
+                      <div
+                        key={label}
+                        className="rounded-2xl border border-white/15 bg-white/5 p-4 shadow-[0_18px_40px_rgba(3,16,36,0.4)]"
+                      >
+                        <p className="text-[0.65rem] font-semibold uppercase tracking-[0.26em] text-cyan-100/80">{label}</p>
+                        <p className="mt-1 text-xl font-bold text-white">{value}</p>
+                        <p className="mt-2 text-xs leading-relaxed text-slate-100/80">{detail}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute -right-10 bottom-0 hidden h-64 w-64 opacity-70 md:block" aria-hidden="true">
+                  <img src={heroBlueprintOverlay} alt="AIヒートマップから改善シナリオへ繋げる設計図のイラスト" className="h-full w-full object-contain" loading="lazy" />
                 </div>
               </div>
               <div className="grid gap-4 text-left md:grid-cols-3">

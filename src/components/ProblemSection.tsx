@@ -418,30 +418,38 @@ const ProblemSection = () => {
             </figure>
             <div className="space-y-5">
               <div className="inline-flex items-center gap-3 rounded-full border border-cyan-300/25 bg-cyan-400/10 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-cyan-100">
-                Pattern Interrupt
+                視点の転換
               </div>
               <h3 className="text-2xl font-semibold leading-snug md:text-[1.75rem]">
-                資金繰りシナリオを会議冒頭で共有できる意思決定キャンバス
+                会議冒頭で未来像を揃える意思決定キャンバス
               </h3>
-              <p className="text-sm leading-relaxed text-slate-200/90 md:text-base">
-                <span className="text-cyan-200">状況・意図・判断</span>を一枚に揃え、財務と現場の思考速度を同期させる。議題は即座に実行設計へ移り、交渉資料も同じストーリーで更新される。
-              </p>
+              <div className="space-y-3 text-sm leading-relaxed text-slate-200/90 md:text-base">
+                <p className="text-cyan-200">
+                  経営会議で未来の筋道を語り切り、頼られる判断を先回りで示す舞台を整えます。生成AIと中小企業診断士の伴走で、迷いを見せない指揮を可能にします。
+                </p>
+                <p>
+                  業界・競合・顧客・コストの分析を束ねた専用キャンバスに、資金繰りシナリオと行動計画を一体化。議題はすぐに次の一手まで落とし込め、交渉資料も同じ筋書きで整います。
+                </p>
+                <p>
+                  外部環境を常時モニタリングし、五年先を見据えた警戒ポイントを通知。経営管理アプリとダッシュボードを個社ごとに調整し、会議で決めた道筋が日々の実行に結び付きます。
+                </p>
+              </div>
               <ul className="grid gap-3 text-sm text-slate-200/90 md:grid-cols-2">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Dual Coding｜財務・現場・リスクの3層を一画面で可視化。</span>
+                  <span>財務・現場・リスクの指標を一画面で照らし合わせ、論点を瞬時に共有。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Gaze Cueing｜視線誘導で議論の順序を固定し、迷いを減らす。</span>
+                  <span>視線誘導で議論の順序を整え、迷いを削り時間を節約。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Picture Superiority｜キーメッセージに象徴アイコンを添え記憶に残す。</span>
+                  <span>象徴図と短い言葉で骨子を刻み込み、チーム全員の理解をそろえる。</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-cyan-300" aria-hidden="true" />
-                  <span>Isolation Effect｜重要指標を色面で分離し、判断基準を強調。</span>
+                  <span>重要指標を色分けし、判断基準を明確に保つ。</span>
                 </li>
               </ul>
             </div>

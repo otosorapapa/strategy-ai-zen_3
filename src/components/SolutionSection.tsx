@@ -74,27 +74,27 @@ const impactHighlights = [
 
 const logicSequence = [
   {
-    title: "課題が見える化",
+    title: "先を読む判断軸を揃える",
     description:
-      "AIが粗利とキャッシュの歪みをスコアリングし、寄与要因をレイヤー構造で提示。どこを止血すべきかが瞬時に判明します。",
-    metricLabel: "寄与要因カバレッジ",
-    metricValue: "高精度に把握",
+      "外部環境や顧客動向、粗利とキャッシュの歪みをAIが同時に解析し、診断士が論点を整理。社内外で共有できる全体像で、迷いなく指示を出せる土台を築きます。",
+    metricLabel: "兆候把握スピード",
+    metricValue: "即座に共有",
     icon: Layers,
   },
   {
-    title: "打ち手を設計",
+    title: "次の一手を描き切る",
     description:
-      "診断士がAIシミュレーションを検証し、優先度とリスクを意思決定キャンバスに整理。現場タスクとKPIがワンクリックで連動します。",
-    metricLabel: "実行準備まで",
-    metricValue: "短期間で整備",
+      "役員・現場の議論を踏まえて、優先施策とリスクをカスタムダッシュボードに落とし込み。5年を見据えた経営改善計画を段階ごとに設計し、行動順序を明確化します。",
+    metricLabel: "行動計画更新",
+    metricValue: "自社仕様で提示",
     icon: GanttChart,
   },
   {
-    title: "成果を定着",
+    title: "実行と信頼を積み上げる",
     description:
-      "週次の進捗と金融機関への説明資料が同じダッシュボードで更新。意思決定の納得感を可視化するレポートが自動生成されます。",
-    metricLabel: "金融先連携満足度",
-    metricValue: "高水準を維持",
+      "週次レビューで成果と課題を追跡し、金融機関や取引先へ示す資料も自動で同期。伴走支援で現場の実行力を磨きつつ、判断の裏付けとなる証跡を蓄積します。",
+    metricLabel: "関係者の納得感",
+    metricValue: "高い評価を継続",
     icon: BarChart3,
   },
 ];
@@ -505,10 +505,10 @@ const SolutionSection = () => {
                 ロジックドリブンな再生設計
               </span>
               <h3 className="text-2xl font-semibold text-[#0b1f3f]">
-                課題 → 介入 → 成果を3フェーズでトレースし、因果を可視化
+                経営判断の筋道を3フェーズで共有し、先を読む力を磨く
               </h3>
               <p className="max-w-2xl text-sm leading-relaxed text-[#1e3359]/75">
-                データ統合で課題の発生源を炙り出し、優先施策の検証と現場浸透までを一気通貫に連結。各フェーズで生まれるKPIをトラストシグナルとして蓄積し、金融機関や株主への説明責任をスマートに果たせます。
+                業界・競合・顧客の動きと社内データを一つのダッシュボードに束ね、生成AIと診断士が次の一手を検証。5年を見据えた経営改善計画まで滑らかにつなぎ、貴社仕様の経営管理アプリで根拠を示しながら指示を出せる状態を守ります。
               </p>
             </div>
             <div className="grid gap-3 rounded-3xl border border-[#0584c6]/25 bg-white/75 px-5 py-4 text-left shadow-[0_20px_45px_rgba(5,120,180,0.12)] md:grid-cols-[auto_1fr] md:items-center">
@@ -533,7 +533,7 @@ const SolutionSection = () => {
                     </span>
                     <span className="inline-flex items-center gap-1 text-[#0b1f3f]/45">
                       <Gauge className="h-3.5 w-3.5 text-[#0584c6]" aria-hidden="true" />
-                      因果スコア
+                      先読み指標
                     </span>
                   </div>
                   <span className="mt-4 inline-flex h-12 w-12 items-center justify-center rounded-[18px] bg-[#0584c6]/15 text-[#0584c6]">

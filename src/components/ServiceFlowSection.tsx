@@ -3,27 +3,27 @@ import { ArrowRight, CalendarClock, MapPinned } from "lucide-react";
 
 const executionTimeline = [
   {
-    phase: "初動",
-    dayRange: "0〜2日",
-    description: "データ統合と改善余地の見える化。粗利率・資金ギャップの分析と優先度付けを実施。",
-    metric: "+3pt",
-    metricLabel: "粗利率改善目安",
+    phase: "48時間診断",
+    dayRange: "Day0-2",
+    description: "会計・販売・人材データをAIが統合し、粗利・資金・人材のギャップを色分けして共有。",
+    metric: "48h",
+    metricLabel: "初回レポート",
     icon: CalendarClock,
   },
   {
-    phase: "設計",
-    dayRange: "7日目",
-    description: "現場ヒアリングを通じて生成AIの兆しをストーリー化し、再生シナリオと資金計画・交渉資料を提示。",
-    metric: "▲45%",
-    metricLabel: "交渉リードタイム短縮",
+    phase: "シナリオ設計",
+    dayRange: "Day3-7",
+    description: "診断士が現場ヒアリングを重ね、生成AIが描いた複数シナリオを実行可能なロードマップに整理。",
+    metric: "▲52%",
+    metricLabel: "意思決定リードタイム",
     icon: MapPinned,
   },
   {
-    phase: "実行",
-    dayRange: "30日目以降",
-    description: "部署横断ダッシュボードで週次レビューを回し、金融機関や取引先との交渉を前倒しで準備。",
-    metric: "+1.8億円",
-    metricLabel: "再投資余力創出例",
+    phase: "伴走実行",
+    dayRange: "Day8-30+",
+    description: "96時間で構築した管理アプリとAIレポートで週次レビューを実施。金融機関・取引先との交渉資料も同時に更新。",
+    metric: "+28%",
+    metricLabel: "在庫回転率",
     icon: ArrowRight,
   },
 ];
@@ -37,10 +37,10 @@ const ServiceFlowSection = () => {
             Execution Roadmap
           </span>
           <h2 className="text-balance text-3xl font-semibold leading-tight md:text-[2.4rem]">
-            3フェーズで意思決定と実行を加速
+            創業期から再生期までを貫く3ステップ伴走
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-100/80 md:text-lg">
-            初動で土台を整え、設計でストーリーと根拠を揃え、実行で行動と交渉を前倒しに。数字と現場の声が同じ時間軸で進むよう伴走します。
+            初動の診断で全体像を掴み、設計で複数シナリオと指標を揃え、伴走実行で意思決定と現場行動を同期させます。全国どこからでも同じ品質で導入できます。
           </p>
         </ScrollReveal>
 

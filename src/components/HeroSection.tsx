@@ -19,75 +19,75 @@ import {
 } from "lucide-react";
 
 const heroKeyPhrases = [
-  { icon: BrainCircuit, label: "生成AIと診断士が描く未来地図" },
-  { icon: LayoutDashboard, label: "カスタマイズ型管理アプリ" },
-  { icon: LifeBuoy, label: "伴走支援" },
+  { icon: BrainCircuit, label: "生成AI×診断士のW視点" },
+  { icon: LayoutDashboard, label: "96時間でカスタムアプリ" },
+  { icon: LifeBuoy, label: "創業〜再生期まで伴走" },
 ];
 
 const heroSummaryCards = [
   {
     icon: Timer,
-    eyebrow: "初動",
-    title: "Day0→Day2で兆しを把握",
-    description: "生成AIが外部データと社内数値を突き合わせ、優先課題を色分け",
+    eyebrow: "創業・小規模",
+    title: "資金繰りと数値感覚を整える",
+    description: "月次〜隔週AIレポートと資金繰り講座で迷いなく初期投資を判断",
   },
   {
     icon: Landmark,
-    eyebrow: "設計",
-    title: "Day7で再生シナリオを描写",
-    description: "診断士が現場ヒアリングを重ね、実現性の高い打ち手に整理",
+    eyebrow: "成長期",
+    title: "粗利と在庫の改善余地を特定",
+    description: "週次AIシナリオと診断士レビューで粗利率+5.2pt・在庫回転+28%を実現",
   },
   {
     icon: BriefcaseBusiness,
-    eyebrow: "展開",
-    title: "Day30で対外説明を更新",
-    description: "取引先や金融機関へ示せる根拠資料と行動計画を整備",
+    eyebrow: "成熟・再生期",
+    title: "投資判断と再建を一気通貫",
+    description: "M&Aや公的支援も視野に、伴走で意思決定リードタイムを52%短縮",
   },
 ];
 
 const heroBoardroomInsights = [
   {
-    label: "判断の土台",
-    value: "全体像を一枚に",
-    description: "経営指標と現場ヒアリングを結びつけ、議論の出発点を統一",
+    label: "全国対応",
+    value: "福岡発×オンライン",
+    description: "地域特有の商習慣に合わせた言語化と交渉資料で、全国どこでも導入しやすい",
   },
   {
-    label: "再生シナリオ",
-    value: "複数案を提示",
-    description: "投資余力と資金余裕を数値化し、打ち手の筋道を明確化",
+    label: "AI診断",
+    value: "48時間で提示",
+    description: "創業期でも扱いやすい指標と優先度を整理し、初回相談で共有",
   },
   {
-    label: "進行スピード",
-    value: "初回会議で合意",
-    description: "根拠資料と段取りが揃い、議論を未来設計に集中",
+    label: "再生設計",
+    value: "複数シナリオ",
+    description: "生成AIが描いた案を診断士がブラッシュアップし、判断の根拠を補強",
   },
 ];
 
 const heroImpactStats = [
   {
     icon: LineChart,
-    value: "数字が語る",
-    label: "粗利と資金のギャップを同時に縮小",
-    helper: "6〜12カ月の伴走で得た実感を共有",
+    value: "+5.2pt",
+    label: "平均粗利率改善幅",
+    helper: "スタンダード/プレミアム導入企業の6ヶ月平均",
   },
   {
     icon: Activity,
-    value: "対話が締まる",
-    label: "金融機関や取引先との協議が前倒し",
-    helper: "未来像と根拠を揃えて臨める",
+    value: "+28%",
+    label: "在庫回転率向上",
+    helper: "AIレポートと伴走で在庫滞留を解消",
   },
   {
     icon: Target,
-    value: "決断が冴える",
-    label: "合意形成までの時間を圧縮",
-    helper: "共通指標で議論できるから迷わない",
+    value: "▲52%",
+    label: "意思決定リードタイム",
+    helper: "初回診断〜経営会議までの準備時間を短縮",
   },
 ];
 
 const trustSignals = [
   { icon: Landmark, label: "中小企業庁 登録支援機関" },
-  { icon: BriefcaseBusiness, label: "福岡発｜再生支援の伴走実績" },
-  { icon: LineChart, label: "診断士が監修するAI経営改善支援" },
+  { icon: BriefcaseBusiness, label: "福岡発｜全国130社の伴走実績" },
+  { icon: LineChart, label: "国家資格×生成AIで多角的に支援" },
 ];
 
 const HeroSection = () => {
@@ -110,17 +110,16 @@ const HeroSection = () => {
                 AI × 診断士 × 再生設計図
               </span>
               <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.2] tracking-tight md:text-[3.1rem] md:leading-[1.2] md:tracking-[-0.01em] xl:text-[3.6rem]">
-                地方企業が再挑戦できる土台を築く
+                創業期から再生期まで、全国の中小企業をAIと診断士で伴走
               </h1>
               <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-                数字と現場の声を一枚の物語に束ね、経営者が次の一手を胸を張って選べる環境を整えます。生成AIの分析と診断士の伴走が、地域企業の情熱を確かな戦略に変えていきます。
+                福岡で磨いた再生ノウハウをオンラインで全国へ。地域ごとの商習慣に合わせ、生成AIが描く複数シナリオと中小企業診断士の判断で、迷いのない一手を共に決めていきます。
               </p>
             </div>
 
             <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-              初回48時間で粗利率・資金・人材の改善余地を可視化し、次の経営会議の討議時間を大幅に短縮する診断レポートを提示。未来シナリオと行動順序を揃え、迷いなく動き出せる状態を共に整えます。
+              初回無料相談とAI診断レポートで、粗利・資金・人材のギャップを48時間以内に可視化。意思決定リードタイムを平均52%短縮する段取りと共通指標を整え、創業から再生までの挑戦を後押しします。
             </p>
-
             <div className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/90 md:gap-4 md:text-base">
               {heroKeyPhrases.map(({ icon: Icon, label }) => (
                 <span

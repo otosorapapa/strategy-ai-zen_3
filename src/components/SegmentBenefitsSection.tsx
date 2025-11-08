@@ -1,4 +1,4 @@
-import { ArrowRight, Building2, Factory, LineChart, Sparkle } from "lucide-react";
+import { ArrowRight, ShieldCheck, Sparkles, TrendingUp } from "lucide-react";
 
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
@@ -7,51 +7,51 @@ import { cn } from "@/lib/utils";
 
 const segments = [
   {
-    id: "manufacturing",
-    icon: Factory,
-    title: "製造業｜ライン別に粗利を立て直したい",
-    persona: "年商7億円・従業員120名の加工メーカー社長",
+    id: "starter",
+    icon: Sparkles,
+    title: "創業期・小規模企業向けスタータープラン",
+    persona: "年商数千万円｜資金繰りと数値管理が不安な経営者",
     pains: [
-      "稼働が高いラインほど粗利率が下がる",
-      "価格転嫁の交渉材料が不足し意思決定が遅れる",
+      "月次試算表の読み方が分からず、資金ショートが怖い",
+      "販路拡大と投資判断の優先度を決められない",
     ],
-    value: "粗利改善幅 +12%",
-    proof: "重点ラインの原価ドリルダウンと交渉ストーリーを48Hで提示",
+    value: "+30日",
+    proof: "AI簡易レポートと資金繰り基礎講座でキャッシュ余力を可視化",
     cta: {
-      label: "生産ライン別の改善案を受け取る",
-      ctaId: `${PRIMARY_CTA.id}-segment-manufacturing`,
+      label: "スタータープランの詳細を見る",
+      ctaId: `${PRIMARY_CTA.id}-segment-starter`,
     },
   },
   {
-    id: "service",
-    icon: Building2,
-    title: "サービス業｜複数拠点の資金繰りを整えたい",
-    persona: "年商3億円・8店舗を運営するサービス事業経営者",
+    id: "growth",
+    icon: TrendingUp,
+    title: "成長期企業向けスタンダードプラン",
+    persona: "年商数千万〜数億円｜粗利と在庫改善が課題の企業",
     pains: [
-      "拠点ごとの損益管理がExcelで属人化",
-      "運転資金の山谷が把握できず、借入調達のタイミングを逃す",
+      "売上は伸びているのに粗利率が上がらない",
+      "在庫と資金のバランスが崩れ、投資判断に迷う",
     ],
-    value: "資金繰り耐性 +45日",
-    proof: "週次キャッシュ予測ボードと金融機関共有資料で交渉を先手に",
+    value: "+5.2pt",
+    proof: "週次AIレポートと診断士レビューで粗利率+5.2pt・在庫回転+28%",
     cta: {
-      label: "資金繰りシナリオのサンプルを見る",
-      ctaId: `${SECONDARY_CTA.id}-segment-service`,
+      label: "スタンダードプランを確認",
+      ctaId: `${SECONDARY_CTA.id}-segment-growth`,
     },
   },
   {
-    id: "it",
-    icon: LineChart,
-    title: "IT・卸｜AI投資を売上に直結させたい",
-    persona: "年商12億円・DX投資を加速させたい卸・IT企業の経営者",
+    id: "premium",
+    icon: ShieldCheck,
+    title: "成熟・再生期企業向けプレミアムプラン",
+    persona: "年商数億〜15億円｜事業再生やM&Aを視野に入れる企業",
     pains: [
-      "PoCの成果が現場KPIに落ちずROIを示せない",
-      "役員会で意思決定の根拠資料が不足し議論が迷走",
+      "金融機関との交渉準備に時間がかかり意思決定が遅れる",
+      "部門横断の改善施策が定着せず再挑戦の糸口が見えない",
     ],
-    value: "意思決定速度 1.9倍",
-    proof: "AIスコア×診断士伴走で週次アクションと成果指標を同期",
+    value: "▲52%",
+    proof: "診断士が伴走し意思決定リードタイムを平均52%短縮、公的支援も活用",
     cta: {
-      label: "AI投資の稟議テンプレートを入手",
-      ctaId: `${TERTIARY_CTA.id}-segment-it`,
+      label: "プレミアムプランの相談を予約",
+      ctaId: `${TERTIARY_CTA.id}-segment-premium`,
       href: TERTIARY_CTA.href,
     },
   },
@@ -75,13 +75,13 @@ const SegmentBenefitsSection = () => {
       <div className="container mx-auto max-w-6xl px-4">
         <ScrollReveal variant="fade-up" className="space-y-6 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-[#0b1f3f]/10 bg-white px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/70">
-            Stage 03｜やりたいこと
+            Audience Journey
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            業態別に「次の一手」を具体化し、行動したくなる理由と成果物を明確に提示
+            創業・成長・再生の3ステージごとに、欲しい成果物と導線を設計
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-[#1e3359]/85 md:text-lg">
-            モールスコピー第三段階では、「やりたい」と思ってもらう条件を細かく提示します。年商5,000万〜15億円の経営者でも業態ごとに欲しいアウトプットが違うため、ZENはAI診断と診断士伴走を組み合わせた成果物・KPI・CTAをセグメント別に設計しました。
+            「福岡発だがオンラインで全国対応」という強みを活かし、3つの成長ステージに合わせた価値訴求を用意。AIレポートの深さや伴走の密度を調整し、地域や業種ごとの課題にも応えられる導線を整えました。
           </p>
         </ScrollReveal>
 
@@ -110,7 +110,7 @@ const SegmentBenefitsSection = () => {
                   <ul className="space-y-2 text-sm leading-relaxed text-[#1e3359]/80">
                     {segment.pains.map((pain) => (
                       <li key={pain} className="flex items-start gap-2">
-                        <Sparkle className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
+                        <Sparkles className="mt-1 h-4 w-4 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
                         <span>{pain}</span>
                       </li>
                     ))}

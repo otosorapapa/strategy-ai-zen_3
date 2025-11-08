@@ -30,7 +30,10 @@ const executionTimeline = [
 
 const ServiceFlowSection = () => {
   return (
-    <section id="how-section" className="section-spacing bg-gradient-to-b from-[#010713] via-[#04152c] to-[#010713] text-white">
+    <section
+      id="service-flow-section"
+      className="section-spacing bg-gradient-to-b from-[#010713] via-[#04152c] to-[#010713] text-white"
+    >
       <div className="layout-shell">
         <ScrollReveal variant="fade-up" className="space-y-5 text-center">
           <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-cyan-200">

@@ -96,7 +96,7 @@ export const serviceSchema = {
   ],
   audience: {
     "@type": "Audience",
-    audienceType: "年商5,000万円～15億円の再生・改善を検討する中小企業経営者",
+    audienceType: "年商5,000万円～10億円未満の再生・改善を検討する中小企業経営者",
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",

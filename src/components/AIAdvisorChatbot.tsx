@@ -99,10 +99,10 @@ const responseModeOptions: { id: ResponseMode; label: string; description: strin
 ];
 
 const companySizeOptions = [
-  "〜3億円",
-  "3〜10億円",
-  "10〜30億円",
-  "30億円以上",
+  "〜1億円",
+  "1〜3億円",
+  "3〜7億円",
+  "7〜10億円未満",
 ];
 
 const industryOptions = [

@@ -163,7 +163,7 @@ const executiveStats: { icon: LucideIcon; label: string; value: string; descript
   {
     icon: Briefcase,
     label: "対象規模",
-    value: "年商5,000万円〜15億円",
+    value: "年商5,000万円〜10億円未満",
     description: "複数事業や地方拠点を抱える成長企業の意思決定速度を補強",
   },
   {

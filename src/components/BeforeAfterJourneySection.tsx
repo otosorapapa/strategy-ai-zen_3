@@ -16,7 +16,7 @@ const journeySteps = [
     stage: "Turning Point",
     label: "48Hで羅針盤を取得",
     description:
-      "AIが粗利・資金・人材の歪みを色分けし、診断士が現場ヒアリングで制約条件を補正。年商5,000万〜15億円規模の経営者が最初に見るべき「次の一手」を一本化。",
+      "AIが粗利・資金・人材の歪みを色分けし、診断士が現場ヒアリングで制約条件を補正。年商5,000万〜10億円未満規模の経営者が最初に見るべき「次の一手」を一本化。",
     emotion: "状況把握と納得",
   },
   {
@@ -52,7 +52,7 @@ const momentumSignals = [
 const reassuranceBullets = [
   "紙・Excelのデータでもスタートできる実装設計",
   "金融機関・主要取引先への説明資料を48Hでドラフト",
-  "年商5,000万〜15億円に最適化した行動リストと交渉Q&A",
+  "年商5,000万〜10億円未満に最適化した行動リストと交渉Q&A",
 ] as const;
 
 const BeforeAfterJourneySection = () => {
@@ -72,7 +72,7 @@ const BeforeAfterJourneySection = () => {
             Stage 02｜感じていること
           </span>
           <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-            年商5,000万〜15億円の経営者が抱く不安と希望を、ビフォー／アフターの感情ジャーニーで描き切る
+            年商5,000万〜10億円未満の経営者が抱く不安と希望を、ビフォー／アフターの感情ジャーニーで描き切る
           </h2>
           <p className="mx-auto max-w-4xl text-[1.05rem] leading-relaxed text-slate-100/85 md:text-lg">
             モールスコピー第二段階の「感じていること」を補強するパートです。焦り・孤独感・安堵といった感情の変化をストーリーで可視化し、読者が「自分のことだ」と心で理解できるよう再構成しました。

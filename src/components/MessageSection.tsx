@@ -94,7 +94,7 @@ const MessageSection = () => {
                     <div className="flex items-start gap-3">
                       <Building2 className="mt-1 h-5 w-5 text-primary" aria-hidden="true" />
                       <div>
-                        <p className="font-semibold text-foreground">対象年商：5,000万円〜150億円</p>
+                        <p className="font-semibold text-foreground">対象年商：5,000万円〜10億円未満</p>
                         <p>建設・製造・物流・医療・ITなど、多業種のスケールアップを伴走。</p>
                       </div>
                     </div>

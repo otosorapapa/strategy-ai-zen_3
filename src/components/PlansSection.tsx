@@ -102,7 +102,7 @@ const plans = [
   {
     name: "プレミアムプラン",
     summary: "成熟・再生期の投資判断と再建を一気通貫で伴走",
-    target: "年商3億〜15億円 / 部門横断で変革を進めたい企業",
+    target: "年商3億〜10億円未満 / 部門横断で変革を進めたい企業",
     price: "320,000",
     accent: "highlight" as const,
     metrics: [

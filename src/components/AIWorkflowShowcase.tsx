@@ -278,7 +278,7 @@ const AIWorkflowShowcase = () => {
                     「ヒアリングの直後には粗利改善の仮説が共有され、銀行面談でも一枚のダッシュボードで説明できました。現場の動き方まで視覚化されるので、チーム全員が同じ方向を向けています。」
                   </blockquote>
                   <div className="flex flex-col gap-1 text-sm text-[#143057]/75">
-                    <span className="font-semibold text-[#0b1f3f]">福岡県内 製造業 代表取締役（年商約10億円規模）</span>
+                    <span className="font-semibold text-[#0b1f3f]">福岡県内 製造業 代表取締役（年商約9.8億円規模）</span>
                     <span>交渉資料と現場タスクの整合性が保たれ、会議のたびに自信を持って共有できています。</span>
                   </div>
                 </div>

@@ -253,7 +253,7 @@ const OfferSection = () => {
               「初回相談で即座に届いた“再生シグナル”のドラフトが、役員会での意思決定を加速させました。ZENの三つの入り口が、金融機関との交渉資料づくりと現場の動きを同時に進めるエンジンになりました。」
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-[#1e3359]/70">
-              <span className="font-semibold text-[#0b1f3f]">年商86億円 製造業C社（再生支援）</span>
+              <span className="font-semibold text-[#0b1f3f]">年商8.6億円 製造業C社（再生支援）</span>
               <span className="inline-flex items-center gap-2 rounded-full bg-[#f2f7ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
                 粗利率 +3.2pt（例）
               </span>

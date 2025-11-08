@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="mb-4 text-2xl font-bold">株式会社創和経営コンサルティング</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              福岡発の再生デザインスタジオ。生成AIと中小企業診断士の伴走で、年商5,000万円〜15億円規模の企業が粗利・キャッシュ・現場の動きを再構築できるよう支援します。経営改善計画策定支援補助金を活用した計画策定・申請まで一気通貫でサポートします。
+              福岡発の再生デザインスタジオ。生成AIと中小企業診断士の伴走で、年商5,000万円〜10億円未満規模の企業が粗利・キャッシュ・現場の動きを再構築できるよう支援します。経営改善計画策定支援補助金を活用した計画策定・申請まで一気通貫でサポートします。
             </p>
             <div className="pt-3">
               <div className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2">

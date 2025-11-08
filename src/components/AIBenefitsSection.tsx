@@ -278,7 +278,7 @@ const AIBenefitsSection = () => {
                   <span className="serif-accent">利益構造を読み解き、判断と実行を同じ画面で完結させる</span>
                 </h2>
                 <p className="text-lg leading-relaxed text-muted-foreground">
-                  年商5,000万円〜15億円の企業で繰り返し磨かれたナレッジをもとに、生成AIが利益とキャッシュの因果を分解。社長がその場で納得し、現場が迷わず動ける意思決定インフラを提供します。
+                  年商5,000万円〜10億円未満の企業で繰り返し磨かれたナレッジをもとに、生成AIが利益とキャッシュの因果を分解。社長がその場で納得し、現場が迷わず動ける意思決定インフラを提供します。
                 </p>
               </div>
             </ScrollReveal>
@@ -358,7 +358,7 @@ const AIBenefitsSection = () => {
                   地方製造業 / 従業員180名
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full border border-primary/10 bg-white/80 px-3 py-1 text-primary/70 shadow-sm">
-                  年商68億円・九州拠点
+                  年商6.8億円・九州拠点
                 </span>
               </div>
               <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start">

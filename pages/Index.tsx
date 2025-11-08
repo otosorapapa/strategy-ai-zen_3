@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import ValuePropositionSection from "@/components/ValuePropositionSection";
+import SegmentBenefitsSection from "@/components/SegmentBenefitsSection";
 import ServiceFlowSection from "@/components/ServiceFlowSection";
 import DashboardExampleSection from "@/components/DashboardExampleSection";
 import MeritsSection from "@/components/MeritsSection";
@@ -38,6 +39,7 @@ const Index = () => {
       <PurposeSection />
       <SectionNavigationMap />
       <ValuePropositionSection />
+      <SegmentBenefitsSection />
       <ServiceFlowSection />
       <DashboardExampleSection />
       <MeritsSection />

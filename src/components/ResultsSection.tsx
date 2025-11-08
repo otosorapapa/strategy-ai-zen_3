@@ -10,21 +10,21 @@ import { Building2, LineChart, ShieldCheck } from "lucide-react";
 const impactHighlights = [
   {
     icon: LineChart,
-    value: "+3.1pt",
+    value: "+5.2pt",
     label: "平均粗利率改善幅",
-    helper: "6ヶ月伴走時の中央値（出典：自社実績調査 2024年9月）",
+    helper: "スタンダード/プレミアム導入企業の6ヶ月平均（2024年実績）",
   },
   {
     icon: ShieldCheck,
-    value: "▲45%",
-    label: "金融交渉リードタイム",
-    helper: "交渉準備期間の短縮幅（出典：自社実績調査 2024年9月）",
+    value: "+28%",
+    label: "在庫回転率向上",
+    helper: "AIレポートと伴走で在庫滞留を解消した平均値",
   },
   {
     icon: Building2,
-    value: "+1.8億円",
-    label: "再投資余力の創出例",
-    helper: "製造業案件の平均（出典：自社実績調査 2024年9月）",
+    value: "▲52%",
+    label: "意思決定リードタイム",
+    helper: "初回診断〜経営会議までの準備時間短縮（2024年実績）",
   },
 ];
 

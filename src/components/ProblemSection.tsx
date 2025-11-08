@@ -48,18 +48,18 @@ type CausalityPillar = {
 
 const authorityStack: AuthorityBadge[] = [
   {
-    label: "中小企業庁 認定支援機関",
-    description: "再生支援の現場で磨いた統制設計と寄り添う支援体制",
+    label: "経営革新等支援機関（中小企業庁）",
+    description: "公式登録機関として計画策定と補助金申請を伴走し、再生案件の根拠資料を整備",
     icon: ShieldCheck,
   },
   {
-    label: "地域金融機関との共創検証",
-    description: "九州地銀と意思決定ボードを共同構築し交渉の再現性を検証",
+    label: "福岡県信用保証協会 登録専門家",
+    description: "資金繰り改善と保証付与の相談窓口を担当し、金融機関との調整を支援",
     icon: Building2,
   },
   {
-    label: "日経XTECHなど専門メディア掲載",
-    description: "AIと管理会計の融合事例として紹介され、公開の場でも評価",
+    label: "福岡県中小企業活性化協議会 登録診断士",
+    description: "再生計画のレビューと実行フォローを担当し、地域の事業再生を継続支援",
     icon: Newspaper,
   },
 ];

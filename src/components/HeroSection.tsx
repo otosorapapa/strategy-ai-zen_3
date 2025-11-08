@@ -7,41 +7,52 @@ import { cn } from "@/lib/utils";
 import {
   Activity,
   ArrowRight,
-  BriefcaseBusiness,
   BrainCircuit,
+  BriefcaseBusiness,
   CheckCircle2,
+  Globe2,
+  Laptop,
   Landmark,
   LayoutDashboard,
   LifeBuoy,
   LineChart,
+  ShieldCheck,
   Target,
   Timer,
 } from "lucide-react";
 
 const heroKeyPhrases = [
-  { icon: BrainCircuit, label: "生成AI×診断士のW視点" },
-  { icon: LayoutDashboard, label: "96時間でカスタムアプリ" },
-  { icon: LifeBuoy, label: "創業〜再生期まで伴走" },
+  { icon: LifeBuoy, label: "福岡発｜全国オンライン対応" },
+  { icon: LayoutDashboard, label: "創業〜再生期の三位一体改善" },
+  { icon: ShieldCheck, label: "国家資格×生成AIの伴走" },
+];
+
+const heroSupportPhrases = [
+  { icon: Globe2, label: "地域・業種別にローカライズ" },
+  { icon: Laptop, label: "オンライン×対面のハイブリッド支援" },
 ];
 
 const heroSummaryCards = [
   {
     icon: Timer,
     eyebrow: "創業・小規模",
-    title: "資金繰りと数値感覚を整える",
-    description: "月次〜隔週AIレポートと資金繰り講座で迷いなく初期投資を判断",
+    title: "資金繰りが不安で、数値の読み方が分からない",
+    description:
+      "隔週AIレポートと資金繰り基礎講座、創業補助金ナビで初期の迷いを解消",
   },
   {
-    icon: Landmark,
+    icon: BrainCircuit,
     eyebrow: "成長期",
-    title: "粗利と在庫の改善余地を特定",
-    description: "週次AIシナリオと診断士レビューで粗利率+5.2pt・在庫回転+28%を実現",
+    title: "売れているのに利益とキャッシュが残らない",
+    description:
+      "週次AIシナリオと診断士レビューで粗利率+5.2pt・在庫回転率+28%を後押し",
   },
   {
     icon: BriefcaseBusiness,
     eyebrow: "成熟・再生期",
-    title: "投資判断と再建を一気通貫",
-    description: "M&Aや公的支援も視野に、伴走で意思決定リードタイムを52%短縮",
+    title: "投資判断や再建策を相談できる相手がいない",
+    description:
+      "M&Aや公的支援も視野に、意思決定リードタイム▲52%の伴走体制を提供",
   },
 ];
 
@@ -85,9 +96,9 @@ const heroImpactStats = [
 ];
 
 const trustSignals = [
-  { icon: Landmark, label: "中小企業庁 登録支援機関" },
-  { icon: BriefcaseBusiness, label: "福岡発｜全国130社の伴走実績" },
-  { icon: LineChart, label: "国家資格×生成AIで多角的に支援" },
+  { icon: Landmark, label: "中小企業診断士が全工程を伴走" },
+  { icon: LineChart, label: "粗利率+5.2pt／在庫回転+28%（平均実績）" },
+  { icon: BrainCircuit, label: "意思決定リードタイム52%短縮" },
 ];
 
 const HeroSection = () => {
@@ -110,15 +121,15 @@ const HeroSection = () => {
                 AI × 診断士 × 再生設計図
               </span>
               <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.2] tracking-tight md:text-[3.1rem] md:leading-[1.2] md:tracking-[-0.01em] xl:text-[3.6rem]">
-                創業期から再生期まで、全国の中小企業をAIと診断士で伴走
+                AI×中小企業診断士が、創業準備から再生局面まで“迷わない経営”を全国で伴走。
               </h1>
               <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-                福岡で磨いた再生ノウハウをオンラインで全国へ。地域ごとの商習慣に合わせ、生成AIが描く複数シナリオと中小企業診断士の判断で、迷いのない一手を共に決めていきます。
+                AIシナリオ×専門家レビューで意思決定リードタイムを52%短縮。福岡発の再生ノウハウを全国各地の商習慣に合わせてローカライズし、創業・成長・成熟それぞれの課題に即した判断材料を整備します。
               </p>
             </div>
 
             <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-              初回無料相談とAI診断レポートで、粗利・資金・人材のギャップを48時間以内に可視化。意思決定リードタイムを平均52%短縮する段取りと共通指標を整え、創業から再生までの挑戦を後押しします。
+              初回無料相談とAI診断レポートで、粗利・資金・人材のギャップを48時間以内に可視化。創業期は資金繰りテンプレート、成長期は粗利・在庫の改善策、成熟期は再生・M&Aシナリオまで一気通貫で提示します。
             </p>
             <div className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/90 md:gap-4 md:text-base">
               {heroKeyPhrases.map(({ icon: Icon, label }) => (
@@ -127,6 +138,20 @@ const HeroSection = () => {
                   className="flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-semibold uppercase tracking-[0.18em] text-cyan-100/90 shadow-[0_14px_32px_rgba(2,12,32,0.26)] backdrop-blur"
                 >
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500/15 text-cyan-200">
+                    <Icon className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                  {label}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 text-left text-xs text-slate-100/80 md:text-sm">
+              {heroSupportPhrases.map(({ icon: Icon, label }) => (
+                <span
+                  key={label}
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 font-semibold uppercase tracking-[0.18em] text-cyan-100/80 shadow-[0_12px_28px_rgba(2,12,32,0.22)] backdrop-blur"
+                >
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-200">
                     <Icon className="h-4 w-4" aria-hidden="true" />
                   </span>
                   {label}

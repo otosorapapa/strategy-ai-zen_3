@@ -2,9 +2,12 @@ import HeroSection from "@/components/HeroSection";
 import InsightSpotlight from "@/components/InsightSpotlight";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
+import ServiceFlowSection from "@/components/ServiceFlowSection";
+import SegmentBenefitsSection from "@/components/SegmentBenefitsSection";
 import AIWorkflowShowcase from "@/components/AIWorkflowShowcase";
 import ResultsSection from "@/components/ResultsSection";
 import OfferSection from "@/components/OfferSection";
+import PlansSection from "@/components/PlansSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import SecurityPrivacySection from "@/components/SecurityPrivacySection";
 import FAQSection from "@/components/FAQSection";
@@ -25,10 +28,13 @@ const Index = () => {
       <HeroSection />
       <InsightSpotlight />
       <ProblemSection />
+      <SegmentBenefitsSection />
       <SolutionSection />
+      <ServiceFlowSection />
       <AIWorkflowShowcase />
       <ResultsSection />
       <OfferSection />
+      <PlansSection />
       <ComparisonSection />
       <SecurityPrivacySection />
       <FAQSection />

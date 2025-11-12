@@ -1,27 +1,39 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import { ArrowRight, CalendarClock, MapPinned } from "lucide-react";
+import { ArrowRight, CalendarClock, Files, Presentation } from "lucide-react";
 
 const executionTimeline = [
   {
-    phase: "48時間診断",
-    dayRange: "Day0-2",
-    description: "会計・販売・人材データをAIが統合し、粗利・資金・人材のギャップを色分けして共有。",
-    metric: "48h",
-    metricLabel: "初回レポート",
+    phase: "ヒアリング＆データキャッチ",
+    dayRange: "Day0〜Day1",
+    description:
+      "創業〜成熟までの課題を45分で棚卸し。財務・現場・心理のメモを受領し、AI分析の準備を整えます。",
+    metric: "Day0-1",
+    metricLabel: "課題棚卸",
     icon: CalendarClock,
   },
   {
-    phase: "シナリオ設計",
-    dayRange: "Day3-7",
-    description: "診断士が現場ヒアリングを重ね、生成AIが描いた複数シナリオを実行可能なロードマップに整理。",
-    metric: "▲52%",
-    metricLabel: "意思決定リードタイム",
-    icon: MapPinned,
+    phase: "AIシナリオ生成＆診断士レビュー",
+    dayRange: "Day1〜Day2",
+    description:
+      "生成AIが複数シナリオを描き、診断士が優先順位と実行難易度を判定。財務・現場・心理の打ち手を一枚に統合します。",
+    metric: "48h",
+    metricLabel: "再生ボード",
+    icon: Files,
   },
   {
-    phase: "伴走実行",
-    dayRange: "Day8-30+",
-    description: "96時間で構築した管理アプリとAIレポートで週次レビューを実施。金融機関・取引先との交渉資料も同時に更新。",
+    phase: "48時間後プレゼンテーション",
+    dayRange: "Day2",
+    description:
+      "代表と“再生ボード”を共有し、金融機関資料や次のアクションを決定。その後は週次レビューで学習と交渉を並走します。",
+    metric: "▲52%",
+    metricLabel: "意思決定LT",
+    icon: Presentation,
+  },
+  {
+    phase: "伴走実行と仕組み化",
+    dayRange: "Day3〜",
+    description:
+      "96時間で管理アプリとナレッジ基盤を構築し、AIレポート×診断士伴走で粗利+5.2pt／在庫回転+28%の再現を狙います。",
     metric: "+28%",
     metricLabel: "在庫回転率",
     icon: ArrowRight,
@@ -40,14 +52,14 @@ const ServiceFlowSection = () => {
             Execution Roadmap
           </span>
           <h2 className="text-balance text-3xl font-semibold leading-tight md:text-[2.4rem]">
-            創業期から再生期までを貫く3ステップ伴走
+            48時間で動き出す、再生計画のロードマップ
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-100/80 md:text-lg">
-            初動の診断で全体像を掴み、設計で複数シナリオと指標を揃え、伴走実行で意思決定と現場行動を同期させます。全国どこからでも同じ品質で導入できます。
+            Day0〜Day2で迷いの正体を可視化し、再生ボードを共創。以降は週次レビューと金融機関連携を一体化させ、判断と実装を加速させます。
           </p>
         </ScrollReveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {executionTimeline.map(({ phase, dayRange, description, metric, metricLabel, icon: Icon }) => (
             <ScrollReveal
               key={phase}

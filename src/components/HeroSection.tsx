@@ -22,37 +22,37 @@ import {
 } from "lucide-react";
 
 const heroKeyPhrases = [
-  { icon: LifeBuoy, label: "福岡発｜全国オンライン対応" },
-  { icon: LayoutDashboard, label: "創業〜再生期の三位一体改善" },
-  { icon: ShieldCheck, label: "国家資格×生成AIの伴走" },
+  { icon: ShieldCheck, label: "経営改善計画書×診断士の暗黙知×AI" },
+  { icon: LifeBuoy, label: "共に戦う参謀チーム" },
+  { icon: LayoutDashboard, label: "48時間で再生ボードを提示" },
 ];
 
 const heroSupportPhrases = [
-  { icon: Globe2, label: "地域・業種別にローカライズ" },
-  { icon: Laptop, label: "オンライン×対面のハイブリッド支援" },
+  { icon: Globe2, label: "福岡発｜全国オンライン対応" },
+  { icon: Laptop, label: "現場と数字をつなぐ伴走体制" },
 ];
 
 const heroSummaryCards = [
   {
     icon: Timer,
-    eyebrow: "創業・小規模",
-    title: "資金繰りが不安で、数値の読み方が分からない",
+    eyebrow: "創業・小規模期",
+    title: "資金繰りが不安で、何から手を付けていいか分からない",
     description:
-      "隔週AIレポートと資金繰り基礎講座、創業補助金ナビで初期の迷いを解消",
+      "AI×診断士が“資金の見える化”テンプレートを即時生成し、48時間で初期のつまずきを解消",
   },
   {
     icon: BrainCircuit,
     eyebrow: "成長期",
-    title: "売れているのに利益とキャッシュが残らない",
+    title: "売上はあるのに、なぜか現金が残らない",
     description:
-      "週次AIシナリオと診断士レビューで粗利率+5.2pt・在庫回転率+28%を後押し",
+      "粗利構造・在庫回転・固定費の歪みをAIが診断し、利益が続く設計へ翻訳",
   },
   {
     icon: BriefcaseBusiness,
     eyebrow: "成熟・再生期",
-    title: "投資判断や再建策を相談できる相手がいない",
+    title: "投資判断や再生計画を相談できる相手がいない",
     description:
-      "M&Aや公的支援も視野に、意思決定リードタイム▲52%の伴走体制を提供",
+      "AIが数値を構築し、診断士が事業構造を分解。金融機関との対話資料まで一気通貫で整備",
   },
 ];
 
@@ -121,15 +121,17 @@ const HeroSection = () => {
                 AI × 診断士 × 再生設計図
               </span>
               <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.2] tracking-tight md:text-[3.1rem] md:leading-[1.2] md:tracking-[-0.01em] xl:text-[3.6rem]">
-                AI×中小企業診断士が、創業準備から再生局面まで“迷わない経営”を全国で伴走。
+                迷っている時間が、いちばんの損失です。
+                <br className="hidden md:block" />
+                AIと経営改善のプロが、48時間で「再生の設計図」を描きます。
               </h1>
               <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-                AIシナリオ×専門家レビューで意思決定リードタイムを52%短縮。福岡発の再生ノウハウを全国各地の商習慣に合わせてローカライズし、創業・成長・成熟それぞれの課題に即した判断材料を整備します。
+                数字の裏にある“現場の感情”まで読み解けるのは、AIだけではありません。財務×現場×心理を熟知した中小企業診断士が、AIと共にあなたの意思決定を加速させます。
               </p>
             </div>
 
             <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-              初回無料相談とAI診断レポートで、粗利・資金・人材のギャップを48時間以内に可視化。創業期は資金繰りテンプレート、成長期は粗利・在庫の改善策、成熟期は再生・M&Aシナリオまで一気通貫で提示します。
+              創業準備・成長停滞・再生局面──どんなステージでも、今のあなたに必要な「答え」を最短で導きます。無料診断を予約すれば、粗利・資金・人材のギャップと次の一手を48時間で共有します。
             </p>
             <div className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/90 md:gap-4 md:text-base">
               {heroKeyPhrases.map(({ icon: Icon, label }) => (

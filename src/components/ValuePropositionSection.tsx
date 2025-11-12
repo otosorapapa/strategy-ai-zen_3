@@ -1,33 +1,33 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import { BarChart3, ClipboardList, LayoutDashboard, LifeBuoy } from "lucide-react";
+import { BrainCircuit, ClipboardList, GaugeCircle, Workflow } from "lucide-react";
 
 const valueCards = [
   {
-    title: "AI診断×診断士レビュー",
-    description: "生成AIが複数の改善シナリオを描き、中小企業診断士が現場条件で磨き上げて提示。",
+    title: "AIが数字を読み取り、48時間で診断",
+    description: "財務・在庫・人材データを統合し、優先課題とインパクトを色分けした再生ボードを生成します。",
+    metric: "48h",
+    metricLabel: "初回レポート",
+    icon: Workflow,
+  },
+  {
+    title: "診断士が意味を読み解き、判断材料に翻訳",
+    description: "財務×現場×心理のギャップを言語化し、経営者が迷わず決断できる筋書きに整えます。",
     metric: "▲52%",
     metricLabel: "意思決定リードタイム",
-    icon: BarChart3,
+    icon: BrainCircuit,
   },
   {
-    title: "財務・経営・業務の三位一体改善",
-    description: "粗利率・在庫回転・資金余力を同時に可視化し、優先順位を一枚の設計図で共有。",
-    metric: "+5.2pt",
-    metricLabel: "平均粗利率改善幅",
-    icon: LayoutDashboard,
-  },
-  {
-    title: "96時間で使える管理アプリ",
-    description: "Python×生成AIで最短96時間のカスタムSaaSを構築し、週次AIレポートと連動させます。",
+    title: "エンジニアが仕組み化し、現場で回る",
+    description: "生成AIとノーコードを組み合わせ、96時間で管理アプリや週次レビュー基盤を構築します。",
     metric: "96h",
-    metricLabel: "主要機能の提供目安",
-    icon: LifeBuoy,
+    metricLabel: "運用基盤",
+    icon: GaugeCircle,
   },
   {
-    title: "全国対応×公的支援",
-    description: "福岡発の実績をもとに全国の商習慣へローカライズ。補助金や金融機関との交渉も伴走。",
-    metric: "78%",
-    metricLabel: "補助金採択率（直近2年）",
+    title: "金融・公的支援と連携し、実装まで伴走",
+    description: "週次レビューと金融機関連携を一体化。補助金・再生支援の資料まで共創して意思決定を後押しします。",
+    metric: "+5.2pt",
+    metricLabel: "粗利率改善",
     icon: ClipboardList,
   },
 ];
@@ -42,10 +42,10 @@ const ValuePropositionSection = () => {
               Value Proposition
             </span>
             <h2 className="text-balance text-3xl font-semibold leading-tight md:text-[2.4rem]">
-              再挑戦を支える提供価値
+              “AIが数字を読み、診断士が意味を読み、エンジニアが仕組み化する。”
             </h2>
             <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-100/80 md:text-lg">
-              未来志向の計画と日々の意思決定をつなげ、数字と現場の感覚を同じダッシュボードで共有できる環境を整備します。
+              経営改善計画書策定の熟練ノウハウと生成AIを掛け合わせ、共に戦う参謀として判断と実行を一気通貫で支援します。
             </p>
           </ScrollReveal>
 

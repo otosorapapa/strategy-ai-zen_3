@@ -11,8 +11,8 @@ import { CalendarClock, FileText, Loader2, Phone } from "lucide-react";
 const ctaOptions = [
   {
     id: "diagnostic",
-    label: "無料診断を予約する",
-    description: "48時間診断で優先課題と行動順序を確認",
+    label: "無料診断を予約して、48時間で“次の一手”を受け取る",
+    description: "再生ボードと優先課題を48時間で提示",
     icon: CalendarClock,
   },
   {

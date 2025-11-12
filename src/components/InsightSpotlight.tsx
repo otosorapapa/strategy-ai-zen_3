@@ -2,11 +2,14 @@ import {
   ArrowUpRight,
   BadgeCheck,
   BarChart3,
+  Cog,
+  Cpu,
   Lightbulb,
   Quote,
   Sparkles,
   Target,
   TrendingUp,
+  Users,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionMicroCta from "@/components/SectionMicroCta";
@@ -14,19 +17,37 @@ import blueprintFlowVisual from "@/assets/insight-blueprint-flow.svg";
 
 const insightHighlights = [
   {
-    label: "因果の見取り図",
-    value: "48時間で提示",
-    caption: "資金・現場・市場の歪みを一本化し、判断の論点を同期",
+    label: "STEP 01｜整える",
+    value: "48時間で判断材料を提示",
+    caption: "AIが資金・粗利・人材のギャップを数値化。",
   },
   {
-    label: "設計図化プロセス",
-    value: "AI × 診断士",
-    caption: "定量と定性を統合し、合意形成の摩擦を削減",
+    label: "STEP 02｜読み解く",
+    value: "AI × 診断士のハイブリッド診断",
+    caption: "暗黙知とデータを融合し、経営構造を読み解く。",
   },
   {
-    label: "合意形成スピード",
-    value: "会議1回で決定",
-    caption: "前提共有をテンプレート化し、論点議論に即移行",
+    label: "STEP 03｜前に進む",
+    value: "会議1回で意思決定まで完了",
+    caption: "判断に必要な要素を“経営者の言葉”で整理して提示。",
+  },
+];
+
+const expertiseFusion = [
+  {
+    label: "AI",
+    icon: Cpu,
+    description: "先行指標を抽出し、数字の揺らぎを可視化。",
+  },
+  {
+    label: "診断士",
+    icon: Users,
+    description: "現場の暗黙知を言語化し、意思決定の視座をそろえる。",
+  },
+  {
+    label: "エンジニア",
+    icon: Cog,
+    description: "仕組みに落とし込み、判断が巡るオペレーションを構築。",
   },
 ];
 
@@ -153,21 +174,38 @@ const InsightSpotlight = () => {
                 創和の使命
               </span>
               <h2 className="text-3xl font-bold leading-tight md:text-4xl">
-                情熱を力に変える舞台を整え、経営者が堂々と次の一手を選び取れる状態をつくる
+                迷いを力に変え、次の一手を“選び切れる経営者”を増やす。
               </h2>
-              <div className="space-y-4 text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
+              <div className="space-y-5 text-[1.05rem] leading-relaxed text-[#1e3359]/80 md:text-lg">
                 <p>
-                  原価の揺らぎや採用環境の変化を把握していても、数字と現場の手応えが別々に積み上がるだけでは次の打ち手に踏み切れません。月次資料の整備で一日が終わり、未来を描く時間が削られる──その状況が意思決定の質と速さを鈍らせます。
+                  経営の現場では、「次の手を打ちたいのに、何から決めていいかわからない」──そんな“判断の迷い”が、日々のエネルギーを奪っていきます。
                 </p>
                 <p>
-                  創和経営コンサルティングは、生成AIが読み解く兆しと中小企業診断士の現場ヒアリングを重ね、判断の座標軸を整えます。経営会議で語るべき筋道と実行の段取りを一本化し、次の一手を胸を張って示せる状態を共につくります。
+                  創和経営コンサルティングは、経営改善に精通した中小企業診断士の知見と、機械学習エンジニアの技術、生成AIの解析力を融合。情熱を“仕組みに変える舞台”を整え、経営者が堂々と判断し、行動できる状態をつくります。
                 </p>
                 <p>
-                  まずは業界・競合・外部環境・顧客・コスト・商品サービスを同時に分析し、生成AIが抽出したシグナルを基に専用の経営管理アプリとダッシュボードを設計。最新データを絶えず取り込み、5か年を見据えた経営改善計画を磨き込むことで、意思決定の先見性を高めます。
+                  整える → 読み解く → 前に進む。その連続を支えるために、経営の迷いを感情とデータの両面から捉え、意思決定が止まる瞬間を48時間で抜け出すシナリオをご用意します。
                 </p>
-                <p>
-                  計画策定後も中小企業診断士が伴走し、現場と経営が同じ道筋で動けるようサイクルを整えます。国の補助金を活用した支援にも精通しており、攻めと守りの判断を前向きに語れる舞台を整備します。
-                </p>
+              </div>
+              <div className="grid gap-4 pt-2 sm:grid-cols-3">
+                {expertiseFusion.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <div
+                      key={item.label}
+                      className="flex items-start gap-3 rounded-2xl border border-[#0b1f3f]/12 bg-white/85 p-4 shadow-[0_18px_45px_rgba(11,31,63,0.1)]"
+                    >
+                      <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#0584c6]/30 bg-[#0584c6]/10">
+                        <Icon className="h-5 w-5 text-[#0584c6]" aria-hidden="true" />
+                      </span>
+                      <div className="space-y-1 text-left">
+                        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">{item.label}</p>
+                        <p className="text-sm leading-relaxed text-[#1e3359]/75">{item.description}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </ScrollReveal>
 
@@ -190,6 +228,21 @@ const InsightSpotlight = () => {
             </ScrollReveal>
 
             <ScrollReveal variant="fade-up" className="space-y-6">
+              <div className="space-y-4 text-left">
+                <h3 className="text-2xl font-semibold text-[#0b1f3f]">
+                  判断が止まる時間を、成長の時間に変える。
+                </h3>
+                <p className="text-sm leading-relaxed text-[#1e3359]/75 md:text-base">
+                  AIが抽出した経営データをもとに、現場の“リアル”と照らし合わせて整理します。数字に現れない違和感をすくい上げ、対話の土台を共有することで、意思決定の足並みをそろえます。
+                </p>
+                <p className="text-sm leading-relaxed text-[#1e3359]/75 md:text-base">
+                  診断士が暗黙知を読み解き、エンジニアが仕組みに落とし込む。数字と現場の間にある「モヤモヤ」を、48時間で見える形に変換します。
+                </p>
+                <p className="text-sm leading-relaxed text-[#1e3359]/75 md:text-base">
+                  AIだけでは経営は変わらない──「数値を診るAI」「構造を読む診断士」「仕組みをつくるエンジニア」が一体となり、会社全体を再現性のある経営へ導きます。
+                </p>
+              </div>
+
               <div className="grid gap-4 sm:grid-cols-3">
                 {blueprintSignals.map((signal) => (
                   <div
@@ -377,8 +430,9 @@ const InsightSpotlight = () => {
 
       <SectionMicroCta
         eyebrow="Micro CTA"
-        title="未来の設計図を、無料相談で自社の判断軸に重ねる"
-        description="因果マップや会議用テンプレートのサンプルを並べ、自社資料とのずれと補うべき要点を可視化。次の会議で堂々と語れる骨子を一緒に描きます。"
+        title="経営は「戦略」ではなく「連続する判断」。"
+        description="判断を迷わず進められるように――私たちは、経営者の思考と情熱を“動く経営設計図”に変えます。"
+        ctaLabel="48時間で“経営の霧”を晴らす"
         ctaId="insight-blueprint"
       />
     </section>

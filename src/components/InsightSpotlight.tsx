@@ -90,48 +90,48 @@ const blueprintAssurances = [
 const rootCauseNarrative = [
   {
     badge: "Pattern 01",
-    title: "数字に映る想いが全社へ届かない",
-    description:
-      "原価や人件費の波が点で管理され、チームごとに優先順位がぶれてしまう。決裁の遅れが将来資金の歪みを呼び、守るべき価値まで霞みます。",
-    metric: "判断リードタイム +2週間",
-    signal: "会議後に追加ヒアリングが常態化し、行動が翌月へ持ち越される",
+    title: "数字を見ているのに、現場の想いが届かない",
+    narrative:
+      "経営会議で原価やKPIを確認しても、社員が動かない。──それは“数字の意味”が現場に伝わっていないから。AIが数値の構造を可視化し、診断士が“なぜ動かないか”を言語化する。",
+    diagnosis: "診断士視点の要因：KPIの選定が現場と乖離し、動機形成が不十分。",
+    outcome: "結果：意思決定リードタイム +2週間／行動量が半減。",
   },
   {
     badge: "Pattern 02",
-    title: "語りたい未来より資料更新が先行する",
-    description:
-      "現場確認→資料作成→再説明の往復が続き、未来の構想に割く時間が消えていく。金融機関との調整に追われ、攻めの議論が止まります。",
-    metric: "再説明工数 1.7倍",
-    signal: "説明資料の修正が週次化し、改善の議論が夜間対応にずれ込む",
+    title: "資料を更新しても、未来が見えない",
+    narrative:
+      "報告資料づくりが目的化し、「なぜ」「どの順で」「何を変えるか」が抜けていく。──形式ではなく、経営構造を動かすシナリオ設計が必要です。AIがシミュレーションを提示し、診断士が優先順位を明確化。",
+    diagnosis: "診断士視点の要因：情報整理が“伝達”で止まり、“設計”になっていない。",
+    outcome: "結果：再説明工数 1.7倍／次週以降の修正が恒常化。",
   },
   {
     badge: "Pattern 03",
-    title: "明文化された未来像が揃わない",
-    description:
-      "改善施策は揃っていても、人・数字・現場の視点が交わらず、語る未来に一体感が宿らない。実行に踏み切る勇気が薄れ、変革の初速が鈍ります。",
-    metric: "再投資判断が停滞 3カ月",
-    signal: "未来シナリオの定義が曖昧で、合意形成のために追加会議が発生",
+    title: "将来像が描けず、投資のタイミングを逃す",
+    narrative:
+      "明文化されないまま時間だけが過ぎ、資金繰りと人材配置が後手に回る。──AIが複数シナリオを提示し、診断士が“判断の自信”を設計します。",
+    diagnosis: "診断士視点の要因：投資判断の「前提と仮説」が曖昧。",
+    outcome: "結果：投資判断が3か月遅延／会議数1.5倍。",
   },
 ];
 
-const hopeStatements = [
+const recoveryDesignPhases = [
   {
-    title: "停滞期",
-    description: "月次報告が終わるころには次の危機が迫り、社員の熱量が削がれたまま。",
-    metric: "会議再設計前",
-    kpi: "会議準備 38h/週",
+    phase: "準備期",
+    focus: "会議設計",
+    shift: "月次報告から判断会議へ",
+    anchor: "会議準備38h→短縮",
   },
   {
-    title: "設計フェーズ",
-    description: "生成AIと診断士がボトルネックを多面的に構造化し、未来を描く核となる仮説を厳選。",
-    metric: "短期集中診断",
-    kpi: "48hで歪みの見取り図",
+    phase: "設計期",
+    focus: "シナリオ設計",
+    shift: "AI×診断士で再生方針を可視化",
+    anchor: "48hで見取り図提示",
   },
   {
-    title: "実行フェーズ",
-    description: "資金・人材・案件が一枚の設計図で同期し、次の一手が誰でも語れる形で整う。",
-    metric: "迅速な実装フェーズ",
-    kpi: "決裁リードタイム ▲45%",
+    phase: "実行期",
+    focus: "意思決定の速度",
+    shift: "部門横断で動く会議体へ",
+    anchor: "意思決定リードタイム▲45%",
   },
 ];
 
@@ -139,17 +139,17 @@ const proofMetrics = [
   {
     label: "粗利率",
     value: "+3.2pt",
-    caption: "設計図再構築後6カ月の代表例",
+    caption: "粗利率： +3.2pt 改善",
   },
   {
-    label: "交渉リードタイム",
+    label: "意思決定リードタイム",
     value: "▲45%",
-    caption: "主要金融機関との折衝スピード改善例",
+    caption: "意思決定リードタイム： ▲45％",
   },
   {
-    label: "再投資余力",
+    label: "資金調達力",
     value: "+1.8億円",
-    caption: "キャッシュ創出原資の可視化例",
+    caption: "資金調達力： +1.8億円（キャッシュ創出効果）",
   },
 ];
 
@@ -330,84 +330,101 @@ const InsightSpotlight = () => {
         <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-6">
             <ScrollReveal variant="fade-up" className="space-y-4">
-              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
-                <Quote className="h-5 w-5" aria-hidden="true" />
-                よくある失速パターン
+              <div className="flex items-start gap-3">
+                <Quote className="mt-1 h-5 w-5 text-[#0584c6]" aria-hidden="true" />
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">Executive Narrative</p>
+                  <h2 className="text-2xl font-semibold leading-relaxed text-[#0b1f3f]">
+                    経営が止まるのは、やる気が足りないからではない。<br className="hidden lg:block" />“設計がずれている”からだ。
+                  </h2>
+                </div>
               </div>
-              <p className="text-sm text-[#1e3359]/70">
-                現場ヒアリングと財務診断から抽出された「再生が止まる瞬間」の兆候です。どれか一つでも該当すれば、設計図の再構築が急務です。
-              </p>
+                <p className="text-sm leading-relaxed text-[#1e3359]/70">
+                  数字を追っても、会議を増やしても、なぜか利益が戻らない。それは多くの会社が
+                  <span className="font-semibold text-[#0b1f3f]">「判断・行動・設計」</span>
+                  が噛み合っていないから。AIと経営改善の専門家が、その“ずれ”を48時間で特定し、再び歯車を動かします。
+                </p>
             </ScrollReveal>
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {rootCauseNarrative.map((item, index) => (
                 <ScrollReveal
                   key={item.title}
                   variant="fade-up"
-                  className="flex h-full flex-col gap-5 rounded-3xl border border-[#0b1f3f]/12 bg-white/95 p-6 shadow-[0_24px_60px_rgba(11,31,63,0.12)]"
+                  className="flex h-full flex-col gap-5 rounded-3xl border border-[#0b1f3f]/10 bg-gradient-to-br from-[#f6f7fb] via-[#eef1f7] to-[#e4e8f2] p-6 text-left shadow-[0_24px_60px_rgba(11,31,63,0.1)]"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex items-start gap-3">
-                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#0584c6]/30 bg-[#0584c6]/10 text-sm font-semibold text-[#0584c6]">
+                      <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#0b1f3f]/10 bg-white/60 text-sm font-semibold text-[#0584c6]">
                         0{index + 1}
                       </span>
-                      <div>
-                        <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">{item.badge}</span>
-                        <h3 className="mt-1 text-lg font-semibold text-[#0b1f3f]">{item.title}</h3>
+                      <div className="space-y-1">
+                        <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/50">{item.badge}</span>
+                        <h3 className="text-lg font-semibold leading-snug text-[#0b1f3f]">{item.title}</h3>
                       </div>
                     </div>
-                    <span className="inline-flex items-center rounded-full border border-[#0584c6]/25 bg-[#f0f6ff] px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-[#0584c6]">
-                      Leading Signal
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-[#0584c6]">
+                      AI×診断士
                     </span>
                   </div>
-                  <p className="text-sm leading-relaxed text-[#1e3359]/75">{item.description}</p>
-                  <div className="mt-auto grid gap-2 rounded-2xl border border-[#0584c6]/20 bg-[#f0f6ff] p-4 text-sm text-[#0b1f3f]">
-                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#0584c6]">
-                      <TrendingUp className="h-4 w-4" aria-hidden="true" />
-                      {item.metric}
+                  <p className="text-sm leading-relaxed text-[#1e3359]/75">{item.narrative}</p>
+                  <div className="mt-auto space-y-3 rounded-2xl border border-white/40 bg-white/70 p-4 text-sm text-[#0b1f3f]">
+                    <div className="space-y-1">
+                      <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">
+                        <Target className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />診断士視点
+                      </span>
+                      <p className="leading-relaxed text-[#1e3359]/75">{item.diagnosis}</p>
                     </div>
-                    <p className="text-[#1e3359]/75">{item.signal}</p>
+                    <div className="space-y-1">
+                      <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">
+                        <TrendingUp className="h-4 w-4 text-[#0584c6]" aria-hidden="true" />構造が生む結果
+                      </span>
+                      <p className="leading-relaxed text-[#1e3359]/75">{item.outcome}</p>
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}
             </div>
           </div>
 
-          <div className="space-y-8 rounded-[36px] border border-[#0b1f3f]/10 bg-gradient-to-br from-white via-[#f0f5ff] to-[#e3f2ff] p-10">
+          <div className="space-y-8 rounded-[36px] border border-[#0b1f3f]/10 bg-gradient-to-br from-white via-[#f6f9ff] to-[#e9f3ff] p-10">
             <ScrollReveal variant="fade-up" className="space-y-6">
-              <div className="flex flex-col gap-4 text-left md:flex-row md:items-center md:justify-between">
-                <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/70">
-                  <Quote className="h-5 w-5" aria-hidden="true" />
-                  共に描く希望
+              <div className="space-y-4 text-left">
+                <div className="flex items-start gap-3">
+                  <Quote className="mt-1 h-5 w-5 text-[#0584c6]" aria-hidden="true" />
+                  <div className="space-y-2">
+                    <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#0b1f3f]/60">Recovery Blueprint</p>
+                    <h3 className="text-xl font-semibold leading-relaxed text-[#0b1f3f]">
+                      再生の起点：「設計を変える」と、すべてが噛み合う
+                    </h3>
+                  </div>
                 </div>
-                <p className="text-sm text-[#1e3359]/70">
-                  「再生の設計図」が整うと、判断の根拠と行動が一体化し、次の会議を待たずに動けるようになります。
+                <p className="text-sm leading-relaxed text-[#1e3359]/70">
+                  フェーズごとに変えるべき焦点を定め、48時間で“再生の見取り図”を提示します。以降の会議は「何をやるか」ではなく「なぜそう動くか」で進むようになります。
                 </p>
               </div>
-              <div className="grid gap-6 md:grid-cols-3">
-                {hopeStatements.map((statement, index) => (
-                  <div
-                    key={statement.title}
-                    className="flex h-full flex-col gap-5 rounded-3xl border border-[#0b1f3f]/12 bg-white/85 p-6 text-sm leading-relaxed text-[#1e3359]/80 shadow-[0_20px_55px_rgba(11,31,63,0.12)]"
-                  >
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#0584c6]/30 bg-[#0584c6]/10 text-sm font-semibold text-[#0584c6]">
-                      0{index + 1}
-                    </span>
-                    <div className="space-y-1">
-                      <span className="text-xs font-semibold uppercase tracking-[0.28em] text-[#0b1f3f]/60">{statement.title}</span>
-                      <p className="text-base font-semibold text-[#0b1f3f]">{statement.metric}</p>
+                <div className="overflow-hidden rounded-3xl border border-white/60 bg-white/85 shadow-[0_20px_55px_rgba(11,31,63,0.08)]">
+                <div className="grid grid-cols-[1.1fr_1fr_1.3fr_1fr] gap-3 bg-[#0584c6]/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#0b1f3f]/70">
+                  <span>フェーズ</span>
+                  <span>変えるべき焦点</span>
+                  <span>48時間後に見える変化</span>
+                  <span>KPIアンカー</span>
+                </div>
+                <div className="divide-y divide-[#0b1f3f]/10 text-sm text-[#0b1f3f]">
+                  {recoveryDesignPhases.map((row) => (
+                    <div key={row.phase} className="grid grid-cols-[1.1fr_1fr_1.3fr_1fr] gap-3 px-5 py-4">
+                      <span className="font-semibold text-[#0b1f3f]">{row.phase}</span>
+                      <span className="text-[#1e3359]/75">{row.focus}</span>
+                      <span className="text-[#1e3359]/75">{row.shift}</span>
+                      <span className="font-semibold text-[#0584c6]">{row.anchor}</span>
                     </div>
-                    <p className="flex-1 text-sm leading-relaxed text-[#1e3359]/75">{statement.description}</p>
-                    <div className="inline-flex items-center gap-2 rounded-full border border-[#0584c6]/20 bg-[#f0f6ff] px-3 py-1 text-xs font-semibold text-[#0584c6]">
-                      KPI Anchor｜{statement.kpi}
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-              <div className="grid gap-4 rounded-3xl border border-[#0584c6]/25 bg-[#0584c6]/10 p-6 text-[#0b1f3f]">
-                <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
+                <div className="grid gap-4 rounded-3xl border border-[#0584c6]/25 bg-[#0584c6]/10 p-6 text-[#0b1f3f]">
+                <div className="flex flex-wrap items-center gap-3 text-sm font-semibold leading-relaxed">
                   <TrendingUp className="h-5 w-5 flex-shrink-0 text-[#0584c6]" aria-hidden="true" />
                   <span>
-                    48時間の初期診断で未来の兆候と「歪みの見取り図」を示し、2週目から再生シナリオと優先施策の比較検証へ進みます。資金調達・人材再配置・販管費の見直しを一つの進行表に束ね、判断の速さと確かさを引き上げます。
+                    48時間で“再生の見取り図”を提示。AIが数字の構造を解析し、診断士が判断の筋道を描く。経営改善は、AIの分析ではなく“診断士の設計”で動き出します。
                   </span>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-3">
@@ -422,6 +439,9 @@ const InsightSpotlight = () => {
                     </div>
                   ))}
                 </div>
+                  <p className="text-sm leading-relaxed text-[#1e3359]/75">
+                    あなたの会社にも「止まらない経営設計図」を。
+                  </p>
               </div>
             </ScrollReveal>
           </div>

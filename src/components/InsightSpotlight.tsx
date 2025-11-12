@@ -430,9 +430,10 @@ const InsightSpotlight = () => {
 
       <SectionMicroCta
         eyebrow="Micro CTA"
-        title="経営は「戦略」ではなく「連続する判断」。"
-        description="判断を迷わず進められるように――私たちは、経営者の思考と情熱を“動く経営設計図”に変えます。"
-        ctaLabel="48時間で“経営の霧”を晴らす"
+        title="判断の霧が晴れる。48時間で“経営の見取り図”を受け取る。"
+        description="中小企業診断士のノウハウとAI分析が融合。「どこを直せば利益が戻るのか」「次に投資すべき領域はどこか」──その“答え”を数字と構造で示します。経営の再現性を取り戻す最初の一歩を、無料相談から。"
+        ctaLabel="判断軸を整えて「48時間後の見取り図」を受け取る"
+        ctaHelper="経営者の迷いを見抜き、設計で変える"
         ctaId="insight-blueprint"
       />
     </section>

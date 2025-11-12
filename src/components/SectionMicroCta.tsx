@@ -12,6 +12,7 @@ export type SectionMicroCtaProps = {
   ctaLabel?: string;
   ctaId?: string;
   variant?: "light" | "dark" | "subtle";
+  ctaHelper?: string;
   className?: string;
 };
 
@@ -31,6 +32,7 @@ const SectionMicroCta = ({
   ctaLabel = PRIMARY_CTA.label,
   ctaId = "micro",
   variant = "light",
+  ctaHelper,
   className,
 }: SectionMicroCtaProps) => {
   const handleClick = () => {
@@ -77,16 +79,28 @@ const SectionMicroCta = ({
             {description}
           </p>
         </div>
-        <Button
-          variant="cta"
-          size="lg"
-          onClick={handleClick}
-          data-cta-id={`${PRIMARY_CTA.id}-section-${ctaId}`}
-          className="group inline-flex items-center justify-center gap-2"
-        >
-          {ctaLabel}
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-        </Button>
+        <div className="flex flex-col items-start gap-2">
+          {ctaHelper && (
+            <span
+              className={cn(
+                "text-xs font-semibold",
+                variant === "dark" ? "text-cyan-200/85" : "text-[#0584c6]",
+              )}
+            >
+              {ctaHelper}
+            </span>
+          )}
+          <Button
+            variant="cta"
+            size="lg"
+            onClick={handleClick}
+            data-cta-id={`${PRIMARY_CTA.id}-section-${ctaId}`}
+            className="group inline-flex items-center justify-center gap-2"
+          >
+            {ctaLabel}
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+          </Button>
+        </div>
       </div>
     </ScrollReveal>
   );

@@ -3,31 +3,31 @@ import { BarChart3, ClipboardList, LayoutDashboard, LifeBuoy } from "lucide-reac
 
 const valueCards = [
   {
-    title: "AI診断×診断士レビュー",
-    description: "生成AIが複数の改善シナリオを描き、中小企業診断士が現場条件で磨き上げて提示。",
-    metric: "▲52%",
-    metricLabel: "意思決定リードタイム",
+    title: "48時間で可視化",
+    description: "資金繰り・粗利・人材のギャップを一目で把握できる再生ボードを、ヒアリング後48時間以内にご提示します。",
+    metric: "48h",
+    metricLabel: "初回ボード提示",
     icon: BarChart3,
   },
   {
-    title: "財務・経営・業務の三位一体改善",
-    description: "粗利率・在庫回転・資金余力を同時に可視化し、優先順位を一枚の設計図で共有。",
-    metric: "+5.2pt",
-    metricLabel: "平均粗利率改善幅",
+    title: "AI×診断士のハイブリッド分析",
+    description: "暗黙知とデータを融合し、生成AIが描いたシナリオを診断士とエンジニアが検証。迷いの原因を構造から解き明かします。",
+    metric: "3職種",
+    metricLabel: "AI/診断士/エンジニア",
     icon: LayoutDashboard,
   },
   {
-    title: "96時間で使える管理アプリ",
-    description: "Python×生成AIで最短96時間のカスタムSaaSを構築し、週次AIレポートと連動させます。",
-    metric: "96h",
-    metricLabel: "主要機能の提供目安",
+    title: "全国リモート対応＋地域密着",
+    description: "福岡で磨いた再生ノウハウをベースに、地域・業種ごとの商習慣へローカライズ。全国どこでも同じスピードで意思決定を支援します。",
+    metric: "全国",
+    metricLabel: "オンライン伴走",
     icon: LifeBuoy,
   },
   {
-    title: "全国対応×公的支援",
-    description: "福岡発の実績をもとに全国の商習慣へローカライズ。補助金や金融機関との交渉も伴走。",
-    metric: "78%",
-    metricLabel: "補助金採択率（直近2年）",
+    title: "創業〜再生まで一気通貫",
+    description: "計画書策定から実行支援まで、局面ごとの打ち手をワンチームで支援。創業・成長・成熟・再生を滑らかにつなぎます。",
+    metric: "0→再生",
+    metricLabel: "全フェーズ対応",
     icon: ClipboardList,
   },
 ];
@@ -42,10 +42,10 @@ const ValuePropositionSection = () => {
               Value Proposition
             </span>
             <h2 className="text-balance text-3xl font-semibold leading-tight md:text-[2.4rem]">
-              再挑戦を支える提供価値
+              “迷わない経営”を支える4つの強み
             </h2>
             <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-100/80 md:text-lg">
-              未来志向の計画と日々の意思決定をつなげ、数字と現場の感覚を同じダッシュボードで共有できる環境を整備します。
+              経営者の迷いを減らすために、即時可視化・ハイブリッド分析・地域適応・実行伴走を一体化。判断の根拠と再現性を兼ね備えた経営インフラを届けます。
             </p>
           </ScrollReveal>
 

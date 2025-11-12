@@ -23,13 +23,13 @@ import {
 
 const heroKeyPhrases = [
   { icon: LifeBuoy, label: "福岡発｜全国オンライン対応" },
-  { icon: LayoutDashboard, label: "創業〜再生期の三位一体改善" },
-  { icon: ShieldCheck, label: "国家資格×生成AIの伴走" },
+  { icon: LayoutDashboard, label: "迷わない経営設計を共創" },
+  { icon: ShieldCheck, label: "国家資格×生成AIのハイブリッド" },
 ];
 
 const heroSupportPhrases = [
   { icon: Globe2, label: "地域・業種別にローカライズ" },
-  { icon: Laptop, label: "オンライン×対面のハイブリッド支援" },
+  { icon: Laptop, label: "48時間で再生ボードを提示" },
 ];
 
 const heroSummaryCards = [
@@ -118,18 +118,21 @@ const HeroSection = () => {
           <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
-                AI × 診断士 × 再生設計図
+                AI × 診断士 × エンジニアリング
               </span>
               <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.2] tracking-tight md:text-[3.1rem] md:leading-[1.2] md:tracking-[-0.01em] xl:text-[3.6rem]">
-                AI×中小企業診断士が、創業準備から再生局面まで“迷わない経営”を全国で伴走。
+                AI×経営改善のプロが、“迷わない経営設計”をあなたと一緒に。
               </h1>
               <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-                AIシナリオ×専門家レビューで意思決定リードタイムを52%短縮。福岡発の再生ノウハウを全国各地の商習慣に合わせてローカライズし、創業・成長・成熟それぞれの課題に即した判断材料を整備します。
+                創業準備から再生まで、経営のあらゆる岐路に“答えを出せる伴走者”が全国で支援します。
               </p>
             </div>
 
             <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-              初回無料相談とAI診断レポートで、粗利・資金・人材のギャップを48時間以内に可視化。創業期は資金繰りテンプレート、成長期は粗利・在庫の改善策、成熟期は再生・M&Aシナリオまで一気通貫で提示します。
+              経営の悩みは、データだけでは解けません。私たちは「経営改善に精通した中小企業診断士 × 機械学習エンジニア × 生成AI」のチーム。経験と数値の両面から判断の根拠を可視化し、経営者が迷わず次の一手を打てるよう設計します。
+            </p>
+            <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
+              福岡で磨いた再生ノウハウを全国各地の商習慣にローカライズし、創業・成長・成熟・再生、それぞれの局面で最適な打ち手を48時間以内に提示。資金繰り・粗利・人材・在庫・価格設定など複雑に絡む課題を、貴社専用の「再生ボード」で一目で把握できます。
             </p>
             <div className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/90 md:gap-4 md:text-base">
               {heroKeyPhrases.map(({ icon: Icon, label }) => (

@@ -22,11 +22,11 @@ export type TertiaryCtaContent = {
 
 export const PRIMARY_CTA: PrimaryCtaContent = {
   id: "primary",
-  label: "無料診断を予約して48H後の再生プランを受け取る",
-  benefitCopy: "48時間以内に優先仮説と再生アクションを共有",
-  benefitCopyAlt: "粗利・キャッシュ・人材の歪みを色分け可視化",
+  label: "48時間で“再生ボード”を受け取る",
+  benefitCopy: "経営の霧が晴れる。判断が動き出す。",
+  benefitCopyAlt: "粗利・資金・人材の判断材料を一本化",
   supportText:
-    "代表・古町（中小企業診断士）が直接ヒアリングし、生成AIが抽出した歪みと優先仮説を48時間で整理。銀行説明や社内会議でそのまま使える再生シナリオと資料の骨子をお渡しします。",
+    "代表・古町（中小企業診断士）が直接ヒアリングし、AIと機械学習エンジニアが抽出した歪みを48時間で再生ボード化。金融機関説明や経営会議にそのまま使える判断材料をご提供します。",
 };
 
 export const SECONDARY_CTA: SecondaryCtaContent = {

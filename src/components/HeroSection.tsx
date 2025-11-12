@@ -58,19 +58,19 @@ const heroSummaryCards = [
 
 const heroBoardroomInsights = [
   {
-    label: "全国対応",
-    value: "福岡発×オンライン",
-    description: "地域特有の商習慣に合わせた言語化と交渉資料で、全国どこでも導入しやすい",
+    label: "因果解析 & AI診断",
+    value: "48時間で“判断材料”を可視化",
+    description: "AIが財務・人材・在庫の歪みを抽出。診断士が経営構造を翻訳し、即判断できる資料に。",
   },
   {
-    label: "AI診断",
-    value: "48時間で提示",
-    description: "創業期でも扱いやすい指標と優先度を整理し、初回相談で共有",
+    label: "設計（AI × 診断士）",
+    value: "AIが“数字を読み”、診断士が“意味を読む”",
+    description: "経営改善の暗黙知と機械学習を融合し、攻めと守りの両輪で次の一手を設計。",
   },
   {
-    label: "再生設計",
-    value: "複数シナリオ",
-    description: "生成AIが描いた案を診断士がブラッシュアップし、判断の根拠を補強",
+    label: "合意形成",
+    value: "会議1回で“再生方針”を確定",
+    description: "議論の迷走を防ぎ、全員の意思を同じ方向へ導く再生ボードを提示。",
   },
 ];
 
@@ -118,18 +118,24 @@ const HeroSection = () => {
           <div className="space-y-10">
             <div className="space-y-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.32em] text-[#7ec3ff]">
-                AI × 診断士 × 再生設計図
+                経営の霧を晴らす共闘者
               </span>
               <h1 className="text-balance text-[2.4rem] font-semibold leading-[1.2] tracking-tight md:text-[3.1rem] md:leading-[1.2] md:tracking-[-0.01em] xl:text-[3.6rem]">
-                AI×中小企業診断士が、創業準備から再生局面まで“迷わない経営”を全国で伴走。
+                判断が速い会社は、再生も速い。
               </h1>
-              <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-                AIシナリオ×専門家レビューで意思決定リードタイムを52%短縮。福岡発の再生ノウハウを全国各地の商習慣に合わせてローカライズし、創業・成長・成熟それぞれの課題に即した判断材料を整備します。
+              <p className="max-w-3xl text-[1.05rem] leading-relaxed text-slate-100/90 md:text-[1.2rem] md:leading-relaxed">
+                AIと経営改善の専門家が、数字の裏にある「経営の詰まり」を48時間で可視化します。
+              </p>
+              <p className="max-w-3xl text-base font-semibold leading-relaxed text-cyan-100/90 md:text-lg">
+                ──“もう一度攻める力”を、科学と経験で取り戻す。
               </p>
             </div>
 
             <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
-              初回無料相談とAI診断レポートで、粗利・資金・人材のギャップを48時間以内に可視化。創業期は資金繰りテンプレート、成長期は粗利・在庫の改善策、成熟期は再生・M&Aシナリオまで一気通貫で提示します。
+              AIだけでは経営は変わらない。データを読み解くAI、構造を言語化する中小企業診断士、そして意思決定を実装に落とし込む機械学習エンジニアが一体となり、48時間で判断材料を整えます。
+            </p>
+            <p className="max-w-3xl text-base leading-relaxed text-slate-100/85 md:text-lg">
+              福岡発の現場感と全国の金融・業界ネットワークを掛け合わせ、創業から再生局面まで「経営の霧が晴れる」瞬間を共に作ります。粗利・資金・人材の歪みを一本化し、次の会議で即決できる再生ボードを整備します。
             </p>
             <div className="flex flex-wrap items-center gap-3 text-left text-sm text-slate-100/90 md:gap-4 md:text-base">
               {heroKeyPhrases.map(({ icon: Icon, label }) => (

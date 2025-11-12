@@ -11,8 +11,8 @@ import { CalendarClock, FileText, Loader2, Phone } from "lucide-react";
 const ctaOptions = [
   {
     id: "diagnostic",
-    label: "無料診断を予約する",
-    description: "48時間診断で優先課題と行動順序を確認",
+    label: "48時間で“再生ボード”を受け取る",
+    description: "AI×診断士が共創した判断材料で次の会議を決め切る",
     icon: CalendarClock,
   },
   {
@@ -114,10 +114,10 @@ const CTASection = () => {
             Contact
           </span>
           <h2 className="text-balance text-3xl font-semibold leading-tight md:text-[2.4rem]">
-            次の一手を決めるための相談窓口
+            経営の霧を晴らす相談窓口
           </h2>
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-[#1e3359]/90 md:text-lg">
-            無料診断・資料請求・電話相談のいずれも48時間以内に専門家が応答します。ご希望のメニューを選び、必要事項をご入力ください。
+            48時間で「再生ボード」と判断材料をそろえ、経営会議と金融交渉を前進させます。ご希望のメニューを選び、共闘体制に今すぐアクセスしてください。
           </p>
         </div>
 
